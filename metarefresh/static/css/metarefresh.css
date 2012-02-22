@@ -24,7 +24,7 @@ body {
 
 #hg-bar { display: none; }
 
-.header-wrap {
+.header {
 	color: #EEE;
 	background: black;
 	padding-bottom: 3em;
@@ -159,6 +159,8 @@ body {
 	text-align: center;
 	color: #EEE;
 }
+.navbar .nav li a:hover { background: #F0A40C; }
+.navbar-fixed-top .nav .register a { background-color: #5BB75B; color: white; }
 .navbar .nav .spacer {
 	margin-right: 25%;
 }
@@ -176,6 +178,7 @@ body {
 	color: black;
 /* FIXME: Fallback color when gradients are not supported  */	
 /*	background: #FCFCFC;*/
+	background-color: transparent;
 /* FIXME: Cross-browser  */
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#FCFCFC), color-stop(0.6, #FCFCFC), to(rgba(252,252,252,0)));
 	margin: 0 auto 0.6em;

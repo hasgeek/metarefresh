@@ -1,8 +1,10 @@
 
-// fixed nav-bar transition code
-// adapted from twitter bootstrap docs' sub-nav
 
 $(function() {
+
+	// fixed nav-bar transition code
+	// adapted from twitter bootstrap docs' sub-nav
+
 	var   $win = $(window)
 		, $nav = $('.navbar')
 		, navTop = $nav.length && $nav.offset().top// - 40
@@ -23,5 +25,11 @@ $(function() {
 	
 	$win.on('scroll', processScroll)
 	
+	// smooth scroll nav links
+	$('a', $nav).smoothScroll({
+		  offset: -80
+		, speed: 900
+	});
+
 })
 
