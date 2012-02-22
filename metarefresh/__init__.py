@@ -18,7 +18,7 @@ configureapp(app, 'METAREFRESH_ENV')
 
 app.register_blueprint(baseframe)
 assets = Environment(app)
-js = Bundle(baseframe_js)
+js = Bundle(baseframe_js, 'js/metarefresh.js')
 css = Bundle(baseframe_css, 'css/metarefresh.css')
 assets.register('js_all', js)
 assets.register('css_all', css)
