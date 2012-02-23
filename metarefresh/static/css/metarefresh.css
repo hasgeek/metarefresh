@@ -22,7 +22,7 @@ body {
 /*	background: #9DF;*/
 }
 
-#hg-bar { display: none; }
+#hg-bar { margin-bottom: 0; }
 
 .header {
 	color: #EEE;
