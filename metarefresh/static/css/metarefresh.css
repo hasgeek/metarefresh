@@ -17,9 +17,14 @@
 /* ============================ */
 
 body {
-	font-family: "Futura PT", Futura, "Trebuchet MS", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 14px;
 	background: #FCFCFC;
-/*	background: #9DF;*/
+}
+body, p { font-family: "Futura PT", Futura, "Trebuchet MS", 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+p {
+	font-size: 1em;
+	line-height: inherit;
+	margin-bottom: 0.643em;
 }
 
 #hg-bar { margin-bottom: 0; }
@@ -112,7 +117,6 @@ body {
 }
 .callout {
 	font-style: italic;
-	font-family: inherit;
 	text-align: center;
 	font-size: 2em;
 	line-height: 1.35;
@@ -123,7 +127,6 @@ body {
 .banner .register {
 	width: 70%;
 	margin: 2em auto 1em;
-	font-family: inherit;
 	text-align: center;
 	font-weight: 500;
 	text-transform: uppercase;
@@ -201,5 +204,14 @@ body {
 
 
 
+
+
+
+
+footer .footer-inner {
+	background: none;
+	margin: 15em 0 5em;
+	color: gray;
+}
 
 
