@@ -17,12 +17,12 @@
 /* ============================ */
 
 body {
-	font-size: 14px;
+	font: 14px "Futura PT", Futura, "Trebuchet MS", 'Helvetica Neue', Helvetica, Arial, sans-serif; 	
 	background: #FCFCFC;
 }
-body, p { font-family: "Futura PT", Futura, "Trebuchet MS", 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 p {
 	font-size: 1em;
+	font-family: inherit;
 	line-height: inherit;
 	margin-bottom: 0.643em;
 }
@@ -169,7 +169,7 @@ abbr:not([title]) { cursor: auto; border-bottom: none; }
           transition: background-color 0.25s ease-out; 
 }
 .navbar .nav li a:hover { background-color: #F0A40C; }
-.navbar-fixed-top .nav .register a { background-color: #5BB75B; color: white; }
+.navbar-fixed-top .nav .register a { border-top: 0px solid #5BB75B; color: #0D0; }
 .navbar .nav .spacer {
 	margin-right: 25%;
 }
@@ -213,8 +213,14 @@ abbr:not([title]) { cursor: auto; border-bottom: none; }
 	padding: 3em 0;
 }
 .section h2 {
-/*	color: #F0A40C;*/
-/*	font-size: 3em;*/
+	font-size: 4em;
+	line-height: 1.2;
+	margin: 0 0 1.2em;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 500;
+	color: #E0E0E0;
+	text-shadow: white 0px 1px 0px, #BBB 0px -1px 0px;
 }
 .section h3 {
 	text-transform: uppercase;
@@ -222,7 +228,7 @@ abbr:not([title]) { cursor: auto; border-bottom: none; }
 	margin: 0.4em 0 1em;
 	color: gray;
 }
-.section hr.divider { margin: 3em 0 0; }
+.section hr.divider { margin: 5em 0 0; }
 
 
 #about h2 { display: none; }
@@ -249,9 +255,37 @@ abbr:not([title]) { cursor: auto; border-bottom: none; }
 }
 
 
-
-
-
+.sponsor {
+	border: 1px solid #EEE;
+	padding: 1em;
+	margin-bottom: 2.5em;
+	background: white;
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	position: relative;
+}
+.sponsor.open { background: #F3F3F3; border: 1px dashed #DDD; }
+.sponsor.open.empty { background: transparent; }
+.sponsor:after {
+	font-size: 10px;
+	position: absolute;
+	margin-top: 0.5em;
+	top: 100%;
+	right: 0;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: #CCC;
+}
+.sponsor .logo { text-align: center; vertical-align: middle; margin: 0; }
+.sponsor .logo img { max-height: 100%; width: auto; vertical-align: middle; }
+.sponsor-platinum .logo { height: 250px; line-height: 250px; }
+.sponsor-gold .logo 	{ height: 150px; line-height: 150px; }
+.sponsor-silver .logo	{ height: 100px; line-height: 100px; }
+.sponsor-community .logo{ height: 50px;  line-height: 50px;  }
+.sponsor-platinum:after { content: "Platinum"; }
+.sponsor-gold:after		{ content: "Gold"; }
+.sponsor-silver:after	{ content: "Silver"; }
+.sponsor-community:after{ content: "Community"; }
 
 
 
