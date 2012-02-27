@@ -245,8 +245,8 @@ abbr:not([title]) { cursor: auto; border-bottom: none; }
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: 500;
-	color: #E0E0E0;
-	text-shadow: white 0px 1px 0px, #BBB 0px -1px 0px;
+	color: #DDD;
+	text-shadow: white 0px 1px 0px, #999 0px -1px 0px;
 }
 .section h3 {
 	text-transform: uppercase;
