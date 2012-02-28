@@ -293,7 +293,7 @@ abbr:not([title]) { cursor: auto; border-bottom: none; }
 	   -moz-box-shadow: none;
 	        box-shadow: none;
 }
-.sponsor.open.empty {
+.sponsor.empty {
 	/* FIXME: fallback for non-box-shadow browsers */
 	background: rgba(200,200,200,0.2);
 	-webkit-box-shadow: inset 1px 1px 1px #BBB;
@@ -405,12 +405,58 @@ abbr:not([title]) { cursor: auto; border-bottom: none; }
 	word-spacing: 0.2em;	
 }
 #venue .description strong { font-weight: 400; color: white; margin-right: 1em; }
-#venue .divider { margin-top: 0; }
+#venue .divider {
+	margin-top: 0;
+	border: none;
+	border-bottom: 1px solid #AAA;
+}
 
 
+.credits {
+	padding: 5em 0 9em;
+	background: rgba(60,50,0,0.25);
+}
+.credits .container { padding-top: 4em; }
+.credits h2 {
+	text-align: left;
+	color: #999;
+	text-shadow: #CCC 0px 1px 0px, #555 0px -1px 0px;
+}
+.movie-credits {
+	padding-left: 100px;
+}
+.movie-credits dt {
+	clear: both;
+	float: left;
+	margin-left: -100px;
+	width: 95px;
+	text-align: right;
+	line-height: 1.75;
+	margin-bottom: 0.5em;
+	font-weight: normal;
+	text-transform: lowercase;
+}
+.movie-credits dd {
+	margin-bottom: 0.5em;
+	font-weight: 600;
+	line-height: 1.75;
+}
+h3.hasgeek a {
+	display: inline-block;
+	overflow: hidden;
+	text-indent: -999em;
+	width: 109px;
+	height: 30px;
+	background: url(../img/hg-name.png) no-repeat scroll center left;
+}
+.credits .description { padding: 0 0 0 4em; }
+
+
+footer { background: black; }
 footer .footer-inner {
 	background: none;
-	margin: 2em 0 0;
+	margin: 0;
+	line-height: 2;
 	color: gray;
 }
 
