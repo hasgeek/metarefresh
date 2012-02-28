@@ -18,7 +18,7 @@
 
 html, body {
 	font: 14px "Futura PT", Futura, "Trebuchet MS", 'Helvetica Neue', Helvetica, Arial, sans-serif; 	
-	background: #FCFCFC;
+	background: #F3F3F3 url(../img/stucco.png) repeat top left;
 }
 p {
 	font-size: 1em;
@@ -58,7 +58,8 @@ abbr:not([title]) { cursor: auto; border-bottom: none; }
 
 
 
-
+#root { margin-bottom: 0; }
+#root_footer { display: none; }
 #hg-bar { margin-bottom: 0; }
 
 .header {
@@ -211,11 +212,7 @@ abbr:not([title]) { cursor: auto; border-bottom: none; }
 .navbar .nav .home a {
 	font-size: 2em;
 	color: black;
-/* FIXME: Fallback color when gradients are not supported  */	
-/*	background: #FCFCFC;*/
-	background-color: transparent;
-/* FIXME: Cross-browser  */
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#FCFCFC), color-stop(0.6, #FCFCFC), to(rgba(252,252,252,0)));
+	background: #F3F3F3 url(../img/stucco.png) fixed repeat top left;
 	margin: 0 auto 0.6em;
 	padding: 0;
 	width: 8em;
@@ -245,7 +242,7 @@ abbr:not([title]) { cursor: auto; border-bottom: none; }
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: 500;
-	color: #DDD;
+	color: #CCC;
 	text-shadow: white 0px 1px 0px, #999 0px -1px 0px;
 }
 .section h3 {
@@ -273,21 +270,36 @@ abbr:not([title]) { cursor: auto; border-bottom: none; }
 }
 .speakers li + li { margin-left: 8%; }
 .speakers .funnel {
-	outline: 0.8em solid #F3F3F3;
-	background: #F3F3F3;
+	outline: 0.8em solid #E3E3E3;
+	background: #E3E3E3;
+	outline: 0.8em solid rgba(0,0,0,0.1);
+	background: rgba(0,0,0,0.1);
 }
 
 
 .sponsor {
-	border: 1px solid #EEE;
 	padding: 1em;
 	margin-bottom: 2.5em;
 	background: white;
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 	position: relative;
+	-webkit-box-shadow: 1px 1px 2px #BBB;
+	   -moz-box-shadow: 1px 1px 2px #BBB;
+	        box-shadow: 1px 1px 2px #BBB;
 }
-.sponsor.open { background: #F3F3F3; border: 1px dashed #DDD; }
-.sponsor.open.empty { background: transparent; }
+.sponsor.open {
+	background: #E3E3E3;
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+	        box-shadow: none;
+}
+.sponsor.open.empty {
+	/* FIXME: fallback for non-box-shadow browsers */
+	background: rgba(200,200,200,0.2);
+	-webkit-box-shadow: inset 1px 1px 1px #BBB;
+	   -moz-box-shadow: inset 1px 1px 1px #BBB;
+	        box-shadow: inset 1px 1px 1px #BBB;	
+}
 .sponsor:after {
 	font-size: 10px;
 	position: absolute;
@@ -297,7 +309,7 @@ abbr:not([title]) { cursor: auto; border-bottom: none; }
 	font-weight: 500;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
-	color: #CCC;
+	color: #BBB;
 }
 .sponsor .logo { text-align: center; vertical-align: middle; margin: 0; }
 .sponsor .logo img { max-height: 100%; width: auto; vertical-align: middle; }
@@ -313,17 +325,20 @@ abbr:not([title]) { cursor: auto; border-bottom: none; }
 
 #program .description { padding: 0 0 0 4em; }
 #program .funnel {
-	background: #EEE;
-	padding: 1.75em 1.5em 1em;
+	background: #DDD;
+	background: rgba(0,0,0,0.2);
+	padding: 2em 1.5em 1.5em;
 	margin: 0 0 1.5em;
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 #program .funnel h4 { margin: 1em 0 0.5em; }
 #program .funnel .btn {
+	display: block;
 	text-align: center;
 	padding: 0.35em 1em;
-	margin-bottom: 0.5em;
+	margin-bottom: 1.5em;
 }
+#program .funnel .btn i { font-size: 0.8em; }
 .schedule {
 	margin-bottom: 1em;
 	position: relative;
@@ -340,8 +355,8 @@ abbr:not([title]) { cursor: auto; border-bottom: none; }
 	right: 0;
 	border: 1px solid #EEE;
 	background: #FFF;
-	background: rgba(255,255,255,0.9);
-	color: #555;
+	background: rgba(10,10,10,0.85);
+	color: #EEE;
 	font-weight: bold;
 	text-align: center;
 	padding: 5em 4em 0;
@@ -364,6 +379,7 @@ abbr:not([title]) { cursor: auto; border-bottom: none; }
 	margin: 0 0 0 -640px;
 	width: 1280px;
 	z-index: 0;
+	border-top: 1px solid #CCC;
 }
 #venue .details {
 	position: relative;
@@ -394,7 +410,7 @@ abbr:not([title]) { cursor: auto; border-bottom: none; }
 
 footer .footer-inner {
 	background: none;
-	margin: 15em 0 5em;
+	margin: 2em 0 0;
 	color: gray;
 }
 
