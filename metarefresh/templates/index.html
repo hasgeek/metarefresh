@@ -1,7 +1,9 @@
-{% extends 'base.html' %}
+{% extends 'baseframe.html' %}
 
-{% block subcontent %}
-<div class="header">
+{% block headerbox %}
+{# {% include "baseframe/networkbar.html" -%} #}
+
+<header class="header">
 	<div class="container">
 		<div class="row pullleft3">
 			<div class="web-history span9">
@@ -52,8 +54,13 @@
 			</ul>
 		</div><!-- /container -->
 	</div><!-- /navbar -->
-</div><!-- /header-wrap -->
+</header>
 
+{% endblock %}
+
+
+
+{% block main %}
 
 <section id="about" class="section">
 	<div class="container">
@@ -313,6 +320,6 @@
 		</div>
 		
 	</div>
-</section>
+</section><!-- /credits -->
 
 {% endblock %}

@@ -28,6 +28,10 @@ p {
 }
 li { line-height: inherit; }
 abbr:not([title]) { cursor: auto; border-bottom: none; }
+hr {
+	border-top-color: rgba(200,200,200,0.45);
+	border-bottom-color: rgba(255,255,255,0.85);
+}
 
 .large {
 	font-size: 24px;
@@ -234,6 +238,7 @@ abbr:not([title]) { cursor: auto; border-bottom: none; }
 
 .section {
 	padding: 3em 0;
+	margin: 0;
 }
 .section h2 {
 	font-size: 4em;
