@@ -62,9 +62,16 @@ hr {
 	margin-bottom: 4em;
 }
 
+/*.header, [class*="span"] {
+	-webkit-transition: all 0.25s ease-out;
+	   -moz-transition: all 0.25s ease-out;
+	    -ms-transition: all 0.25s ease-out;
+	     -o-transition: all 0.25s ease-out;
+	        transition: all 0.25s ease-out; 
+}*/
+
 .web-history {
 	margin-left: -220px;
-	min-width: 500px;
 	height: 500px;
 	background: url(../img/earth.jpg) no-repeat scroll top left;
 }

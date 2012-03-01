@@ -112,7 +112,6 @@
 		font-size: 2em;
 		padding-left: 106px;
 	}
-	
 }
  
 
@@ -149,12 +148,76 @@
 	
 	.credits h2 { padding-left: 158px; }
 	.movie-credits { padding-left: 150px; }
-	
 }
 
 
 /* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 980px) {}
+@media (min-width: 768px) and (max-width: 980px) {
+	.pull-right { float: right; }
+	
+	.header { background: black url(../img/earth.jpg) no-repeat scroll -220px 0; }
+	.header .container { width: auto; margin-left: 20px; margin-right: 20px; }
+	.row > .web-history {
+		float: left;
+		background: none;
+		margin-left: 20px;
+		margin-top: 0;
+		width: 152px;
+	}
+	.web-history dl {
+		margin-left: 70px;
+		position: relative;
+		width: 400px;
+	}
+	.web-history dt { visibility: hidden; }
+	.web-history dd { font-weight: 400; }
+	.banner { width: 55%; }
+	.callout { font-size: 1.75em; }
+	.banner .register { margin-top: 3em; }
+	
+	.navbar .container { padding: 0; }
+	.navbar .nav li { float: left; width: 12.5%; }
+	.navbar .nav li a {
+		margin: 0;
+		font-weight: inherit;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		-o-border-radius: 0;
+		border-radius: 0;
+	}
+	.navbar .nav .home { top: 14px; }
+	.navbar .nav .home a {
+		font-size: 2em;
+		width: 6.8em;
+		line-height: 2.3em;
+		-webkit-border-radius: 6.8em 2.3em;
+		   -moz-border-radius: 6.8em/2.3em;
+		     -o-border-radius: 6.8em/2.3em;
+		        border-radius: 6.8em/2.3em;
+	}
+	.navbar .extra { display: none; }
+	
+	.description { padding-right: 2em; }
+	
+	#program .span4,
+	#program .span8 { width: 352px; }
+	.schedule h3 { display: none; }
+	.schedule table { display: none; }
+	.schedule .notice {
+		position: static;
+		overflow: auto;
+		padding: 1em;
+		margin: 0 20px;
+		background: none;
+		color: inherit;
+		text-align: left;
+		font-weight: normal;
+		border-color: #000;
+	}
+	.schedule .notice p { margin-bottom: 0; }
+	
+	#venue .details { padding-top: 1em; padding-bottom: 1em; }
+}
 
 /* Large desktop */
 @media (min-width: 1200px) {
