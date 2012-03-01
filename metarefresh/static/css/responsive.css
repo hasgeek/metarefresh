@@ -3,8 +3,8 @@
 /* ================= */
 
 
-/* Landscape phones and down */
-@media (max-width: 480px) {
+/* Base to portrait tablet */
+@media (max-width: 767px) {
 	.header {
 		margin-bottom: 0;
 		padding-bottom: 0;
@@ -69,9 +69,9 @@
 	.row > .sponsor.span2,
 	.row > .sponsor.span3 { float: left; width: 50%; }
 	.row > .sponsor.span2:nth-child(odd),
-	.row > .sponsor.span3:nth-child(odd) { width: 47.5%; }
+	.row > .sponsor.span3:nth-child(odd) { width: 47.5%; clear: left; }
 	.row > .sponsor.span2:nth-child(even),
-	.row > .sponsor.span3:nth-child(even) { float: right; width: 47.5%; }
+	.row > .sponsor.span3:nth-child(even) { width: 47.5%; float: right; }
 	
 	#program .funnel .btn { padding-left: 0.35em; padding-right: 0.35em; }
 	.schedule { margin-left: -20px; margin-right: -20px; }
@@ -115,8 +115,43 @@
 	
 }
  
-/* Landscape phone to portrait tablet */
-@media (max-width: 768px) {}
+
+/* Inherits base (above) and but specific to portrait tablet */
+@media (min-width: 540px) and (max-width:767px) {
+	.container { padding: 0 40px; }
+	
+	.header { background-position: -150px 0; margin-bottom: 1em; } 
+	.row > .banner { float: right; width: 30em; }
+	.banner h1 { margin: 1em auto; }
+	
+	#about .container,
+	#sponsors .container,
+	.credits .container { max-width: 40em; margin-left: auto; margin-right: auto; }
+	
+	.row > .sponsor.span6 { float: left; width: 50%; }
+	.row > .sponsor.span6:nth-of-type(odd) { width: 47.5%; clear: left; }
+	.row > .sponsor.span6:nth-of-type(even) { width: 47.5%; float: right; }
+	
+	#program .span4 { float: right; width: 55%; }
+	#program .span8 { float: left; width: 40%; }
+	
+	#venue .map {
+		width: 100%;
+		height: auto;
+		min-height: 200px;
+		background: gray;
+		text-align: center;
+	}
+	#venue .map a { display: block; line-height: 0; }
+	#venue .description { margin-bottom: 1em; }
+	#venue .directions { float: left; width: 58%; }
+	#venue .timing    { float: right; width: 35%; }
+	
+	.credits h2 { padding-left: 158px; }
+	.movie-credits { padding-left: 150px; }
+	
+}
+
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 980px) {}
