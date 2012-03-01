@@ -5,7 +5,7 @@
 
 <header class="header">
 	<div class="container">
-		<div class="row pullleft3">
+		<div class="row">
 			<div class="web-history span9">
 				<dl>
 					<dt>2008</dt><dd>Google Chrome</dd>
@@ -29,7 +29,7 @@
 					<dt>1990</dt><dd>HTTP</dd>
 				</dl>
 			</div><!-- /web-history -->
-			<div class="banner span6">
+			<div class="banner span6 pull-right">
 			<p class="callout">A conference that revisits the construction of <strong>user interfaces</strong> on the world&#8217;s biggest platform &#8211; <strong>the web</strong>.</p>
 			<hgroup>
 				<h1><b>Meta</b> Refresh</h1>
@@ -45,9 +45,9 @@
 		<div class="container">
 			<ul class="nav">
 				<li class="home"><a title="Home (Top of the page)" href="#root"><b>Meta</b> Refresh</a></li>
-				<li><a href="#program">Programme</a></li>
+				<li><a href="#program">Program<span class="extra">me</span></a></li>
 				<li><a href="#venue">Venue</a></li>
-				<li class="spacer"><a href="#about">About</a></li>
+				<li class="spacer about"><a href="#about">About</a></li>
 				<li><a href="#sponsors">Sponsors</a></li>
 				<li><a href="#credits">Credits</a></li>
 				<li class="register"><a href="http://metarefresh.doattend.com/">Register</a></li>
@@ -75,7 +75,7 @@
 			</div><!-- span8 -->
 			<div class="featuring span4">
 				<h3>Featuring</h3>
-				<ul class="speakers">
+				<ul class="speakers clearfix">
 					<li>
 						<p class="avatar"><img alt="" src="/static/img/sunit-grayscale.jpg"></p>
 						<h5>Sunit Singh</h5>
@@ -174,6 +174,14 @@
 	<div class="container">
 		<h2>Programme</h2>
 		<div class="row">
+			<div class="span4 pull-right">
+				<div class="funnel legible">
+					<p><a class="btn btn-primary legible" href="http://funnel.hasgeek.com/metarefresh/">Vote <i>or</i><br>Propose a Session</a></p>
+					<p>HasGeek events are community driven. The community is invited to submit their talk proposals and you decide what talks to listen to by voting up or down in <a href="http://funnel.hasgeek.com/metarefresh/">the Funnel</a>.</p>
+					<h4>Submissions close 15th April</h4>
+				</div><!-- /funnel -->
+			</div><!-- /span -->
+			
 			<div class="span8">
 				<div class="schedule">
 					<h3>Schedule</h3>
@@ -229,7 +237,6 @@
 									<p>Shilpa Sharma</p>
 								</td>
 							</tr>
-							
 						</tbody>
 					</table>
 					
@@ -238,15 +245,6 @@
 					</div><!-- /notice -->
 				</div><!-- /schedule -->
 			</div><!-- /span -->
-			
-			<div class="span4">
-				<div class="funnel legible">
-					<p><a class="btn btn-primary legible" href="http://funnel.hasgeek.com/metarefresh/">Vote <i>or</i><br>Propose a Session</a></p>
-					<p>HasGeek events are community driven. The community is invited to submit their talk proposals and you decide what talks to listen to by voting up or down in <a href="http://funnel.hasgeek.com/metarefresh/">the Funnel</a>.</p>
-					<h4>Submissions close 15th April</h4>
-				</div><!-- /funnel -->
-			</div><!-- /span -->
-						
 		</div><!-- /row -->
 		<hr class="divider">
 	</div><!-- /container -->
@@ -256,7 +254,7 @@
 <section id="venue" class="section">
 	<h2>Venue</h2>
 	<div class="spread">
-		<p class="map"><a title="Dharmaram College on Google Maps" href="http://goo.gl/maps/jYyv"><img src="http://maps.google.com/maps/api/staticmap?markers=color:red%7C12.9359,77.6024&amp;center=12.9339, 77.6193&amp;size=640x300&amp;scale=2&amp;zoom=13&amp;maptype=roadmap&amp;sensor=false"></a></p>
+		<p class="map"><a title="Dharmaram College on Google Maps" href="http://goo.gl/maps/jYyv"><img src="http://maps.google.com/maps/api/staticmap?markers=color:red%7C12.9359,77.6024&amp;center=12.9339, 77.6193&amp;size=600x300&amp;scale=2&amp;zoom=13&amp;maptype=roadmap&amp;sensor=false"></a></p>
 		<div class="container">
 			<div class="row">
 				<div class="details offset7 span5">
@@ -282,8 +280,14 @@
 <section class="credits section">
 	<div id="credits" class="container">
 		<div class="row">
+			<div class="span8 description legible pull-right">
+				<h3 class="hasgeek"><a href="http://hasgeek.com/">HasGeek</a></h3>
+				<p><strong>HasGeek is a developer-led initiative</strong>, and has been un-organising the unconference scene since 2010. <a href="http://hasgeek.com">HasGeek</a> is an attempt to solve the problem of insipid conferences organised around buzzwords by uninterested, soulless corporate entities who pitch them as company training events or as places for companies to pick up hot developers.</p>
+				<p>We are attempting to build a new space, <strong>a space that is genuinely respectful</strong> of the communities and topics that we choose to engage with. We want to be a space for developers who are as excited as us about technology and the possibilities that it creates, not to be a recruitment fair (though we hope you do find partnership possibilities at our events).</p>
+				<p>We are community-driven — <a href="http://funnel.hasgeek.com/">check out our speaker-selection funnel</a>, where you decide what talks to listen to by voting up or down — and small — there are just a handful of us running the show and only one of us gets a regular salary from this. We are doing this because this is what we love: bringing a whole bunch of us geeks together, sharing our interests and expertise and hanging out later over $beverageOfChoice.</p>
+			</div>
 			<div class="span4">
-				<h2>Credits</h2>				
+				<h2>Credits</h2>
 				<dl class="movie-credits">
 					<dt>Art Direction</dt>
 					<dd>Abhisek Sarda<br/>Kaustubh Kamat,<br/><a href="http://www.pptsalon.com">PPTSalon</a></dd>
@@ -311,14 +315,7 @@
 					<dd><a href="http://www.cis-india.org/">The Centre for Internet and Society</a></dd>
 				</dl>
 			</div><!-- /span -->
-			<div class="span8 description legible">
-				<h3 class="hasgeek"><a href="http://hasgeek.com/">HasGeek</a></h3>
-				<p><strong>HasGeek is a developer-led initiative</strong>, and has been un-organising the unconference scene since 2010. <a href="http://hasgeek.com">HasGeek</a> is an attempt to solve the problem of insipid conferences organised around buzzwords by uninterested, soulless corporate entities who pitch them as company training events or as places for companies to pick up hot developers.</p>
-				<p>We are attempting to build a new space, <strong>a space that is genuinely respectful</strong> of the communities and topics that we choose to engage with. We want to be a space for developers who are as excited as us about technology and the possibilities that it creates, not to be a recruitment fair (though we hope you do find partnership possibilities at our events).</p>
-				<p>We are community-driven — <a href="http://funnel.hasgeek.com/">check out our speaker-selection funnel</a>, where you decide what talks to listen to by voting up or down — and small — there are just a handful of us running the show and only one of us gets a regular salary from this. We are doing this because this is what we love: bringing a whole bunch of us geeks together, sharing our interests and expertise and hanging out later over $beverageOfChoice.</p>
-			</div>
 		</div>
-		
 	</div>
 </section><!-- /credits -->
 

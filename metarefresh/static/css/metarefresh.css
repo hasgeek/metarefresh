@@ -1,17 +1,6 @@
 @import "fonts.css";
 
 
-/* ================================== */
-/* = Bootstrap Framework Extensions = */
-/* ================================== */
-
-/* .row conjunctions */
-/* FIXME: @media query support */
-.pullleft3 { margin-left: -260px; }
-.pullleft4 { margin-left: -340px; }
-
-
-
 /* ============================ */
 /* = Meta Refresh Space Theme = */
 /* ============================ */
@@ -74,6 +63,8 @@ hr {
 }
 
 .web-history {
+	margin-left: -220px;
+	min-width: 500px;
 	height: 500px;
 	background: url(../img/earth.jpg) no-repeat scroll top left;
 }
@@ -136,10 +127,6 @@ hr {
 	margin: 0.9em auto;
 	line-height: 1.2;
 	color: white;
-	-webkit-border-radius: 9em;
-	-moz-border-radius: 9em;
-	-o-border-radius: 9em;
-	border-radius: 9em;
 }
 .banner h2,
 .banner h3 {
@@ -157,10 +144,11 @@ hr {
 	text-align: center;
 	font-size: 2em;
 	line-height: 1.35;
-	margin-bottom: 0.75em;
-	color: #DF5E0E;
+	margin: 0 auto 0.75em;
+	max-width: 16em;
 	color: #08C;
 }
+/*.callout strong { font-style: normal; }*/  /* Activate to cut down on number of font-files */
 .banner .register {
 	width: 70%;
 	margin: 2em auto 1em;
@@ -168,9 +156,10 @@ hr {
 .banner .register strong { font-size: 1.5em; }
 .banner .register a {
 	display: block;
-/*	background: #F0A40C;*/
 	line-height: 1.5;
 	padding: 0.5em 0 0.75em;
+	max-width: 23em;
+	margin: auto;
 }
 
 .navbar { background: #000; margin: 0; position: absolute; width: 100%; }
@@ -178,7 +167,6 @@ hr {
 .navbar .nav { width: 100%; }
 .navbar .nav li {
 	width: 12.5%;
-	text-decoration: center;
 	font-size: 0.857em;
 	line-height: 1.5;
 	font-weight: 500;
@@ -193,17 +181,15 @@ hr {
 	color: #EEE;
 }
 .navbar .nav li:not(.home) a {
-  -webkit-transition: background-color 0.25s ease-out;
-     -moz-transition: background-color 0.25s ease-out;
-      -ms-transition: background-color 0.25s ease-out;
-       -o-transition: background-color 0.25s ease-out;
-          transition: background-color 0.25s ease-out; 
+-webkit-transition: background-color 0.25s ease-out;
+   -moz-transition: background-color 0.25s ease-out;
+    -ms-transition: background-color 0.25s ease-out;
+     -o-transition: background-color 0.25s ease-out;
+        transition: background-color 0.25s ease-out; 
 }
 .navbar .nav li a:hover { background-color: #F0A40C; }
-.navbar-fixed-top .nav .register a { border-top: 0px solid #5BB75B; color: #0D0; }
-.navbar .nav .spacer {
-	margin-right: 25%;
-}
+.navbar-fixed-top .nav .register a { border-top: 0px solid #5BB75B; color: #0E0; }
+.navbar .nav .spacer { margin-right: 25%; }
 .navbar .nav .home {
 	position: absolute;
 	top: 12px;
@@ -222,6 +208,9 @@ hr {
 	width: 8em;
 	line-height: 2.5em;
 	-webkit-border-radius: 8em 2.5em;
+	   -moz-border-radius: 8em/2.5em;
+	     -o-border-radius: 8em/2.5em;
+	        border-radius: 8em/2.5em;
 	text-transform: none;
 	letter-spacing: 0em;
 	text-shadow: none;
@@ -277,7 +266,7 @@ hr {
 .speakers .funnel {
 	outline: 0.8em solid #E3E3E3;
 	background: #E3E3E3;
-	outline: 0.8em solid rgba(0,0,0,0.1);
+	outline-color: rgba(0,0,0,0.1);
 	background: rgba(0,0,0,0.1);
 }
 
@@ -353,7 +342,6 @@ hr {
 .schedule .track { width: 27%; }
 .schedule .notice {
 	position: absolute;
-	top: 2.3em;
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -381,8 +369,8 @@ hr {
 	top: 0;
 	bottom: 0;
 	overflow: hidden;
-	margin: 0 0 0 -640px;
-	width: 1280px;
+	margin: 0 0 0 -600px;
+	width: 1200px;
 	z-index: 0;
 	border-top: 1px solid #CCC;
 }
@@ -392,22 +380,25 @@ hr {
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 	padding: 2em 1.5em 2em 2em;
 	color: #EEE;
+	background: #333;
 	background: rgba(50,50,50,0.95);
 }
 #venue h3 { margin-top: 2em; }
 #venue h3.large {
 	font-size: 2em;
-	margin-top: 0;
+	line-height: 1.25;
+	margin-top: 0.3em;
 	color: white;
 }
 #venue .description {
 	padding: 0;
 	margin: -1.5em 0 3em;
-	color: gray;
+	color: #F0A40C;
 	font-weight: 300;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	word-spacing: 0.2em;	
+	word-spacing: 0.2em;
+	line-height: 2;
 }
 #venue .description strong { font-weight: 400; color: white; margin-right: 1em; }
 #venue .divider {
@@ -427,9 +418,16 @@ hr {
 	color: #999;
 	text-shadow: #CCC 0px 1px 0px, #555 0px -1px 0px;
 }
-.movie-credits {
-	padding-left: 100px;
+.credits .description { padding: 0 0 0 4em; }
+h3.hasgeek a {
+	display: inline-block;
+	overflow: hidden;
+	text-indent: -999em;
+	width: 109px;
+	height: 30px;
+	background: url(../img/hg-name.png) no-repeat scroll center left;
 }
+.movie-credits { padding-left: 100px; margin-top: 0; }
 .movie-credits dt {
 	clear: both;
 	float: left;
@@ -446,15 +444,7 @@ hr {
 	font-weight: 600;
 	line-height: 1.75;
 }
-h3.hasgeek a {
-	display: inline-block;
-	overflow: hidden;
-	text-indent: -999em;
-	width: 109px;
-	height: 30px;
-	background: url(../img/hg-name.png) no-repeat scroll center left;
-}
-.credits .description { padding: 0 0 0 4em; }
+
 
 
 footer { background: black; }
