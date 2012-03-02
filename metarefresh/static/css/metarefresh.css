@@ -324,7 +324,15 @@ hr {
 .sponsor-community:after{ content: "Community"; }
 
 
-#program .description { padding: 0 0 0 4em; }
+.notice {
+	border: 1px solid #000;
+	text-align: left;
+	padding: 1em;
+	margin: 0.25em 0 1.5em;
+	overflow: auto;
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+.notice p { margin-bottom: 0; }
 #program .funnel {
 	background: #DDD;
 	background: rgba(0,0,0,0.2);
@@ -340,28 +348,56 @@ hr {
 	margin-bottom: 1.5em;
 }
 #program .funnel .btn i { font-size: 0.8em; }
+
 .schedule {
+	display: none;
 	margin-bottom: 1em;
-	position: relative;
 	overflow: auto;
 }
 .schedule .time { width: 19%; }
 .schedule .track { width: 27%; }
-.schedule .notice {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	border: 1px solid #EEE;
-	background: #FFF;
-	background: rgba(10,10,10,0.85);
-	color: #EEE;
-	font-weight: bold;
-	text-align: center;
-	padding: 5em 4em 0;
-	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+
+.preview h3 { margin-top: 0; }
+.proposal {
+	margin-bottom: 3em;
+	padding-right: 4em;
 }
+.proposal h4 {
+	font-size: 1.2em;
+	line-height: 1.4;
+	margin-bottom: 0.2em;
+}
+
+.videos { margin-top: 3em; }
+.session-video { margin-bottom: 1.5em; }
+.session-video a { display: block; }
+.session-video a:hover { text-decoration: none; }
+.session-video a:hover .thumbnail { outline: 0.75em solid rgba(0,0,0,0.1); }
+.session-video a:hover h4 { color: #F0A40C; }
+.session-video h4 {
+	font-weight: 500;
+	color: black;
+	margin-top: 0;
+}
+.session-video h5 {
+	margin: 0.5em 0;
+	color: gray;
+/*	font-size: 0.786em;*/
+	font-weight: 500;
+	text-transform: uppercase;
+}
+.session-video h5 a { display: inline; }
+.session-video .thumbnail {
+	border: none;
+	padding: 0;
+	margin-left: 0;
+	margin-right: 16px;
+	-webkit-box-shadow: 1px 1px 1px #BBB;
+	   -moz-box-shadow: 1px 1px 1px #BBB;
+	        box-shadow: 1px 1px 1px #BBB;
+}
+
+
 
 
 #venue { padding-bottom: 0; }

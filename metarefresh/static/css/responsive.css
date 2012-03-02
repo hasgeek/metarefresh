@@ -75,23 +75,10 @@
 	
 	#program .funnel .btn { padding-left: 0.35em; padding-right: 0.35em; }
 	.schedule { margin-left: -20px; margin-right: -20px; }
-	.schedule h3 { display: none; }
-	.schedule table { display: none; }
 	.schedule .time { width: 13%; }
 	.schedule .track { width: 29%; }
 	.schedule tbody tr td:first-child { font-size: 11px; }
-	.schedule .notice {
-		position: static;
-		overflow: auto;
-		padding: 1em;
-		margin: 0 20px;
-		background: none;
-		color: inherit;
-		text-align: left;
-		font-weight: normal;
-		border-color: #000;
-	}
-	.schedule .notice p { margin-bottom: 0; }
+	.proposal { padding-right: 0; }
 	
 	#venue .map {
 		position: static;
@@ -131,8 +118,20 @@
 	.row > .sponsor.span6:nth-of-type(odd) { width: 47.5%; clear: left; }
 	.row > .sponsor.span6:nth-of-type(even) { width: 47.5%; float: right; }
 	
-	#program .span4 { float: right; width: 55%; }
-	#program .span8 { float: left; width: 40%; }
+	#program .span4 { float: right; width: 50%; margin-left: 5%; }
+	#program .span8 { float: none; }
+	#program .sidebar { float: none; width: auto; margin-left: 0; }
+	.proposal { padding-right: 10%; }
+	.session-video {
+		float: left;
+		width: 50%;
+		padding-right: 5%;
+		-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	}
+	.session-video:nth-child(odd)  { padding-right: 0; float: left;  width: 48%; clear: left; }
+	.session-video:nth-child(even) { padding-right: 0; float: right; width: 48%; }
+	.session-video .thumbnail { float: left; width: 50%; }
+	.session-video h5 { clear: left; }
 	
 	#venue .map {
 		width: 100%;
@@ -199,22 +198,9 @@
 	
 	.description { padding-right: 2em; }
 	
-	#program .span4,
-	#program .span8 { width: 352px; }
-	.schedule h3 { display: none; }
-	.schedule table { display: none; }
-	.schedule .notice {
-		position: static;
-		overflow: auto;
-		padding: 1em;
-		margin: 0 20px;
-		background: none;
-		color: inherit;
-		text-align: left;
-		font-weight: normal;
-		border-color: #000;
-	}
-	.schedule .notice p { margin-bottom: 0; }
+	#program .span4 { width: 290px; }
+	#program .span8 { width: 414px; }
+	.proposal { padding-right: 1.5em; }
 	
 	#venue .details { padding-top: 1em; padding-bottom: 1em; }
 }
