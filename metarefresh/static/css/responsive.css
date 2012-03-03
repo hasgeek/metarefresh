@@ -75,9 +75,12 @@
 	
 	#program .funnel .btn { padding-left: 0.35em; padding-right: 0.35em; }
 	.schedule { margin-left: -20px; margin-right: -20px; }
+	.schedule h3 { display: none; margin-left: 13%; }
 	.schedule .time { width: 13%; }
 	.schedule .track { width: 29%; }
-	.schedule tbody tr td:first-child { font-size: 11px; }
+	.schedule td { padding: 6px 8px; }
+	.schedule tbody tr td:first-child { font-size: 11px; padding: 6px 4px; }
+	
 	.proposal { padding-right: 0; }
 	
 	#venue .map {
@@ -118,6 +121,9 @@
 	.row > .sponsor.span6:nth-of-type(odd) { width: 47.5%; clear: left; }
 	.row > .sponsor.span6:nth-of-type(even) { width: 47.5%; float: right; }
 	
+	.schedule { margin-left: -40px; margin-right: -40px; }
+	.schedule tbody tr td { padding: 8px 10px; }
+	.schedule tbody tr td:first-child { font-size: 12px; padding: 8px; }
 	#program .span4 { float: right; width: 50%; margin-left: 5%; }
 	#program .span8 { float: none; }
 	#program .sidebar { float: none; width: auto; margin-left: 0; }
@@ -202,7 +208,7 @@
 	#program .span8 { width: 414px; }
 	.proposal { padding-right: 1.5em; }
 	
-	#venue .details { padding-top: 1em; padding-bottom: 1em; }
+	#venue .details { width: 352px; padding-top: 1em; padding-bottom: 1em; }
 }
 
 /* Large desktop */
@@ -211,5 +217,5 @@
 	.web-history { width: 700px; margin-left: -140px; }
 	#venue .spread { background: none; margin-bottom: 6em; }
 	#venue .map { border: 1px solid #CCC; }
-	#venue .details { margin-left: 747px; }
+	#venue .details { margin-right: -17px; }
 }

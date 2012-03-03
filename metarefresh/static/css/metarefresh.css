@@ -350,12 +350,26 @@ hr {
 #program .funnel .btn i { font-size: 0.8em; }
 
 .schedule {
-	display: none;
-	margin-bottom: 1em;
+	margin-bottom: 2em;
 	overflow: auto;
 }
 .schedule .time { width: 19%; }
 .schedule .track { width: 27%; }
+.schedule table { border: 1px solid #DDD; }
+.schedule th,
+.schedule .time,
+.schedule .track-2 { background: rgba(0,0,0,0.1); }
+.schedule thead th { text-align: center; }
+.schedule .table tbody tr:hover td { background: white; }
+.schedule td { padding: 0.75em 1em 1.5em; }
+.schedule td[colspan="3"] {
+	padding: 1.125em 1em;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	color: gray;
+}
+.schedule td h4 { margin-bottom: 0.3em; }
 
 .preview h3 { margin-top: 0; }
 .proposal {
