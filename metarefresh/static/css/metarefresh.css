@@ -295,7 +295,6 @@ hr {
 	        box-shadow: none;
 }
 .sponsor.empty {
-	/* FIXME: fallback for non-box-shadow browsers */
 	background: rgba(200,200,200,0.2);
 	-webkit-box-shadow: inset 1px 1px 1px #BBB;
 	   -moz-box-shadow: inset 1px 1px 1px #BBB;
@@ -358,7 +357,7 @@ hr {
 .schedule table { border: 1px solid #DDD; }
 .schedule th,
 .schedule .time,
-.schedule .track-2 { background: rgba(0,0,0,0.1); }
+.schedule .track-2 { background: #E3E3E3; background: rgba(0,0,0,0.1); }
 .schedule thead th { text-align: center; }
 .schedule .table tbody tr:hover td { background: white; }
 .schedule td { padding: 0.75em 1em 1.5em; }
@@ -386,7 +385,7 @@ hr {
 .session-video { margin-bottom: 1.5em; }
 .session-video a { display: block; }
 .session-video a:hover { text-decoration: none; }
-.session-video a:hover .thumbnail { outline: 0.75em solid rgba(0,0,0,0.1); }
+.session-video a:hover .thumbnail { outline: 0.75em solid #E3E3E3; outline-color: rgba(0,0,0,0.1); }
 .session-video a:hover h4 { color: #F0A40C; }
 .session-video h4 {
 	font-weight: 500;
@@ -467,6 +466,7 @@ hr {
 
 .credits {
 	padding: 5em 0 9em;
+	background: #C7C4B8;
 	background: rgba(60,50,0,0.25);
 }
 .credits .container { padding-top: 4em; }
