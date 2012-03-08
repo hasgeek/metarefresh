@@ -1,12 +1,78 @@
-{% extends 'baseframe.html' %}
 
-{% block title %}Meta Refresh{% endblock %}
-{% block description %}A conference on front-end engineering{% endblock %}
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-{% block headerbox %}
-{% include "baseframe/networkbar.html" -%}
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-<header class="header">
+  <title>Meta Refresh</title>
+  <meta name="DC.title" content="Meta Refresh"/>
+  <meta name="description" content="A conference on front-end engineering">
+  <meta name="author" href="/humans.txt">
+
+  <link rel="icon" href="/favicon.ico"/>
+
+  <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Included CSS Files -->
+  <link rel="stylesheet" href="baseframe/css/bootstrap.css"/>
+  <link rel="stylesheet" href="baseframe/css/responsive.css"/>
+  <link rel="stylesheet" href="baseframe/css/chosen.css"/>
+  <link rel="stylesheet" href="baseframe/css/baseframe.css"/>
+  <link rel="stylesheet" href="static/css/metarefresh.css"/>
+  <link rel="stylesheet" href="static/css/responsive.css"/>
+  <!-- FIXME: This css/ie.css doesn't exist right now. -->
+
+  <!--[if lt IE 9]>
+    <link rel="stylesheet" href="/baseframe/css/ie.css"/>
+  <![endif]-->
+</head>
+<body>
+  <div id="root">
+    <!-- headerbox -->
+    
+<div id="hg-bar" class="no-print">
+  <div class="container">
+    <ul id="hg-barlinks">
+      <li><a href="http://hasgeek.com/"><strong><span class="hg-h">Has</span><span class="hg-g">Geek</span></strong></a></li>
+      <li><a href="http://blog.hasgeek.com/">Blog</a></li>
+      <li><a href="http://wiki.hasgeek.in/">Wiki</a></li>
+      <li><a href="http://jobs.hasgeek.com/">Jobs</a></li>
+      <li><a href="http://hasgeek.tv/">TV</a></li>
+      <li><a href="http://funnel.hasgeek.com/">Funnel</a></li>
+      <li><a href="http://geekup.in/">GeekUp</a></li>
+      <li>
+        <a href="#" class="hg-submenu">Events</a>
+        <ul>
+          <li><a href="http://workshop.cartonama.com/">Cartonama Workshop</a></li>
+          <li><a href="http://metarefresh.in/">Meta Refresh</a></li>
+          <li><a href="http://rootconf.com/">Rootconf</a></li>
+          <li><a href="#">Inbox Alert</a></li>
+          <li><a href="#">The Fifth Elephant</a></li>
+          <li><a href="#">Mobile Web</a></li>
+          <li><a href="http://cartonama.com/">Cartonama Conference</a></li>
+          <li><a href="#">PayStation</a></li>
+          <li><a href="http://jsfoo.in/">JSFoo</a></li>
+          <li><a href="http://droidcon.in/">Droidcon 2012</a></li>
+          <li class="hg-menu-section">Past events</li>
+          <li><a href="http://droidcon.in/">Droidcon 2011</a></li>
+          <li><a href="http://phpcloud.hasgeek.com/">Scaling PHP in the Cloud</a></li>
+          <li><a href="http://androidcamp.hasgeek.com/">AndroidCamp</a></li>
+          <li><a href="http://www.doctypehtml5.in/">DocType HTML5</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div><header class="header">
 	<div class="container">
 		<div class="row">
 			<div class="web-history span9">
@@ -59,11 +125,10 @@
 	</div><!-- /navbar -->
 </header>
 
-{% endblock %}
 
+    <!-- /headerbox -->
 
-
-{% block main %}
+    
 
 <section id="about" class="section">
 	<div class="container">
@@ -81,7 +146,7 @@
 				<ul class="speakers clearfix">
 					<li class="funnel">
 						<p class="avatar"><a href="http://funnel.hasgeek.com/metarefresh/"><img alt="" src="http://placehold.it/80&amp;text=You"></a></p>
-						{# <h5>Now Open</h5> #}
+						
 						<p class="bio">Propose or vote for sessions in the <a href="http://funnel.hasgeek.com/metarefresh/">HasGeek Funnel &rarr;</a></p>
 					</li>
 				</ul>
@@ -167,95 +232,7 @@
 <section id="program" class="section">
 	<div class="container">
 		<h2>Programme</h2>
-		{# Uncomment this when the schedule is ready
-		<div class="schedule">
-			<h3>Schedule</h3>
-			<table class="table">
-				<colgroup class="time"></colgroup> 
-				<colgroup class="track track-1"></colgroup>
-				<colgroup class="track track-2"></colgroup>
-				<colgroup class="track track-3"></colgroup>
-				<thead>
-					<tr>
-						<th>Time</th>
-						<th>Track 1 (Hall A)</th>
-						<th>Track 2 (Hall B)</th>
-						<th>Track 3 (Hall C)</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>09:00 - 09:45</td>
-						<td colspan="3">Registration</td>
-					</tr>
-					<tr>
-						<td>09:45 - 10:00</td>
-						<td colspan="3">Introduction</td>
-					</tr>
-					<tr>
-						<td>10:00 - 10:45</td>
-						<td>
-							<h4><a href="http://funnel.hasgeek.com/metarefresh/112-secure-cross-messaging-storage-file-api-and-urls-with-html5-css">Secure - Cross Messaging, Storage, File API and URLs with HTML5 &amp; CSS</a></h4>
-							<p>Bishan Singh Kochher</p>
-						</td>
-						<td>
-							<h4><a href="http://funnel.hasgeek.com/metarefresh/96-responsive-web-design-with-css3-media-queries">Responsive Web Design with CSS3 Media Queries</a></h4>
-							<p>Ramesh Selvam</p>
-						</td>
-						<td>
-							<h4><a href="#">CSS Frameworks</a></h4>
-							<p>Arjun Kumar</p>
-						</td>
-					</tr>
-					<tr>
-						<td>10:45 - 11:30</td>
-						<td>
-							<h4><a href="#">Typography for the Web</a></h4>
-							<p>Gaurav</p>
-						</td>
-						<td>
-							<h4><a href="#">Bootstraps and Boilerplates</a></h4>
-							<p>Varun S.</p>
-						</td>
-						<td>
-							<h4><a href="#">Building Accessible Websites</a></h4>
-							<p>Shilpa Sharma</p>
-						</td>
-					</tr>
-					<tr>
-						<td>10:00 - 10:45</td>
-						<td>
-							<h4><a href="http://funnel.hasgeek.com/metarefresh/112-secure-cross-messaging-storage-file-api-and-urls-with-html5-css">Secure - Cross Messaging, Storage, File API and URLs with HTML5 &amp; CSS</a></h4>
-							<p>Bishan Singh Kochher</p>
-						</td>
-						<td>
-							<h4><a href="http://funnel.hasgeek.com/metarefresh/96-responsive-web-design-with-css3-media-queries">Responsive Web Design with CSS3 Media Queries</a></h4>
-							<p>Ramesh Selvam</p>
-						</td>
-						<td>
-							<h4><a href="#">CSS Frameworks</a></h4>
-							<p>Arjun Kumar</p>
-						</td>
-					</tr>
-					<tr>
-						<td>10:45 - 11:30</td>
-						<td>
-							<h4><a href="#">Typography for the Web</a></h4>
-							<p>Gaurav</p>
-						</td>
-						<td>
-							<h4><a href="#">Bootstraps and Boilerplates</a></h4>
-							<p>Varun S.</p>
-						</td>
-						<td>
-							<h4><a href="#">Building Accessible Websites</a></h4>
-							<p>Shilpa Sharma</p>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div><!-- /schedule -->
-		#}
+		
 		<div class="row">
 			<div class="span4 pull-right">
 				<div class="notice legible">
@@ -390,4 +367,35 @@
 	</div>
 </section><!-- /credits -->
 
-{% endblock %}
+
+    <!-- /container -->
+    <div id="root_footer"></div>
+  </div>
+  <!-- /root -->
+  
+  <footer>
+    <div class="footer-inner">
+      <div class="container">
+        
+          <span class="no-print">Copyright &copy; 2010-12 HasGeek</span>
+        
+      </div>
+    </div>
+  </footer>
+  
+
+  <!-- Included JS Files -->
+  <script type="text/javascript" src="/baseframe/js/jquery-1.7.1.js"></script>
+  <script type="text/javascript" src="/baseframe/js/jquery.form.js"></script>
+  <script type="text/javascript" src="/baseframe/js/tiny_mce/jquery.tinymce.js"></script>
+  <script type="text/javascript" src="/baseframe/js/bootstrap-datepicker.js"></script>
+  <script type="text/javascript" src="/baseframe/js/chosen.jquery.js"></script>
+  <script type="text/javascript" src="/baseframe/js/bootstrap/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/baseframe/js/networkbar.js"></script>
+  <script type="text/javascript" src="/baseframe/js/baseframe.js"></script>
+  <script type="text/javascript" src="/static/js/jquery.smooth-scroll.min.js"></script>
+  <script type="text/javascript" src="/static/js/metarefresh.js"></script>
+  
+
+</body>
+</html>
