@@ -6,3 +6,5 @@ GA_CODE = 'UA-19123154-19'
 TYPEKIT_CODE = 'wxg4owb'
 #: Timezone for displayed datetimes
 TIMEZONE = 'Asia/Calcutta'
+#: Site id for networkbar
+SITE_ID = 'events'
