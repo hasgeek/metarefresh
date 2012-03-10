@@ -8,7 +8,7 @@ Website server for metarefresh.
 from flask import Flask
 from flaskext.assets import Environment, Bundle
 from baseframe import baseframe, baseframe_js, baseframe_css
-from os import environ
+#from os import environ
 from coaster import configureapp
 
 # First, make an app and config it
@@ -24,5 +24,5 @@ assets.register('js_all', js)
 assets.register('css_all', css)
 
 import metarefresh.views
-if environ.get('METAREFRESH_ENV') == 'prod':
-    import metarefresh.loghandler
+#if environ.get('METAREFRESH_ENV') == 'prod':
+#    import metarefresh.loghandler
