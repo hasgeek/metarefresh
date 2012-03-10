@@ -9,6 +9,47 @@ html, body {
 	font: 14px futura-pt, 'Futura PT', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	background: #F3F3F3 url(../img/stucco.png) repeat top left;
 }
+
+#hg-bar {
+  background: #222;
+  color: #888;
+  border-bottom: 1px solid #666;
+}
+#hg-bar ul#hg-barlinks > li a, #hg-bar ul#hg-usertools > li a,
+#hg-bar ul#hg-barlinks > li a:visited, #hg-bar ul#hg-usertools > li a:visited {
+  color: #888;
+}
+#hg-bar ul#hg-barlinks > li a.hg-submenu:after, #hg-bar ul#hg-usertools > li a.hg-submenu:after {
+  border-top: 4px solid #ffffff;
+}
+#hg-bar ul#hg-barlinks > li ul, #hg-bar ul#hg-usertools > li ul {
+  background: #222;
+  color: #888;
+  border: 1px solid #666;
+  border-top: 0;
+  border-bottom: 0;
+}
+#hg-bar ul#hg-barlinks > li.selected > a, #hg-bar ul#hg-usertools > li.selected > a {
+  color: #888;
+}
+#hg-bar ul#hg-barlinks > li:hover > a, #hg-bar ul#hg-barlinks > li > a:focus, #hg-bar ul#hg-usertools > li:hover > a, #hg-bar ul#hg-usertools > li > a:focus {
+  background: #444;
+  border-top: 2px solid #444;
+  color: white;
+}
+#hg-bar ul#hg-barlinks > li.selected:hover > a, #hg-bar ul#hg-barlinks > li.selected > a:focus, #hg-bar ul#hg-usertools > li.selected:hover > a, #hg-bar ul#hg-usertools > li.selected > a:focus {
+  border-top: 2px solid #df5e0e;
+}
+#hg-bar ul#hg-barlinks > li ul li:hover > a, #hg-bar ul#hg-usertools > li ul li:hover > a {
+  text-decoration: none;
+  background: #444;
+  color: white;
+}
+#hg-bar ul#hg-barlinks > li:hover > ul, #hg-bar ul#hg-barlinks > li a:focus > ul, #hg-bar ul#hg-usertools > li:hover > ul, #hg-bar ul#hg-usertools > li a:focus > ul {
+  border: 1px solid #666;
+  border-top: 0;
+}
+
 h1, h2, h3, h4, dd, .navbar .home {
 	font-family: futura-pt, 'Futura PT', Futura, 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -117,7 +158,7 @@ hr {
 .web-history dt:nth-of-type(17) { margin-left: 90px; }
 .web-history dt:nth-of-type(18) { margin-left: 70px; }
 .web-history dt:nth-of-type(19) { margin-left: 50px; }
-/*.web-history dt:nth-of-type() { margin-left: 20px; }*/
+.web-history dt:nth-of-type(20) { margin-left: 20px; }
 /*.web-history dt:nth-of-type() { margin-left: -10px; }*/
 
 
