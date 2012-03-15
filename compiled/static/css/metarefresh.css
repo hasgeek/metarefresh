@@ -161,9 +161,14 @@ hr {
 .web-history dt:nth-of-type(20) { margin-left: 20px; }
 /*.web-history dt:nth-of-type() { margin-left: -10px; }*/
 
+.metarefresh-logo {
+	vertical-align: middle; 
+	text-align: center;
+}
 
-
-
+.metarefresh-logo img {
+	height: 140px;
+}
 
 .banner { padding-top: 3em; }
 .banner h1,
