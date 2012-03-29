@@ -8,7 +8,7 @@
 	.header {
 		margin-bottom: 0;
 		padding-bottom: 0;
-		background: black url(../img/earth.jpg) no-repeat scroll -220px 0;
+		background: black url(../img/earth.jpg) no-repeat scroll -220px 32px;
 	}
 	.row > .web-history { display: none; background: none; }
 	
@@ -109,7 +109,7 @@
 @media (min-width: 540px) and (max-width:767px) {
 	.container { padding: 0 40px; }
 	
-	.header { background-position: -150px 0; margin-bottom: 1em; } 
+	.header { background-position: -150px 32px; margin-bottom: 1em; } 
 	.row > .banner { float: right; width: 30em; }
 	.banner h1 { margin: 1em auto; }
 	
@@ -160,7 +160,7 @@
 @media (min-width: 768px) and (max-width: 980px) {
 	.pull-right { float: right; }
 	
-	.header { background: black url(../img/earth.jpg) no-repeat scroll -220px 0; }
+	.header { background: black url(../img/earth.jpg) no-repeat scroll -226px 32px; }
 	.header .container { width: auto; margin-left: 20px; margin-right: 20px; }
 	.row > .web-history {
 		float: left;
