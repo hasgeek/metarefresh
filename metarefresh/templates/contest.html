@@ -1,0 +1,107 @@
+{% extends 'baseframe.html' %}
+
+{% block title %}Meta Refresh - Take Charge{% endblock %}
+{% block description %}An initiative to take good web design to our public institutions{% endblock %}
+
+{% block headerbox %}
+
+<header class="header">
+  {% include "baseframe/networkbar.html" -%}
+	<div class="container">
+		<div class="row">
+			<div class="banner contest span12">
+				<h2 class="metarefresh-logo"><a href="./"><img src="static/img/Logo_Yellow.png"></a></h2>
+				<h1 class="large">Take <strong>Charge</strong></h1>
+			</div>
+		</div><!--/row-->
+	</div><!-- /container -->
+	
+</header>
+
+{% endblock %}
+
+
+
+{% block main %}
+
+
+<section id="contest">
+	<div class="container">
+		<div class="row">
+			<div class="description span8">
+				<ul class="large">
+					<li>Pick an Indian Government website of your choice.</li>
+					<li>Redesign the homepage by introducing the concepts of design, aesthetics, information architecture and usability.</li>
+					<li>Awe the world.</li>
+				</ul>
+
+				<p class="legible">If it is hard for you to think of them, here are a few who have expressed their interest in taking a look at how they could be better:</p>
+				
+				<ul class="legible">
+					<li><a href="http://mcgm.gov.in/">Municipal Corporation of Greater Mumbai</a></li>
+					<li><a href="http://www.bescom.org/">Bangalore Electric Supply Company</a></li>
+					<li><a href="http://delhigovt.nic.in/bhagidari.asp">Bhagidari of Delhi Govt.</a></li>
+					<li><a href="http://www.bestundertaking.com/">B.E.S.T.</a></li>
+					<li><a href="http://censusindia.gov.in/">Census of India</a></li>
+					<li><a href="http://www.doccentre.net/">Centre for Education and Documentation</a></li>
+				</ul>
+			</div>
+			
+			<div class="legible span4">
+				<p>It’s 2012 and the web today is undisputedly the worlds biggest platform. Over the past two decades most things about the web has changed — be it the utility, the technologies, or even the interfaces.</p>
+
+				<p>Sadly most Indian Government institutions are still sleeping in the past, their websites appear to be totally aloof about these changes— directionless, heartless and a pain for the users. All of us have have cribbed about it at least once in our past. Many around us express their annoyance about this everyday.</p>
+
+				<p>We think it&#8217;s high time to be the change. It&#8217;s time to show the community, the Government and the people at large how you think these websites should be shaped going forward.</p>
+			</div>
+		</div><!-- /row -->
+		<hr class="divider">
+	</div><!-- /container -->
+</section><!-- /contest -->
+
+
+
+<section id="rules" class="section">
+	<div class="container">
+		<h2>Rules</h2>
+		<div class="row">
+			<div class="description legible span8">
+				<ul>
+					<li>We ♥ HTML, CSS and JavaScript. Please submit solutions that render best on a browser, not in Photoshop, not in Fireworks, not in Flash, not as an image.</li>
+					<li>Compatibility with the latest versions of Chrome and Firefox should do.</li>
+					<li>Feel free to use any CSS/JavaScript frameworks/libraries that make your work easier.</li>
+					<li>Do <em>not</em> use any resources that you do not have rights for. This applies as much to photos and graphics as it does to code.</li>
+					<li>Entries should be purely front-end and not have any dependency on the server or server-side technologies.</li>
+				</ul>
+			</div><!-- span8 -->
+			<div class="span4">
+				<div class="notice legible">
+					<p>Write to us with any questions or doubts you may have about this.</p>
+					<p class="large"><a href="mailto:metarefresh@hasgeek.in">metarefresh@hasgeek.in</a></p>
+				</div>
+			</div>
+		</div><!-- /row -->
+		<hr class="divider">
+	</div><!-- /container -->
+</section><!-- /rules -->
+
+
+<section id="submission" class="section">
+	<div class="container">
+		<h2>Submission</h2>
+		<div class="row">
+			<div class="span8 offset2 highlight">
+				<p class="large">Mail your <a href="http://github.com">Github</a> repository <abbr>URL</abbr> to <a class="btn btn-primary" href="mailto:metarefresh@hasgeek.in">metarefresh@hasgeek.in</a></p>
+			</div>
+			<div class="span4 offset2">
+				<p class="secondary">If for some reason you are not comfortable with version control or Github, you can also send us a ZIP of your images, markup and scripts.</p>
+			</div>
+			<div class="span4 deadline">
+				<p class="legible"><strong>Submissions close 19th April.</strong></p>
+			</div>
+		</div><!-- /row -->
+	</div><!-- /container -->
+</section><!-- /submission -->
+
+
+{% endblock %}

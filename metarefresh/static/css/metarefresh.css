@@ -162,13 +162,12 @@ hr {
 /*.web-history dt:nth-of-type() { margin-left: -10px; }*/
 
 .metarefresh-logo {
-	vertical-align: middle; 
+	vertical-align: middle;
 	text-align: center;
 }
-
-.metarefresh-logo img {
-	height: 140px;
-}
+.metarefresh-logo img { height: 140px; }
+.contest .metarefresh-logo { margin: 0; }
+.contest .metarefresh-logo img { height: 80px; width: auto; margin-left: -350px; }
 
 .banner { padding-top: 3em; }
 .banner h1,
@@ -553,6 +552,23 @@ h3.hasgeek a {
 	line-height: 1.75;
 }
 
+
+#contest .divider { margin-top: 4em; }
+#contest .large { margin-bottom: 2em; }
+#contest .large li { margin-bottom: 1em; }
+
+#rules li { margin-bottom: 1em; }
+
+#submission { padding-bottom: 6em; }
+.highlight {
+	background: #DDD;
+	background: rgba(0,0,0,0.2);
+	padding: 2em 1.5em 1em;
+	margin-bottom: 1.5em;
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+#submission .highlight { text-align: center; margin-bottom: 3em; }
+#submission .deadline { text-align: right; }
 
 
 footer { background: black; }
