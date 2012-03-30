@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <title>Meta Refresh - Take Charge</title>
+  <meta name="DC.title" content="Meta Refresh - Take Charge"/>
+  <meta name="description" content="An initiative to take good web design to our public institutions">
+  <meta name="author" href="/humans.txt">
+
+  <link rel="icon" href="/favicon.ico"/>
+
+  <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Included CSS Files -->
+  <link rel="stylesheet" href="/baseframe/css/bootstrap.css"/>
+  <link rel="stylesheet" href="/baseframe/css/responsive.css"/>
+  <link rel="stylesheet" href="/baseframe/css/chosen.css"/>
+  <link rel="stylesheet" href="/baseframe/css/baseframe.css"/>
+  <link rel="stylesheet" href="/static/css/metarefresh.css"/>
+  <link rel="stylesheet" href="/static/css/responsive.css"/>
+  <!-- FIXME: This css/ie.css doesn't exist right now. -->
+
+  <!--[if lt IE 9]>
+    <link rel="stylesheet" href="/baseframe/css/ie.css"/>
+  <![endif]-->
+    <script type="text/javascript" src="//use.typekit.com/wxg4owb.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+</head>
+<body>
+  <div id="root">
+    <!-- headerbox -->
+    
+
+<header class="header">
+  <div id="hg-bar" class="no-print">
+  <div class="container">
+    <ul id="hg-barlinks">
+      <li><a href="http://hasgeek.com/"><strong><span class="hg-h">Has</span><span class="hg-g">Geek</span></strong></a></li>
+      <li><a href="http://blog.hasgeek.com/">Blog</a></li>
+      <li><a href="http://wiki.hasgeek.in/">Wiki</a></li>
+      <li><a href="http://jobs.hasgeek.com/">Jobs</a></li>
+      <li><a href="http://hasgeek.tv/">TV</a></li>
+      <li><a href="http://funnel.hasgeek.com/">Funnel</a></li>
+      <li><a href="http://geekup.in/">GeekUp</a></li>
+      <li class="selected">
+        <a href="#" class="hg-submenu">Events</a>
+        <ul>
+          <li><a href="http://metarefresh.in/">Meta Refresh</a></li>
+          <li><a href="http://rootconf.com/">Rootconf</a></li>
+          <li><a href="#">Inbox Alert</a></li>
+          <li><a href="#">The Fifth Elephant</a></li>
+          <li><a href="#">Mobile Web</a></li>
+          <li><a href="http://cartonama.com/">Cartonama Conference</a></li>
+          <li><a href="#">PayStation</a></li>
+          <li><a href="http://jsfoo.in/">JSFoo</a></li>
+          <li><a href="http://droidcon.in/">Droidcon 2012</a></li>
+          <li class="hg-menu-section">Past events</li>
+          <li><a href="http://workshop.cartonama.com/">Cartonama Workshop</a></li>
+          <li><a href="http://droidcon.in/">Droidcon 2011</a></li>
+          <li><a href="http://phpcloud.hasgeek.com/">Scaling PHP in the Cloud</a></li>
+          <li><a href="http://androidcamp.hasgeek.com/">AndroidCamp</a></li>
+          <li><a href="http://www.doctypehtml5.in/">DocType HTML5</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div><div class="container">
+		<div class="row">
+			<div class="banner contest span12">
+				<h2 class="metarefresh-logo"><a href="./"><img src="static/img/Logo_Yellow.png"></a></h2>
+				<h1 class="large">Take <strong>Charge</strong></h1>
+			</div>
+		</div><!--/row-->
+	</div><!-- /container -->
+	
+</header>
+
+
+    <!-- /headerbox -->
+
+    
+
+
+<section id="contest">
+	<div class="container">
+		<div class="row">
+			<div class="description span8">
+				<ul class="large">
+					<li>Pick an Indian Government website of your choice.</li>
+					<li>Redesign the homepage by introducing the concepts of design, aesthetics, information architecture and usability.</li>
+					<li>Awe the world.</li>
+				</ul>
+
+				<p class="legible">If it is hard for you to think of them, here are a few who have expressed their interest in taking a look at how they could be better:</p>
+				
+				<ul class="legible">
+					<li><a href="http://mcgm.gov.in/">Municipal Corporation of Greater Mumbai</a></li>
+					<li><a href="http://www.bescom.org/">Bangalore Electric Supply Company</a></li>
+					<li><a href="http://delhigovt.nic.in/bhagidari.asp">Bhagidari of Delhi Govt.</a></li>
+					<li><a href="http://www.bestundertaking.com/">B.E.S.T.</a></li>
+					<li><a href="http://censusindia.gov.in/">Census of India</a></li>
+					<li><a href="http://www.doccentre.net/">Centre for Education and Documentation</a></li>
+				</ul>
+			</div>
+			
+			<div class="legible span4">
+				<p>It’s 2012 and the web today is undisputedly the worlds biggest platform. Over the past two decades most things about the web has changed — be it the utility, the technologies, or even the interfaces.</p>
+
+				<p>Sadly most Indian Government institutions are still sleeping in the past, their websites appear to be totally aloof about these changes— directionless, heartless and a pain for the users. All of us have have cribbed about it at least once in our past. Many around us express their annoyance about this everyday.</p>
+
+				<p>We think it&#8217;s high time to be the change. It&#8217;s time to show the community, the Government and the people at large how you think these websites should be shaped going forward.</p>
+			</div>
+		</div><!-- /row -->
+		<hr class="divider">
+	</div><!-- /container -->
+</section><!-- /contest -->
+
+
+
+<section id="rules" class="section">
+	<div class="container">
+		<h2>Rules</h2>
+		<div class="row">
+			<div class="description legible span8">
+				<ul>
+					<li>We ♥ HTML, CSS and JavaScript. Please submit solutions that render best on a browser, not in Photoshop, not in Fireworks, not in Flash, not as an image.</li>
+					<li>Compatibility with the latest versions of Chrome and Firefox should do.</li>
+					<li>Feel free to use any CSS/JavaScript frameworks/libraries that make your work easier.</li>
+					<li>Do <em>not</em> use any resources that you do not have rights for. This applies as much to photos and graphics as it does to code.</li>
+					<li>Entries should be purely front-end and not have any dependency on the server or server-side technologies.</li>
+				</ul>
+			</div><!-- span8 -->
+			<div class="span4">
+				<div class="notice legible">
+					<p>Write to us with any questions or doubts you may have about this.</p>
+					<p class="large"><a href="mailto:metarefresh@hasgeek.in">metarefresh@hasgeek.in</a></p>
+				</div>
+			</div>
+		</div><!-- /row -->
+		<hr class="divider">
+	</div><!-- /container -->
+</section><!-- /rules -->
+
+
+<section id="submission" class="section">
+	<div class="container">
+		<h2>Submission</h2>
+		<div class="row">
+			<div class="span8 offset2 highlight">
+				<p class="large">Mail your <a href="http://github.com">Github</a> repository <abbr>URL</abbr> to <a class="btn btn-primary" href="mailto:metarefresh@hasgeek.in">metarefresh@hasgeek.in</a></p>
+			</div>
+			<div class="span4 offset2">
+				<p class="secondary">If for some reason you are not comfortable with version control or Github, you can also send us a ZIP of your images, markup and scripts.</p>
+			</div>
+			<div class="span4 deadline">
+				<p class="legible"><strong>Submissions close 19th April.</strong></p>
+			</div>
+		</div><!-- /row -->
+	</div><!-- /container -->
+</section><!-- /submission -->
+
+
+
+    <!-- /container -->
+    <div id="root_footer"></div>
+  </div>
+  <!-- /root -->
+  
+  <footer>
+    <div class="footer-inner">
+      <div class="container">
+        
+          <span class="no-print">Copyright &copy; 2010-12 HasGeek</span>
+        
+      </div>
+    </div>
+  </footer>
+  
+
+  <!-- Included JS Files -->
+  <script type="text/javascript" src="/baseframe/js/jquery-1.7.1.js"></script>
+  <script type="text/javascript" src="/baseframe/js/jquery.form.js"></script>
+  <script type="text/javascript" src="/baseframe/js/tiny_mce/jquery.tinymce.js"></script>
+  <script type="text/javascript" src="/baseframe/js/bootstrap-datepicker.js"></script>
+  <script type="text/javascript" src="/baseframe/js/chosen.jquery.js"></script>
+  <script type="text/javascript" src="/baseframe/js/bootstrap/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/baseframe/js/networkbar.js"></script>
+  <script type="text/javascript" src="/baseframe/js/baseframe.js"></script>
+  <script type="text/javascript" src="/static/js/jquery.smooth-scroll.min.js"></script>
+  <script type="text/javascript" src="/static/js/metarefresh.js"></script>
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-19123154-19'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+
+</body>
+</html>
