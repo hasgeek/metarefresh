@@ -93,6 +93,8 @@ hr {
 }
 .btn i { font-weight: 300; font-style: normal; }
 
+/* For image replacement */
+.ir { display: block; border: 0; text-indent: 100%; white-space: nowrap; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
 
 
 #root { margin-bottom: 0; }
@@ -182,6 +184,12 @@ hr {
 	margin: 0.9em auto;
 	line-height: 1.2;
 	color: white;
+}
+.banner h1.ir {
+	width: 250px;
+	height: 140px;
+	background-image: url(../img/Logo_Yellow.png);
+	margin: 0.3em auto 0.5em;
 }
 .banner h2,
 .banner h3 {
