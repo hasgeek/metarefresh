@@ -71,6 +71,9 @@ hr {
 	font-size: 1.714rem;
 	line-height: 1.65;
 }
+ol.large {
+	margin-left: 33px;
+}
 .legible {
 	font-size: 18px;
 	font-size: 1.2857rem;
