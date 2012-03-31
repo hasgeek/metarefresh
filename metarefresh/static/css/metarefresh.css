@@ -324,7 +324,7 @@ hr {
 	outline-color: rgba(0,0,0,0.1);
 	background: rgba(0,0,0,0.1);
 }
-#about .funnel .btn { display: block; }
+#about .funnel .btn { display: block; margin-bottom: 3em; }
 #about .btn i { font-size: 0.8em; }
 
 
@@ -567,8 +567,10 @@ h3.hasgeek a {
 	margin-bottom: 1.5em;
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
+.highlight .btn { display: block; }
 #submission .highlight { text-align: center; margin-bottom: 3em; }
 #submission .deadline { text-align: right; }
+#submission .highlight .btn { display: inline-block; }
 
 
 footer { background: black; }
