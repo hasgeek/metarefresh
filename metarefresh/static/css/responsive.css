@@ -24,6 +24,7 @@
 		text-shadow: #000 -1px 1px 1px;
 		margin: 1.5em auto;
 	}
+	.banner h1.ir { margin-top: 0.75em; }
 	.banner h2,
 	.banner h3 {
 		font-size: 1em;
@@ -34,7 +35,7 @@
 		font-size: 1.4em;
 		text-shadow: #110 -2px 1px 1px, rgba(0,0,0,0.4) 1px 0px 0px;
 	}
-	.banner .register { width: auto; max-width: 21em; margin-top: 4em; }
+	.banner .register { width: auto; max-width: 21em; margin-top: 3em; }
 	.navbar { position: static; margin-top: 2em; border-top: 1px solid #222; }
 	.navbar .container { padding: 0; }
 	.navbar-fixed-top { position: static; }
@@ -178,7 +179,8 @@
 	.web-history dd { font-weight: 400; }
 	.banner { width: 55%; }
 	.callout { font-size: 1.75em; }
-	.banner .register { margin-top: 3em; }
+	.banner h1.ir { margin-top: 0.5em; }
+	.banner .register { margin-top: 2.25em; }
 	
 	.navbar .container { padding: 0; }
 	.navbar .nav li { float: left; width: 12.5%; }
