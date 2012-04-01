@@ -103,8 +103,18 @@
 		font-size: 2em;
 		padding-left: 106px;
 	}
+
+	#takecharge { background-position: -220px -50px; }
+	#takecharge .banner { width: 280px; margin: auto; }
+	#takecharge h2.ir { margin: 0 0 1em 0; }
+	#takecharge h1 {
+		clear: both;
+		margin: 0 0 0 47px;
+		font-size: 4.25em;
+		line-height: 1.1;
+	}
 }
- 
+
 
 /* Inherits base (above) and but specific to portrait tablet */
 @media (min-width: 540px) and (max-width:767px) {
@@ -154,6 +164,8 @@
 	
 	.credits h2 { padding-left: 158px; }
 	.movie-credits { padding-left: 150px; }
+	
+	#takecharge .banner { float: none; width: 420px; }
 }
 
 
@@ -211,6 +223,9 @@
 	.proposal { padding-right: 1.5em; }
 	
 	#venue .details { width: 352px; padding-top: 1em; padding-bottom: 1em; }
+	
+	#takecharge .banner { width: 640px; }
+	#takecharge h1 { font-size: 5em; line-height: 1.59; }
 }
 
 /* Large desktop */

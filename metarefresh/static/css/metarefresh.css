@@ -171,8 +171,6 @@ ol.large {
 	text-align: center;
 }
 .metarefresh-logo img { height: 140px; }
-.contest .metarefresh-logo { margin: 0; }
-.contest .metarefresh-logo img { height: 80px; width: auto; margin-left: -350px; }
 
 .banner { padding-top: 3em; }
 .banner h1,
@@ -563,6 +561,25 @@ h3.hasgeek a {
 	line-height: 1.75;
 }
 
+
+
+#takecharge { background: black url(../img/earth.jpg) no-repeat scroll -200px 32px; }
+#takecharge .banner { padding: 8em 0 5em; width: 750px; margin: auto; }
+#takecharge h1 {
+	text-transform: uppercase;
+	font-size: 6em;
+	line-height: 1.22;
+	margin: 0;
+	text-align: left;
+}
+#takecharge h1 strong { color: #F0A40C; }
+#takecharge h2.ir {
+	float: left;
+	margin: 0 4em 0 0;
+	width: 143px;
+	height: 80px;
+	background-image: url(../img/logo_small.png);
+}
 
 #contest .divider { margin-top: 4em; }
 #contest .large { margin-bottom: 2em; }
