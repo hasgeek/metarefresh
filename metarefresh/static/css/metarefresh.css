@@ -71,9 +71,6 @@ hr {
 	font-size: 1.714rem;
 	line-height: 1.65;
 }
-ol.large {
-	margin-left: 33px;
-}
 .legible {
 	font-size: 18px;
 	font-size: 1.2857rem;
@@ -581,9 +578,9 @@ h3.hasgeek a {
 	background-image: url(../img/logo_small.png);
 }
 
+#contest .description { margin-bottom: 2em; }
 #contest .divider { margin-top: 4em; }
-#contest .large { margin-bottom: 2em; }
-#contest .large li { margin-bottom: 1em; }
+#contest ol.large { margin-bottom: 3em; }
 
 #rules li { margin-bottom: 1em; }
 

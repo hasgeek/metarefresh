@@ -113,6 +113,9 @@
 		font-size: 4.25em;
 		line-height: 1.1;
 	}
+	#contest .large li { margin-left: 1.34em; display: list-item; }
+	#contest .large li { margin-bottom: 1em; }
+	#contest ol.large { margin-bottom: 1em; }
 }
 
 
