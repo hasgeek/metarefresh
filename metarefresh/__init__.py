@@ -9,12 +9,12 @@ from flask import Flask
 from flaskext.assets import Environment, Bundle
 from baseframe import baseframe, baseframe_js, baseframe_css
 #from os import environ
-from coaster import configureapp
+from coaster.app import configure
 
 # First, make an app and config it
 
 app = Flask(__name__, instance_relative_config=True)
-configureapp(app, 'METAREFRESH_ENV')
+configure(app, 'METAREFRESH_ENV')
 
 app.register_blueprint(baseframe)
 assets = Environment(app)

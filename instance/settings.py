@@ -8,3 +8,13 @@ TYPEKIT_CODE = 'wxg4owb'
 TIMEZONE = 'Asia/Calcutta'
 #: Site id for networkbar
 SITE_ID = 'events'
+#: LastUser server
+LASTUSER_SERVER = 'https://auth.hasgeek.com/'
+#: LastUser client id
+#: DO NOT FILL IN THIS VALUE! THIS FILE IS CHECKED INTO GIT
+#: Put the value in development.py or production.py instead
+LASTUSER_CLIENT_ID = ''
+#: LastUser client secret
+#: DO NOT FILL IN THIS VALUE! THIS FILE IS CHECKED INTO GIT
+#: Put the value in development.py or production.py instead
+LASTUSER_CLIENT_SECRET = ''

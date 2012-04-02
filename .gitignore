@@ -8,3 +8,5 @@ test.db
 .sass-cache
 .webassets-cache
 error.log
+instance/development.py
+instance/production.py

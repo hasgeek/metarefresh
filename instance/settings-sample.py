@@ -6,8 +6,10 @@ TYPEKIT_CODE = ''
 SECRET_KEY = 'make this something random'
 #: Timezone for displayed datetimes
 TIMEZONE = 'Asia/Calcutta'
+#: Database backend
+SQLALCHEMY_DATABASE_URI = 'sqlite:///test.db'
 #: LastUser server
-LASTUSER_SERVER = 'https://login.hasgeek.com/'
+LASTUSER_SERVER = 'https://auth.hasgeek.com/'
 #: LastUser client id
 LASTUSER_CLIENT_ID = ''
 #: LastUser client secret
