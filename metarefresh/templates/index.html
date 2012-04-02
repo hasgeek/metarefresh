@@ -353,12 +353,22 @@
 
               var venue = new L.LatLng(12.93568, 77.60416); // geographical point (longitude and latitude)
               var center = new L.LatLng(12.93928, 77.61068);
-              map.setView(center, 15).addLayer(cloudmade);
+              map.setView(venue, 15).addLayer(cloudmade);
 
 
                 var venue_marker = new L.Marker(venue);
                   map.addLayer(venue_marker);
                   venue_marker.bindPopup('Dharmaram College').openPopup();
+
+                  map.on('zoomend', onZoomend);
+				  function onZoomend(){
+					    if(map.getZoom()>=4) {
+
+						map.setView(venue, map.getZoom());
+
+					};
+				};
+
                 </script>
                 </div>
 				<div class="details clearfix span5 pull-right">
