@@ -536,9 +536,12 @@ h3.hasgeek a {
 	display: inline-block;
 	overflow: hidden;
 	text-indent: -999em;
-	width: 109px;
+	/* width: 109px;
 	height: 30px;
-	background: url(../img/hg-name.png) no-repeat scroll center left;
+	background: url(../img/hg-name.png) no-repeat scroll center left; */
+	width: 75px;
+	height: 75px;
+	background: url(../../baseframe/img/logo.png) no-repeat scroll center left;
 }
 .movie-credits { padding-left: 100px; margin-top: 0; }
 .movie-credits dt {
