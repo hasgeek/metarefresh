@@ -478,12 +478,12 @@ hr {
 #venue .map {
 	position: absolute;
 	left: 50%;
-	top: 0;
-	bottom: 0;
+	/*top: 0;*/
+	/*bottom: 0;*/
 	/*overflow: hidden;*/
 	margin: 0 0 0 -600px;
 	height:600px;
-	width: 1200px;
+	width: 800px;
 	z-index: 1;
 	border-top: 1px solid #CCC;
 }

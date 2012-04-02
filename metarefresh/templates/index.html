@@ -353,7 +353,8 @@
 
               var venue = new L.LatLng(12.93568, 77.60416); // geographical point (longitude and latitude)
               var center = new L.LatLng(12.93928, 77.61068);
-              map.setView(venue, 15).addLayer(cloudmade);
+              map.setView(venue, 14).addLayer(cloudmade);
+              map.panTo(venue);
 
 
                 var venue_marker = new L.Marker(venue);
