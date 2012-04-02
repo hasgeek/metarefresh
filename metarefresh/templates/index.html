@@ -4,7 +4,8 @@
 {% block description %}A conference on front-end engineering{% endblock %}
 
 {% block headerbox %}
-
+<link rel="stylesheet" href="static/js/leaflet/leaflet.css" />
+<script src="static/js/leaflet/leaflet.js"></script>
 <header class="header">
   {% include "baseframe/networkbar.html" -%}
 	<div class="container">
@@ -338,9 +339,28 @@
 <section id="venue" class="section">
 	<h2>Venue</h2>
 	<div class="spread">
-		<p class="map"><a title="Dharmaram College on Google Maps" href="http://goo.gl/maps/jYyv"><img src="http://maps.google.com/maps/api/staticmap?markers=color:red%7C12.9359,77.6024&amp;center=12.9339, 77.6193&amp;size=600x300&amp;scale=2&amp;zoom=13&amp;maptype=roadmap&amp;sensor=false"></a></p>
+
 		<div class="container">
+
 			<div class="row">
+					<div id="map" class="map">
+				<script>
+          var map = new L.Map('map');
+          var cloudmadeUrl = 'http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
+              subDomains = ['otile1','otile2','otile3','otile4'],
+              cloudmadeAttrib = '<a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>, <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>';
+              var cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttrib, subdomains: subDomains});
+
+              var venue = new L.LatLng(12.93568, 77.60416); // geographical point (longitude and latitude)
+              var center = new L.LatLng(12.93928, 77.61068);
+              map.setView(center, 15).addLayer(cloudmade);
+
+
+                var venue_marker = new L.Marker(venue);
+                  map.addLayer(venue_marker);
+                  venue_marker.bindPopup('Dharmaram College').openPopup();
+                </script>
+                </div>
 				<div class="details clearfix span5 pull-right">
 					<h3 class="large">Dharmaram College</h3>
 					<p class="description"><strong>Christ University Campus</strong> Bangalore</p>
@@ -357,6 +377,7 @@
 							21 April 2012<br>
 							9:00 am to 6:00 pm
 						</p>
+
 					</div><!-- /timing -->
 				</div><!-- /details -->
 			</div><!-- /row -->

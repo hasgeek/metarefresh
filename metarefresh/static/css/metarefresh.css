@@ -480,12 +480,14 @@ hr {
 	left: 50%;
 	top: 0;
 	bottom: 0;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	margin: 0 0 0 -600px;
+	height:600px;
 	width: 1200px;
-	z-index: 0;
+	z-index: 1;
 	border-top: 1px solid #CCC;
 }
+
 #venue .details {
 	position: relative;
 	z-index: 10;
