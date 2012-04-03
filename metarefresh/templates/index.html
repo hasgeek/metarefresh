@@ -353,20 +353,22 @@
 
               var venue = new L.LatLng(12.9334, 77.6050); // geographical point (longitude and latitude)
               var center = new L.LatLng(12.93928, 77.61068);
+              var mobile_center = new L.LatLng(12.935, 77.591);
               map.setView(venue, 14).addLayer(cloudmade);
-              map.panTo(venue);
-
+              
+              /*fix for portrait centering- find a better way*/
+              if(map.getSize().x>800) {
+              	map.setView(mobile_center,14);
+              };
 
                 var venue_marker = new L.Marker(venue);
                   map.addLayer(venue_marker);
                   venue_marker.bindPopup('Dharmaram College').openPopup();
+                  console.log(map.getSize().x)
 
                   map.on('zoomend', onZoomend);
-				  function onZoomend(){
-					    if(map.getZoom()>=4) {
-						// map.setView(venue, map.getZoom());
-						map.panTo(venue)
-					};
+				  function onZoomend(){	
+							map.setView(venue, map.getZoom());
 				};
 
                 </script>
