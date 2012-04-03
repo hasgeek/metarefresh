@@ -364,7 +364,7 @@
                 var venue_marker = new L.Marker(venue);
                   map.addLayer(venue_marker);
                   venue_marker.bindPopup('Dharmaram College').openPopup();
-                  console.log(map.getSize().x)
+                  map.scrollWheelZoom.disable();
 
                   map.on('zoomend', onZoomend);
 				  function onZoomend(){	
