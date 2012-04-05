@@ -341,8 +341,7 @@
     <div class="container">
 
       <div class="row">
-          <div id="map" class="map">
-                </div>
+        <div id="map" class="map"></div>
         <div class="details clearfix span5 pull-right">
           <h3 class="large">Dharmaram Vidya Kshetram</h3>
           <p class="description"><strong>Christ University Campus</strong> Bangalore</p>
@@ -361,7 +360,6 @@
               21<sup>st</sup> April 2012<br>
               9:00 am to 6:00 pm
             </p>
-
           </div><!-- /timing -->
         </div><!-- /details -->
       </div><!-- /row -->
@@ -417,24 +415,19 @@
         var cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttrib, subdomains: subDomains});
 
         var venue = new L.LatLng(12.9334, 77.6050); // geographical point (longitude and latitude)
-        var center = new L.LatLng(12.93928, 77.61068);
+        var center = new L.LatLng(12.936, 77.62);
         var mobile_center = new L.LatLng(12.935, 77.591);
-        map.setView(venue, 14).addLayer(cloudmade);
+        map.setView(center, 14).addLayer(cloudmade);
+        if (map.getSize().x < 768) { map.setView(venue,14); } // on smaller screen where map takes full-width
+
+        var venue_marker = new L.Marker(venue);
+        map.addLayer(venue_marker);
+        venue_marker.bindPopup('Dharmaram Vidya Kshetram').openPopup();
+        map.scrollWheelZoom.disable();
+        map.doubleClickZoom.disable();
         
-        /*fix for portrait centering- find a better way*/
-        if(map.getSize().x>800) {
-          map.setView(mobile_center,14);
-        };
-
-          var venue_marker = new L.Marker(venue);
-            map.addLayer(venue_marker);
-            venue_marker.bindPopup('Dharmaram Vidya Kshetram').openPopup();
-            map.scrollWheelZoom.disable();
-
-            map.on('zoomend', onZoomend);
-    function onZoomend(){ 
-        map.setView(venue, map.getZoom());
-    };
+        map.on('zoomend', onZoomend);
+        function onZoomend(){ map.setView(venue, map.getZoom()); };
   });
-  </script>
+</script>
 {% endblock %}
