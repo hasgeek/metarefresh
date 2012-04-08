@@ -589,7 +589,6 @@ h3.hasgeek a {
 
 #rules li { margin-bottom: 1em; }
 
-#submission { padding-bottom: 6em; }
 .highlight {
 	background: #DDD;
 	background: rgba(0,0,0,0.2);
@@ -601,6 +600,8 @@ h3.hasgeek a {
 #submission .highlight { text-align: center; margin-bottom: 3em; }
 #submission .deadline { text-align: right; }
 #submission .highlight .btn { display: inline-block; }
+
+#goals { padding-bottom: 6em; }
 
 
 footer { background: black; }
