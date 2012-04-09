@@ -167,7 +167,7 @@
   <div class="container">
     <h2>Schedule</h2>
     <div class="schedule">
-      <table class="table">
+      <table class="table all-tracks">
         <colgroup class="time"></colgroup> 
         <colgroup class="track track-1"></colgroup>
         <colgroup class="track track-2"></colgroup>
@@ -205,6 +205,46 @@
           {%- endfor %}
         </tbody>
       </table>
+
+			{% for sub_table in [[("Room P1 (Stories)", 1), ("Room P2 (Process)", 2)], [("Room T1 (Browsers)", 3), ("Room T2 (Tools)", 4)]] -%}
+			  <table class="table double-track">
+          <colgroup class="time"></colgroup> 
+          <colgroup class="track track-1"></colgroup>
+          <colgroup class="track track-2"></colgroup>
+          <thead>
+            <tr>
+              <th>Time</th>
+              {% for track, track_index in sub_table -%}
+                <th>{{ track }}</th>
+              {%- endfor %}
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in schedule -%}
+              <tr>
+                <td>{{ row[0] }}</td>
+                {% if row|length == 2 -%}
+                  <td colspan="2">{{ row[1] }}</td>
+                {%- else -%}
+                  {% for track, track_index in sub_table -%}
+                  {%- set col = row[track_index] %}
+                    {% if col == 0 %}
+                      <td>(open)</td>
+                    {%- else -%}
+                      {%- set proposal = proposals[col] %}
+                      <td>
+                        <h4><a href="{{ proposal['url'] }}">{{ proposal['title'] }}</a></h4>
+                        <p>{{ proposal['speaker'] }}</p>
+                      </td>
+                    {%- endif %}
+                  {%- endfor %}
+                {%- endif %}
+              </tr>
+            {%- endfor %}
+          </tbody>
+        </table>
+      {%- endfor %}
+
     </div><!-- /schedule -->
     <div class="row">
       <div class="span4 pull-right">

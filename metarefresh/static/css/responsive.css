@@ -77,8 +77,8 @@
 	#schedule .funnel .btn { padding-left: 0.35em; padding-right: 0.35em; }
 	.schedule { margin-left: -20px; margin-right: -20px; }
 	.schedule h3 { display: none; margin-left: 13%; }
-	.schedule .time { width: 16%; }
-	.schedule .track { width: 21%; }
+	.schedule .all-tracks { display: none; }
+	.schedule .double-track { display: table; }
 	.schedule td { padding: 6px 8px; }
 	.schedule tbody tr td:first-child { font-size: 11px; padding: 6px 4px; }
 	
@@ -135,6 +135,10 @@
 	.row > .sponsor.span6:nth-of-type(even) { width: 47.5%; float: right; }
 	
 	.schedule { margin-left: -40px; margin-right: -40px; }
+	.schedule .all-tracks { display: table; }
+	.schedule .double-track { display: none; }
+	.schedule .time { width: 16%; }
+	.schedule .track { width: 21%; }
 	.schedule tbody tr td { padding: 8px 10px; }
 	.schedule tbody tr td:first-child { font-size: 12px; padding: 8px; }
 	#schedule .span4 { float: right; width: 50%; margin-left: 5%; }

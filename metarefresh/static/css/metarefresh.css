@@ -410,6 +410,9 @@ hr {
 }
 .schedule .time { width: 16%; }
 .schedule .track { width: 21%; }
+.schedule .double-track { display: none; }
+.schedule .double-track .time { width: 24%; }
+.schedule .double-track .track { width: 38%; }
 .schedule table { border: 1px solid #DDD; }
 .schedule th,
 .schedule .time,
@@ -417,13 +420,16 @@ hr {
 .schedule thead th { text-align: center; }
 .schedule .table tbody tr:hover td { background: white; }
 .schedule td { padding: 0.75em 1em 1.5em; }
-.schedule td[colspan="4"] {
+.schedule .double-track td { word-break: break-word; } /* -- debatable -- */
+.schedule td[colspan="4"],
+.schedule td[colspan="2"] {
 	padding: 1.125em 1em;
 	text-transform: uppercase;
 	text-align: center;
 	font-weight: bold;
 	color: gray;
 }
+.schedule td[colspan="2"] { padding: 0.5em; }
 .schedule td h4 { margin-bottom: 0.3em; }
 
 .preview h3 { margin-top: 0; }
