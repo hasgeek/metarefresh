@@ -77,8 +77,8 @@
 	#program .funnel .btn { padding-left: 0.35em; padding-right: 0.35em; }
 	.schedule { margin-left: -20px; margin-right: -20px; }
 	.schedule h3 { display: none; margin-left: 13%; }
-	.schedule .time { width: 13%; }
-	.schedule .track { width: 29%; }
+	.schedule .time { width: 16%; }
+	.schedule .track { width: 21%; }
 	.schedule td { padding: 6px 8px; }
 	.schedule tbody tr td:first-child { font-size: 11px; padding: 6px 4px; }
 	

@@ -408,16 +408,16 @@ hr {
 	margin-bottom: 2em;
 	overflow: auto;
 }
-.schedule .time { width: 19%; }
-.schedule .track { width: 27%; }
+.schedule .time { width: 16%; }
+.schedule .track { width: 21%; }
 .schedule table { border: 1px solid #DDD; }
 .schedule th,
 .schedule .time,
-.schedule .track-2 { background: #E3E3E3; background: rgba(0,0,0,0.1); }
+.schedule .track-2, .schedule .track-4 { background: #E3E3E3; background: rgba(0,0,0,0.1); }
 .schedule thead th { text-align: center; }
 .schedule .table tbody tr:hover td { background: white; }
 .schedule td { padding: 0.75em 1em 1.5em; }
-.schedule td[colspan="3"] {
+.schedule td[colspan="4"] {
 	padding: 1.125em 1em;
 	text-transform: uppercase;
 	text-align: center;

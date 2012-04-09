@@ -48,7 +48,7 @@
     <div class="container">
       <ul class="nav">
         <li class="home"><a title="Home (Top of the page)" href="#root"><b>Meta</b> Refresh</a></li>
-        <li><a href="#program">Program<span class="extra">me</span></a></li>
+        <li><a href="#schedule">Schedule</a></li>
         <li><a href="#venue">Venue</a></li>
         <li class="spacer about"><a href="#about">About</a></li>
         <li><a href="#sponsors">Sponsors</a></li>
@@ -163,102 +163,53 @@
 </section><!-- /sponsors -->
 
 
-<section id="program" class="section">
+<section id="schedule" class="section">
   <div class="container">
-    <h2>Programme</h2>
-    {# Uncomment this when the schedule is ready
+    <h2>Schedule</h2>
     <div class="schedule">
-      <h3>Schedule</h3>
       <table class="table">
         <colgroup class="time"></colgroup> 
         <colgroup class="track track-1"></colgroup>
         <colgroup class="track track-2"></colgroup>
         <colgroup class="track track-3"></colgroup>
+        <colgroup class="track track-4"></colgroup>
         <thead>
           <tr>
             <th>Time</th>
-            <th>Track 1 (Hall A)</th>
-            <th>Track 2 (Hall B)</th>
-            <th>Track 3 (Hall C)</th>
+            <th>Room P1 (Stories)</th>
+            <th>Room P2 (Process)</th>
+            <th>Room T1 (Browsers)</th>
+            <th>Room T2 (Tools)</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>09:00 - 09:45</td>
-            <td colspan="3">Registration</td>
-          </tr>
-          <tr>
-            <td>09:45 - 10:00</td>
-            <td colspan="3">Introduction</td>
-          </tr>
-          <tr>
-            <td>10:00 - 10:45</td>
-            <td>
-              <h4><a href="http://funnel.hasgeek.com/metarefresh/112-secure-cross-messaging-storage-file-api-and-urls-with-html5-css">Secure - Cross Messaging, Storage, File API and URLs with HTML5 &amp; CSS</a></h4>
-              <p>Bishan Singh Kochher</p>
-            </td>
-            <td>
-              <h4><a href="http://funnel.hasgeek.com/metarefresh/96-responsive-web-design-with-css3-media-queries">Responsive Web Design with CSS3 Media Queries</a></h4>
-              <p>Ramesh Selvam</p>
-            </td>
-            <td>
-              <h4><a href="#">CSS Frameworks</a></h4>
-              <p>Arjun Kumar</p>
-            </td>
-          </tr>
-          <tr>
-            <td>10:45 - 11:30</td>
-            <td>
-              <h4><a href="#">Typography for the Web</a></h4>
-              <p>Gaurav</p>
-            </td>
-            <td>
-              <h4><a href="#">Bootstraps and Boilerplates</a></h4>
-              <p>Varun S.</p>
-            </td>
-            <td>
-              <h4><a href="#">Building Accessible Websites</a></h4>
-              <p>Shilpa Sharma</p>
-            </td>
-          </tr>
-          <tr>
-            <td>10:00 - 10:45</td>
-            <td>
-              <h4><a href="http://funnel.hasgeek.com/metarefresh/112-secure-cross-messaging-storage-file-api-and-urls-with-html5-css">Secure - Cross Messaging, Storage, File API and URLs with HTML5 &amp; CSS</a></h4>
-              <p>Bishan Singh Kochher</p>
-            </td>
-            <td>
-              <h4><a href="http://funnel.hasgeek.com/metarefresh/96-responsive-web-design-with-css3-media-queries">Responsive Web Design with CSS3 Media Queries</a></h4>
-              <p>Ramesh Selvam</p>
-            </td>
-            <td>
-              <h4><a href="#">CSS Frameworks</a></h4>
-              <p>Arjun Kumar</p>
-            </td>
-          </tr>
-          <tr>
-            <td>10:45 - 11:30</td>
-            <td>
-              <h4><a href="#">Typography for the Web</a></h4>
-              <p>Gaurav</p>
-            </td>
-            <td>
-              <h4><a href="#">Bootstraps and Boilerplates</a></h4>
-              <p>Varun S.</p>
-            </td>
-            <td>
-              <h4><a href="#">Building Accessible Websites</a></h4>
-              <p>Shilpa Sharma</p>
-            </td>
-          </tr>
+          {% for row in schedule -%}
+            <tr>
+              <td>{{ row[0] }}</td>
+              {% if row|length == 2 -%}
+                <td colspan="4">{{ row[1] }}</td>
+              {%- else -%}
+                {% for col in row[1:] -%}
+                  {% if col == 0 %}
+                    <td>(open)</td>
+                  {%- else -%}
+                    {%- set proposal = proposals[col] %}
+                    <td>
+                      <h4><a href="{{ proposal['url'] }}">{{ proposal['title'] }}</a></h4>
+                      <p>{{ proposal['speaker'] }}</p>
+                    </td>
+                  {%- endif %}
+                {%- endfor %}
+              {%- endif %}
+            </tr>
+          {%- endfor %}
         </tbody>
       </table>
     </div><!-- /schedule -->
-    #}
     <div class="row">
       <div class="span4 pull-right">
         <div class="notice legible">
-          <p>The final list of sessions and the event schedule will be put up a few days prior to the event.</p>
+          <p>This is a tentative schedule. The final schedule goes up a week before the event.</p>
         </div><!-- /notice -->
         
         <div class="funnel legible">
