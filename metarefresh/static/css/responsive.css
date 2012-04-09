@@ -74,7 +74,7 @@
 	.row > .sponsor.span2:nth-child(even),
 	.row > .sponsor.span3:nth-child(even) { width: 47.5%; float: right; }
 	
-	#program .funnel .btn { padding-left: 0.35em; padding-right: 0.35em; }
+	#schedule .funnel .btn { padding-left: 0.35em; padding-right: 0.35em; }
 	.schedule { margin-left: -20px; margin-right: -20px; }
 	.schedule h3 { display: none; margin-left: 13%; }
 	.schedule .time { width: 16%; }
@@ -137,9 +137,9 @@
 	.schedule { margin-left: -40px; margin-right: -40px; }
 	.schedule tbody tr td { padding: 8px 10px; }
 	.schedule tbody tr td:first-child { font-size: 12px; padding: 8px; }
-	#program .span4 { float: right; width: 50%; margin-left: 5%; }
-	#program .span8 { float: none; }
-	#program .sidebar { float: none; width: auto; margin-left: 0; }
+	#schedule .span4 { float: right; width: 50%; margin-left: 5%; }
+	#schedule .span8 { float: none; }
+	#schedule .sidebar { float: none; width: auto; margin-left: 0; }
 	.proposal { padding-right: 10%; }
 	.session-video {
 		float: left;
@@ -215,8 +215,8 @@
 	
 	.description { padding-right: 2em; }
 	
-	#program .span4 { width: 290px; }
-	#program .span8 { width: 414px; }
+	#schedule .span4 { width: 290px; }
+	#schedule .span8 { width: 414px; }
 	.proposal { padding-right: 1.5em; }
 	
 	#venue .details { width: 352px; padding-top: 1em; padding-bottom: 1em; }

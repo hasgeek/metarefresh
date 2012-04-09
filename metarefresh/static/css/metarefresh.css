@@ -388,21 +388,21 @@ hr {
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 .notice p { margin-bottom: 0; }
-#program .funnel {
+#schedule .funnel {
 	background: #DDD;
 	background: rgba(0,0,0,0.2);
 	padding: 2em 1.5em 1.5em;
 	margin: 0 0 1.5em;
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
-#program .funnel h4 { margin: 1em 0 0.5em; }
-#program .funnel .btn {
+#schedule .funnel h4 { margin: 1em 0 0.5em; }
+#schedule .funnel .btn {
 	display: block;
 	text-align: center;
 	padding: 0.35em 1em;
 	margin-bottom: 1.5em;
 }
-#program .funnel .btn i { font-size: 0.8em; }
+#schedule .funnel .btn i { font-size: 0.8em; }
 
 .schedule {
 	margin-bottom: 2em;
