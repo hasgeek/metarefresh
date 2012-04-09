@@ -85,15 +85,14 @@
 	.proposal { padding-right: 0; }
 	
 	#venue .map {
-		position: static;
+		left: 0;
+		right: 0;
 		width: auto;
-		height: 300px;
-/*		left: 0;
-		margin: 0;
-		border-top:    1px solid #D3D3D3;
-		border-bottom: 1px solid #000;
-*/	}
+		margin-left: 0;
+		height: 250px;
+	}
 	#venue .details {
+		margin-top: 250px;
 		padding: 2em 0 4em;
 		background: none;
 	}
@@ -153,16 +152,9 @@
 	.session-video .thumbnail { float: left; width: 50%; }
 	.session-video h5 { clear: left; }
 	
-	#venue .map {
-		width: auto;
-		height: 100%;
-		min-height: 200px;
-		background: gray;
-		text-align: center;
-	}
-
-	
+	#venue .map { height: 350px; }
 	#venue .map a { display: block; line-height: 0; }
+	#venue .details { margin-top: 350px; }
 	#venue .description { margin-bottom: 1em; }
 	#venue .directions { float: left; width: 58%; }
 	#venue .timing    { float: right; width: 35%; }

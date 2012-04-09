@@ -263,7 +263,7 @@ hr {
 .navbar .nav .home a {
 	font-size: 2em;
 	color: black;
-	background: #F3F3F3 url(../img/stucco.png) fixed repeat top left;
+	background: #F3F3F3 url(../img/stucco.png) scroll repeat top center;
 	margin: 0 auto 0.6em;
 	padding: 0;
 	width: 8em;
@@ -477,17 +477,17 @@ hr {
 }
 #venue .map {
 	position: absolute;
-	left: 50%;
-	/*top: 0;*/
-	/*bottom: 0;*/
-	/*overflow: hidden;*/
-	margin: 0 0 0 -600px;
-	height:600px;
-	width: 800px;
-	z-index: 1;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	overflow: hidden;
+	margin: 0;
+	height: auto;
+	width: auto;
+	z-index: 0;
 	border-top: 1px solid #CCC;
 }
-
 #venue .details {
 	position: relative;
 	z-index: 10;
@@ -589,7 +589,6 @@ h3.hasgeek a {
 
 #rules li { margin-bottom: 1em; }
 
-#submission { padding-bottom: 6em; }
 .highlight {
 	background: #DDD;
 	background: rgba(0,0,0,0.2);
@@ -602,6 +601,10 @@ h3.hasgeek a {
 #submission .deadline { text-align: right; }
 #submission .highlight .btn { display: inline-block; }
 .notice ol li { margin-bottom: 0.2em !important;}
+
+
+#goals { padding-bottom: 6em; }
+
 
 footer { background: black; }
 footer .footer-inner {
