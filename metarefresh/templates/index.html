@@ -95,6 +95,7 @@
   <div class="container">
     <h2>Sponsors</h2>
     <div class="row">
+      {#
       <article class="open sponsor-platinum sponsor span6">
         <p class="logo"><img alt="Become a Sponsor" src="http://placehold.it/430x200/E3E3E3/666&amp;text=Your+Logo+Here"></p>
       </article>
@@ -115,7 +116,7 @@
       <article class="open empty sponsor-gold sponsor span3">
         <p class="logo"></p>
       </article>
-      
+      #}
 
 
       <article class="open sponsor-silver sponsor span2">
@@ -139,6 +140,9 @@
       
       
       <article class="open sponsor-community sponsor span2">
+        <p class="logo"><a data-toggle="modal" href="#sponsor-practo"><img alt="Practo" src="{{ url_for('static', filename='img/sponsors/practo.png') }}"></a></p>
+      </article>
+      <article class="open sponsor-community sponsor span2">
         <p class="logo"><img alt="Become a Sponsor" src="http://placehold.it/90x50/E3E3E3/666&amp;text=You"></p>
       </article>
       <article class="open empty sponsor-community sponsor span2">
@@ -153,9 +157,22 @@
       <article class="open empty sponsor-community sponsor span2">
         <p class="logo"></p>
       </article>
-      <article class="open empty sponsor-community sponsor span2">
-        <p class="logo"></p>
-      </article>
+
+      <div class="modal fade sponsor-box" id="sponsor-practo">
+        <div class="modal-header">
+          <a class="close" data-dismiss="modal">&times;</a>
+          <h3>Practo</h3>
+        </div>
+        <div class="modal-body">
+          <p>
+            At Practo, we make online software which simplifies the lives of doctors and patients. We help 12,000 doctors across 100 cities in India run their practices smoothly and serve their patients better. We are not building the regular old school 'Medical Records Software' but an awesome new way for doctors and patients to interact utilizing the internet, mobile and more. Healthcare is one of the slowest industries to adopt to technology, and we are fighting this battle to bring about change. We deserve better healthcare services as patients and we will get them.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <a href="http://www.practo.com/" class="btn btn-primary sponsor-exit">Visit Practo</a>
+          <a data-dismiss="modal" class="btn">Close</a>
+        </div>
+      </div>
       
     </div><!-- /row -->
     <hr class="divider">
@@ -419,6 +436,25 @@
         
         map.on('zoomend', onZoomend);
         function onZoomend(){ map.setView(venue, map.getZoom()); };
+  });
+</script>
+<script type="text/javascript">
+  $(function() {
+    $(".sponsor-box").on('shown', function() {
+      if (typeof _gaq != 'undefined') {
+        _gaq.push(['_trackPageview', "/2012/#" + $(this).attr('id')]);
+      };
+    });    
+    $(".sponsor-box").on('hidden', function() {
+      if (typeof _gaq != 'undefined') {
+        _gaq.push(['_trackPageview', "/2012/#"]);
+      };
+    });    
+    $(".sponsor-exit").click(function() {
+      if (typeof _gaq != 'undefined') {
+        _gaq.push(['_trackPageview', "/out/" + $(this).attr('href')]);
+      };
+    });
   });
 </script>
 {% endblock %}

@@ -621,3 +621,5 @@ footer .footer-inner {
 }
 
 
+.modal-header h3 { font-size: 1.8em; margin-bottom: 0.4em; }
+.modal-body { font-size: 16px; }
