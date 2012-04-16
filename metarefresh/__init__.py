@@ -18,8 +18,9 @@ configure(app, 'METAREFRESH_ENV')
 
 app.register_blueprint(baseframe)
 assets = Environment(app)
-js = Bundle(baseframe_js,  'js/leaflet/leaflet.js', 'js/jquery.smooth-scroll.min.js', 'js/metarefresh.js',
-    filters='jsmin', output='js/metarefresh-packed.js')
+js = Bundle(Bundle(baseframe_js,  'js/jquery.smooth-scroll.min.js', 'js/metarefresh.js',
+                   filters='jsmin', output='js/metarefresh-packed.js'),
+            'js/leaflet/leaflet.js')
 css = Bundle(Bundle(baseframe_css, 'css/metarefresh.css', 'css/responsive.css',
                     filters='cssmin', output='css/metarefresh-packed.css'),
              'js/leaflet/leaflet.css')
