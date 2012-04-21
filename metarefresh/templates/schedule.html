@@ -1,0 +1,57 @@
+{% extends 'baseframe.html' %}
+
+{% block title %}Meta Refresh{% endblock %}
+{% block description %}A conference on front-end engineering{% endblock %}
+{% block pageheaders %}
+  <style type="text/css">
+    table p {
+      margin-bottom: 0;
+    }
+  </style>
+{% endblock %}
+{% block headerbox %}{% endblock %}
+{% block main %}
+<section id="schedule" class="section">
+  <div class="container">
+    <table class="table all-tracks">
+      <colgroup class="time"></colgroup> 
+      <colgroup class="track track-1"></colgroup>
+      <colgroup class="track track-2"></colgroup>
+      <colgroup class="track track-3"></colgroup>
+      <colgroup class="track track-4"></colgroup>
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>P1 (Stories)</th>
+          <th>P2 (Process)</th>
+          <th>T1 (Browsers)</th>
+          <th>T2 (Tools)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in schedule -%}
+          <tr>
+            <td nowrap>{{ row[0] }}</td>
+            {% if row|length == 2 -%}
+              <td colspan="4">{{ row[1] }}</td>
+            {%- else -%}
+              {% for col in row[1:] -%}
+                {% if col == 0 %}
+                  <td>(open)</td>
+                {%- else -%}
+                  {%- set proposal = proposals[col] %}
+                  <td>
+                    <p>+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-1</p>
+                    <h4><a href="{{ proposal['url'] }}">{{ proposal['title'] }}</a></h4>
+                    <p>{{ proposal['speaker'] }}</p>
+                  </td>
+                {%- endif %}
+              {%- endfor %}
+            {%- endif %}
+          </tr>
+        {%- endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}
