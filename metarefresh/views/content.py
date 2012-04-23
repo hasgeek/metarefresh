@@ -13,7 +13,7 @@ schedule = [
     [u'10:00 – 10:45', 256, 230,   0, 258],
     [u'10:45 – 11:15', "Break"],
     [u'11:15 – 12:00', 247, 241, 234, 233],
-    [u'12:00 – 12:45', 245, 251, 276, 240],
+    [u'12:00 – 12:45', 245,   0, 276, 240],
     [u'12:45 – 02:00', "Lunch"],
     [u'02:00 – 02:45', 271, 267, 275, 242],
     [u'02:45 – 03:30', 248, 254, 272,  96],
@@ -51,3 +51,26 @@ def contest():
 @app.route('/takecharge')
 def contest_old_url():
     return redirect(url_for('contest'), code=301)
+
+
+print_schedule = [
+    [u'10:00 – 10:45', 256, 230,   0, 258],
+    [u'11:15 – 12:00', 247, 241, 234, 233],
+    [u'12:00 – 12:45', 245,   0, 276, 240],
+    [u'02:00 – 02:45', 271, 267, 275, 242],
+    [u'02:45 – 03:30', 248, 254, 272,  96],
+    [u'04:00 – 04:45', 281, 243, 239, 278],
+    [u'04:45 – 05:30', 282, 264, 266, 280],
+]
+
+
+@app.route('/2012/schedule')
+def schedule2012():
+    # Load proposals from JSON feed
+    # TODO: Cache this?
+    data = json.loads(urllib2.urlopen('http://funnel.hasgeek.com/metarefresh/json').read())
+    # Index for dictionary lookup
+    proposals = {}
+    for p in data['proposals']:
+        proposals[p['id']] = p
+    return render_template('schedule.html', active=1, schedule=print_schedule, proposals=proposals)
