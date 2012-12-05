@@ -12,3 +12,5 @@ baseframe-packed.css
 baseframe-packed.js
 instance/development.py
 instance/production.py
+*.packed.css
+*.packed.js

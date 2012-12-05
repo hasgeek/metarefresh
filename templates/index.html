@@ -1,4 +1,4 @@
-{% extends 'baseframe.html' %}
+{% extends 'eventframe.html' %}
 
 {% block title %}Meta Refresh{% endblock %}
 {% block description %}A conference on front-end engineering{% endblock %}
@@ -81,7 +81,7 @@
           <p><a class="btn btn-primary legible" href="http://funnel.hasgeek.com/metarefresh/">Propose a session<br><i>on the Funnel</i></a></p>
         </div>
         <div class="highlight legible">
-          <p><a class="btn btn-inverse legible" href="{{ url_for('contest') }}"><i>Meta Refresh</i><br>Take Charge</a></p>
+          <p><a class="btn btn-inverse legible" href="/2012/takecharge"><i>Meta Refresh</i><br>Take Charge</a></p>
           <p>Redesign your least favourite Indian Government website.</p>
         </div>
       </div>
@@ -120,16 +120,16 @@
 
 
       <article class="open sponsor-silver sponsor span2">
-        <p class="logo"><a data-toggle="modal" href="#sponsor-directi"><img alt="Talk.To" src="{{ url_for('static', filename='img/sponsors/talkto.png') }}"></a></p>
+        <p class="logo"><a data-toggle="modal" href="#sponsor-directi"><img alt="Talk.To" src="{{ theme_static('img/sponsors/talkto.png') }}"></a></p>
       </article>
       <article class="open sponsor-silver sponsor span2">
-        <p class="logo"><a data-toggle="modal" href="#sponsor-langoor"><img alt="Langoor.mobi" src="{{ url_for('static', filename='img/sponsors/langoor.png') }}"></a></p>
+        <p class="logo"><a data-toggle="modal" href="#sponsor-langoor"><img alt="Langoor.mobi" src="{{ theme_static('img/sponsors/langoor.png') }}"></a></p>
       </article>
       <article class="open sponsor-silver sponsor span2">
-        <p class="logo"><a data-toggle="modal" href="#sponsor-ideadevice"><img alt="Idea Device" src="{{ url_for('static', filename='img/sponsors/ideadevice.png') }}"></a></p>
+        <p class="logo"><a data-toggle="modal" href="#sponsor-ideadevice"><img alt="Idea Device" src="{{ theme_static('img/sponsors/ideadevice.png') }}"></a></p>
       </article>
       <article class="open sponsor-silver sponsor span2">
-        <p class="logo"><a data-toggle="modal" href="#sponsor-adobe"><img alt="Adobe" src="{{ url_for('static', filename='img/sponsors/adobe.png') }}"></a></p>
+        <p class="logo"><a data-toggle="modal" href="#sponsor-adobe"><img alt="Adobe" src="{{ theme_static('img/sponsors/adobe.png') }}"></a></p>
       </article>
       <article class="open sponsor-silver sponsor span2">
         <p class="logo"><img alt="Become a Sponsor" src="http://placehold.it/90x100/E3E3E3/666&amp;text=You"></p>
@@ -140,13 +140,13 @@
       
       
       <article class="open sponsor-community sponsor span2">
-        <p class="logo"><a data-toggle="modal" href="#sponsor-practo"><img alt="Practo" src="{{ url_for('static', filename='img/sponsors/practo.png') }}"></a></p>
+        <p class="logo"><a data-toggle="modal" href="#sponsor-practo"><img alt="Practo" src="{{ theme_static('img/sponsors/practo.png') }}"></a></p>
       </article>
       <article class="open sponsor-community sponsor span2">
-        <p class="logo"><a data-toggle="modal" href="#sponsor-fusioncharts"><img alt="Fusion Charts" src="{{ url_for('static', filename='img/sponsors/fusioncharts.png') }}"></a></p>
+        <p class="logo"><a data-toggle="modal" href="#sponsor-fusioncharts"><img alt="Fusion Charts" src="{{ theme_static('img/sponsors/fusioncharts.png') }}"></a></p>
       </article>
       <article class="open sponsor-community sponsor span2">
-        <p class="logo"><a data-toggle="modal" href="#sponsor-capillary"><img alt="Capillary Technologies" src="{{ url_for('static', filename='img/sponsors/capillary.png') }}"></a></p>
+        <p class="logo"><a data-toggle="modal" href="#sponsor-capillary"><img alt="Capillary Technologies" src="{{ theme_static('img/sponsors/capillary.png') }}"></a></p>
       </article>
       <article class="open sponsor-community sponsor span2">
         <p class="logo"><img alt="Become a Sponsor" src="http://placehold.it/90x50/E3E3E3/666&amp;text=You"></p>
@@ -358,7 +358,8 @@
           </tr>
         </thead>
         <tbody>
-          {% for row in schedule -%}
+          {%- set proposals = getnode(path='proposals').proposals_mapping() %}
+          {% for row in getnode(path='schedule-data').data['schedule'] -%}
             <tr>
               <td>{{ row[0] }}</td>
               {% if row|length == 2 -%}

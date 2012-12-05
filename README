@@ -1,21 +1,9 @@
-Meta Refresh 2012 Website
+Meta Refresh 2012 Website - Eventframe version
 
 Installation instructions
-* Clone coaster and install.
-    git clone git://github.com/hasgeek/coaster.git
-    python setup.py develop
+* Clone into themes folder
+    git clone git://github.com/hasgeek/metarefresh.git metarefresh2012
+    cd metarefresh2012
+    git checkout 2012-eventframe
 
-* Clone baseframe and install.
-    git clone git://github.com/hasgeek/baseframe.git
-    python setup.py develop
-
-* Install the requirements for metarefresh
-    pip install -r requirements.txt
-
-* Create a new settings file
-    cp instance/settings-sample.py instance/settings.py
-
-* Run metarefresh.
-    ./runserver.py
-
-* PROFIT!!
+* Restart Eventframe
