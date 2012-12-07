@@ -1,21 +1,13 @@
 {
     "application": "eventframe",
-    "identifier": "metarefresh2012",
-    "name": "Meta Refresh 2012",
+    "identifier": "metarefresh2013",
+    "name": "Meta Refresh 2013",
     "author": "HasGeek",
-    "description": "Meta Refresh 2012 website",
+    "description": "Meta Refresh 2013 website",
     "license": "All rights reserved",
     "doctype": "html5",
     "options": {
-        "assets_css": [
-            "js/leaflet/leaflet.css",
-            "css/metarefresh.css",
-            "css/responsive.css"
-        ],
-        "assets_js": [
-            "js/jquery.smooth-scroll.min.js",
-            "js/metarefresh.js",
-            "js/leaflet/leaflet.js"
-        ]
+        "assets_css": [],
+        "assets_js": []
     }
 }
