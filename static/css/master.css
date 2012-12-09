@@ -4,7 +4,48 @@ body{
     color: #231F20;
     color: #1B1A19;
 }
-.clear{clear:both}
+
+.clear{
+    clear:both;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #17AA9D;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-bottom: 1px solid #17AA9D;
+}
+
+a:hover{
+    color: #17AA9D;
+    border-bottom: none;
+}
+
+a.button{
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 1px;
+    font-size: 10px;
+    background: #17AA9D;
+    display: block;
+    float: left;
+    text-align: center;
+    padding: 4px 0;
+    color: #fff;
+    border-bottom: none;
+}
+
+a.button:hover{
+    background: #005952;
+    text-decoration: none;
+}
+
+a.big_btn{width: 123px;}
+a.small_btn{width: 84px;margin-left: 15px;}
+
+
 #wrapper{
     width: 550px;
     margin: 0 auto;
@@ -23,11 +64,16 @@ div.left_description{
     margin-right: 40px;
 }
 
+
 div.left_description p{
     font-family: 'Source Sans Pro', sans-serif;
     font-style: italic;
     font-size: 14px;
     line-height: 19px;
+}
+
+p.source_regular{
+    font-style: normal !important;
 }
 
 div.event_info{
