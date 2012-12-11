@@ -78,6 +78,7 @@ p.source_regular{
 
 div.event_info{
     margin: 0;
+    margin-bottom: 50px;
     float: left;
     width: 225px;
 }
@@ -97,6 +98,7 @@ span{
 span.date_day{
     font: 85px 'Cawnpore', serif;
     letter-spacing: -4px;
+    height: 70px;
 }
 
 span.and{
@@ -107,7 +109,6 @@ span.and{
 }
 
 .month{
-    margin-top: -20px;
     letter-spacing: 2px;
     font: 30px "Source Sans Pro", sans-serif;
     text-transform: uppercase;
