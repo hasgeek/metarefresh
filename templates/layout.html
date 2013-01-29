@@ -1,6 +1,11 @@
 {% from "baseframe/components.html" import flash_messages, networkbar with context -%}
 {%- extends "eventframe.html" -%}
 
+{% block layoutheaders %}
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css'>
+  {% block pageheaders %}{% endblock %}
+{% endblock %}
+
 {% block networkbar %}{{ networkbar(siteid='events', login=false) }}{% endblock %}
 
 {% block baseheadline -%}

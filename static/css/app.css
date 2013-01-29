@@ -1,0 +1,116 @@
+#root {
+  overflow-x: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+header {
+  margin-bottom: 0;
+}
+
+#page-header {
+  border-bottom: 0;
+  margin-top: 20px;
+  text-align: center;
+}
+#page-header object, #page-header embed {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  color: #222222;
+}
+
+.description {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.description, .description p {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 600;
+}
+
+.button-bar {
+  text-align: center;
+}
+
+.rounded {
+  position: relative;
+  padding-bottom: 20px;
+  padding-top: 60px;
+  margin-bottom: 20px;
+  margin-top: -20px;
+}
+
+.rounded:after {
+  position: absolute;
+  display: block;
+  content: "";
+  bottom: -15px;
+  left: -40px;
+  right: -40px;
+  border: 15px solid;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.section1, .section1:after {
+  background-color: #dedce6;
+  border-color: #dedce6;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.section2, .section2:after {
+  background-color: #ceccdd;
+  border-color: #ceccdd;
+}
+
+.section3, .section3:after {
+  background-color: #c2bed6;
+  border-color: #c2bed6;
+}
+
+.section4, .section4:after {
+  background-color: #b8b4d1;
+  border-color: #b8b4d1;
+}
+
+.section5, .section5:after, body {
+  background-color: #b0abcf;
+  border-color: #b0abcf;
+}
+
+.section1.rounded:after {
+  z-index: 5;
+}
+
+.section2.rounded:after {
+  z-index: 4;
+}
+
+.section3.rounded:after {
+  z-index: 3;
+}
+
+.section4.rounded:after {
+  z-index: 2;
+}
+
+.section5.rounded:after {
+  z-index: 1;
+}
+
+footer .footer-inner {
+  background: inherit;
+}
