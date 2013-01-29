@@ -1,0 +1,16 @@
+{% from "baseframe/components.html" import flash_messages, networkbar with context -%}
+{%- extends "eventframe.html" -%}
+
+{% block networkbar %}{{ networkbar(siteid='events', login=false) }}{% endblock %}
+
+{% block baseheadline -%}
+  {% block headline -%}
+    <div class="page-header">
+      <h1>{{ self.title() }}</h1>
+    </div>
+  {%- endblock %}
+{%- endblock %}
+
+{% block basecontent -%}
+  {% block content %}{% endblock %}
+{%- endblock %}
