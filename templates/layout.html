@@ -2,8 +2,11 @@
 {%- extends "eventframe.html" -%}
 
 {% block layoutheaders %}
-  <link href='http://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css'>
-  {% block pageheaders %}{% endblock %}
+  <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,500,600,700,900' rel='stylesheet' type='text/css'>
+
+  {% block pageheaders %}
+
+  {% endblock %}
 {% endblock %}
 
 {% block networkbar %}{{ networkbar(siteid='events', login=false) }}{% endblock %}

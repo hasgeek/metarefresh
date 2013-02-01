@@ -15,22 +15,118 @@ header
   object, embed
     max-width: 100%
     height: auto
+  img
+    width: 180px
+    margin-top: 10px
+    margin-bottom: 20px
 
-h1, h2, h3, h4, h5, h6
+body
   font-family: 'Raleway', sans-serif
-  font-weight: 600
-  color: #222
+  font-weight: 400
+  margin-left: auto
+  margin-right: auto
+  min-width: 50px
+  background-color: #33608F
+h2, h3,h4,h5,h6
+  color: #666
+  text-align: center
+h1
+  color: #333
+  text-align: center
+
+//mov bg
+@-webkit-keyframes mov
+  0% 
+    background-position: 0
+  100% 
+    background-position: 100%
+@-moz-keyframes mov
+  0% 
+    background-position: 0
+  100% 
+    background-position: 100%
+@-o-keyframes mov
+  0% 
+    background-position: 0
+  100% 
+    background-position: 100%
+@keyframes mov
+  0% 
+    background-position: 0
+  100% 
+    background-position: 100%
+
+//rotate wheel
+@-webkit-keyframes rotate
+  from
+    -webkit-transform: rotate(0deg)
+  to
+    -webkit-transform: rotate(360deg)
+@-moz-keyframes rotate
+  from
+    -webkit-transform: rotate(0deg)
+  to
+    -webkit-transform: rotate(360deg)
+@-o-keyframes rotate
+  from
+    -webkit-transform: rotate(0deg)
+  to
+    -webkit-transform: rotate(360deg)
+@keyframes rotate
+  from
+    -webkit-transform: rotate(0deg)
+  to
+    -webkit-transform: rotate(360deg)
+
+.masthead
+  -moz-animation: 30s linear 0s normal none infinite mov
+  -webkit-animation: 30s linear 0s normal none infinite mov
+  -o-animation: 30s linear 0s normal none infinite mov
+  animation: 30s linear 0s normal none infinite mov
+  animation: 30s linear 0s normal none infinite mov
+  //background-image: image-url('moving-bg.png')
+  left: 0px
+  right: 0px
+  position: absolute
+  overflow: hidden
+  text-align: center
+
+  h1
+    font-family: 'Raleway', sans-serif
+    color: #DF5E0E
+    font-weight: 900
+    text-transform: uppercase
+    font-size: 30px
+    line-height: 46px
+    //text-shadow: 2px 2px 3px #333
+  .btn
+    background-image: none
+    background-color: #DF5E0E
+    border-radius: 0
+    border: none
+    text-shadow: none
+    color: #fff
+    font-size: 20px
+    box-shadow: none
+    font-weight: 200
+    padding: 5px
+  img
+    -moz-animation: rotate 20s linear 0s infinite
+    -webkit-animation: rotate 20s linear 0 infinite
+    -o-animation: rotate 20s linear 0 infinite
+    animation: rotate 20s linear 0 infinite
 
 .description
   max-width: 800px
   margin-left: auto
   margin-right: auto
+  padding-bottom: 10px
 
 .description, .description p
   font-family: 'Raleway', sans-serif
   font-size: 18px
   line-height: 30px
-  font-weight: 600
+  font-weight: 300
 
 .button-bar
   text-align: center
@@ -55,38 +151,83 @@ h1, h2, h3, h4, h5, h6
   // +box-shadow(0 2px 1px rgba(0, 0, 0, 0.1))
 
 .section1, .section1:after
-  background-color: #dedce6
-  border-color: #dedce6
+  background-color: #F4F8F9
+  border-color: #F4F8F9
   padding-top: 0
   margin-top: 0
-
 .section2, .section2:after
-  background-color: #ceccdd
-  border-color: #ceccdd
+  background-color: #ECF1F2
+  border-color: #ECF1F2
+  //background-image: image-url('moving-bg.png')
+  //opacity: 0.5
+  // border-color: #518AAE
 
-.section3, .section3:after, body
-  background-color: #c2bed6
-  border-color: #c2bed6
+.section3, .section3:after
+  background-color: #ECF1F2
+  border-color: #ECF1F2
 
 .section4, .section4:after
-  background-color: #b8b4d1
-  border-color: #b8b4d1
+  background-color: #D7E9F5
+  border-color: #D7E9F5
 
 .section5, .section5:after
-  background-color: #b0abcf
-  border-color: #b0abcf
+  background-color: #C5DCEB
+  border-color: #C5DCEB
+
+.section6, .section6:after
+  background-color: #9FC2D6
+  border-color: #9FC2D6
+
+.section7, .section7:after
+  background-color: #73A2BD
+  border-color: #73A2BD
+
+.section8, .section8:after
+  background-color: #518AAE
+  border-color: #518AAE
 
 .section1.rounded:after
-  z-index: 5
+  z-index: 8
 .section2.rounded:after
-  z-index: 4
+  z-index: 7
 .section3.rounded:after
-  z-index: 3
+  z-index: 6
 .section4.rounded:after
-  z-index: 2
+  z-index: 5
 .section5.rounded:after
+  z-index: 4
+.section6.rounded:after
+  z-index: 3
+.section7.rounded:after
+  z-index: 2
+.section8.rounded:after
   z-index: 1
 
 
+.section-heading
+  font-weight: 500
+  font-size: 36px
+  margin-bottom: 60px
+  letter-spacing: -2px
+.speaker-img
+  text-align: center
+  img
+    width: 200px
+    height: 200px
+    border-radius: 50%
+  img:hover
+    box-shadow: 2px 2px 3px #518AAE
+    
+.speaker-name 
+  text-align: center
+  margin-bottom: 60px
+  h3
+    color: #000
+    font-weight: 100
+    text-transform: uppercase
+  em
+    font-size: 12px
+
 footer .footer-inner
   background: inherit
+  color: #ccc

@@ -9,24 +9,89 @@
     {% block networkbar %}{{ networkbar(siteid='events', login=false) }}{% endblock %}
     <div id="page-header" class="container">
       <img src="{{ theme_static('img/logo.svg') }}" onerror="this.onerror = null; this.src='{{ theme_static('img/logo.png') }}';">
-      <h1>February 22-23, 2013, Bangalore, India</h1>
+      <h2>February 22-23, 2013, Bangalore, India</h2>
     </div>
   </header>
 {% endblock %}
 {% block headline %}{% endblock %}
 {% block main %}
-  <div class="section2 rounded">
+  <div class="section2 masthead rounded">
+    <div class="container centered">
+      <img src="{{ theme_static('img/wheel_black.png') }}">
+      <h1>A conference on the construction of <br />user experience on the web.</h1>
+    </div>
+  </div>
+  <div class="section3 rounded">
     <div class="container">
       <div class="description">
         {{ node.content }}
-        <p class="button-bar">
-          <a class="btn btn-large btn-primary" href="http://funnel.hasgeek.com/metarefresh2013">View sessions</a>
-          <a class="btn btn-large btn-primary" href="http://metarefresh.doattend.com/">Buy tickets</a>
-        </p>
-        <p class="button-bar">
-          Previously: <a href="http://metarefresh.in/2012">2012 edition</a>
-        </p>
       </div>
     </div>
   </div>
+
+  <div class="section4 rounded">
+    <div class="container">
+      <h1 class="section-heading">Speakers</h1>
+      {% include theme("inc/speakers.html") %}
+    </div>
+  </div>
+  <div class="section5 rounded">
+    <div class="Sponsors">
+      <h1 class="section-heading">Schedule</h1>
+      <div class="description">Will be Announced Soon..</div>
+    </div>
+  </div>
+  <div class="section6 rounded">
+    <div class="container">
+      <h1 class="section-heading">Sponsors</h1>
+      {% include theme("inc/sponsors.html") %}
+    </div>
+  </div>
+  <div class="section7 rounded">
+    <div class="container">
+      <h1 class="section-heading">Venue</h1>
+      {% include theme("inc/venue.html") %}
+    </div>
+  </div>
+  <div class="section8 rounded">
+    <div class="container">
+      <h1 class="section-heading">Register</h1>
+    </div>
+  </div>
 {% endblock %}
+{% block footerscripts %}
+  {{ mapscript(getnode('2013', 'venue-map')) }}
+{% endblock %}
+{% macro mapscript(mapnode, markername=None) %}
+  <script type="text/javascript">
+    $(function() {
+      var map = new L.Map('map');
+      var cloudmadeUrl = 'http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
+        subDomains = ['otile1','otile2','otile3','otile4'],
+        cloudmadeAttrib = '<a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>, <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>';
+      var cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttrib, subdomains: subDomains});
+
+      map.scrollWheelZoom.disable();
+
+      var open_marker = function(marker) {
+        return function(e) {
+          map.panTo(marker['_latlng']);
+          marker.openPopup();
+          e.preventDefault();
+        };
+      };
+
+      $('a[href^="#map-"]').tooltip({title: "Show on map"});
+      {% for marker in mapnode.items %}
+        var marker_{{ marker.name }} = new L.Marker(new L.LatLng({{ marker.latitude }}, {{ marker.longitude }}));
+        map.addLayer(marker_{{ marker.name }});
+        marker_{{ marker.name }}.bindPopup("{{ marker.title }}");
+        $('a[href="#map-{{ marker.name }}"]').click(open_marker(marker_{{ marker.name }}));
+      {%- endfor %}
+      {%- with marker = mapnode.get_by_name(markername) or mapnode.items[0] %}
+        map.setView(marker_{{ marker.name }}['_latlng'], {{ marker.zoomlevel or 13 }}).addLayer(cloudmade);
+        marker_{{ marker.name }}.openPopup();
+      {%- endwith %}
+    });
+  </script>
+{% endmacro %}

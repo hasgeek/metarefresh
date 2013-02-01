@@ -16,24 +16,162 @@ header {
   max-width: 100%;
   height: auto;
 }
+#page-header img {
+  width: 180px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
 
-h1, h2, h3, h4, h5, h6 {
+body {
   font-family: "Raleway", sans-serif;
-  font-weight: 600;
-  color: #222222;
+  font-weight: 400;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 50px;
+  background-color: #33608f;
+}
+
+h2, h3, h4, h5, h6 {
+  color: #666666;
+  text-align: center;
+}
+
+h1 {
+  color: #333333;
+  text-align: center;
+}
+
+@-webkit-keyframes mov {
+  0% {
+    background-position: 0;
+  }
+
+  100% {
+    background-position: 100%;
+  }
+}
+
+@-moz-keyframes mov {
+  0% {
+    background-position: 0;
+  }
+
+  100% {
+    background-position: 100%;
+  }
+}
+
+@-o-keyframes mov {
+  0% {
+    background-position: 0;
+  }
+
+  100% {
+    background-position: 100%;
+  }
+}
+
+@keyframes mov {
+  0% {
+    background-position: 0;
+  }
+
+  100% {
+    background-position: 100%;
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.masthead {
+  -moz-animation: 30s linear 0s normal none infinite mov;
+  -webkit-animation: 30s linear 0s normal none infinite mov;
+  -o-animation: 30s linear 0s normal none infinite mov;
+  animation: 30s linear 0s normal none infinite mov;
+  animation: 30s linear 0s normal none infinite mov;
+  left: 0px;
+  right: 0px;
+  position: absolute;
+  overflow: hidden;
+  text-align: center;
+}
+.masthead h1 {
+  font-family: "Raleway", sans-serif;
+  color: #df5e0e;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 46px;
+}
+.masthead .btn {
+  background-image: none;
+  background-color: #df5e0e;
+  border-radius: 0;
+  border: none;
+  text-shadow: none;
+  color: white;
+  font-size: 20px;
+  box-shadow: none;
+  font-weight: 200;
+  padding: 5px;
+}
+.masthead img {
+  -moz-animation: rotate 20s linear 0s infinite;
+  -webkit-animation: rotate 20s linear 0 infinite;
+  -o-animation: rotate 20s linear 0 infinite;
+  animation: rotate 20s linear 0 infinite;
 }
 
 .description {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 10px;
 }
 
 .description, .description p {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   line-height: 30px;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 .button-bar {
@@ -65,52 +203,112 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section1, .section1:after {
-  background-color: #dedce6;
-  border-color: #dedce6;
+  background-color: #f4f8f9;
+  border-color: #f4f8f9;
   padding-top: 0;
   margin-top: 0;
 }
 
 .section2, .section2:after {
-  background-color: #ceccdd;
-  border-color: #ceccdd;
+  background-color: #ecf1f2;
+  border-color: #ecf1f2;
 }
 
-.section3, .section3:after, body {
-  background-color: #c2bed6;
-  border-color: #c2bed6;
+.section3, .section3:after {
+  background-color: #ecf1f2;
+  border-color: #ecf1f2;
 }
 
 .section4, .section4:after {
-  background-color: #b8b4d1;
-  border-color: #b8b4d1;
+  background-color: #d7e9f5;
+  border-color: #d7e9f5;
 }
 
 .section5, .section5:after {
-  background-color: #b0abcf;
-  border-color: #b0abcf;
+  background-color: #c5dceb;
+  border-color: #c5dceb;
+}
+
+.section6, .section6:after {
+  background-color: #9fc2d6;
+  border-color: #9fc2d6;
+}
+
+.section7, .section7:after {
+  background-color: #73a2bd;
+  border-color: #73a2bd;
+}
+
+.section8, .section8:after {
+  background-color: #518aae;
+  border-color: #518aae;
 }
 
 .section1.rounded:after {
-  z-index: 5;
+  z-index: 8;
 }
 
 .section2.rounded:after {
-  z-index: 4;
+  z-index: 7;
 }
 
 .section3.rounded:after {
-  z-index: 3;
+  z-index: 6;
 }
 
 .section4.rounded:after {
-  z-index: 2;
+  z-index: 5;
 }
 
 .section5.rounded:after {
+  z-index: 4;
+}
+
+.section6.rounded:after {
+  z-index: 3;
+}
+
+.section7.rounded:after {
+  z-index: 2;
+}
+
+.section8.rounded:after {
   z-index: 1;
+}
+
+.section-heading {
+  font-weight: 500;
+  font-size: 36px;
+  margin-bottom: 60px;
+  letter-spacing: -2px;
+}
+
+.speaker-img {
+  text-align: center;
+}
+.speaker-img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.speaker-img img:hover {
+  box-shadow: 2px 2px 3px #518aae;
+}
+
+.speaker-name {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.speaker-name h3 {
+  color: black;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+.speaker-name em {
+  font-size: 12px;
 }
 
 footer .footer-inner {
   background: inherit;
+  color: #cccccc;
 }
