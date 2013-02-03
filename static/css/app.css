@@ -41,6 +41,105 @@ h1 {
   text-align: center;
 }
 
+.navbar-margin {
+  margin-bottom: 10px;
+}
+
+.main-navbar .nav {
+  float: left;
+  width: 60px;
+  background-color: white;
+  z-index: 10;
+  margin-top: 120px;
+  margin-bottom: auto;
+}
+.main-navbar .nav > li {
+  float: left;
+  font-size: 12px;
+  margin-bottom: 0;
+  padding-left: 5px;
+  -webkit-transition-property: color, background-color;
+  -moz-transition-property: color, background-color;
+  -o-transition-property: color, background-color;
+  transition-property: color, background-color;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  width: 100%;
+  position: relative;
+}
+.main-navbar .nav > li > a {
+  display: block;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  color: #df5e0e;
+  line-height: 19px;
+  text-decoration: none;
+  -webkit-transition-property: color, background-color;
+  -moz-transition-property: color, background-color;
+  -o-transition-property: color, background-color;
+  transition-property: color, background-color;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  border-radius: 50%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-bottom: 1px transparent;
+}
+.main-navbar .nav > li:hover > a {
+  color: white;
+  background-color: #df5e0e;
+  text-decoration: none;
+  -webkit-transition-property: color, background-color;
+  -moz-transition-property: color, background-color;
+  -o-transition-property: color, background-color;
+  transition-property: color, background-color;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  overflow: hidden;
+}
+.main-navbar .nav > li i {
+  padding-right: 5px;
+  font-size: 20px;
+}
+
+.main-navbar:after {
+  position: absolute;
+  float: left;
+  display: block;
+  content: "";
+  left: 44px;
+  top: 120px;
+  bottom: 0px;
+  border: 15px solid white;
+  -webkit-border-radius: 80%;
+  -moz-border-radius: 80%;
+  -ms-border-radius: 80%;
+  -o-border-radius: 80%;
+  border-radius: 80%;
+  overflow: hidden;
+  background-color: white;
+  z-index: -2;
+}
+
+.navbar-fixed-top .nav {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.navbar-fixed-top .nav > .register, .navbar-fixed-top .nav > .register a {
+  color: yellow;
+}
+
 @-webkit-keyframes mov {
   0% {
     background-position: 0;
@@ -311,4 +410,9 @@ h1 {
 footer .footer-inner {
   background: inherit;
   color: #cccccc;
+}
+
+.speaker-img img {
+  width: 165px;
+  height: 165px;
 }
