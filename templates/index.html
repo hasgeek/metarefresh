@@ -7,8 +7,18 @@
 {% block headerbox %}
   <header class="section1 rounded">
     {% block networkbar %}{{ networkbar(siteid='events', login=false) }}{% endblock %}
-    
-    <div id="page-header" class="container">
+    <div class="main-navbar" id="main-navbar">
+      <ul class="nav" id="main-nav">
+        <li id="home"><a href="#"><i class="icon-repeat"></i><br />Meta Refresh</a></li>
+        <li><a href="#about"><i class="icon-quote-left"></i><br />About</a></li>
+        <li><a href="#speakers"><i class="icon-user"></i><br />Speakers</a></li>
+        <li><a href="#schedule"><i class="icon-time"></i><br />Schedule</a></li>
+        <li><a href="#sponsors"><i class="icon-money"></i><br />Sponsors</a></li>
+        <li><a href="#venue"><i class="icon-map-marker"></i><br />Venue</a></li>
+        <li><a href="#register"><i class="icon-signin"></i><br />Register</a></li>
+      </ul>
+    </div>
+    <div id="page-header" class="container" id="home">
       <img src="{{ theme_static('img/logo.svg') }}" onerror="this.onerror = null; this.src='{{ theme_static('img/logo.png') }}';">
       <h2>February 22-23, 2013, Bangalore, India</h2>
     </div>
@@ -16,21 +26,24 @@
 {% endblock %}
 {% block headline %}{% endblock %}
 {% block main %}
-  <div class="main-navbar">
+  <div class="section0 rounded" id="mob-navbar">
+    <div class="main-navbar">
     <ul class="nav" id="main-nav">
-      <li><a href="#"><i class="icon-repeat"></i><br />About</a></li>
-      <li><a href="#"><i class="icon-user"></i><br />Speakers</a></li>
-      <li><a href="#"><i class="icon-time"></i><br />Schedule</a></li>
-      <li><a href="#"><i class="icon-money"></i><br />Sponsors</a></li>
-      <li><a href="#"><i class="icon-map-marker"></i><br />Venue</a></li>
-      <li><a href="#"><i class="icon-signin"></i><br />Register</a></li>
+      <li id="home"><a href="#"><i class="icon-repeat"></i><p>Meta Refresh</p></a></li>
+      <li><a href="#about"><i class="icon-quote-left"></i><p>About</p></a></li>
+      <li><a href="#speakers"><i class="icon-user"></i><p>Speakers</p></a></li>
+      <li><a href="#schedule"><i class="icon-time"></i><p>Schedule</p></a></li>
+      <li><a href="#sponsors"><i class="icon-money"></i><p>Sponsors</p></a></li>
+      <li><a href="#venue"><i class="icon-map-marker"></i><p>Venue</p></a></li>
+      <li><a href="#register"><i class="icon-signin"></i><p>Register</p></a></li>
     </ul>
   </div>
-  <div class="main-navbar-bottom">
   </div>
   <div class="section2 masthead rounded">
     <div class="container centered">
+      <div id="about"> </div>
       <img src="{{ theme_static('img/wheel_black.png') }}">
+      
       <h1>A conference on the construction of <br />user experience on the web.</h1>
     </div>
   </div>
@@ -43,31 +56,31 @@
   </div>
 
   <div class="section4 rounded">
-    <div class="container">
+    <div class="container" id="speakers">
       <h1 class="section-heading">Speakers</h1>
       {% include theme("inc/speakers.html") %}
     </div>
   </div>
   <div class="section5 rounded">
-    <div class="Sponsors">
+    <div class="Sponsors" id="schedule">
       <h1 class="section-heading">Schedule</h1>
       <div class="description">Will be Announced Soon..</div>
     </div>
   </div>
   <div class="section6 rounded">
-    <div class="container">
+    <div class="container" id="sponsors">
       <h1 class="section-heading">Sponsors</h1>
       {% include theme("inc/sponsors.html") %}
     </div>
   </div>
   <div class="section7 rounded">
-    <div class="container">
+    <div class="container" id="venue">
       <h1 class="section-heading">Venue</h1>
       {% include theme("inc/venue.html") %}
     </div>
   </div>
   <div class="section8 rounded">
-    <div class="container">
+    <div class="container" id="register">
       <h1 class="section-heading">Register</h1>
     </div>
   </div>
@@ -75,13 +88,14 @@
 
 {% block footerscripts %}
 <script type="text/javascript">
+
   $(function() {
     // fixed nav-bar transition code
     // adapted from twitter bootstrap docs' sub-nav
     var $win = $(window)
       , $nav = $('.main-navbar')
       , $masthead = $('#masthead')
-      , navTop = $nav.length && $nav.offset().top // - 40
+      , navTop = $nav.length && $nav.offset().top + 200
       , isFixed = 0;
     
     var processScroll = function () {
@@ -108,5 +122,16 @@
     });
 
   });
+  
+  /*!
+  * jQuery Smooth Scroll Plugin v1.4.4
+  */
+  (function(b){function m(c){return c.replace(/(:|\.)/g,"\\$1")}var n=function(c){var e=[],a=false,d=c.dir&&c.dir=="left"?"scrollLeft":"scrollTop";this.each(function(){if(!(this==document||this==window)){var f=b(this);if(f[d]()>0)e.push(this);else{f[d](1);a=f[d]()>0;f[d](0);a&&e.push(this)}}});if(c.el==="first"&&e.length)e=[e.shift()];return e},o="ontouchend"in document;b.fn.extend({scrollable:function(c){return this.pushStack(n.call(this,{dir:c}))},firstScrollable:function(c){return this.pushStack(n.call(this,
+  {el:"first",dir:c}))},smoothScroll:function(c){c=c||{};var e=b.extend({},b.fn.smoothScroll.defaults,c),a=b.smoothScroll.filterPath(location.pathname);this.die("click.smoothscroll").live("click.smoothscroll",function(d){var f={},j=b(this),g=location.hostname===this.hostname||!this.hostname,h=e.scrollTarget||(b.smoothScroll.filterPath(this.pathname)||a)===a,k=m(this.hash),i=true;if(!e.scrollTarget&&(!g||!h||!k))i=false;else{g=e.exclude;h=0;for(var l=g.length;i&&h<l;)if(j.is(m(g[h++])))i=false;g=e.excludeWithin;
+  h=0;for(l=g.length;i&&h<l;)if(j.closest(g[h++]).length)i=false}if(i){d.preventDefault();b.extend(f,e,{scrollTarget:e.scrollTarget||k,link:this});b.smoothScroll(f)}});return this}});b.smoothScroll=function(c,e){var a,d,f,j=0;d="offset";var g="scrollTop",h={},k=false;f=[];if(typeof c==="number"){a=b.fn.smoothScroll.defaults;f=c}else{a=b.extend({},b.fn.smoothScroll.defaults,c||{});if(a.scrollElement){d="position";a.scrollElement.css("position")=="static"&&a.scrollElement.css("position","relative")}f=
+  e||b(a.scrollTarget)[d]()&&b(a.scrollTarget)[d]()[a.direction]||0}a=b.extend({link:null},a);g=a.direction=="left"?"scrollLeft":g;if(a.scrollElement){d=a.scrollElement;j=d[g]()}else{d=b("html, body").firstScrollable();k=o&&"scrollTo"in window}h[g]=f+j+a.offset;a.beforeScroll.call(d,a);if(k){f=a.direction=="left"?[h[g],0]:[0,h[g]];window.scrollTo.apply(window,f);a.afterScroll.call(a.link,a)}else d.animate(h,{duration:a.speed,easing:a.easing,complete:function(){a.afterScroll.call(a.link,a)}})};b.smoothScroll.version=
+  "1.4.4";b.smoothScroll.filterPath=function(c){return c.replace(/^\//,"").replace(/(index|default).[a-zA-Z]{3,4}$/,"").replace(/\/$/,"")};b.fn.smoothScroll.defaults={exclude:[],excludeWithin:[],offset:0,direction:"top",scrollElement:null,scrollTarget:null,beforeScroll:function(){},afterScroll:function(){},easing:"swing",speed:400}})(jQuery);
+
+
 </script>
 {% endblock %}

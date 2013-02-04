@@ -11,6 +11,7 @@
             "css/app.css"
         ],
         "assets_js": [
+            "js/jquery.smooth-scroll.min.js",
             "js/app.js"
         ]
     }

@@ -34,29 +34,35 @@ h1
   color: #333
   text-align: center
 
+
 .navbar-margin
   margin-bottom: 10px
-
+#main-navbar.main-navbar
+  display: none
+#main-navbar.main-navbar.navbar-fixed-top
+  display: block
 // Navigation bar
 .main-navbar .nav
-  float: left
-  width: 60px
-  background-color: #FFFFFF
-  z-index: 10
-  margin-top: 120px
-  margin-bottom: auto
+  float: none
+  +box-sizing(border-box)
+  +display-box
+  margin-right: 0
+  margin-bottom: 0
+  width: 100%
+  background-color: white
 
   & > li
-    float: left
-    font-size: 12px
+    +inline-block
+    float: none
+    font-size: 20px
     margin-bottom: 0
     // background-color: black
-    padding-left: 5px
-    //padding-right: 5px
-    +transition-property("color, background-color")
-    +transition-duration(0.2s) 
-    width: 100%
-    position: relative
+    +display-box
+    +box-flex(1)
+    +box-pack(center)
+    +transition-property("color, color")
+    +transition-duration(0.2s)
+    border-radius: 50%
 
     & > a
       display: block
@@ -64,70 +70,42 @@ h1
       +box-sizing(border-box)
       width: 100%
       color: #DF5E0E
+      padding: 10px 10px 0px
       line-height: 19px
       text-decoration: none
-      +transition-property("color, background-color")
+      background-color: #FFFFFF
+      +transition-property("color, color")
       +transition-duration(0.2s)
       border-radius: 50%
-      padding-top: 7px
-      padding-bottom: 7px
-      padding-left: 2px
-      padding-right: 2px
-      border-bottom: 1px transparent
-    &:hover > a
-      color: #FFF
-      background-color: #DF5E0E
-      //border-radius: 50%
+      text-transform: uppercase
+      font-size: 15px
+
+    &:hover, &:hover > a
       text-decoration: none
-      +transition-property("color, background-color")
+      color: #518AAE
+      +transition-property("color, color")
       +transition-duration(0.2s)
-      overflow: hidden
-    i
-      padding-right: 5px
-      font-size: 20px
+
 .main-navbar:after
   position: absolute
-  float: left
   display: block
   content: ""
-  left: 44px
-  top: 120px
-  bottom: 0px
+  bottom: -10px
+  left: -40px
+  right: -40px
   border: 15px solid #FFFFFF
-  +border-radius(80%)
+  +border-radius(50%)
   overflow: hidden
   background-color: #FFFFFF
   z-index: -2
-
 .navbar-fixed-top .nav
-  //border-radius: 10%
-  padding-bottom: 10px
-  padding-top: 10px
   & > .register, & > .register a
     color: yellow
 
-
-//mov bg
-@-webkit-keyframes mov
-  0% 
-    background-position: 0
-  100% 
-    background-position: 100%
-@-moz-keyframes mov
-  0% 
-    background-position: 0
-  100% 
-    background-position: 100%
-@-o-keyframes mov
-  0% 
-    background-position: 0
-  100% 
-    background-position: 100%
-@keyframes mov
-  0% 
-    background-position: 0
-  100% 
-    background-position: 100%
+#mob-navbar
+  display: none
+.hide
+  opacity: 0
 
 //rotate wheel
 @-webkit-keyframes rotate
@@ -229,10 +207,13 @@ h1
   border-color: #F4F8F9
   padding-top: 0
   margin-top: 0
+.section0, .section0:after
+  background-color: #fff
+  border-color: #fff
 .section2, .section2:after
   background-color: #ECF1F2
   border-color: #ECF1F2
-  //margin-top: -52px
+  //margin-top: -70px
   //background-image: image-url('moving-bg.png')
   //opacity: 0.5
   // border-color: #518AAE
@@ -262,6 +243,8 @@ h1
   border-color: #518AAE
 
 .section1.rounded:after
+  z-index: 9
+.section0.rounded:after
   z-index: 8
 .section2.rounded:after
   z-index: 7
@@ -278,6 +261,8 @@ h1
 .section8.rounded:after
   z-index: 1
 
+.section3.rounded
+  padding-top: 5px
 
 .section-heading
   font-weight: 500
@@ -307,8 +292,75 @@ footer .footer-inner
   background: inherit
   color: #ccc
 
+
+@media (max-width: 979px)
+  #mob-navbar
+    display: block
+  #main-navbar
+    display: none
+  #home
+    display: none
+  .main-navbar .nav
+    width: 100%
+    & > li
+      font-size: 20px
+      & > a
+        width: 100%
+        padding: 0px 10px 0px
+        line-height: 19px
+        font-size: 15px
+  .section0.rounded
+    padding-top: 30px
+    padding-bottom: 0px
+  .section3.rounded
+    padding-top: 0px
+  .main-navbar .nav
+    & > li
+      p
+        font-weight: bold
+  .masthead
+    h1
+      font-size: 25px
+      line-height: 32px
+
 @media (min-width: 768px) and (max-width: 979px)
-.speaker-img
-  img
-    width: 165px
-    height: 165px
+  .speaker-img
+    img
+      height: 165px
+  .main-navbar .nav
+    & > li
+      p
+        font-size: 16px
+        padding-bottom: 5px
+                                                                            
+@media (max-width: 767px)
+  #page-header
+    h2
+      font-size: 20px
+@media (max-width: 460px)
+  .main-navbar .nav
+    & > li
+      & > a
+        width: 100%
+        padding: 0px 5px 0px
+        color: #222222
+      p
+        display: none
+      i
+        font-size: 22px
+        padding-bottom: 15px
+        padding-top: 10px
+
+  #page-header
+    h2
+      font-size: 16px
+  .masthead
+    h1
+      font-size: 20px
+      line-height: 24px
+    img
+      display: none
+  .rounded
+    padding-top: 30px
+  .section1.rounded, .section3.rounded
+    padding-top: 0px
