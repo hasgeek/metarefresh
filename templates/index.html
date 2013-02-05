@@ -7,16 +7,18 @@
 {% block headerbox %}
   <header class="section1 rounded">
     {% block networkbar %}{{ networkbar(siteid='events', login=false) }}{% endblock %}
-    <div class="main-navbar" id="main-navbar">
-      <ul class="nav" id="main-nav">
-        <li id="home"><a href="#"><i class="icon-repeat"></i><br />Meta Refresh</a></li>
-        <li><a href="#about"><i class="icon-quote-left"></i><br />About</a></li>
-        <li><a href="#speakers"><i class="icon-user"></i><br />Speakers</a></li>
-        <li><a href="#schedule"><i class="icon-time"></i><br />Schedule</a></li>
-        <li><a href="#sponsors"><i class="icon-money"></i><br />Sponsors</a></li>
-        <li><a href="#venue"><i class="icon-map-marker"></i><br />Venue</a></li>
-        <li><a href="#register"><i class="icon-signin"></i><br />Register</a></li>
-      </ul>
+    <div id="main-navbar">
+      <div class="main-navbar">
+        <ul class="nav" id="main-nav">
+          <li id="home"><a href="#"><i class="icon-repeat"></i><br />Meta Refresh</a></li>
+          <li><a href="#about"><i class="icon-quote-left"></i><br />About</a></li>
+          <li><a href="#speakers"><i class="icon-user"></i><br />Speakers</a></li>
+          <li><a href="#schedule"><i class="icon-time"></i><br />Schedule</a></li>
+          <li><a href="#sponsors"><i class="icon-money"></i><br />Sponsors</a></li>
+          <li><a href="#venue"><i class="icon-map-marker"></i><br />Venue</a></li>
+          <li><a href="#register"><i class="icon-signin"></i><br />Register</a></li>
+        </ul>
+      </div>
     </div>
     <div id="page-header" class="container" id="home">
       <img src="{{ theme_static('img/logo.svg') }}" onerror="this.onerror = null; this.src='{{ theme_static('img/logo.png') }}';">
@@ -52,6 +54,11 @@
       <div class="description">
         {{ node.content }}
       </div>
+      <div id="social">
+        <a href="#" title="Twitter" id="social-icon1">twitter</a>
+        <a href="#" title="Google Plus" id="social-icon2">google-plus</a>
+        <a href="#" title="Facebook" id="social-icon3">facebook</a>
+      </div>
     </div>
   </div>
 
@@ -64,7 +71,9 @@
   <div class="section5 rounded">
     <div class="Sponsors" id="schedule">
       <h1 class="section-heading">Schedule</h1>
-      <div class="description">Will be Announced Soon..</div>
+      <div class="container">
+        <div class="description">Will be Announced Soon..</div>
+      </div>
     </div>
   </div>
   <div class="section6 rounded">
