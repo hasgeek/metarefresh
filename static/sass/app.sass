@@ -6,6 +6,27 @@
 
 header
   margin-bottom: 0
+.btn-primary
+  background-color: #518AAE
+  *background-color: #33608F
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#518AAE), to(#33608F))
+  background-image: -webkit-linear-gradient(top, #518AAE, #33608F)
+  background-image: -o-linear-gradient(top, #518AAE, #33608F)
+  background-image: linear-gradient(to bottom, #518AAE, #33608F)
+  background-image: -moz-linear-gradient(top, #518AAE, #33608F)
+  background-repeat: repeat-x
+  border-color: #33608F #518AAE #002a80
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25)
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff518AAE', endColorstr='#ff33608F', GradientType=0)
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false)
+  font-size: 14px
+  margin-top: 15px
+.btn-primary:hover,.btn-primary:active,.btn-primary.active,.btn-primary.disabled,.btn-primary[disabled]
+  background-color: #33608F
+  *background-color: #518AAE
+
+.btn-primary:active,.btn-primary.active
+  background-color: #518AAE \9
 
 #page-header
   border-bottom: 0
@@ -16,7 +37,7 @@ header
     max-width: 100%
     height: auto
   img
-    width: 180px
+    width: 250px
     margin-top: 10px
     margin-bottom: 20px
 
@@ -27,12 +48,37 @@ body
   margin-right: auto
   min-width: 50px
   background-color: #33608F
-h2, h3,h4,h5,h6
+h2,h3,h4,h5,h6
   color: #666
   text-align: center
 h1
   color: #333
   text-align: center
+#credits h3, #venue h3
+  color: #222222
+  font-size: 20px
+  text-align: left
+  font-weight: 500
+  margin-bottom: 15px
+#venue
+  img
+    border: 8px solid #518AAE
+    border-radius: 10px
+#credits 
+  p
+    font-family: 'Raleway', sans-serif
+    font-size: 14px
+    line-height: 25px
+    font-weight: 200
+    text-align: left
+    color: #fff
+    margin-top: 10px
+  img
+    text-align: left
+    border-radius: 10px
+    background: #73A2BD
+    box-shadow: inset 2px 2px 3px #33608F
+    padding: 10px
 
 
 .navbar-margin
@@ -109,6 +155,37 @@ h1
 .hide
   opacity: 0
 
+.rect
+  width: 300px
+  height: 160px
+  background-color: #FFFFFF
+  display: block
+  position: relative
+  z-index: 20
+  margin-left: auto
+  margin-right: auto
+
+.rect:after
+  content: ""
+  display: block
+  border: 30px solid #FFFFFF
+  position: absolute
+  top: 0px
+  bottom: 0px
+  right: -30px
+  z-index: -1
+  border-radius: 50%
+.rect:before
+  content: ""
+  display: block
+  border: 30px solid #FFFFFF
+  position: absolute
+  top: 0px
+  bottom: 0px
+  left: -30px
+  z-index: -1
+  border-radius: 50%
+
 //rotate wheel
 @-webkit-keyframes rotate
   from
@@ -137,19 +214,24 @@ h1
   max-width: 120px
   margin-right: auto
   margin-left: auto
-  margin-top: 30px
+  margin-top: 10px
+  em
+    color: #9FC2D6
+    margin-bottom: 10px
 #social-icon1,#social-icon2,#social-icon3
   height: 29px
   width: 29px
   float: left
-  margin-right: 10px
+  margin-right: 5px
+  margin-left: 5px
   text-indent: -99999px
+  margin-top: 10px
 
 #social-icon1
-  background: image-url('social-share/twitter.png') bottom
+  background: image-url('social-share/twitter1.png') bottom
 
 #social-icon2
-  background: image-url('social-share/google-plus.png') bottom
+  background: image-url('social-share/google-plus1.png') bottom
 
 #social-icon3
   background: image-url('social-share/facebook.png') bottom
@@ -178,17 +260,7 @@ h1
     font-size: 30px
     line-height: 46px
     //text-shadow: 2px 2px 3px #333
-  .btn
-    background-image: none
-    background-color: #DF5E0E
-    border-radius: 0
-    border: none
-    text-shadow: none
-    color: #fff
-    font-size: 20px
-    box-shadow: none
-    font-weight: 200
-    padding: 5px
+  
   img
     -moz-animation: rotate 20s linear 0s infinite
     -webkit-animation: rotate 20s linear 0 infinite
@@ -205,7 +277,62 @@ h1
   font-family: 'Raleway', sans-serif
   font-size: 18px
   line-height: 30px
+  font-weight: 200
+
+.schedule-placeholder
+  text-align: center
+  margin-left: auto
+  margin-right: auto
+  padding-bottom: 10px
+  font-family: 'Raleway', sans-serif
+  font-size: 18px
+  line-height: 30px
   font-weight: 300
+
+.video-reel 
+  margin-top: 30px
+  margin-bottom: 30px
+  border-radius: 10px
+  padding: 20px
+  position: relative
+  h3
+    a
+      color: #666666
+    a:hover
+      color: #DF5E0E
+      text-decoration: none
+
+.video-reel:before 
+  top: 5px
+.video-reel:after 
+  bottom: 5px
+.video-reel ul 
+  list-style-type: none
+  margin: 0
+  text-align: center
+.video-reel li 
+  display: inline-block
+.video-reel li a, .video-reel li img 
+  transition-duration: 0.3s
+  transition-timing-function: ease-in
+
+.video-reel li a 
+  color: #003366
+  text-shadow: 0 0 2px #EEEEEE
+
+.video-reel li img 
+  background-color: #FFFFFF
+  border: 0 none
+  border-radius: 6px 6px 6px 6px
+  box-shadow: 0 0 4px black
+  display: block
+  margin: 10px
+.video-reel li:hover img 
+  border-radius: 10px 10px 10px 10px
+  box-shadow: 0 0 20px white
+
+.video-reel li:hover a 
+  text-shadow: 0 0 10px white
 
 
 .button-bar
@@ -231,8 +358,8 @@ h1
   // +box-shadow(0 2px 1px rgba(0, 0, 0, 0.1))
 
 .section1, .section1:after
-  background-color: #F4F8F9
-  border-color: #F4F8F9
+  background-color: #F2F8F2
+  border-color: #F2F8F2
   padding-top: 0
   margin-top: 0
 .section0, .section0:after
@@ -299,12 +426,19 @@ h1
   letter-spacing: -2px
 .speaker-img
   text-align: center
+  border-radius: 50%
+  -webkit-border-radius: 50%
+  width: 200px
+  height: 200px
+  border: 8px solid #C5DCEB
+  margin-left: auto
+  margin-right: auto
   img
     width: 200px
     height: 200px
     border-radius: 50%
-  img:hover
-    box-shadow: 2px 2px 3px #518AAE
+    -webkit-border-radius: 50%
+    display: block
     
 .speaker-name 
   text-align: center
@@ -319,7 +453,145 @@ h1
 footer .footer-inner
   background: inherit
   color: #ccc
+///////////////////////
 
+#colorbox, #cboxOverlay, #cboxWrapper
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 9999
+  overflow: hidden
+#cboxOverlay
+  position: fixed
+  width: 100%
+  height: 100%
+#cboxMiddleLeft, #cboxBottomLeft
+  clear: left
+#cboxContent
+  position: relative
+#cboxLoadedContent
+  overflow: auto
+#cboxTitle
+  margin: 0
+#cboxLoadingOverlay, #cboxLoadingGraphic
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow
+  cursor: pointer
+.cboxIframe
+  width: 100%
+  height: 100%
+  display: block
+  border: 0
+#colorbox, #cboxContent, #cboxLoadedContent
+  box-sizing: content-box
+  -moz-box-sizing: content-box
+  -webkit-box-sizing: content-box
+
+
+#cboxOverlay
+  background: image-url('images/overlay.png') repeat 0 0
+#cboxTopLeft
+  width: 21px
+  height: 21px
+  background: image-url('images/controls.png') no-repeat -101px 0
+#cboxTopRight
+  width: 21px
+  height: 21px
+  background: image-url('images/controls.png') no-repeat -130px 0
+#cboxBottomLeft
+  width: 21px 
+  height: 21px
+  background: image-url('images/controls.png') no-repeat -101px -29px
+#cboxBottomRight
+  width: 21px
+  height: 21px
+  background: image-url('images/controls.png') no-repeat -130px -29px
+#cboxMiddleLeft
+  width: 21px
+  background: image-url('images/controls.png') left top repeat-y
+#cboxMiddleRight
+  width: 21px
+  background: image-url('images/controls.png') right top repeat-y
+#cboxTopCenter
+  height: 21px
+  background: image-url('images/border.png') 0 0 repeat-x
+#cboxBottomCenter
+  height: 21px
+  background: image-url('images/border.png') 0 -29px repeat-x
+#cboxContent
+  background: #fff
+  overflow: hidden
+.cboxIframe
+  background: #fff
+#cboxError
+  padding: 50px
+  border: 1px solid #ccc
+#cboxLoadedContent
+  margin-bottom: 28px
+#cboxTitle
+  position: absolute
+  bottom: 4px
+  left: 0
+  text-align: center
+  width: 100%
+  color: #949494
+#cboxCurrent
+  position: absolute
+  bottom: 4px
+  left: 58px
+  color: #949494
+#cboxSlideshow
+  position: absolute
+  bottom: 4px
+  right: 30px
+  color: #0092ef
+#cboxPrevious
+  position: absolute
+  bottom: 0
+  left: 0
+  background: image-url('images/controls.png') no-repeat -75px 0
+  width: 25px
+  height: 25px
+  text-indent: -9999px
+#cboxPrevious:hover
+  background-position: -75px -25px
+#cboxNext
+  position: absolute
+  bottom: 0
+  left: 27px
+  background: image-url('images/controls.png') no-repeat -50px 0
+  width: 25px
+  height: 25px
+  text-indent: -9999px
+#cboxNext:hover
+  background-position: -50px -25px
+#cboxLoadingOverlay
+  background: image-url('images/loading_background.png') no-repeat center center
+#cboxLoadingGraphic
+  background: image-url('images/loading.gif') no-repeat center center
+#cboxClose
+  position: absolute
+  bottom: 0
+  right: 0
+  background: image-url('images/controls.png') no-repeat -25px 0
+  width: 25px
+  height: 25px
+  text-indent: -9999px
+#cboxClose:hover
+  background-position: -25px -25px
+
+
+
+
+////////////////////
+@media (min-width: 980px) and (max-width: 1200px)
+  .rect
+    width: 200px
+    height: 130px
 
 @media (max-width: 979px)
   #mob-navbar
@@ -350,29 +622,54 @@ footer .footer-inner
     h1
       font-size: 25px
       line-height: 32px
+  .speaker-img
+    border: 5px solid #C5DCEB
 
 @media (min-width: 768px) and (max-width: 979px)
   .speaker-img
+    width: 165px
+    height: 165px
     img
+      width: 165px
       height: 165px
   .main-navbar .nav
     & > li
       p
         font-size: 16px
-        padding-bottom: 5px
+        padding-bottom: 15px
+  .rect
+    width: 180px
+    height: 120px
                                                                             
 @media (max-width: 767px)
   #page-header
     h2
       font-size: 20px
-@media (min-width: 460px) and (max-width: 767px)
+  .rect
+    width: 60%
+    height: 40%
+    margin-bottom: 30px
+  .span4
+    float: none
+    margin-left: auto
+    margin-right: auto
+@media (min-width: 461px) and (max-width: 767px)
   .speaker-img
+    height: 165px
+    width: 165px
     img
       height: 165px
       width: 165px
   .main-navbar .nav
     p
       padding-bottom: 10px
+
+@media (min-width: 461px) and (max-width: 559px)
+  .span3
+    float: none
+    margin-left: auto
+    margin-right: auto
+
 @media (max-width: 460px)
   .main-navbar .nav
     & > li
@@ -402,12 +699,16 @@ footer .footer-inner
     padding-top: 0px
   .speaker-img
     width: 30%
+    height: auto
     float: left
+    border: none
     img
       height: auto
       width: 90%
       float: left
       margin-top: 5px
+      margin-bottom: 5px
+      //border: 2px solid #C5DCEB
   .speaker-name 
     margin-bottom: 30px
     float: right
@@ -425,4 +726,14 @@ footer .footer-inner
       padding-top: 10px
       width: 100%
       margin-left: 0
-
+  .rect
+    width: 60%
+    height: 40%
+    margin-bottom: 30px
+    margin-left: 0
+    margin-left: auto
+    margin-right: auto
+  .span4
+    float: none
+    margin-right: auto
+    margin-left: auto

@@ -12,7 +12,8 @@
         ],
         "assets_js": [
             "js/jquery.smooth-scroll.min.js",
-            "js/app.js"
+            "js/app.js",
+            "js/jquery.colorbox.js"
         ]
     }
 }
