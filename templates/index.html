@@ -5,12 +5,12 @@
   <meta name="DC.title" content="{{ node.title }}"/>
 {%- endblock %}
 {% block headerbox %}
-  <header class="section1 rounded">
+  <header id="home" class="section1 rounded">
     {% block networkbar %}{{ networkbar(siteid='events', login=false) }}{% endblock %}
     <div id="main-navbar">
       <div class="main-navbar navbar-fixed-top navbar-hidden">
         <ul class="nav" id="main-nav">
-          <li id="home"><a href="#"><i class="icon-repeat"></i><br />Meta Refresh</a></li>
+          <li><a href="#home"><i class="icon-repeat"></i><br />Meta Refresh</a></li>
           <li><a href="#about"><i class="icon-quote-left"></i><br />About</a></li>
           <li><a href="#speakers"><i class="icon-user"></i><br />Speakers</a></li>
           {#<li><a href="#schedule"><i class="icon-time"></i><br />Schedule</a></li>
@@ -20,7 +20,7 @@
         </ul>
       </div>
     </div>
-    <div id="page-header" class="container" id="home">
+    <div id="page-header" class="container">
       <img src="{{ theme_static('img/logo.svg') }}" onerror="this.onerror = null; this.src='{{ theme_static('img/logo.png') }}';">
       <h2>February 22-23, 2013, MLR Convention Centre, JP Nagar, Bangalore, India</h2>
       <div class="description">
@@ -37,7 +37,7 @@
   <div class="section0 rounded" id="mob-navbar">
     <div class="main-navbar">
     <ul class="nav" id="main-nav">
-      <li id="home"><a href="#"><i class="icon-repeat"></i><p>Meta Refresh</p></a></li>
+      <li><a href="#home"><i class="icon-repeat"></i><p>Meta Refresh</p></a></li>
       <li><a href="#about"><i class="icon-quote-left"></i><p>About</p></a></li>
       <li><a href="#speakers"><i class="icon-user"></i><p>Speakers</p></a></li>
       {#<li><a href="#schedule"><i class="icon-time"></i><p>Schedule</p></a></li>
