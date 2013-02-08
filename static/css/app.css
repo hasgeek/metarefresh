@@ -102,12 +102,36 @@ h1 {
   margin-bottom: 10px;
 }
 
-#main-navbar .main-navbar {
-  display: none;
+.navbar-fixed-top {
+  visibility: visible;
+  top: 0;
+  -webkit-transition-property: top, visibility;
+  -moz-transition-property: top, visibility;
+  -o-transition-property: top, visibility;
+  transition-property: top, visibility;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
-
-#main-navbar .main-navbar.navbar-fixed-top {
-  display: block;
+.navbar-fixed-top.navbar-hidden {
+  top: -100px;
+  -webkit-transition-property: top, visibility;
+  -moz-transition-property: top, visibility;
+  -o-transition-property: top, visibility;
+  transition-property: top, visibility;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
 
 .main-navbar .nav {
@@ -122,7 +146,7 @@ h1 {
   margin-right: 0;
   margin-bottom: 0;
   width: 100%;
-  background-color: #eeeeee;
+  background-color: #dedce6;
 }
 .main-navbar .nav > li {
   display: -moz-inline-stack;
@@ -167,7 +191,7 @@ h1 {
   padding: 10px 10px 0px;
   line-height: 19px;
   text-decoration: none;
-  background-color: #eeeeee;
+  background-color: #dedce6;
   -webkit-transition-property: color, color;
   -moz-transition-property: color, color;
   -o-transition-property: color, color;
@@ -200,14 +224,14 @@ h1 {
   bottom: -10px;
   left: -40px;
   right: -40px;
-  border: 15px solid #eeeeee;
+  border: 15px solid #dedce6;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
   overflow: hidden;
-  background-color: #eeeeee;
+  background-color: #dedce6;
   z-index: -2;
 }
 
@@ -477,8 +501,8 @@ h1 {
 }
 
 .section0, .section0:after {
-  background-color: #eeeeee;
-  border-color: #eeeeee;
+  background-color: #dedce6;
+  border-color: #dedce6;
 }
 
 .section1, .section1:after {
@@ -591,9 +615,9 @@ h1 {
   color: black;
   font-weight: 600;
 }
-.speaker-name em {
-  font-size: 12px;
+.speaker-name .from {
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 footer .footer-inner {

@@ -8,7 +8,7 @@
   <header class="section1 rounded">
     {% block networkbar %}{{ networkbar(siteid='events', login=false) }}{% endblock %}
     <div id="main-navbar">
-      <div class="main-navbar">
+      <div class="main-navbar navbar-fixed-top navbar-hidden">
         <ul class="nav" id="main-nav">
           <li id="home"><a href="#"><i class="icon-repeat"></i><br />Meta Refresh</a></li>
           <li><a href="#about"><i class="icon-quote-left"></i><br />About</a></li>
@@ -107,20 +107,17 @@
     // adapted from twitter bootstrap docs' sub-nav
     var $win = $(window)
       , $nav = $('.main-navbar')
-      , $masthead = $('#masthead')
-      , navTop = $nav.length && $nav.offset().top + 280
+      , navTop = $nav.length && $nav.offset().top + 450
       , isFixed = 0;
     
     var processScroll = function () {
       var scrollTop = $win.scrollTop();
       if (scrollTop >= navTop && !isFixed) {
         isFixed = 1;
-        $nav.addClass('navbar-fixed-top');
-        $masthead.addClass('navbar-margin');
+        $nav.removeClass('navbar-hidden');
       } else if (scrollTop <= navTop && isFixed) {
         isFixed = 0;
-        $nav.removeClass('navbar-fixed-top');
-        $masthead.removeClass('navbar-margin');
+        $nav.addClass('navbar-hidden');
       };
     };
     

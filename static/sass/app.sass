@@ -87,12 +87,33 @@ h1
 
 .navbar-margin
   margin-bottom: 10px
-#main-navbar
-  .main-navbar
-    display: none
-#main-navbar
-  .main-navbar.navbar-fixed-top
-    display: block
+
+.navbar-fixed-top
+  visibility: visible
+  top: 0
+  +transition-property("top, visibility")
+  +transition-duration(0.25s)
+  +transition-timing-function(ease-out)
+  &.navbar-hidden
+    top: -100px
+    +transition-property("top, visibility")
+    +transition-duration(0.25s)
+    +transition-timing-function(ease-out)
+
+// #main-navbar
+//   .main-navbar
+//     max-height: 0
+//     visibility: hidden
+//     @include transition-property("max-height, visibility")
+//     @include transition-duration(0.1s)
+//     @include transition-timing-function(ease-out)
+// #main-navbar
+//   .main-navbar.navbar-fixed-top
+//     max-height: 100px
+//     visibility: visible
+//     @include transition-property("max-height, visibility")
+//     @include transition-duration(0.1s)
+//     @include transition-timing-function(ease-out)
 // Navigation bar
 .main-navbar .nav
   float: none
@@ -101,7 +122,7 @@ h1
   margin-right: 0
   margin-bottom: 0
   width: 100%
-  background-color: #eee
+  background-color: #dedce6
 
   & > li
     +inline-block
@@ -125,7 +146,7 @@ h1
       padding: 10px 10px 0px
       line-height: 19px
       text-decoration: none
-      background-color: #eee
+      background-color: #dedce6
       +transition-property("color, color")
       +transition-duration(0.2s)
       border-radius: 50%
@@ -145,10 +166,10 @@ h1
   bottom: -10px
   left: -40px
   right: -40px
-  border: 15px solid #eee
+  border: 15px solid #dedce6
   +border-radius(50%)
   overflow: hidden
-  background-color: #eee
+  background-color: #dedce6
   z-index: -2
 .navbar-fixed-top .nav
   & > .register, & > .register a
@@ -361,8 +382,8 @@ h1
   // +box-shadow(0 2px 1px rgba(0, 0, 0, 0.1))
 
 .section0, .section0:after
-  background-color: #eee
-  border-color: #eee
+  background-color: #dedce6
+  border-color: #dedce6
 .section1, .section1:after
   background-color: #dedce6
   border-color: #dedce6
@@ -445,9 +466,9 @@ h1
   h3
     color: #000
     font-weight: 600
-  em
-    font-size: 12px
+  .from
     font-weight: 600
+    text-transform: uppercase
 
 footer .footer-inner
   background: inherit
@@ -706,7 +727,7 @@ footer .footer-inner
       margin-top: 5px
       margin-bottom: 5px
       //border: 2px solid #C5DCEB
-  .speaker-name 
+  .speaker-name
     margin-bottom: 30px
     float: right
     width: 70%
