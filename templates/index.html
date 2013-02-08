@@ -7,27 +7,133 @@
 {% block headerbox %}
   <header class="section1 rounded">
     {% block networkbar %}{{ networkbar(siteid='events', login=false) }}{% endblock %}
-    <div id="page-header" class="container">
+    <div id="main-navbar">
+      <div class="main-navbar">
+        <ul class="nav" id="main-nav">
+          <li id="home"><a href="#"><i class="icon-repeat"></i><br />Meta Refresh</a></li>
+          <li><a href="#about"><i class="icon-quote-left"></i><br />About</a></li>
+          <li><a href="#speakers"><i class="icon-user"></i><br />Speakers</a></li>
+          {#<li><a href="#schedule"><i class="icon-time"></i><br />Schedule</a></li>
+          <li><a href="#sponsors"><i class="icon-money"></i><br />Sponsors</a></li>#}
+          {#<li><a href="#venue"><i class="icon-map-marker"></i><br />Venue</a></li>#}
+          {#<li><a href="#credits"><i class="icon-certificate"></i><br />Credits</a></li>#}
+        </ul>
+      </div>
+    </div>
+    <div id="page-header" class="container" id="home">
       <img src="{{ theme_static('img/logo.svg') }}" onerror="this.onerror = null; this.src='{{ theme_static('img/logo.png') }}';">
-      <h1>February 22-23, 2013, Bangalore, India</h1>
+      <h2>February 22-23, 2013, MLR Convention Centre, JP Nagar, Bangalore, India</h2>
+      <a class="ticket-popup" href="http://metarefresh.doattend.com/" data-href="http://doattend.com/embed_ticket/25343"><div class="btn btn-primary btn-large">Buy tickets</div></a>
+      <a class="btn btn-large btn-primary" href="http://funnel.hasgeek.com/metarefresh2013">View sessions</a>
+      <a class="btn btn-large btn-primary" href="https://www.dropbox.com/s/68ky29eize0awms/Meta%20Refresh%202013%20Sponsor%20Kit%20INR.pdf">Sponsor</a>
     </div>
   </header>
 {% endblock %}
 {% block headline %}{% endblock %}
 {% block main %}
+  <div class="section0 rounded" id="mob-navbar">
+    <div class="main-navbar">
+    <ul class="nav" id="main-nav">
+      <li id="home"><a href="#"><i class="icon-repeat"></i><p>Meta Refresh</p></a></li>
+      <li><a href="#about"><i class="icon-quote-left"></i><p>About</p></a></li>
+      <li><a href="#speakers"><i class="icon-user"></i><p>Speakers</p></a></li>
+      {#<li><a href="#schedule"><i class="icon-time"></i><p>Schedule</p></a></li>
+      <li><a href="#sponsors"><i class="icon-money"></i><p>Sponsors</p></a></li>
+      <li><a href="#venue"><i class="icon-map-marker"></i><p>Venue</p></a></li>
+      <li><a href="#credits"><i class="icon-certificate"></i><p>Credits</p></a></li>#}
+    </ul>
+  </div>
+  </div>
   <div class="section2 rounded">
-    <div class="container">
+    <div id="about" class="container">
       <div class="description">
         {{ node.content }}
-        <p class="button-bar">
-          <a class="btn btn-large btn-primary" href="http://metarefresh.doattend.com/">Buy tickets</a>
-          <a class="btn btn-large btn-primary" href="http://funnel.hasgeek.com/metarefresh2013">View sessions</a>
-          <a class="btn btn-large btn-primary" href="https://www.dropbox.com/s/68ky29eize0awms/Meta%20Refresh%202013%20Sponsor%20Kit%20INR.pdf">Sponsor</a>
-        </p>
-        <p class="button-bar">
-          Previously: <a href="http://metarefresh.in/2012">2012 edition</a>
-        </p>
+      </div>
+{#      <div id="social">
+        <em>Share with friends</em><br />
+        <a href="#" title="Twitter" id="social-icon1">twitter</a>
+        <a href="#" title="Google Plus" id="social-icon2">google-plus</a>
+        <a href="#" title="Facebook" id="social-icon3">facebook</a>
+      </div> #}
+    </div>
+  </div>
+
+  <div class="section3 rounded">
+    <div class="container" id="speakers">
+      <h1 class="section-heading">Speakers</h1>
+      {% include theme("inc/speakers.html") %}
+    </div>
+  </div>
+{#  <div class="section4 rounded">
+    <div class="Sponsors" id="schedule">
+      <h1 class="section-heading">Schedule</h1>
+      <div class="container">
+        {% include theme("inc/schedule.html") %}
       </div>
     </div>
   </div>
+  <div class="section5 rounded">
+    <div class="container" id="sponsors">
+      <h1 class="section-heading">Sponsors</h1>
+      {% include theme("inc/sponsors.html") %}
+    </div>
+  </div> #}
+{#  <div class="section4 rounded">
+    <div class="container" id="venue">
+      <h1 class="section-heading">Venue</h1>
+      {% include theme("inc/venue.html") %}
+    </div>
+  </div> #}
+{#  <div class="section7 rounded">
+    <div class="container" id="credits">
+      <h1 class="section-heading">Credits</h1>
+      {% include theme("inc/credits.html") %}
+    </div>
+  </div> #}
+{% endblock %}
+
+{% block footerscripts %}
+<script type="text/javascript">
+  $(document).ready(function(){
+    
+    $(".no-touch .ticket-popup").colorbox({iframe:true, width:"80%", height:"80%", href: $(".ticket-popup").attr("data-href")});
+    
+  });
+</script>
+<script type="text/javascript">
+
+  $(function() {
+    // fixed nav-bar transition code
+    // adapted from twitter bootstrap docs' sub-nav
+    var $win = $(window)
+      , $nav = $('.main-navbar')
+      , $masthead = $('#masthead')
+      , navTop = $nav.length && $nav.offset().top + 280
+      , isFixed = 0;
+    
+    var processScroll = function () {
+      var scrollTop = $win.scrollTop();
+      if (scrollTop >= navTop && !isFixed) {
+        isFixed = 1;
+        $nav.addClass('navbar-fixed-top');
+        $masthead.addClass('navbar-margin');
+      } else if (scrollTop <= navTop && isFixed) {
+        isFixed = 0;
+        $nav.removeClass('navbar-fixed-top');
+        $masthead.removeClass('navbar-margin');
+      };
+    };
+    
+    processScroll();
+    
+    $win.on('scroll', processScroll);
+    
+    // smooth scroll nav links
+    $('a', $nav).smoothScroll({
+        offset: -80
+      , speed: 900
+    });
+
+  });
+</script>
 {% endblock %}

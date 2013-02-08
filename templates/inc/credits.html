@@ -1,0 +1,21 @@
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+    </div>
+    <div class="row">
+      <div class="span6">
+        {% with f = fragment('2013', 'about-hasgeek') %}
+          <div class="section-subheader">
+            <h3>{{ f.title }}</h3>
+          </div>
+          <img src="{{ theme_static('img/2013/partners/hg-logo.png') }}">
+          {{ f.content }}
+        {% endwith %}
+      </div>
+      <div class="span6">
+        <h3>Partners</h3>
+        <img src="{{ theme_static('img/2013/partners/cis.png') }}">
+      </div>
+    </div><!-- /row -->
+  </div><!-- /container -->
+</section><!-- /venue -->

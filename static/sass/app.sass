@@ -6,6 +6,27 @@
 
 header
   margin-bottom: 0
+.btn-primary
+  background-color: #518AAE
+  *background-color: #33608F
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#518AAE), to(#33608F))
+  background-image: -webkit-linear-gradient(top, #518AAE, #33608F)
+  background-image: -o-linear-gradient(top, #518AAE, #33608F)
+  background-image: linear-gradient(to bottom, #518AAE, #33608F)
+  background-image: -moz-linear-gradient(top, #518AAE, #33608F)
+  background-repeat: repeat-x
+  border-color: #33608F #518AAE #002a80
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25)
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff518AAE', endColorstr='#ff33608F', GradientType=0)
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false)
+  // font-size: 14px
+  // margin-top: 15px
+.btn-primary:hover,.btn-primary:active,.btn-primary.active,.btn-primary.disabled,.btn-primary[disabled]
+  background-color: #33608F
+  *background-color: #518AAE
+
+.btn-primary:active,.btn-primary.active
+  background-color: #518AAE
 
 #page-header
   border-bottom: 0
@@ -15,22 +36,307 @@ header
   object, embed
     max-width: 100%
     height: auto
+  img
+    width: 300px
+    margin-top: 10px
+    margin-bottom: 20px
 
-h1, h2, h3, h4, h5, h6
+  h2
+    margin-bottom: 20px
+
+body
   font-family: 'Raleway', sans-serif
-  font-weight: 600
+  font-weight: 400
+  margin-left: auto
+  margin-right: auto
+  min-width: 50px
+  background-color: #b8b4d1
+
+h2,h3,h4,h5,h6
   color: #222
+  text-align: center
+h1
+  color: #333
+  text-align: center
+#credits h3, #venue h3
+  color: #222222
+  font-size: 20px
+  text-align: left
+  font-weight: 500
+  margin-bottom: 15px
+#venue
+  img
+    border: 8px solid #518AAE
+    border-radius: 10px
+#credits 
+  p
+    font-family: 'Raleway', sans-serif
+    font-size: 14px
+    line-height: 25px
+    font-weight: 200
+    text-align: left
+    color: #fff
+    margin-top: 10px
+  img
+    text-align: left
+    border-radius: 10px
+    background: #73A2BD
+    box-shadow: inset 2px 2px 3px #33608F
+    padding: 10px
+
+
+.navbar-margin
+  margin-bottom: 10px
+#main-navbar
+  .main-navbar
+    display: none
+#main-navbar
+  .main-navbar.navbar-fixed-top
+    display: block
+// Navigation bar
+.main-navbar .nav
+  float: none
+  +box-sizing(border-box)
+  +display-box
+  margin-right: 0
+  margin-bottom: 0
+  width: 100%
+  background-color: #eee
+
+  & > li
+    +inline-block
+    float: none
+    font-size: 20px
+    margin-bottom: 0
+    // background-color: black
+    +display-box
+    +box-flex(1)
+    +box-pack(center)
+    +transition-property("color, color")
+    +transition-duration(0.2s)
+    border-radius: 50%
+
+    & > a
+      display: block
+      text-align: center
+      +box-sizing(border-box)
+      width: 100%
+      color: #DF5E0E
+      padding: 10px 10px 0px
+      line-height: 19px
+      text-decoration: none
+      background-color: #eee
+      +transition-property("color, color")
+      +transition-duration(0.2s)
+      border-radius: 50%
+      text-transform: uppercase
+      font-size: 15px
+
+    &:hover, &:hover > a
+      text-decoration: none
+      color: #518AAE
+      +transition-property("color, color")
+      +transition-duration(0.2s)
+
+.main-navbar:after
+  position: absolute
+  display: block
+  content: ""
+  bottom: -10px
+  left: -40px
+  right: -40px
+  border: 15px solid #eee
+  +border-radius(50%)
+  overflow: hidden
+  background-color: #eee
+  z-index: -2
+.navbar-fixed-top .nav
+  & > .register, & > .register a
+    color: yellow
+
+#mob-navbar
+  display: none
+.hide
+  opacity: 0
+
+.rect
+  width: 300px
+  height: 160px
+  background-color: #FFFFFF
+  display: block
+  position: relative
+  z-index: 20
+  margin-left: auto
+  margin-right: auto
+
+.rect:after
+  content: ""
+  display: block
+  border: 30px solid #FFFFFF
+  position: absolute
+  top: 0px
+  bottom: 0px
+  right: -30px
+  z-index: -1
+  border-radius: 50%
+.rect:before
+  content: ""
+  display: block
+  border: 30px solid #FFFFFF
+  position: absolute
+  top: 0px
+  bottom: 0px
+  left: -30px
+  z-index: -1
+  border-radius: 50%
+
+//rotate wheel
+@-webkit-keyframes rotate
+  from
+    -webkit-transform: rotate(0deg)
+  to
+    -webkit-transform: rotate(360deg)
+@-moz-keyframes rotate
+  from
+    -webkit-transform: rotate(0deg)
+  to
+    -webkit-transform: rotate(360deg)
+@-o-keyframes rotate
+  from
+    -webkit-transform: rotate(0deg)
+  to
+    -webkit-transform: rotate(360deg)
+@keyframes rotate
+  from
+    -webkit-transform: rotate(0deg)
+  to
+    -webkit-transform: rotate(360deg)
+
+
+#social
+  text-align: center
+  max-width: 120px
+  margin-right: auto
+  margin-left: auto
+  margin-top: 10px
+  em
+    margin-bottom: 10px
+#social-icon1,#social-icon2,#social-icon3
+  height: 29px
+  width: 29px
+  float: left
+  margin-right: 5px
+  margin-left: 5px
+  text-indent: -99999px
+  margin-top: 10px
+
+#social-icon1
+  background: image-url('social-share/twitter1.png') bottom
+
+#social-icon2
+  background: image-url('social-share/google-plus1.png') bottom
+
+#social-icon3
+  background: image-url('social-share/facebook.png') bottom
+
+#social-icon1:hover, #social-icon2:hover, #social-icon3:hover
+  background-position: 0 0
+
+.masthead
+  -moz-animation: 30s linear 0s normal none infinite mov
+  -webkit-animation: 30s linear 0s normal none infinite mov
+  -o-animation: 30s linear 0s normal none infinite mov
+  animation: 30s linear 0s normal none infinite mov
+  animation: 30s linear 0s normal none infinite mov
+  //background-image: image-url('moving-bg.png')
+  left: 0px
+  right: 0px
+  position: absolute
+  overflow: hidden
+  text-align: center
+
+  h1
+    font-family: 'Raleway', sans-serif
+    color: #DF5E0E
+    font-weight: 900
+    text-transform: uppercase
+    font-size: 30px
+    line-height: 46px
+    //text-shadow: 2px 2px 3px #333
+  
+  img
+    -moz-animation: rotate 20s linear 0s infinite
+    -webkit-animation: rotate 20s linear 0 infinite
+    -o-animation: rotate 20s linear 0 infinite
+    animation: rotate 20s linear 0 infinite
 
 .description
   max-width: 800px
   margin-left: auto
   margin-right: auto
+  padding-bottom: 10px
 
 .description, .description p
   font-family: 'Raleway', sans-serif
   font-size: 18px
   line-height: 30px
   font-weight: 600
+
+.schedule-placeholder
+  text-align: center
+  margin-left: auto
+  margin-right: auto
+  padding-bottom: 10px
+  font-family: 'Raleway', sans-serif
+  font-size: 18px
+  line-height: 30px
+  font-weight: 300
+
+.video-reel 
+  margin-top: 30px
+  margin-bottom: 30px
+  border-radius: 10px
+  padding: 20px
+  position: relative
+  h3
+    a
+      color: #666666
+    a:hover
+      color: #DF5E0E
+      text-decoration: none
+
+.video-reel:before 
+  top: 5px
+.video-reel:after 
+  bottom: 5px
+.video-reel ul 
+  list-style-type: none
+  margin: 0
+  text-align: center
+.video-reel li 
+  display: inline-block
+.video-reel li a, .video-reel li img 
+  transition-duration: 0.3s
+  transition-timing-function: ease-in
+
+.video-reel li a 
+  color: #003366
+  text-shadow: 0 0 2px #EEEEEE
+
+.video-reel li img 
+  background-color: #FFFFFF
+  border: 0 none
+  border-radius: 6px 6px 6px 6px
+  box-shadow: 0 0 4px black
+  display: block
+  margin: 10px
+.video-reel li:hover img 
+  border-radius: 10px 10px 10px 10px
+  box-shadow: 0 0 20px white
+
+.video-reel li:hover a 
+  text-shadow: 0 0 10px white
+
 
 .button-bar
   text-align: center
@@ -54,17 +360,23 @@ h1, h2, h3, h4, h5, h6
   overflow: hidden
   // +box-shadow(0 2px 1px rgba(0, 0, 0, 0.1))
 
+.section0, .section0:after
+  background-color: #eee
+  border-color: #eee
 .section1, .section1:after
   background-color: #dedce6
   border-color: #dedce6
   padding-top: 0
   margin-top: 0
-
 .section2, .section2:after
   background-color: #ceccdd
   border-color: #ceccdd
+  //margin-top: -70px
+  //background-image: image-url('moving-bg.png')
+  //opacity: 0.5
+  // border-color: #518AAE
 
-.section3, .section3:after, body
+.section3, .section3:after
   background-color: #c2bed6
   border-color: #c2bed6
 
@@ -76,17 +388,349 @@ h1, h2, h3, h4, h5, h6
   background-color: #b0abcf
   border-color: #b0abcf
 
+.section6, .section6:after
+  background-color: #b0abcf
+  border-color: #b0abcf
+
+.section7, .section7:after
+  background-color: #b0abcf
+  border-color: #b0abcf
+
+.section8, .section8:after
+  background-color: #b0abcf
+  border-color: #b0abcf
+
 .section1.rounded:after
-  z-index: 5
+  z-index: 9
+.section0.rounded:after
+  z-index: 8
 .section2.rounded:after
-  z-index: 4
+  z-index: 7
 .section3.rounded:after
-  z-index: 3
+  z-index: 6
 .section4.rounded:after
-  z-index: 2
+  z-index: 5
 .section5.rounded:after
+  z-index: 4
+.section6.rounded:after
+  z-index: 3
+.section7.rounded:after
+  z-index: 2
+.section8.rounded:after
   z-index: 1
 
+.section-heading
+  font-weight: 600
+  font-size: 36px
+  margin-bottom: 60px
+.speaker-img
+  text-align: center
+  border-radius: 50%
+  -webkit-border-radius: 50%
+  width: 200px
+  height: 200px
+  border: 8px solid #b8b4d1
+  margin-left: auto
+  margin-right: auto
+  img
+    width: 200px
+    height: 200px
+    border-radius: 50%
+    -webkit-border-radius: 50%
+    display: block
+    
+.speaker-name 
+  text-align: center
+  margin-bottom: 60px
+  h3
+    color: #000
+    font-weight: 600
+  em
+    font-size: 12px
+    font-weight: 600
 
 footer .footer-inner
   background: inherit
+  // color: #ccc
+///////////////////////
+
+#colorbox, #cboxOverlay, #cboxWrapper
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 9999
+  overflow: hidden
+#cboxOverlay
+  position: fixed
+  width: 100%
+  height: 100%
+#cboxMiddleLeft, #cboxBottomLeft
+  clear: left
+#cboxContent
+  position: relative
+#cboxLoadedContent
+  overflow: auto
+#cboxTitle
+  margin: 0
+#cboxLoadingOverlay, #cboxLoadingGraphic
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow
+  cursor: pointer
+.cboxIframe
+  width: 100%
+  height: 100%
+  display: block
+  border: 0
+#colorbox, #cboxContent, #cboxLoadedContent
+  box-sizing: content-box
+  -moz-box-sizing: content-box
+  -webkit-box-sizing: content-box
+
+
+#cboxOverlay
+  background: image-url('images/overlay.png') repeat 0 0
+#cboxTopLeft
+  width: 21px
+  height: 21px
+  background: image-url('images/controls.png') no-repeat -101px 0
+#cboxTopRight
+  width: 21px
+  height: 21px
+  background: image-url('images/controls.png') no-repeat -130px 0
+#cboxBottomLeft
+  width: 21px 
+  height: 21px
+  background: image-url('images/controls.png') no-repeat -101px -29px
+#cboxBottomRight
+  width: 21px
+  height: 21px
+  background: image-url('images/controls.png') no-repeat -130px -29px
+#cboxMiddleLeft
+  width: 21px
+  background: image-url('images/controls.png') left top repeat-y
+#cboxMiddleRight
+  width: 21px
+  background: image-url('images/controls.png') right top repeat-y
+#cboxTopCenter
+  height: 21px
+  background: image-url('images/border.png') 0 0 repeat-x
+#cboxBottomCenter
+  height: 21px
+  background: image-url('images/border.png') 0 -29px repeat-x
+#cboxContent
+  background: #fff
+  overflow: hidden
+.cboxIframe
+  background: #fff
+#cboxError
+  padding: 50px
+  border: 1px solid #ccc
+#cboxLoadedContent
+  margin-bottom: 28px
+#cboxTitle
+  position: absolute
+  bottom: 4px
+  left: 0
+  text-align: center
+  width: 100%
+  color: #949494
+#cboxCurrent
+  position: absolute
+  bottom: 4px
+  left: 58px
+  color: #949494
+#cboxSlideshow
+  position: absolute
+  bottom: 4px
+  right: 30px
+  color: #0092ef
+#cboxPrevious
+  position: absolute
+  bottom: 0
+  left: 0
+  background: image-url('images/controls.png') no-repeat -75px 0
+  width: 25px
+  height: 25px
+  text-indent: -9999px
+#cboxPrevious:hover
+  background-position: -75px -25px
+#cboxNext
+  position: absolute
+  bottom: 0
+  left: 27px
+  background: image-url('images/controls.png') no-repeat -50px 0
+  width: 25px
+  height: 25px
+  text-indent: -9999px
+#cboxNext:hover
+  background-position: -50px -25px
+#cboxLoadingOverlay
+  background: image-url('images/loading_background.png') no-repeat center center
+#cboxLoadingGraphic
+  background: image-url('images/loading.gif') no-repeat center center
+#cboxClose
+  position: absolute
+  bottom: 0
+  right: 0
+  background: image-url('images/controls.png') no-repeat -25px 0
+  width: 25px
+  height: 25px
+  text-indent: -9999px
+#cboxClose:hover
+  background-position: -25px -25px
+
+
+
+
+////////////////////
+@media (min-width: 980px) and (max-width: 1200px)
+  .rect
+    width: 200px
+    height: 130px
+
+@media (max-width: 979px)
+  #mob-navbar
+    display: block
+  #main-navbar
+    display: none
+  #home
+    display: none
+  .main-navbar .nav
+    width: 100%
+    & > li
+      font-size: 20px
+      & > a
+        width: 100%
+        padding: 0px 10px 0px
+        line-height: 19px
+        font-size: 15px
+  .section0.rounded
+    padding-top: 30px
+    padding-bottom: 0px
+  .main-navbar .nav
+    & > li
+      p
+        font-weight: bold
+  .masthead
+    h1
+      font-size: 25px
+      line-height: 32px
+  .speaker-img
+    border: 5px solid #C5DCEB
+
+@media (min-width: 768px) and (max-width: 979px)
+  .speaker-img
+    width: 165px
+    height: 165px
+    img
+      width: 165px
+      height: 165px
+  .main-navbar .nav
+    & > li
+      p
+        font-size: 16px
+        padding-bottom: 15px
+  .rect
+    width: 180px
+    height: 120px
+                                                                            
+@media (max-width: 767px)
+  #page-header
+    h2
+      font-size: 20px
+  .rect
+    width: 60%
+    height: 40%
+    margin-bottom: 30px
+  .span4
+    float: none
+    margin-left: auto
+    margin-right: auto
+@media (min-width: 461px) and (max-width: 767px)
+  .speaker-img
+    height: 165px
+    width: 165px
+    img
+      height: 165px
+      width: 165px
+  .main-navbar .nav
+    p
+      padding-bottom: 10px
+
+@media (min-width: 461px) and (max-width: 559px)
+  .span3
+    float: none
+    margin-left: auto
+    margin-right: auto
+
+@media (max-width: 460px)
+  .main-navbar .nav
+    & > li
+      & > a
+        width: 100%
+        padding: 0px 5px 0px
+        color: #222222
+      p
+        display: none
+      i
+        font-size: 22px
+        padding-bottom: 15px
+        padding-top: 10px
+
+  #page-header
+    h2
+      font-size: 16px
+  .masthead
+    h1
+      font-size: 20px
+      line-height: 24px
+    img
+      display: none
+  .rounded
+    padding-top: 30px
+  .section1.rounded
+    padding-top: 0px
+  .speaker-img
+    width: 30%
+    height: auto
+    float: left
+    border: none
+    img
+      height: auto
+      width: 90%
+      float: left
+      margin-top: 5px
+      margin-bottom: 5px
+      //border: 2px solid #C5DCEB
+  .speaker-name 
+    margin-bottom: 30px
+    float: right
+    width: 70%
+    h3
+      float: right
+      text-align: right
+    em
+      float: right
+      text-align: right
+  .speakers
+    border-bottom: 1px solid #fff
+    .span3
+      border-bottom: 1px solid #fff
+      padding-top: 10px
+      width: 100%
+      margin-left: 0
+  .rect
+    width: 60%
+    height: 40%
+    margin-bottom: 30px
+    margin-left: 0
+    margin-left: auto
+    margin-right: auto
+  .span4
+    float: none
+    margin-right: auto
+    margin-left: auto
