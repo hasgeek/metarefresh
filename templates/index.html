@@ -23,9 +23,12 @@
     <div id="page-header" class="container" id="home">
       <img src="{{ theme_static('img/logo.svg') }}" onerror="this.onerror = null; this.src='{{ theme_static('img/logo.png') }}';">
       <h2>February 22-23, 2013, MLR Convention Centre, JP Nagar, Bangalore, India</h2>
-      <a class="ticket-popup" href="http://metarefresh.doattend.com/" data-href="http://doattend.com/embed_ticket/25343"><div class="btn btn-primary btn-large">Buy tickets</div></a>
-      <a class="btn btn-large btn-primary" href="http://funnel.hasgeek.com/metarefresh2013">View sessions</a>
-      <a class="btn btn-large btn-primary" href="https://www.dropbox.com/s/68ky29eize0awms/Meta%20Refresh%202013%20Sponsor%20Kit%20INR.pdf">Sponsor</a>
+      <div class="description">
+        <a class="ticket-popup btn btn-primary btn-large" href="http://metarefresh.doattend.com/" data-href="http://doattend.com/embed_ticket/25343">Buy tickets</a>
+        <a class="btn btn-large btn-primary" target="_blank" href="http://funnel.hasgeek.com/metarefresh2013">View sessions</a>
+        <a class="btn btn-large btn-primary" target="_blank" href="https://www.dropbox.com/s/68ky29eize0awms/Meta%20Refresh%202013%20Sponsor%20Kit%20INR.pdf">Sponsor</a><br>
+        <small>Previously: <a href="/2012">2012 edition</a></small>
+      </div>
     </div>
   </header>
 {% endblock %}
@@ -107,7 +110,7 @@
     // adapted from twitter bootstrap docs' sub-nav
     var $win = $(window)
       , $nav = $('.main-navbar')
-      , navTop = $nav.length && $nav.offset().top + 450
+      , navTop = $nav.length && $nav.offset().top + 500
       , isFixed = 0;
     
     var processScroll = function () {
