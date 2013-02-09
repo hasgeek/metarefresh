@@ -60,7 +60,7 @@
       </div> #}
     </div>
   </div>
-
+  
   <div class="section3 rounded">
     <div class="container" id="speakers">
       <h1 class="section-heading">Speakers</h1>
@@ -96,6 +96,245 @@
 {% endblock %}
 
 {% block footerscripts %}
+
+<script>
+
+  $(function() {
+    $(".no-touch .talk-title a").popover({
+      trigger: 'hover'
+    });
+
+    $(".touch .talk-title a").popover({
+      trigger: 'click'
+    });
+  });
+
+  // /// 1 ///
+  // var isVisible1 = false;
+  // var clickedAway1 = false;
+
+  // $('#talk-title1').popover({
+  //         html: true,
+  //         trigger: 'manual'
+  //     }).click(function(e) {
+  //         $(this).popover('show');
+  //         clickedAway1 = false
+  //         isVisible1 = true
+  //         e.preventDefault()
+  //     });
+
+  // $(document).click(function(e) {
+  //   if(isVisible1 & clickedAway1)
+  //   {
+  //     $('#talk-title1').popover('hide')
+  //     isVisible1 = clickedAway1 = false
+  //   }
+  //   else
+  //   {
+  //     clickedAway1 = true
+  //   }
+  // });
+
+  // /// 2 ///
+  // var isVisible2 = false;
+  // var clickedAway2 = false;
+  // $('#talk-title2').popover({
+  //         html: true,
+  //         trigger: 'manual'
+  //     }).click(function(e) {
+  //         $(this).popover('show');
+  //         clickedAway2 = false
+  //         isVisible2 = true
+  //         e.preventDefault()
+  //     });
+
+  // $(document).click(function(e) {
+  //   if(isVisible2 & clickedAway2)
+  //   {
+  //     $('#talk-title2').popover('hide')
+  //     isVisible2 = clickedAway2 = false
+  //   }
+  //   else
+  //   {
+  //     clickedAway2 = true
+  //   }
+  // });
+
+  // /// 3 ///
+  // var isVisible3 = false;
+  // var clickedAway3 = false;
+  // $('#talk-title3').popover({
+  //         html: true,
+  //         trigger: 'manual'
+  //     }).click(function(e) {
+  //         $(this).popover('show');
+  //         clickedAway3 = false
+  //         isVisible3 = true
+  //         e.preventDefault()
+  //     });
+
+  // $(document).click(function(e) {
+  //   if(isVisible3 & clickedAway3)
+  //   {
+  //     $('#talk-title3').popover('hide')
+  //     isVisible3 = clickedAway3 = false
+  //   }
+  //   else
+  //   {
+  //     clickedAway3 = true
+  //   }
+  // });
+
+  // /// 4 ///
+  // var isVisible4 = false;
+  // var clickedAway4 = false;
+  // $('#talk-title4').popover({
+  //         html: true,
+  //         trigger: 'manual'
+  //     }).click(function(e) {
+  //         $(this).popover('show');
+  //         clickedAway4 = false
+  //         isVisible4 = true
+  //         e.preventDefault()
+  //     });
+
+  // $(document).click(function(e) {
+  //   if(isVisible4 & clickedAway4)
+  //   {
+  //     $('#talk-title4').popover('hide')
+  //     isVisible4 = clickedAway4 = false
+  //   }
+  //   else
+  //   {
+  //     clickedAway4 = true
+  //   }
+  // });
+
+  // /// 5 ///
+  // var isVisible5 = false;
+  // var clickedAway5 = false;
+  // $('#talk-title5').popover({
+  //         html: true,
+  //         trigger: 'manual'
+  //     }).click(function(e) {
+  //         $(this).popover('show');
+  //         clickedAway5 = false
+  //         isVisible5 = true
+  //         e.preventDefault()
+  //     });
+
+  // $(document).click(function(e) {
+  //   if(isVisible5 & clickedAway5)
+  //   {
+  //     $('#talk-title5').popover('hide')
+  //     isVisible5 = clickedAway5 = false
+  //   }
+  //   else
+  //   {
+  //     clickedAway5 = true
+  //   }
+  // });
+
+  // /// 6 ///
+  // var isVisible6 = false;
+  // var clickedAway6 = false;
+  // $('#talk-title6').popover({
+  //         html: true,
+  //         trigger: 'manual'
+  //     }).click(function(e) {
+  //         $(this).popover('show');
+  //         clickedAway6 = false
+  //         isVisible6 = true
+  //         e.preventDefault()
+  //     });
+
+  // $(document).click(function(e) {
+  //   if(isVisible6 & clickedAway6)
+  //   {
+  //     $('#talk-title6').popover('hide')
+  //     isVisible6 = clickedAway6 = false
+  //   }
+  //   else
+  //   {
+  //     clickedAway6 = true
+  //   }
+  // });
+  
+  // /// 7 ///
+  // var isVisible7 = false;
+  // var clickedAway7 = false;
+  // $('#talk-title7').popover({
+  //         html: true,
+  //         trigger: 'manual'
+  //     }).click(function(e) {
+  //         $(this).popover('show');
+  //         clickedAway7 = false
+  //         isVisible7 = true
+  //         e.preventDefault()
+  //     });
+
+  // $(document).click(function(e) {
+  //   if(isVisible7 & clickedAway7)
+  //   {
+  //     $('#talk-title7').popover('hide')
+  //     isVisible7 = clickedAway7 = false
+  //   }
+  //   else
+  //   {
+  //     clickedAway7 = true
+  //   }
+  // });
+
+  // /// 8 ///
+  // var isVisible8 = false;
+  // var clickedAway8 = false;
+  // $('#talk-title8').popover({
+  //         html: true,
+  //         trigger: 'manual'
+  //     }).click(function(e) {
+  //         $(this).popover('show');
+  //         clickedAway8 = false
+  //         isVisible8 = true
+  //         e.preventDefault()
+  //     });
+
+  // $(document).click(function(e) {
+  //   if(isVisible8 & clickedAway8)
+  //   {
+  //     $('#talk-title8').popover('hide')
+  //     isVisible8 = clickedAway8 = false
+  //   }
+  //   else
+  //   {
+  //     clickedAway8 = true
+  //   }
+  // });
+
+  // /// 9 ///
+  // var isVisible9 = false;
+  // var clickedAway9 = false;
+  // $('#talk-title9').popover({
+  //         html: true,
+  //         trigger: 'manual'
+  //     }).click(function(e) {
+  //         $(this).popover('show');
+  //         clickedAway9 = false
+  //         isVisible9 = true
+  //         e.preventDefault()
+  //     });
+
+  // $(document).click(function(e) {
+  //   if(isVisible9 & clickedAway9)
+  //   {
+  //     $('#talk-title9').popover('hide')
+  //     isVisible9 = clickedAway9 = false
+  //   }
+  //   else
+  //   {
+  //     clickedAway9 = true
+  //   }
+  // });
+</script>
 <script type="text/javascript">
   $(document).ready(function(){
     
@@ -136,4 +375,5 @@
 
   });
 </script>
+
 {% endblock %}

@@ -6,27 +6,7 @@
 
 header
   margin-bottom: 0
-.btn-primary
-  background-color: #518AAE
-  *background-color: #33608F
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#518AAE), to(#33608F))
-  background-image: -webkit-linear-gradient(top, #518AAE, #33608F)
-  background-image: -o-linear-gradient(top, #518AAE, #33608F)
-  background-image: linear-gradient(to bottom, #518AAE, #33608F)
-  background-image: -moz-linear-gradient(top, #518AAE, #33608F)
-  background-repeat: repeat-x
-  border-color: #33608F #518AAE #002a80
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25)
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff518AAE', endColorstr='#ff33608F', GradientType=0)
-  filter: progid:dximagetransform.microsoft.gradient(enabled=false)
-  // font-size: 14px
-  // margin-top: 15px
-.btn-primary:hover,.btn-primary:active,.btn-primary.active,.btn-primary.disabled,.btn-primary[disabled]
-  background-color: #33608F
-  *background-color: #518AAE
 
-.btn-primary:active,.btn-primary.active
-  background-color: #518AAE
 
 #page-header
   border-bottom: 0
@@ -145,7 +125,7 @@ h1
       text-align: center
       +box-sizing(border-box)
       width: 100%
-      color: #DF5E0E
+      //color: #518AAE
       padding: 10px 10px 0px
       line-height: 19px
       text-decoration: none
@@ -158,7 +138,7 @@ h1
 
     &:hover, &:hover > a
       text-decoration: none
-      color: #518AAE
+      color: #DF5E0E
       +transition-property("color, color")
       +transition-duration(0.2s)
 
@@ -213,29 +193,6 @@ h1
   left: -30px
   z-index: -1
   border-radius: 50%
-
-//rotate wheel
-@-webkit-keyframes rotate
-  from
-    -webkit-transform: rotate(0deg)
-  to
-    -webkit-transform: rotate(360deg)
-@-moz-keyframes rotate
-  from
-    -webkit-transform: rotate(0deg)
-  to
-    -webkit-transform: rotate(360deg)
-@-o-keyframes rotate
-  from
-    -webkit-transform: rotate(0deg)
-  to
-    -webkit-transform: rotate(360deg)
-@keyframes rotate
-  from
-    -webkit-transform: rotate(0deg)
-  to
-    -webkit-transform: rotate(360deg)
-
 
 #social
   text-align: center
@@ -447,6 +404,193 @@ h1
   font-weight: 600
   font-size: 36px
   margin-bottom: 60px
+
+.tooltip 
+  position: absolute 
+  z-index: 1030 
+  display: block 
+  padding: 5px 
+  font-size: 11px 
+  opacity: 0 
+  filter: alpha(opacity=0) 
+  visibility: visible 
+ 
+.tooltip.in 
+  opacity: 0.8 
+  filter: alpha(opacity=80) 
+
+.tooltip.top 
+  margin-top: -3px 
+
+.tooltip.right 
+  margin-left: 3px  
+
+.tooltip.bottom 
+  margin-top: 3px 
+
+.tooltip.left 
+  margin-left: -3px 
+
+.tooltip-inner 
+  max-width: 200px 
+  padding: 3px 8px 
+  color: #ffffff 
+  text-align: center 
+  text-decoration: none 
+  background-color: #000000 
+  -webkit-border-radius: 4px 
+  -moz-border-radius: 4px 
+  border-radius: 4px 
+
+.tooltip-arrow 
+  position: absolute 
+  width: 0 
+  height: 0 
+  border-color: transparent 
+  border-style: solid 
+
+.tooltip.top .tooltip-arrow 
+  bottom: 0 
+  left: 50% 
+  margin-left: -5px 
+  border-top-color: #000000 
+  border-width: 5px 5px 0 
+
+.tooltip.right .tooltip-arrow 
+  top: 50% 
+  left: 0 
+  margin-top: -5px 
+  border-right-color: #000000 
+  border-width: 5px 5px 5px 0 
+
+.tooltip.left .tooltip-arrow 
+  top: 50% 
+  right: 0 
+  margin-top: -5px 
+  border-left-color: #000000 
+  border-width: 5px 0 5px 5px 
+
+.tooltip.bottom .tooltip-arrow 
+  top: 0 
+  left: 50% 
+  margin-left: -5px 
+  border-bottom-color: #000000 
+  border-width: 0 5px 5px 
+ 
+  
+.popover 
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 1010
+  display: none
+  width: 236px
+  padding: 1px
+  background-color: #CECCDD
+  border: 5px solid #B8B4D1
+  -webkit-border-radius: 6px
+  -moz-border-radius: 6px
+  border-radius: 6px
+  //-webkit-box-shadow: 0px 5px 8px gray, -8px 5px 10px gray, 8px 5px 10px gray
+  //-moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2)
+  box-shadow: 0px 2px 5px #666, -3px 2px 5px #666, 3px 2px 5px #666
+  -webkit-background-clip: padding-box
+  -moz-background-clip: padding
+  background-clip: padding-box
+
+.popover.top
+  margin-bottom: 10px
+
+.popover.right
+  margin-left: 10px
+
+.popover.bottom
+  margin-top: 10px
+
+.popover.left
+  margin-right: 10px
+
+.popover-title
+  padding: 8px 14px
+  margin: 0 
+  font-size: 14px 
+  font-weight: normal 
+  line-height: 18px 
+  background-color: #B8B4D1
+  -webkit-border-radius: 5px 5px 0 0 
+  -moz-border-radius: 5px 5px 0 0 
+  border-radius: 5px 5px 0 0 
+
+.popover-content  
+  padding: 9px 14px 
+ 
+.popover-content p, .popover-content ul, .popover-content ol 
+  margin-bottom: 0 
+
+.popover .arrow, .popover .arrow:after  
+  position: absolute 
+  display: inline-block 
+  width: 0 
+  height: 0 
+  border-color: transparent 
+  border-style: solid 
+ 
+.popover .arrow:after  
+  z-index: -1 
+  content: "" 
+
+.popover.top .arrow  
+  bottom: -10px 
+  left: 50% 
+  margin-left: -10px 
+  border-top-color: #B8B4D1
+  border-width: 10px 10px 0 
+
+.popover.top .arrow:after  
+  bottom: -1px 
+  left: -11px 
+  border-top-color: rgba(0, 0, 0, 0.25) 
+  border-width: 11px 11px 0 
+ 
+.popover.right .arrow  
+  top: 50% 
+  left: -10px 
+  margin-top: -10px 
+  border-right-color: #B8B4D1
+  border-width: 10px 10px 10px 0 
+
+.popover.right .arrow:after  
+  bottom: -11px 
+  left: -1px 
+  border-right-color: #FFF
+  border-width: 11px 11px 11px 0 
+
+.popover.bottom .arrow  
+  top: -15px 
+  left: 50% 
+  margin-left: -10px 
+  border-bottom-color: #B8B4D1 
+  border-width: 0 10px 10px 
+
+.popover.bottom .arrow:after  
+  top: -1px 
+  left: -11px 
+  border-bottom-color: #B8B4D1
+  border-width: 0 11px 11px 
+
+.popover.left .arrow  
+  top: 50% 
+  right: -10px 
+  margin-top: -10px 
+  border-left-color: #B8B4D1
+  border-width: 10px 0 10px 10px 
+
+.popover.left .arrow:after  
+  right: -1px 
+  bottom: -11px 
+  border-left-color: #FFF
+  border-width: 11px 0 11px 11px 
+ 
 .speaker-img
   text-align: center
   border-radius: 50%
@@ -465,13 +609,24 @@ h1
     
 .speaker-name 
   text-align: center
-  margin-bottom: 60px
+  //margin-bottom: 60px
+  height: 98px
   h3
     color: #000
     font-weight: 600
   .from
     font-weight: 600
     text-transform: uppercase
+.talk-title
+  margin-bottom: 60px
+  //font-weight: 500
+  a
+    //color: #518AAE
+    font-size: 16px
+    &:hover
+      color: #DF5E0E
+      text-decoration: none
+
 
 footer .footer-inner
   background: inherit
@@ -615,6 +770,32 @@ footer .footer-inner
   .rect
     width: 200px
     height: 130px
+  .speakers
+    padding-left: 50px
+    .span3
+      width: 190px
+  .speaker-img
+    width: 190px
+    height: 190px
+    border: 6px solid #b8b4d1
+    img
+      width: 190px
+      height: 190px
+  .speaker-name 
+    text-align: center
+    height: 115px
+    h3
+      font-weight: 600
+  .talk-title
+    margin-bottom: 60px
+    font-weight: 600
+    display: block
+    width: 80%
+    margin-left: 20px
+    a
+      //color: #518AAE
+      font-size: 15px
+
 
 @media (max-width: 979px)
   #mob-navbar
@@ -644,7 +825,7 @@ footer .footer-inner
       font-size: 25px
       line-height: 32px
   .speaker-img
-    border: 5px solid #C5DCEB
+    border: 5px solid #b8b4d1
 
 @media (min-width: 768px) and (max-width: 979px)
   .speaker-img
@@ -653,6 +834,20 @@ footer .footer-inner
     img
       width: 165px
       height: 165px
+  .speaker-name 
+    height: 115px
+    h3
+      font-weight: 600
+  .talk-title
+    margin-bottom: 60px
+    font-weight: 500
+    display: block
+    width: 80%
+    margin-left: 20px
+    a
+      //color: #518AAE
+      font-size: 15px
+
   .main-navbar .nav
     & > li
       p
@@ -684,6 +879,8 @@ footer .footer-inner
   .main-navbar .nav
     p
       padding-bottom: 10px
+
+
 
 @media (min-width: 461px) and (max-width: 559px)
   .span3
@@ -733,6 +930,16 @@ footer .footer-inner
     margin-bottom: 30px
     float: right
     width: 70%
+    min-height: 60px
+    max-height: 80px
+  .talk-title
+    margin-bottom: 15px
+    font-weight: 600
+    width: 70%
+    float: right
+    a
+      //color: #518AAE
+      font-size: 15px
   .speakers
     border-bottom: 1px solid #fff
     .span3
