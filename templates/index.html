@@ -98,16 +98,28 @@
 {% block footerscripts %}
 
 <script>
-
   $(function() {
-    $(".no-touch .talk-title a").popover({
-      trigger: 'hover'
-    });
-
-    $(".touch .talk-title a").popover({
-      trigger: 'click'
-    });
+    if(Modernizr.touch){
+      $(".talk-title a").popover({
+        trigger: 'click'
+      });
+    }
+    else{
+      $(".talk-title a").popover({
+        trigger: 'hover'
+      });
+    }
   });
+
+  // $(function() {
+  //   $(".no-touch .talk-title a").popover({
+  //     trigger: 'hover'
+  //   });
+
+  //   $(".touch .talk-title a").popover({
+  //     trigger: 'click'
+  //   });
+  // });
 
   // /// 1 ///
   // var isVisible1 = false;

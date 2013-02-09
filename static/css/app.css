@@ -1124,12 +1124,12 @@ footer .footer-inner {
 }
 @media (min-width: 461px) and (max-width: 767px) {
   .speaker-img {
-    height: 165px;
-    width: 165px;
+    height: 160px;
+    width: 160px;
   }
   .speaker-img img {
-    height: 165px;
-    width: 165px;
+    height: 160px;
+    width: 160px;
   }
 
   .main-navbar .nav p {
@@ -1144,6 +1144,11 @@ footer .footer-inner {
   }
 }
 @media (max-width: 460px) {
+  .btn-primary {
+    margin: 3px;
+    margin-bottom: 6px;
+  }
+
   .main-navbar .nav > li > a {
     width: 100%;
     padding: 0px 5px 0px;
@@ -1195,8 +1200,9 @@ footer .footer-inner {
     margin-bottom: 30px;
     float: right;
     width: 70%;
-    min-height: 60px;
-    max-height: 80px;
+  }
+  .speaker-name .from {
+    padding-bottom: 100px;
   }
 
   .talk-title {
@@ -1207,6 +1213,7 @@ footer .footer-inner {
   }
   .talk-title a {
     font-size: 15px;
+    padding-top: 10px;
   }
 
   .speakers {
