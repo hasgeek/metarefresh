@@ -7,6 +7,26 @@ header {
   margin-bottom: 0;
 }
 
+.btn {
+  background-image: none;
+  background-color: #8883ab;
+  border-radius: 0;
+  border: none;
+  text-shadow: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 8px 35px 10px 35px;
+  margin-top: 20px;
+  margin-bottom: 3px;
+  border-radius: 12px;
+}
+.btn:hover {
+  background-color: #3c2b73;
+  color: white;
+  text-shadow: none;
+}
+
 #page-header {
   border-bottom: 0;
   margin-top: 20px;
@@ -31,11 +51,19 @@ body {
   margin-left: auto;
   margin-right: auto;
   min-width: 50px;
-  background-color: #b8b4d1;
+  background-color: #9c96bf;
 }
 
 small {
   font-size: smaller;
+}
+
+a {
+  color: #3c2b73;
+}
+
+a:hover {
+  color: #200864;
 }
 
 h2, h3, h4, h5, h6 {
@@ -65,17 +93,21 @@ h1 {
   font-family: "Raleway", sans-serif;
   font-size: 14px;
   line-height: 25px;
-  font-weight: 200;
+  font-weight: 500;
   text-align: left;
-  color: white;
+  color: #222222;
   margin-top: 10px;
 }
 #credits img {
   text-align: left;
   border-radius: 10px;
-  background: #73a2bd;
-  box-shadow: inset 2px 2px 3px #33608f;
+  background: #b0abcf;
   padding: 10px;
+}
+#credits li {
+  list-style-type: none;
+  margin-left: -23px;
+  font-weight: 600;
 }
 
 .navbar-margin {
@@ -283,15 +315,15 @@ h1 {
 }
 
 #social-icon1 {
-  background: url('../img/social-share/twitter1.png?1360286156') bottom;
+  background: url('../img/social-share/twitter1.png?1360314787') bottom;
 }
 
 #social-icon2 {
-  background: url('../img/social-share/google-plus1.png?1360286156') bottom;
+  background: url('../img/social-share/google-plus1.png?1360314787') bottom;
 }
 
 #social-icon3 {
-  background: url('../img/social-share/facebook.png?1360286156') bottom;
+  background: url('../img/social-share/facebook.png?1360314787') bottom;
 }
 
 #social-icon1:hover, #social-icon2:hover, #social-icon3:hover {
@@ -331,12 +363,17 @@ h1 {
   margin-right: auto;
   padding-bottom: 10px;
 }
+.description #cleartrip-offer {
+  color: #666666;
+  font-size: 14px;
+  margin-top: 20px;
+}
 
 .description, .description p {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   line-height: 30px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .schedule-placeholder {
@@ -350,65 +387,97 @@ h1 {
   font-weight: 300;
 }
 
-.video-reel {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  border-radius: 10px;
-  padding: 20px;
-  position: relative;
+#preview-videos h3 {
+  margin-bottom: 50px;
+  font-size: 20px;
 }
-.video-reel h3 a {
-  color: #666666;
+#preview-videos h3 a {
+  color: #3c2b73;
 }
-.video-reel h3 a:hover {
+#preview-videos h3 a:hover {
   color: #df5e0e;
   text-decoration: none;
 }
 
-.video-reel:before {
-  top: 5px;
-}
-
-.video-reel:after {
-  bottom: 5px;
-}
-
-.video-reel ul {
-  list-style-type: none;
-  margin: 0;
-  text-align: center;
-}
-
-.video-reel li {
-  display: inline-block;
-}
-
-.video-reel li a, .video-reel li img {
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in;
-}
-
-.video-reel li a {
-  color: #003366;
-  text-shadow: 0 0 2px #eeeeee;
-}
-
-.video-reel li img {
-  background-color: white;
-  border: 0 none;
-  border-radius: 6px 6px 6px 6px;
-  box-shadow: 0 0 4px black;
+.preview-video {
   display: block;
-  margin: 10px;
+}
+.preview-video .span3 {
+  margin-left: auto;
+  margin-right: auto;
+}
+.preview-video svg {
+  float: none;
+  margin-left: 30px;
+}
+.preview-video svg:hover {
+  opacity: 0.9;
+}
+.preview-video a {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+}
+.preview-video a:hover {
+  text-decoration: none;
 }
 
-.video-reel li:hover img {
-  border-radius: 10px 10px 10px 10px;
-  box-shadow: 0 0 20px white;
+.play-btn {
+  color: white;
+  font-size: 30px;
+  display: block;
+  width: 35px;
+  height: 30px;
+  border-radius: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 5px;
+  margin-left: 115px;
+  background-color: #3c2b73;
+  margin-top: -108px;
+  position: absolute;
+  z-index: 999;
+  opacity: 0.8;
 }
 
-.video-reel li:hover a {
-  text-shadow: 0 0 10px white;
+.play-btn:hover {
+  opacity: 1;
+}
+
+.sponsors {
+  margin-top: -50px;
+}
+.sponsors svg {
+  margin-left: 12px;
+}
+.sponsors h3 {
+  margin-top: 40px;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+.sponsors h4 {
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
+.sponsors h4 a:hover {
+  text-decoration: none;
+  color: #3c2b73;
+}
+
+.event-sponsor {
+  margin-left: 37%;
+}
+
+.sponsor-description {
+  background-color: #b8b4d1;
+  border: 5px solid #a39dc4;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 20px;
+  display: none;
 }
 
 .button-bar {
@@ -472,13 +541,13 @@ h1 {
 }
 
 .section6, .section6:after {
-  background-color: #b0abcf;
-  border-color: #b0abcf;
+  background-color: #aaa5c8;
+  border-color: #aaa5c8;
 }
 
 .section7, .section7:after {
-  background-color: #b0abcf;
-  border-color: #b0abcf;
+  background-color: #a39dc4;
+  border-color: #a39dc4;
 }
 
 .section8, .section8:after {
@@ -774,6 +843,10 @@ h1 {
 
 .talk-title {
   margin-bottom: 60px;
+  font-weight: 500;
+}
+.talk-title i {
+  color: #b0abcf;
 }
 .talk-title a {
   cursor: pointer;
@@ -844,51 +917,51 @@ footer .footer-inner {
 }
 
 #cboxOverlay {
-  background: url('../img/images/overlay.png?1360286156') repeat 0 0;
+  background: url('../img/images/overlay.png?1360314787') repeat 0 0;
 }
 
 #cboxTopLeft {
   width: 21px;
   height: 21px;
-  background: url('../img/images/controls.png?1360286156') no-repeat -101px 0;
+  background: url('../img/images/controls.png?1360314786') no-repeat -101px 0;
 }
 
 #cboxTopRight {
   width: 21px;
   height: 21px;
-  background: url('../img/images/controls.png?1360286156') no-repeat -130px 0;
+  background: url('../img/images/controls.png?1360314786') no-repeat -130px 0;
 }
 
 #cboxBottomLeft {
   width: 21px;
   height: 21px;
-  background: url('../img/images/controls.png?1360286156') no-repeat -101px -29px;
+  background: url('../img/images/controls.png?1360314786') no-repeat -101px -29px;
 }
 
 #cboxBottomRight {
   width: 21px;
   height: 21px;
-  background: url('../img/images/controls.png?1360286156') no-repeat -130px -29px;
+  background: url('../img/images/controls.png?1360314786') no-repeat -130px -29px;
 }
 
 #cboxMiddleLeft {
   width: 21px;
-  background: url('../img/images/controls.png?1360286156') left top repeat-y;
+  background: url('../img/images/controls.png?1360314786') left top repeat-y;
 }
 
 #cboxMiddleRight {
   width: 21px;
-  background: url('../img/images/controls.png?1360286156') right top repeat-y;
+  background: url('../img/images/controls.png?1360314786') right top repeat-y;
 }
 
 #cboxTopCenter {
   height: 21px;
-  background: url('../img/images/border.png?1360286156') 0 0 repeat-x;
+  background: url('../img/images/border.png?1360314786') 0 0 repeat-x;
 }
 
 #cboxBottomCenter {
   height: 21px;
-  background: url('../img/images/border.png?1360286156') 0 -29px repeat-x;
+  background: url('../img/images/border.png?1360314786') 0 -29px repeat-x;
 }
 
 #cboxContent {
@@ -936,7 +1009,7 @@ footer .footer-inner {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: url('../img/images/controls.png?1360286156') no-repeat -75px 0;
+  background: url('../img/images/controls.png?1360314786') no-repeat -75px 0;
   width: 25px;
   height: 25px;
   text-indent: -9999px;
@@ -950,7 +1023,7 @@ footer .footer-inner {
   position: absolute;
   bottom: 0;
   left: 27px;
-  background: url('../img/images/controls.png?1360286156') no-repeat -50px 0;
+  background: url('../img/images/controls.png?1360314786') no-repeat -50px 0;
   width: 25px;
   height: 25px;
   text-indent: -9999px;
@@ -961,18 +1034,18 @@ footer .footer-inner {
 }
 
 #cboxLoadingOverlay {
-  background: url('../img/images/loading_background.png?1360286156') no-repeat center center;
+  background: url('../img/images/loading_background.png?1360314787') no-repeat center center;
 }
 
 #cboxLoadingGraphic {
-  background: url('../img/images/loading.gif?1360286156') no-repeat center center;
+  background: url('../img/images/loading.gif?1360314787') no-repeat center center;
 }
 
 #cboxClose {
   position: absolute;
   bottom: 0;
   right: 0;
-  background: url('../img/images/controls.png?1360286156') no-repeat -25px 0;
+  background: url('../img/images/controls.png?1360314786') no-repeat -25px 0;
   width: 25px;
   height: 25px;
   text-indent: -9999px;

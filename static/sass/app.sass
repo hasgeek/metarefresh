@@ -7,6 +7,26 @@
 header
   margin-bottom: 0
 
+.btn
+  background-image: none
+  background-color: #8883AB
+  border-radius: 0
+  border: none
+  text-shadow: none
+  color: #fff
+  font-size: 20px
+  //box-shadow: none
+  font-weight: 600
+  padding: 8px 35px 10px 35px
+  margin-top: 20px
+  margin-bottom: 3px
+  border-radius: 12px
+  //box-shadow: 0 8px 6px -6px #000
+  &:hover
+    background-color: #3C2B73
+    color: #FFFFFF
+    text-shadow: none
+    //box-shadow: 0 8px 6px -6px #000
 
 #page-header
   border-bottom: 0
@@ -30,10 +50,15 @@ body
   margin-left: auto
   margin-right: auto
   min-width: 50px
-  background-color: #b8b4d1
+  background-color: #9c96bf
 
 small
   font-size: smaller
+
+a
+  color: #3C2B73
+a:hover
+  color: #200864
 
 h2,h3,h4,h5,h6
   color: #222
@@ -41,6 +66,7 @@ h2,h3,h4,h5,h6
 h1
   color: #333
   text-align: center
+
 #credits h3, #venue h3
   color: #222222
   font-size: 20px
@@ -56,17 +82,19 @@ h1
     font-family: 'Raleway', sans-serif
     font-size: 14px
     line-height: 25px
-    font-weight: 200
+    font-weight: 500
     text-align: left
-    color: #fff
+    color: #222
     margin-top: 10px
   img
     text-align: left
     border-radius: 10px
-    background: #73A2BD
-    box-shadow: inset 2px 2px 3px #33608F
+    background: #B0ABCF
     padding: 10px
-
+  li
+    list-style-type: none
+    margin-left: -23px
+    font-weight: 600
 
 .navbar-margin
   margin-bottom: 10px
@@ -125,7 +153,7 @@ h1
       text-align: center
       +box-sizing(border-box)
       width: 100%
-      //color: #518AAE
+      //color: #270863
       padding: 10px 10px 0px
       line-height: 19px
       text-decoration: none
@@ -256,12 +284,16 @@ h1
   margin-left: auto
   margin-right: auto
   padding-bottom: 10px
+  #cleartrip-offer
+    color: #666
+    font-size: 14px
+    margin-top: 20px
 
 .description, .description p
   font-family: 'Raleway', sans-serif
   font-size: 18px
   line-height: 30px
-  font-weight: 600
+  font-weight: 500
 
 .schedule-placeholder
   text-align: center
@@ -273,52 +305,80 @@ h1
   line-height: 30px
   font-weight: 300
 
-.video-reel 
-  margin-top: 30px
-  margin-bottom: 30px
-  border-radius: 10px
-  padding: 20px
-  position: relative
+#preview-videos
   h3
+    margin-bottom: 50px
+    font-size: 20px
     a
-      color: #666666
+      color: #3C2B73
     a:hover
       color: #DF5E0E
       text-decoration: none
 
-.video-reel:before 
-  top: 5px
-.video-reel:after 
-  bottom: 5px
-.video-reel ul 
-  list-style-type: none
-  margin: 0
-  text-align: center
-.video-reel li 
-  display: inline-block
-.video-reel li a, .video-reel li img 
-  transition-duration: 0.3s
-  transition-timing-function: ease-in
-
-.video-reel li a 
-  color: #003366
-  text-shadow: 0 0 2px #EEEEEE
-
-.video-reel li img 
-  background-color: #FFFFFF
-  border: 0 none
-  border-radius: 6px 6px 6px 6px
-  box-shadow: 0 0 4px black
+.preview-video
   display: block
-  margin: 10px
-.video-reel li:hover img 
-  border-radius: 10px 10px 10px 10px
-  box-shadow: 0 0 20px white
+  .span3
+    margin-left: auto
+    margin-right: auto
+  svg
+    float: none
+    margin-left: 30px
+  svg:hover
+    opacity: 0.9
+  a
+    text-align: center
+    font-size: 18px
+    font-weight: bold
+    color: #333
+    &:hover
+      text-decoration: none
 
-.video-reel li:hover a 
-  text-shadow: 0 0 10px white
+.play-btn
+  color: #FFF
+  font-size: 30px
+  display: block
+  width: 35px
+  height: 30px
+  border-radius: 50px
+  padding-top: 10px
+  padding-bottom: 10px
+  padding-left: 10px
+  padding-right: 5px
+  margin-left: 115px
+  background-color: #3C2B73
+  //top: 100px
+  margin-top: -108px
+  position: absolute
+  z-index: 999
+  opacity: 0.8
+.play-btn:hover
+  opacity: 1.0
 
+.sponsors
+  margin-top: -50px
+  svg
+    margin-left: 12px
+  h3
+    margin-top: 40px
+    font-size: 22px
+    margin-bottom: 30px
+  h4
+    margin-top: -20px
+    margin-bottom: 30px
+    a:hover
+      text-decoration: none
+      color: #3C2B73
+.event-sponsor
+  margin-left: 37%
 
+.sponsor-description
+  background-color: #B8B4D1
+  border: 5px solid #A39DC4
+  margin-top: 20px
+  margin-bottom: 30px
+  padding: 10px
+  border-radius: 20px
+  display: none
 .button-bar
   text-align: center
 
@@ -366,16 +426,16 @@ h1
   border-color: #b8b4d1
 
 .section5, .section5:after
-  background-color: #b0abcf
-  border-color: #b0abcf
+  background-color: #B0ABCF
+  border-color: #B0ABCF
 
 .section6, .section6:after
-  background-color: #b0abcf
-  border-color: #b0abcf
+  background-color: #AAA5C8
+  border-color: #AAA5C8
 
 .section7, .section7:after
-  background-color: #b0abcf
-  border-color: #b0abcf
+  background-color: #A39DC4
+  border-color: #A39DC4
 
 .section8, .section8:after
   background-color: #b0abcf
@@ -619,9 +679,11 @@ h1
     text-transform: uppercase
 .talk-title
   margin-bottom: 60px
-  //font-weight: 500
+  font-weight: 500
+  i
+    color: #B0ABCF
   a
-    //color: #518AAE
+    //color: #270863
     cursor: pointer
     font-size: 16px
     &:hover
