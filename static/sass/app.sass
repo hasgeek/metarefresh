@@ -74,7 +74,7 @@ h1
   font-weight: 500
   margin-bottom: 15px
 .people, .people > li
-  line-height: 30px
+  line-height: 20px
 #venue
   img
     border: 8px solid #518AAE
@@ -387,18 +387,23 @@ h1
   width: 350px
   height: 220px
 
-.travel-sponsor.rect
-  width: 250px
-  height: 180px
-  margin-bottom: 60px
-  
-.community-partner.rect, .corporate-ticket.rect
+.travel-sponsor.rect, .community-partner.rect
   width: 160px
   height: 160px
+  margin-bottom: 20px
 
-.corporate-ticket, .community-partner
-  width: 160px
-  height: 160px
+.travel-sponsor.rect
+  img
+    margin-top: 20px
+
+.corporate-ticket.rect
+  width: 120px
+  height: 120px
+  p
+    font-size: 16px
+    padding-top: 48px
+    color: #999
+    padding-left: 5px
 
 .sponsor-description
   background-color: #B8B4D1
@@ -893,6 +898,12 @@ footer .footer-inner
     height: 30px
     margin-left: 95px
     margin-top: -100px
+  .corporate-ticket.rect
+    width: 82px
+    height: 82px
+    p
+      padding-top: 22px
+      font-size: 12px
 
 
 @media (max-width: 979px)
@@ -935,15 +946,10 @@ footer .footer-inner
     height: 180px
 
   .travel-sponsor.rect
-    width: 170px
-    height: 130px
-    margin-bottom: 60px
-    
-  .community-partner.rect, .corporate-ticket.rect
-    width: 120px
-    height: 120px
+    img
+      margin-top: 15px
 
-  .corporate-ticket, .community-partner
+  .travel-sponsor.rect, .community-partner.rect
     width: 120px
     height: 120px
 
@@ -983,6 +989,12 @@ footer .footer-inner
     padding-bottom: 8px
     margin-left: 75px
     margin-top: -80px
+  .corporate-ticket.rect
+    width: 60px
+    height: 60px
+    p
+      padding-top: 10px
+      font-size: 12px
                                                                             
 @media (max-width: 767px)
   #page-header
@@ -1144,13 +1156,5 @@ footer .footer-inner
     img
       margin-top: 30px
 
-  .travel-sponsor.rect
-    width: 160px
-    height: 160px
-    margin-bottom: 10px 
-    img
-      margin-top: 20px
   .community-partner.rect, .corporate-ticket.rect
-    margin-bottom: 10px
-  .corporate-ticket, .community-partner
     margin-bottom: 10px
