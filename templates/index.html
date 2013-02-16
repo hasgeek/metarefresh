@@ -4,38 +4,27 @@
   <title>{% block title %}{{ node.title }}{% endblock %}</title>
   <meta name="DC.title" content="{{ node.title }}"/>
 {%- endblock %}
-{% macro mapscript(mapnode, markername=None) %}
+{% macro mapscript() %}
   <script type="text/javascript">
-    $(function() {
-      var map = new L.Map('map');
-      var cloudmadeUrl = 'http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
-        subDomains = ['otile1','otile2','otile3','otile4'],
-        cloudmadeAttrib = '<a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>, <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>';
-      var cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttrib, subdomains: subDomains});
+  var cloudmadeUrl = 'http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
+      subDomains = ['otile1','otile2','otile3','otile4'],
+      cloudmadeAttrib = '<a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>, and <a href="http://www.openstreetmap.org/" target="_blank">OSM</a>, <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>';
+     bounds = new L.LatLngBounds(new L.LatLng(12, 77), new L.LatLng(13, 78));
+  var cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 20, attribution: cloudmadeAttrib, subdomains: subDomains});
+  var map = new L.Map('map', {
+        center: bounds.getCenter(),
+        zoom: 15,
+        layers: [cloudmade],
+        maxBounds: bounds
+      });
 
-      map.scrollWheelZoom.disable();
+  var venue = new L.LatLng(12.8917, 77.5851); // geographical point (longitude and latitude)
+  map.setView(venue, 14).addLayer(cloudmade);
 
-      var open_marker = function(marker) {
-        return function(e) {
-          map.panTo(marker['_latlng']);
-          marker.openPopup();
-          e.preventDefault();
-        };
-      };
-
-      $('a[href^="#map-"]').tooltip({title: "Show on map"});
-      {% for marker in mapnode.items %}
-        var marker_{{ marker.name }} = new L.Marker(new L.LatLng({{ marker.latitude }}, {{ marker.longitude }}));
-        map.addLayer(marker_{{ marker.name }});
-        marker_{{ marker.name }}.bindPopup("{{ marker.title }}");
-        $('a[href="#map-{{ marker.name }}"]').click(open_marker(marker_{{ marker.name }}));
-      {%- endfor %}
-      {%- with marker = mapnode.get_by_name(markername) or mapnode.items[0] %}
-        map.setView(marker_{{ marker.name }}['_latlng'], {{ marker.zoomlevel or 13 }}).addLayer(cloudmade);
-        marker_{{ marker.name }}.openPopup();
-      {%- endwith %}
-    });
-  </script>
+  var venue_marker = new L.Marker(venue);
+  map.addLayer(venue_marker);
+  venue_marker.bindPopup('MLR Convension Center, JP Nagar').openPopup();
+</script> 
 {% endmacro %}
 
 {% block headerbox %}
@@ -133,7 +122,7 @@
 {% endblock %}
 
 {% block footerscripts %}
-  {{ mapscript(getnode(path='venue-map')) }}
+  {{ mapscript() }}
 <script>
   $(function() {
     if(Modernizr.touch){
