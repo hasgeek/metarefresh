@@ -43,6 +43,10 @@ header
 
   h2
     margin-bottom: 20px
+#logo
+  width: 300px
+  height: auto
+  background: image-url('logo.png')
 
 body
   font-family: 'Raleway', sans-serif
@@ -75,10 +79,27 @@ h1
   margin-bottom: 15px
 .people, .people > li
   line-height: 20px
-#venue
-  img
-    border: 8px solid #518AAE
-    border-radius: 10px
+
+#map
+  height: 450px
+  width: 450px
+  border-radius: 50%
+.leaflet-control-zoom
+  top: 190px
+#venue-detail
+  h3
+    font-size: 30px
+  h4 > p
+    font-size: 22px
+    float: left
+    margin-top: -10px
+  p
+    margin-top: 10px
+#venue-image
+  border: 5px solid #B0ABCF
+  display: block
+  margin-top: 50px
+
 #credits 
   p
     font-family: 'Raleway', sans-serif
@@ -289,7 +310,7 @@ h1
       color: #3C2B73
     a:hover
       color: #DF5E0E
-      text-decoration: none
+      //text-decoration: none
 
 .preview-video
   display: block
@@ -334,8 +355,7 @@ h1
 
 .sponsors
   margin-top: -50px
-  svg
-    margin-left: 12px
+  text-align: center
   h3
     margin-top: 40px
     font-size: 22px
@@ -348,14 +368,12 @@ h1
       color: #3C2B73
 
 .rect
-  //width: 300px
-  //height: 160px
   background-color: #C2BED6
-  display: block
   position: relative
   z-index: 20
-  margin-left: auto
-  margin-right: auto
+  display: inline-block
+  margin-right: 30px
+  margin-left: 30px
   p
     font-size: 20px
     padding-top: 65px
@@ -384,8 +402,11 @@ h1
   border-radius: 50%
 
 .event-sponsor.rect
-  width: 350px
-  height: 220px
+  width: 300px
+  height: 190px
+  margin-bottom: 20px
+  margin-left: 30px
+  margin-right: 30px
 
 .travel-sponsor.rect, .community-partner.rect
   width: 160px
@@ -896,7 +917,7 @@ footer .footer-inner
     font-size: 30px
     width: 35px
     height: 30px
-    margin-left: 95px
+    margin-left: 85px
     margin-top: -100px
   .corporate-ticket.rect
     width: 82px
@@ -904,6 +925,15 @@ footer .footer-inner
     p
       padding-top: 22px
       font-size: 12px
+  .preview-video
+    img
+      margin-left: 25px
+  #map
+    height: 400px
+    width: 400px
+    border-radius: 50%
+  .leaflet-control-zoom
+    top: 170px
 
 
 @media (max-width: 979px)
@@ -942,7 +972,7 @@ footer .footer-inner
       padding-top: 48px
       font-size: 15px
   .event-sponsor.rect
-    width: 300px
+    width: 280px
     height: 180px
 
   .travel-sponsor.rect
@@ -987,7 +1017,7 @@ footer .footer-inner
     height: 23px
     padding-top: 8px
     padding-bottom: 8px
-    margin-left: 75px
+    margin-left: 62px
     margin-top: -80px
   .corporate-ticket.rect
     width: 60px
@@ -995,6 +1025,15 @@ footer .footer-inner
     p
       padding-top: 10px
       font-size: 12px
+  .preview-video
+    img
+      margin-left: 16px
+  #map
+    height: 320px
+    width: 320px
+    border-radius: 50%
+  .leaflet-control-zoom
+    top: 130px
                                                                             
 @media (max-width: 767px)
   #page-header
@@ -1010,6 +1049,21 @@ footer .footer-inner
     margin-right: auto
   .rect.none
     display: none
+
+  #venue-detail
+    h3
+      line-height: 30px
+      float: none
+      margin-left: auto
+      margin-right: auto
+      text-align: center
+    h4 > p
+      float: none
+      margin-left: auto
+      margin-right: auto
+      text-align: center
+  #map
+    margin-bottom: 30px
   
   
 @media (min-width: 461px) and (max-width: 767px)
@@ -1042,6 +1096,14 @@ footer .footer-inner
     padding-bottom: 8px
     margin-left: 95px
     margin-top: -100px
+  #map
+    height: 400px
+    width: 400px
+    border-radius: 50%
+    margin-left: auto
+    margin-right: auto
+  .leaflet-control-zoom
+    top: 170px
 
 @media (min-width: 461px) and (max-width: 559px)
   .span3
@@ -1061,6 +1123,16 @@ footer .footer-inner
     padding-bottom: 9px
     margin-left: 100px
     margin-top: -98px
+  
+
+  #map
+    height: 300px
+    width: 300px
+    border-radius: 50%
+    margin-left: auto
+    margin-right: auto
+  .leaflet-control-zoom
+    top: 120px
 
 @media (max-width: 460px)
   .btn-primary
@@ -1158,3 +1230,15 @@ footer .footer-inner
 
   .community-partner.rect, .corporate-ticket.rect
     margin-bottom: 10px
+  #map
+    height: 250px
+    width: 250px
+    border-radius: 50%
+    margin-left: auto
+    margin-right: auto
+  .leaflet-control-zoom
+    top: 100px
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+  #logo
+    background: image-url('logo-mobile.png')

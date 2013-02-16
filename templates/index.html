@@ -1,0 +1,192 @@
+{% from "baseframe/components.html" import flash_messages, networkbar with context -%}
+{% extends theme("layout.html") %}
+{% block titletags -%}
+  <title>{% block title %}{{ node.title }}{% endblock %}</title>
+  <meta name="DC.title" content="{{ node.title }}"/>
+{%- endblock %}
+{% macro mapscript(mapnode, markername=None) %}
+  <script type="text/javascript">
+    $(function() {
+      var map = new L.Map('map');
+      var cloudmadeUrl = 'http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
+        subDomains = ['otile1','otile2','otile3','otile4'],
+        cloudmadeAttrib = '<a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>, <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>';
+      var cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttrib, subdomains: subDomains});
+
+      map.scrollWheelZoom.disable();
+
+      var open_marker = function(marker) {
+        return function(e) {
+          map.panTo(marker['_latlng']);
+          marker.openPopup();
+          e.preventDefault();
+        };
+      };
+
+      $('a[href^="#map-"]').tooltip({title: "Show on map"});
+      {% for marker in mapnode.items %}
+        var marker_{{ marker.name }} = new L.Marker(new L.LatLng({{ marker.latitude }}, {{ marker.longitude }}));
+        map.addLayer(marker_{{ marker.name }});
+        marker_{{ marker.name }}.bindPopup("{{ marker.title }}");
+        $('a[href="#map-{{ marker.name }}"]').click(open_marker(marker_{{ marker.name }}));
+      {%- endfor %}
+      {%- with marker = mapnode.get_by_name(markername) or mapnode.items[0] %}
+        map.setView(marker_{{ marker.name }}['_latlng'], {{ marker.zoomlevel or 13 }}).addLayer(cloudmade);
+        marker_{{ marker.name }}.openPopup();
+      {%- endwith %}
+    });
+  </script>
+{% endmacro %}
+
+{% block headerbox %}
+  <header id="top" class="section1 rounded">
+    {% block networkbar %}{{ networkbar(siteid='events', login=false) }}{% endblock %}
+    <div id="main-navbar">
+      <div class="main-navbar navbar-fixed-top navbar-hidden">
+        <ul class="nav" id="main-nav">
+          <li><a href="#top"><i class="icon-repeat"></i><br />Meta Refresh</a></li>
+          <li><a href="#about"><i class="icon-quote-left"></i><br />About</a></li>
+          <li><a href="#speakers"><i class="icon-user"></i><br />Speakers</a></li>
+          {#<li><a href="#schedule"><i class="icon-time"></i><br />Schedule</a></li>#}
+          <li><a href="#sponsors"><i class="icon-money"></i><br />Sponsors</a></li>
+          <li><a href="#venue"><i class="icon-map-marker"></i><br />Venue</a></li>
+          {#<li><a href="#credits"><i class="icon-certificate"></i><br />Credits</a></li>#}
+        </ul>
+      </div>
+    </div>
+    <div id="page-header" class="container">
+      <img src="{{ theme_static('img/logo.svg') }}" onerror="this.onerror = null; this.src='{{ theme_static('img/logo.png') }}';">
+      <h2>February 22-23, 2013, <br />MLR Convention Centre, JP Nagar, Bangalore, India</h2>
+      <div class="description">
+        <a class="ticket-popup btn btn-primary btn-large" href="http://metarefresh.doattend.com/" data-href="http://doattend.com/embed_ticket/25343">
+          <big>Buy tickets</big>
+          <br />
+          <small><del>Rs 5000</del>
+          Rs 3000</small>
+        </a>
+        <p id="cleartrip-offer">
+          <strong>Bonus!</strong> Rs 1000 cashback from Cleartrip on travel to Bangalore for<br>
+          Meta Refresh. Forward your event ticket to support@hasgeek.com for details.
+        </p>
+      </div>
+    </div>
+  </header>
+{% endblock %}
+{% block headline %}{% endblock %}
+{% block main %}
+  <div class="section0 rounded" id="mob-navbar">
+    <div class="main-navbar">
+    <ul class="nav" id="main-nav">
+      <li><a href="#top"><i class="icon-repeat"></i><p>Meta Refresh</p></a></li>
+      <li><a href="#about"><i class="icon-quote-left"></i><p>About</p></a></li>
+      <li><a href="#speakers"><i class="icon-user"></i><p>Speakers</p></a></li>
+      {#<li><a href="#schedule"><i class="icon-time"></i><p>Schedule</p></a></li>#}
+      <li><a href="#sponsors"><i class="icon-money"></i><p>Sponsors</p></a></li>
+      <li><a href="#venue"><i class="icon-map-marker"></i><p>Venue</p></a></li>
+      {#<li><a href="#credits"><i class="icon-certificate"></i><p>Credits</p></a></li>#}
+    </ul>
+  </div>
+  </div>
+  <div class="section2 rounded">
+    <div id="about" class="container">
+      <div class="description">
+        {{ node.content }}
+      </div>
+{# <div id="social">
+        <em>Share with friends</em><br />
+        <a href="#" title="Twitter" id="social-icon1">twitter</a>
+        <a href="#" title="Google Plus" id="social-icon2">google-plus</a>
+        <a href="#" title="Facebook" id="social-icon3">facebook</a>
+      </div> #}
+    </div>
+  </div>
+  
+  <div class="section3 rounded">
+    <div class="container" id="speakers">
+      <h1 class="section-heading">Speakers</h1>
+      {% include theme("inc/speakers.html") %}
+    </div>
+  </div>
+  <div class="section4 rounded">
+    <div class="container" id="speaker-previews">
+      {% include theme("inc/previews.html") %}
+    </div>
+  </div>
+  <div class="section5 rounded">
+    <div class="container" id="sponsors">
+      <h1 class="section-heading">Friends of Meta Refresh</h1>
+      {% include theme("inc/sponsors.html") %}
+    </div>
+  </div>
+  <div class="section7 rounded">
+    <div class="container" id="venue">
+      <h1 class="section-heading">Venue</h1>
+      {% include theme("inc/venue.html") %}
+    </div>
+  </div>
+{# <div class="section7 rounded">
+    <div class="container" id="credits">
+      <h1 class="section-heading">Credits</h1>
+      {% include theme("inc/credits.html") %}
+    </div>
+  </div>#}
+{% endblock %}
+
+{% block footerscripts %}
+  {{ mapscript(getnode(path='venue-map')) }}
+<script>
+  $(function() {
+    if(Modernizr.touch){
+      $(".talk-title a").popover({
+        trigger: 'click'
+      });
+    }
+    else{
+      $(".talk-title a").popover({
+        trigger: 'hover'
+      });
+    }
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    
+    $(".no-touch .ticket-popup").colorbox({iframe:true, width:"80%", height:"80%", href: $(".ticket-popup").attr("data-href")});
+    
+  });
+</script>
+<script type="text/javascript">
+
+  $(function() {
+    // fixed nav-bar transition code
+    // adapted from twitter bootstrap docs' sub-nav
+    var $win = $(window)
+      , $nav = $('.main-navbar')
+      , navTop = $nav.length && $nav.offset().top + 610
+      , isFixed = 0;
+    
+    var processScroll = function () {
+      var scrollTop = $win.scrollTop();
+      if (scrollTop >= navTop && !isFixed) {
+        isFixed = 1;
+        $nav.removeClass('navbar-hidden');
+      } else if (scrollTop <= navTop && isFixed) {
+        isFixed = 0;
+        $nav.addClass('navbar-hidden');
+      };
+    };
+    
+    processScroll();
+    
+    $win.on('scroll', processScroll);
+    
+    // smooth scroll nav links
+    $('a', $nav).smoothScroll({
+        offset: -80
+      , speed: 900
+    });
+
+  });
+</script>
+
+{% endblock %}

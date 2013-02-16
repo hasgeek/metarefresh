@@ -45,6 +45,12 @@ header {
   margin-bottom: 20px;
 }
 
+#logo {
+  width: 300px;
+  height: auto;
+  background: url('../img/logo.png?1360344352');
+}
+
 body {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
@@ -88,9 +94,32 @@ h1 {
   line-height: 20px;
 }
 
-#venue img {
-  border: 8px solid #518aae;
-  border-radius: 10px;
+#map {
+  height: 450px;
+  width: 450px;
+  border-radius: 50%;
+}
+
+.leaflet-control-zoom {
+  top: 190px;
+}
+
+#venue-detail h3 {
+  font-size: 30px;
+}
+#venue-detail h4 > p {
+  font-size: 22px;
+  float: left;
+  margin-top: -10px;
+}
+#venue-detail p {
+  margin-top: 10px;
+}
+
+#venue-image {
+  border: 5px solid #b0abcf;
+  display: block;
+  margin-top: 50px;
 }
 
 #credits p {
@@ -370,7 +399,6 @@ h1 {
 }
 #preview-videos h3 a:hover {
   color: #df5e0e;
-  text-decoration: none;
 }
 
 .preview-video {
@@ -424,9 +452,7 @@ h1 {
 
 .sponsors {
   margin-top: -50px;
-}
-.sponsors svg {
-  margin-left: 12px;
+  text-align: center;
 }
 .sponsors h3 {
   margin-top: 40px;
@@ -444,11 +470,11 @@ h1 {
 
 .rect {
   background-color: #c2bed6;
-  display: block;
   position: relative;
   z-index: 20;
-  margin-left: auto;
-  margin-right: auto;
+  display: inline-block;
+  margin-right: 30px;
+  margin-left: 30px;
 }
 .rect p {
   font-size: 20px;
@@ -482,8 +508,11 @@ h1 {
 }
 
 .event-sponsor.rect {
-  width: 350px;
-  height: 220px;
+  width: 300px;
+  height: 190px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .travel-sponsor.rect, .community-partner.rect {
@@ -1138,7 +1167,7 @@ footer .footer-inner {
     font-size: 30px;
     width: 35px;
     height: 30px;
-    margin-left: 95px;
+    margin-left: 85px;
     margin-top: -100px;
   }
 
@@ -1149,6 +1178,20 @@ footer .footer-inner {
   .corporate-ticket.rect p {
     padding-top: 22px;
     font-size: 12px;
+  }
+
+  .preview-video img {
+    margin-left: 25px;
+  }
+
+  #map {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+  }
+
+  .leaflet-control-zoom {
+    top: 170px;
   }
 }
 @media (max-width: 979px) {
@@ -1202,7 +1245,7 @@ footer .footer-inner {
   }
 
   .event-sponsor.rect {
-    width: 300px;
+    width: 280px;
     height: 180px;
   }
 
@@ -1258,7 +1301,7 @@ footer .footer-inner {
     height: 23px;
     padding-top: 8px;
     padding-bottom: 8px;
-    margin-left: 75px;
+    margin-left: 62px;
     margin-top: -80px;
   }
 
@@ -1269,6 +1312,20 @@ footer .footer-inner {
   .corporate-ticket.rect p {
     padding-top: 10px;
     font-size: 12px;
+  }
+
+  .preview-video img {
+    margin-left: 16px;
+  }
+
+  #map {
+    height: 320px;
+    width: 320px;
+    border-radius: 50%;
+  }
+
+  .leaflet-control-zoom {
+    top: 130px;
   }
 }
 @media (max-width: 767px) {
@@ -1290,6 +1347,24 @@ footer .footer-inner {
 
   .rect.none {
     display: none;
+  }
+
+  #venue-detail h3 {
+    line-height: 30px;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  #venue-detail h4 > p {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  #map {
+    margin-bottom: 30px;
   }
 }
 @media (min-width: 461px) and (max-width: 767px) {
@@ -1331,6 +1406,18 @@ footer .footer-inner {
     margin-left: 95px;
     margin-top: -100px;
   }
+
+  #map {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .leaflet-control-zoom {
+    top: 170px;
+  }
 }
 @media (min-width: 461px) and (max-width: 559px) {
   .span3 {
@@ -1353,6 +1440,18 @@ footer .footer-inner {
     padding-bottom: 9px;
     margin-left: 100px;
     margin-top: -98px;
+  }
+
+  #map {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .leaflet-control-zoom {
+    top: 120px;
   }
 }
 @media (max-width: 460px) {
@@ -1480,5 +1579,22 @@ footer .footer-inner {
 
   .community-partner.rect, .corporate-ticket.rect {
     margin-bottom: 10px;
+  }
+
+  #map {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .leaflet-control-zoom {
+    top: 100px;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  #logo {
+    background: url('../img/logo-mobile.png?1361021756');
   }
 }
