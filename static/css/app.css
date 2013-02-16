@@ -60,7 +60,7 @@ body {
   background-color: #9c96bf;
 }
 
-.leaflet-popup-content {
+.leaflet-popup-content, .leaflet-container .leaflet-control-attribution {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
 }
