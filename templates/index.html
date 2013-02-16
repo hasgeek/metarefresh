@@ -17,13 +17,13 @@
         layers: [cloudmade],
         maxBounds: bounds
       });
-
+  map.scrollWheelZoom.disable();
   var venue = new L.LatLng(12.8917, 77.5851); // geographical point (longitude and latitude)
   map.setView(venue, 14).addLayer(cloudmade);
 
   var venue_marker = new L.Marker(venue);
   map.addLayer(venue_marker);
-  venue_marker.bindPopup('MLR Convension Center, JP Nagar').openPopup();
+  venue_marker.bindPopup('MLR Convention Center, JP Nagar').openPopup();
 </script> 
 {% endmacro %}
 
