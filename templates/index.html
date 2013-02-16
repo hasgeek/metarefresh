@@ -18,12 +18,17 @@
         maxBounds: bounds
       });
   map.scrollWheelZoom.disable();
-  var venue = new L.LatLng(12.8917, 77.5851); // geographical point (longitude and latitude)
-  map.setView(venue, 14).addLayer(cloudmade);
+  var map_centre = new L.LatLng(12.9000, 77.5880);
+  var event_venue = new L.LatLng(12.8917, 77.5851); // geographical point (longitude and latitude)
+  var party_venue = new L.LatLng(12.9065, 77.5930);
+  map.setView(map_centre, 14).addLayer(cloudmade);
 
-  var venue_marker = new L.Marker(venue);
-  map.addLayer(venue_marker);
-  venue_marker.bindPopup('MLR Convention Center, JP Nagar').openPopup();
+  var event_venue_marker = new L.Marker(event_venue);
+  var party_venue_marker = new L.Marker(party_venue);
+  map.addLayer(event_venue_marker);
+  map.addLayer(party_venue_marker);
+  event_venue_marker.bindPopup('MLR Convention Center, JP Nagar').openPopup();
+  party_venue_marker.bindPopup('HHI Select (formerly Hotel Emlion)');
 </script> 
 {% endmacro %}
 
