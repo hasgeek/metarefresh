@@ -8,7 +8,7 @@
   <script type="text/javascript">
   var cloudmadeUrl = 'http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
       subDomains = ['otile1','otile2','otile3','otile4'],
-      cloudmadeAttrib = '<a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>, and <a href="http://www.openstreetmap.org/" target="_blank">OSM</a>, <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>';
+      cloudmadeAttrib = '<a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a> and <a href="http://www.openstreetmap.org/" target="_blank">OSM</a>, <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>';
      bounds = new L.LatLngBounds(new L.LatLng(12, 77), new L.LatLng(13, 78));
   var cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 20, attribution: cloudmadeAttrib, subdomains: subDomains});
   var map = new L.Map('map', {
