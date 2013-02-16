@@ -98,6 +98,8 @@ h1 {
   height: 450px;
   width: 450px;
   border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .leaflet-control-zoom {
@@ -117,7 +119,6 @@ h1 {
 }
 
 #venue-image {
-  border: 5px solid #b0abcf;
   display: block;
   margin-top: 50px;
 }
@@ -509,7 +510,7 @@ h1 {
 
 .event-sponsor.rect {
   width: 280px;
-  height: 190px;
+  height: 180px;
   margin-bottom: 30px;
   margin-left: 40px;
   margin-right: 40px;
