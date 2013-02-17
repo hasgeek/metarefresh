@@ -1502,6 +1502,7 @@ hr {
 
   .end-time {
     display: inline-block;
+    padding-left: 7px;
   }
 
   #day1-head {
