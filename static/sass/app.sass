@@ -44,15 +44,19 @@ header
   h2
     margin-bottom: 20px
 #logo
-  width: 300px
-  height: auto
+  width: 369px
+  height: 244px
+  display: block
+  margin-left: auto
+  margin-right: auto
   background: image-url('logo.png')
+  margin-bottom: 30px
 
 body
   margin-left: auto
   margin-right: auto
   min-width: 50px
-  background-color: #9c96bf
+  background-color: #958fbb
 
 body, p
   font-family: 'Raleway', sans-serif
@@ -85,7 +89,9 @@ h1
   font-weight: bold
   margin-bottom: 15px
 .people, .people > li
-  line-height: 20px
+  font-size: 15px
+  line-height: 22px
+
 
 #map
   height: 450px
@@ -106,8 +112,11 @@ h1
     font-size: 22px
     float: left
     margin-top: -10px
+    margin-bottom: 20px
   p
     margin-top: 10px
+    font-size: 15px
+    line-height: 22px
 #venue-image
   //border: 5px solid #B0ABCF
   display: block
@@ -126,7 +135,7 @@ h1
   img
     text-align: left
     border-radius: 10px
-    background: #B0ABCF
+    background: #A39DC4
     padding: 10px
   li
     list-style-type: none
@@ -507,8 +516,8 @@ h1
   border-color: #A39DC4
 
 .section8, .section8:after
-  background-color: #b0abcf
-  border-color: #b0abcf
+  background-color: #9c96bf
+  border-color: #9c96bf
 
 .section1.rounded:after
   z-index: 9
@@ -738,7 +747,7 @@ h1
     
 .speaker-name 
   text-align: center
-  //margin-bottom: 60px
+  margin-bottom: 40px
   height: 98px
   h3
     color: #000
@@ -894,6 +903,36 @@ footer .footer-inner
 #cboxClose:hover
   background-position: -25px -25px
 
+.schedule-header
+  font-size: 20px
+  color: #666
+hr
+  border-bottom: 1px solid #C2BED6
+  border-top: 2px solid #A39DC4
+  margin-top: 10px
+  margin-bottom: 10px
+.day1
+  text-align: right
+.time
+  text-align: center
+.day2
+  text-align: left
+
+.start-time
+  margin-top: 13px
+  font-size: 30px
+.schedule-speaker
+  font-size: 18px
+  font-weight: 600px
+  margin-bottom: 10px
+.schedule-talk
+  a
+    //color: #270863
+    cursor: pointer
+    font-size: 16px
+    &:hover
+      color: #DF5E0E
+      text-decoration: none
 
 
 
@@ -1055,6 +1094,11 @@ footer .footer-inner
     margin-left: 20px
   h3
     line-height: 35px
+  #logo
+    width: 290px
+    height: 190px
+    background: image-url('logo.png')
+    background-size: 100%
                                                                             
 @media (max-width: 767px)
   
@@ -1088,7 +1132,22 @@ footer .footer-inner
       text-align: center
   #map
     margin-bottom: 30px
-  
+  .day1
+    text-align: left
+    display: block
+    width: 40%
+  .day2
+    text-align: right
+    display: block
+    width: 40%
+  .time
+    text-align: center
+    display: block
+    width: 20%
+    margin-top: 10px
+  #credits 
+    img
+      margin-top: 50px
   
 @media (min-width: 461px) and (max-width: 767px)
   .speaker-img
@@ -1128,6 +1187,11 @@ footer .footer-inner
     margin-right: auto
   .leaflet-control-zoom
     top: 170px
+  #logo
+    width: 250px
+    height: 163px
+    background: image-url('logo.png')
+    background-size: 100%
 
 @media (min-width: 461px) and (max-width: 559px)
   .span3
@@ -1264,6 +1328,11 @@ footer .footer-inner
     top: 100px
   #venue-image
     margin-left: 0
+  #logo
+    width: 200px
+    height: 130px
+    background: image-url('logo.png')
+    background-size: 100%
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
   #logo
