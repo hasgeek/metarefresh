@@ -1198,6 +1198,15 @@ hr {
   text-decoration: none;
 }
 
+.menu {
+  font-size: 12px;
+  cursor: auto;
+  color: #333333;
+}
+.menu:hover {
+  color: #333333;
+}
+
 @media (min-width: 980px) and (max-width: 1200px) {
   .rect {
     width: 200px;
