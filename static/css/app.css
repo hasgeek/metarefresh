@@ -1433,6 +1433,7 @@ hr {
     height: 190px;
     background: url('../img/logo.png?1359632506');
     background-size: 100%;
+    background-repeat: no-repeat;
   }
 }
 @media (max-width: 767px) {
@@ -1588,6 +1589,7 @@ hr {
     height: 163px;
     background: url('../img/logo.png?1359632506');
     background-size: 100%;
+    background-repeat: no-repeat;
   }
 }
 @media (min-width: 461px) and (max-width: 559px) {
@@ -1773,10 +1775,13 @@ hr {
     height: 130px;
     background: url('../img/logo.png?1359632506');
     background-size: 100%;
+    background-repeat: 100%;
   }
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   #logo {
     background: url('../img/logo-mobile.png?1361025450');
+    background-size: 100%;
+    background-repeat: no-repeat;
   }
 }
