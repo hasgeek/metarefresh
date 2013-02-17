@@ -1188,11 +1188,12 @@ hr {
   margin-bottom: 10px;
 }
 
-.schedule-talk a {
+.schedule-talk, .schedule-talk > a {
+  color: #3c2b73;
   cursor: pointer;
   font-size: 16px;
 }
-.schedule-talk a:hover {
+.schedule-talk:hover, .schedule-talk > a:hover {
   color: #df5e0e;
   text-decoration: none;
 }
