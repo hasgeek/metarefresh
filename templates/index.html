@@ -4,186 +4,25 @@
   <title>{% block title %}{{ node.title }}{% endblock %}</title>
   <meta name="DC.title" content="{{ node.title }}"/>
 {%- endblock %}
-{% macro mapscript() %}
-  <script type="text/javascript">
-  var cloudmadeUrl = 'http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
-      subDomains = ['otile1','otile2','otile3','otile4'],
-      cloudmadeAttrib = '<a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a> and <a href="http://www.openstreetmap.org/" target="_blank">OSM</a>, <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>';
-     bounds = new L.LatLngBounds(new L.LatLng(12, 77), new L.LatLng(14, 79));
-  var cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 20, attribution: cloudmadeAttrib, subdomains: subDomains});
-  var map = new L.Map('map', {
-        center: bounds.getCenter(),
-        zoom: 15,
-        layers: [cloudmade],
-        maxBounds: bounds
-      });
-  map.scrollWheelZoom.disable();
-  var map_centre = new L.LatLng(12.9000, 77.5880);
-  var event_venue = new L.LatLng(12.8917, 77.5851); // geographical point (longitude and latitude)
-  var party_venue = new L.LatLng(12.9065, 77.5930);
-  map.setView(map_centre, 14).addLayer(cloudmade);
-
-  var event_venue_marker = new L.Marker(event_venue);
-  var party_venue_marker = new L.Marker(party_venue);
-  map.addLayer(event_venue_marker);
-  map.addLayer(party_venue_marker);
-  event_venue_marker.bindPopup('MLR Convention Center, JP Nagar').openPopup();
-  party_venue_marker.bindPopup('HHI Select (formerly Hotel Emlion)');
-</script> 
-{% endmacro %}
-
 {% block headerbox %}
   <header id="top" class="section1 rounded">
     {% block networkbar %}{{ networkbar(siteid='events', login=false) }}{% endblock %}
-    <div id="main-navbar">
-      <div class="main-navbar navbar-fixed-top navbar-hidden">
-        <ul class="nav" id="main-nav">
-          <li><a href="#top"><i class="icon-repeat"></i><br />Meta Refresh</a></li>
-          <li><a href="#about"><i class="icon-quote-left"></i><br />About</a></li>
-          <li><a href="#speakers"><i class="icon-user"></i><br />Speakers</a></li>
-          <li><a href="#sponsors"><i class="icon-money"></i><br />Sponsors</a></li>
-          <li><a href="#schedule"><i class="icon-time"></i><br />Schedule</a></li>
-          <li><a href="#venue"><i class="icon-map-marker"></i><br />Venue</a></li>
-          <li><a href="#credits"><i class="icon-certificate"></i><br />Credits</a></li>
-        </ul>
-      </div>
-    </div>
     <div id="page-header" class="container">
       <div id="logo"></div>
-      <h2>February 22-23, 2013, <br />MLR Convention Centre, JP Nagar, Bangalore, India</h2>
+      <h2>February 21-22, 2014,<br> Bangalore, India</h2>
       <div class="description">
-        <a class="ticket-popup btn btn-primary btn-large" href="http://metarefresh.doattend.com/" data-href="http://doattend.com/embed_ticket/25343">
-          <big>Buy tickets</big>
-          <br />
-          <small><del>Rs 5000</del>
-          Rs 4000</small>
-        </a>
+        Opens July 2013.
+        Previously: <a href="/2013">2013</a>, <a href="/2012">2012</a>.<br>
+        Videos on <a href="http://hasgeek.tv/metarefresh/">HasGeek TV</a>.<br>
+        @<a href="http://twitter.com/metarefresh">metarefresh</a>,
+        @<a href="http://twitter.com/hasgeek">hasgeek</a>,
+        <a href="mailto:info@hasgeek.com">info@hasgeek.com</a>
       </div>
     </div>
   </header>
 {% endblock %}
 {% block headline %}{% endblock %}
-{% block main %}
-  <div class="section0 rounded" id="mob-navbar">
-    <div class="main-navbar">
-    <ul class="nav" id="main-nav">
-      <li><a href="#top"><i class="icon-repeat"></i><p>Meta Refresh</p></a></li>
-      <li><a href="#about"><i class="icon-quote-left"></i><p>About</p></a></li>
-      <li><a href="#speakers"><i class="icon-user"></i><p>Speakers</p></a></li>
-      <li><a href="#sponsors"><i class="icon-money"></i><p>Sponsors</p></a></li>
-      <li><a href="#schedule"><i class="icon-time"></i><p>Schedule</p></a></li>
-      <li><a href="#venue"><i class="icon-map-marker"></i><p>Venue</p></a></li>
-      <li><a href="#credits"><i class="icon-certificate"></i><p>Credits</p></a></li>
-    </ul>
-  </div>
-  </div>
-  <div class="section2 rounded">
-    <div id="about" class="container">
-      <div class="description">
-        {{ node.content }}
-      </div>
-{# <div id="social">
-        <em>Share with friends</em><br />
-        <a href="#" title="Twitter" id="social-icon1">twitter</a>
-        <a href="#" title="Google Plus" id="social-icon2">google-plus</a>
-        <a href="#" title="Facebook" id="social-icon3">facebook</a>
-      </div> #}
-    </div>
-  </div>
-  
-  <div class="section3 rounded">
-    <div class="container" id="speakers">
-      <h1 class="section-heading">Speakers</h1>
-      {% include theme("inc/speakers.html") %}
-    </div>
-  </div>
-  <div class="section4 rounded">
-    <div class="container" id="speaker-previews">
-      {% include theme("inc/previews.html") %}
-    </div>
-  </div>
-  <div class="section5 rounded">
-    <div class="container" id="sponsors">
-      <h1 class="section-heading">Friends of Meta Refresh</h1>
-      {% include theme("inc/sponsors.html") %}
-    </div>
-  </div>
-  <div class="section6 rounded">
-    <div class="container" id="schedule">
-      <h1 class="section-heading">Schedule</h1>
-      {% include theme("inc/schedule.html") %}
-    </div>
-  </div>
-  <div class="section7 rounded">
-    <div class="container" id="venue">
-      <h1 class="section-heading">Venue</h1>
-      {% include theme("inc/venue.html") %}
-    </div>
-  </div>
-  
-  <div class="section8 rounded">
-    <div class="container" id="credits">
-      <h1 class="section-heading">Credits</h1>
-      {% include theme("inc/credits.html") %}
-    </div>
-  </div>
-{% endblock %}
+{% block main %}{% endblock %}
 
 {% block footerscripts %}
-  {{ mapscript() }}
-<script>
-  $(function() {
-    if(Modernizr.touch){
-      $(".talk-title a").popover({
-        trigger: 'click'
-      });
-    }
-    else{
-      $(".talk-title a").popover({
-        trigger: 'hover'
-      });
-    }
-  });
-</script>
-<script type="text/javascript">
-  $(document).ready(function(){
-    
-    $(".no-touch .ticket-popup").colorbox({iframe:true, width:"80%", height:"80%", href: $(".ticket-popup").attr("data-href")});
-    
-  });
-</script>
-<script type="text/javascript">
-
-  $(function() {
-    // fixed nav-bar transition code
-    // adapted from twitter bootstrap docs' sub-nav
-    var $win = $(window)
-      , $nav = $('.main-navbar')
-      , navTop = $nav.length && $nav.offset().top + 610
-      , isFixed = 0;
-    
-    var processScroll = function () {
-      var scrollTop = $win.scrollTop();
-      if (scrollTop >= navTop && !isFixed) {
-        isFixed = 1;
-        $nav.removeClass('navbar-hidden');
-      } else if (scrollTop <= navTop && isFixed) {
-        isFixed = 0;
-        $nav.addClass('navbar-hidden');
-      };
-    };
-    
-    processScroll();
-    
-    $win.on('scroll', processScroll);
-    
-    // smooth scroll nav links
-    $('a', $nav).smoothScroll({
-        offset: -80
-      , speed: 900
-    });
-
-  });
-</script>
-
 {% endblock %}
