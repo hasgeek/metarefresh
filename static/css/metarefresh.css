@@ -50,6 +50,10 @@ html, body {
   border-top: 0;
 }
 
+#hg-bar ul#hg-barlinks>li ul li.hg-menu-section, #hg-bar ul#hg-usertools>li ul li.hg-menu-section {
+	border-top: 1px solid #666;
+}
+
 h1, h2, h3, h4, dd, .navbar .home {
 	font-family: futura-pt, 'Futura PT', Futura, 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
