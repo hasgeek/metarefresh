@@ -1,0 +1,349 @@
+{%
+  set types = {
+      'app-demos' : {
+        'title'     : 'App Demos'
+    }
+    , 'business' : {
+        'title' : 'Business'
+    }
+    , 'gaming' : {
+        'title' : 'Gaming'
+    }
+    , 'systems' : {
+        'title' : 'Systems'
+    }
+    , 'ux' : {
+        'title' : 'UX'
+    }
+  }
+%}
+{%
+  set sessions = {
+      'session-10-00-A' : {
+        'id'          : 'session-10-00-A'
+      , 'title'       : 'Session'
+      , 'speaker'     : 'Speaker'
+      , 'designation' : 'Designation'
+      , 'type'        : ''
+      , 'blurb'       : 'Will be updated soon'
+      , 'link'        : 'conference#session-10-00-A'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/droidcon2013/'
+      , 'preview'     : 'https://hasgeek.tv/droidconin/'
+      , 'featured'    : false
+    }
+    , 'panel-discussion-11-45-A' : {
+        'id'          : 'panel-discussion-11-45-A'
+      , 'title'       : '[Panel] Android &amp; The Elephant in the Room - Monetization Models'
+      , 'speaker'     : 'Gaurav Sharma, Kavin Mittal,<br>ThiyagaRajan M, Nischal Shetty'
+      , 'designation' : ''
+      , 'type'        : 'business'
+      , 'blurb'       : 'This topic is a moderated panel discussion. Lets discuss the elephant in the room - the challenges with monetizing Android apps. Lets discuss monetization strategies that are working, and gain insights from the panel on new approaches that could open up in the future.'
+      , 'link'        : 'conference#panel-discussion-11-45-A'
+      , 'funnel'      : 'https://funnel.hasgeek.com/droidcon2013/877-panel-android-the-elephant-in-the-room-monetizatio'
+      , 'featured'    : true
+    }
+    , 'session-11-45-B' : {
+        'id'          : 'session-11-45-B'
+      , 'title'       : 'Session'
+      , 'speaker'     : 'Speaker'
+      , 'designation' : 'Designation'
+      , 'type'        : 'systems'
+      , 'blurb'       : 'Will be updated soon'
+      , 'link'        : 'conference#session-11-45-B'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/droidcon2013/'
+      , 'preview'     : 'https://hasgeek.tv/droidconin/'
+      , 'featured'    : false
+    }
+    , 'panel-discussion-12-30-A' : {
+        'id'          : 'panel-discussion-12-30-A'
+      , 'title'       : '[Panel] Move fast, break things or Polish the back of the chest of drawers?'
+      , 'speaker'     : 'Satyajeet Singh, ThiyagaRajan M, Kavin Mittal'
+      , 'type'        : 'business'
+      , 'blurb'       : 'This topic is a moderated panel discussion. Lets discuss how you build and release your app (versus typical web dev cycles)? What\'s the process you follow? How often do you release? What are the tradeoffs you have to make for ensuring adequate velocity? How you do you know when too broken is bad? How do you apply A/B testing results? Beta channel feedback? Phased rollouts?'
+      , 'link'        : 'conference#panel-discussion-12-30-A'
+      , 'funnel'      : 'https://funnel.hasgeek.com/droidcon2013/880-panel-move-fast-break-things-or-polish-the-back-of'
+      , 'featured'    : true
+    }
+    , 'session-12-30-B' : {
+        'id'          : 'session-11-45-B'
+      , 'title'       : 'Session'
+      , 'speaker'     : 'Speaker'
+      , 'designation' : 'Designation'
+      , 'type'        : 'systems'
+      , 'blurb'       : 'Will be updated soon'
+      , 'link'        : 'conference#session-11-45-B'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/droidcon2013/'
+      , 'preview'     : 'https://hasgeek.tv/droidconin/'
+      , 'featured'    : false
+    }
+    , 'session-02-45-A' : {
+        'id'          : 'session-02-45-A'
+      , 'title'       : 'Session'
+      , 'speaker'     : 'Speaker'
+      , 'designation' : 'Designation'
+      , 'type'        : 'gaming'
+      , 'blurb'       : 'Will be updated soon'
+      , 'link'        : 'conference#session-02-45-A'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/droidcon2013/'
+      , 'preview'     : 'https://hasgeek.tv/droidconin/'
+      , 'featured'    : false
+    }
+    , 'session-03-45-A' : {
+        'id'          : 'session-03-45-A'
+      , 'title'       : 'Developing Augmented Reality Android Application'
+      , 'speaker'     : 'Samarth Shah'
+      , 'designation' : 'Systems Engineer at Infosys Labs'
+      , 'type'        : 'gaming'
+      , 'blurb'       : 'Understanding Unity3d game engine, Understanding Vuforia SDK, Getting started with Unity3d (Eclipse IDE) and Vuforia SDK'
+      , 'link'        : 'conference#session-03-45-A'
+      , 'funnel'      : 'https://funnel.hasgeek.com/droidcon2013/869-developing-augmented-reality-android-application'
+      , 'featured'    : true
+    }
+    , 'session-04-30-A' : {
+        'id'          : 'session-04-30-A'
+      , 'title'       : 'Lessons learnt by porting our game engine from iOS to Android'
+      , 'speaker'     : 'Manish Mathai'
+      , 'designation' : ''
+      , 'type'        : 'gaming'
+      , 'blurb'       : 'Talk about lessons learned while porting our proprietary game engine - roloengine to android. Rolocule\'s Award winning game Flick Tennis would be used as a case study.'
+      , 'link'        : 'conference#session-04-30-A'
+      , 'funnel'      : 'https://funnel.hasgeek.com/droidcon2013/908-lessons-learnt-by-porting-our-game-engine-from-ios'
+      , 'featured'    : true
+    }
+
+
+    , 'session-10-00-C' : {
+        'id'          : 'session-10-00-C'
+      , 'title'       : 'Session'
+      , 'speaker'     : 'Speaker'
+      , 'designation' : 'Designation'
+      , 'type'        : ''
+      , 'blurb'       : 'Will be updated soon'
+      , 'link'        : 'conference#session-10-00-C'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/droidcon2013/'
+      , 'preview'     : 'https://hasgeek.tv/droidconin/'
+      , 'featured'    : false
+    }
+    , 'session-11-45-C' : {
+        'id'          : 'session-11-45-C'
+      , 'title'       : 'Building apps for the SmartWatch 2'
+      , 'speaker'     : 'Jonas Hellstr\u00f6m'
+      , 'designation' : ''
+      , 'type'        : 'systems'
+      , 'blurb'       : 'This session is about how you can make use of the Smart Extension API to create your own SmartWatch 2 compatible apps. We will cover the SmartWatch 2\'s specs and capabilities. You will be guided through the required steps for registering your own extension, get it running on the watch and how to publish it properly on Google Play for easier discoverability. We will also take a look at things you can do to make the most use of the SmartWatch 2 and optimize your implementation.'
+      , 'link'        : 'conference#session-11-45-C'
+      , 'funnel'      : 'https://funnel.hasgeek.com/droidcon2013/870-building-apps-for-the-smartwatch-2'
+      , 'featured'    : true
+    }
+    , 'session-12-30-C' : {
+        'id'          : 'session-11-45-C'
+      , 'title'       : 'Volley with OkHttp: A Deadly Ultrafast Network Application'
+      , 'speaker'     : 'Bhaskar Gupta'
+      , 'designation' : ''
+      , 'type'        : 'systems'
+      , 'blurb'       : 'Volley, is an excellent library that implements best practices, design patterns and framework to build fast, async and cachable Android applications. OkHttp is the android client  of SPYDY. There is very less documentation around Volley, hence the objective is to become aware of how to use Volley and customize it along with OkHttp.'
+      , 'link'        : 'conference#session-11-45-C'
+      , 'funnel'      : 'https://funnel.hasgeek.com/droidcon2013/907-volley-with-okhttp-a-deadly-ultrafast-network-appl'
+      , 'featured'    : true
+    }
+    , 'session-02-45-C' : {
+        'id'          : 'session-02-45-C'
+      , 'title'       : 'To Android, with Love'
+      , 'speaker'     : 'Ramprakash R'
+      , 'designation' : ''
+      , 'type'        : 'ux'
+      , 'blurb'       : 'To help developers, entrepreneurs and designers feel emotionally connected to the creative process \u2014 and care for details that could help them create meaningful products and services for today and the future.'
+      , 'link'        : 'conference#session-02-45-C'
+      , 'funnel'      : 'https://funnel.hasgeek.com/droidcon2013/924-to-android-with-love'
+      , 'featured'    : true
+    }
+    , 'session-02-45-D' : {
+        'id'          : 'session-02-45-D'
+      , 'title'       : 'Dalvik VM - Deep dive into what makes the Android apps run'
+      , 'speaker'     : 'Satyam Kandula'
+      , 'designation' : ''
+      , 'type'        : 'systems'
+      , 'blurb'       : 'Understand the basics of Android\'s DalvikVM architecture from the perspective of an App developer. Understand how it can influence your application and learn about possible tips and tricks that might help your app perform better'
+      , 'link'        : 'conference#session-02-45-D'
+      , 'funnel'      : 'https://funnel.hasgeek.com/droidcon2013/911-dalvik-vm-deep-dive-into-what-makes-the-android-ap'
+      , 'featured'    : true
+    }
+    , 'session-03-45-C' : {
+        'id'          : 'session-03-45-C'
+      , 'title'       : 'Design by Understanding'
+      , 'speaker'     : 'Pooja Saxena'
+      , 'designation' : ''
+      , 'type'        : 'ux'
+      , 'blurb'       : 'To introduce the audience to the process of looking at the core content of their apps structurally and semantically as a stepping stone towards a consistent and easy-to-navigate design.'
+      , 'link'        : 'conference#session-03-45-C'
+      , 'funnel'      : 'https://funnel.hasgeek.com/droidcon2013/921-design-by-understanding'
+      , 'featured'    : true
+    }
+    , 'session-04-30-C' : {
+        'id'          : 'session-04-30-C'
+      , 'title'       : 'Session'
+      , 'speaker'     : 'Speaker'
+      , 'designation' : 'Designation'
+      , 'type'        : 'ux'
+      , 'blurb'       : 'Will be updated soon'
+      , 'link'        : 'conference#session-04-30-C'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/droidcon2013/'
+      , 'preview'     : 'https://hasgeek.tv/droidconin/'
+      , 'featured'    : false
+    }
+
+
+    , 'panel-discussion-10-45-A' : {
+        'id'          : 'panel-discussion-10-45-A'
+      , 'title'       : '[Panel] How should I prep for my app launch?'
+      , 'speaker'     : 'Satyajeet Singh, Varun Krishnan<br>Shashaank Shekhar Singhal'
+      , 'designation' : ''
+      , 'type'        : 'business'
+      , 'blurb'       : 'This is a moderated panel discussion. How important is your app launch? What are the different things you need to ensure you check off on your list during the build up to your app launch to ensure that things go well?'
+      , 'link'        : 'conference#panel-discussion-10-45-A'
+      , 'funnel'      : 'https://funnel.hasgeek.com/droidcon2013/879-panel-how-should-i-prep-for-my-app-launch'
+      , 'featured'    : true
+
+    }
+    , 'panel-discussion-02-00-A' : {
+        'id'          : 'panel-discussion-02-00-A'
+      , 'title'       : 'Gaming Panel Discussion'
+      , 'speaker'     : 'Panel Members'
+      , 'designation' : ''
+      , 'type'        : 'gaming'
+      , 'blurb'       : 'Will be updated soon'
+      , 'link'        : 'conference#panel-discussion-02-00-A'
+      , 'featured'    : false
+    }
+
+    , 'panel-discussion-10-45-C' : {
+        'id'          : 'panel-discussion-10-45-C'
+      , 'title'       : 'Systems Panel Discussion'
+      , 'speaker'     : 'Panel Members'
+      , 'designation' : ''
+      , 'type'        : 'systems'
+      , 'blurb'       : 'Will be updated soon'
+      , 'link'        : 'conference#panel-discussion-10-45-C'
+      , 'featured'    : false
+    }
+    , 'panel-discussion-02-00-C' : {
+        'id'          : 'panel-discussion-02-00-C'
+      , 'title'       : 'UX Panel Discussion'
+      , 'speaker'     : 'Panel Members'
+      , 'designation' : ''
+      , 'type'        : 'ux'
+      , 'blurb'       : 'Will be updated soon'
+      , 'link'        : 'conference#panel-discussion-02-00-C'
+      , 'featured'    : false
+    }
+
+
+
+    , 'demo-02-00-B' : {
+        'id'          : 'demo-02-00-B'
+      , 'title'       : 'Demo'
+      , 'speaker'     : 'Speaker'
+      , 'designation' : 'Designation'
+      , 'type'        : 'app-demos'
+      , 'blurb'       : 'Will be updated soon'
+      , 'link'        : 'conference#demo-02-00-B'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/droidcon2013/'
+      , 'preview'     : 'https://hasgeek.tv/droidconin/'
+      , 'featured'    : false
+    }
+    , 'demo-02-45-B' : {
+        'id'          : 'demo-02-45-B'
+      , 'title'       : 'Demo'
+      , 'speaker'     : 'Speaker'
+      , 'designation' : 'Designation'
+      , 'type'        : 'app-demos'
+      , 'blurb'       : 'Will be updated soon'
+      , 'link'        : 'conference#demo-02-45-B'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/droidcon2013/'
+      , 'preview'     : 'https://hasgeek.tv/droidconin/'
+      , 'featured'    : false
+    }
+    , 'demo-03-45-B' : {
+        'id'          : 'demo-03-45-B'
+      , 'title'       : 'Demo'
+      , 'speaker'     : 'Speaker'
+      , 'designation' : 'Designation'
+      , 'type'        : 'app-demos'
+      , 'blurb'       : 'Will be updated soon'
+      , 'link'        : 'conference#demo-03-45-B'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/droidcon2013/'
+      , 'preview'     : 'https://hasgeek.tv/droidconin/'
+      , 'featured'    : false
+    }    
+    , 'demo-04-30-B' : {
+        'id'          : 'demo-04-30-B'
+      , 'title'       : 'Demo'
+      , 'speaker'     : 'Speaker'
+      , 'designation' : 'Designation'
+      , 'type'        : 'app-demos'
+      , 'blurb'       : 'Will be updated soon'
+      , 'link'        : 'conference#demo-04-30-B'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/droidcon2013/'
+      , 'preview'     : 'https://hasgeek.tv/droidconin/'
+      , 'featured'    : false
+    }
+
+
+    , 'session-03-45-D' : {
+        'id'          : 'session-03-45-D'
+      , 'title'       : 'Making Mobile Web Services that Don\u2019t Suck'
+      , 'speaker'     : 'Christopher Neugebauer'
+      , 'designation' : ''
+      , 'type'        : 'systems'
+      , 'blurb'       : 'This talk looks designing web service APIs that embrace the restrictions and limitations of mobile networks: how mobile networks differ from fixed networks, how to take advantage of these differences, and how to make your API useful to developers of mobile apps.'
+      , 'link'        : 'conference#session-03-45-D'
+      , 'funnel'      : 'https://funnel.hasgeek.com/droidcon2013/861-making-mobile-web-services-that-dont-suck'
+      , 'featured'    : true
+    }    
+    , 'demo-04-30-D' : {
+        'id'          : 'demo-04-30-D'
+      , 'title'       : 'Student Demos'
+      , 'speaker'     : 'Speaker'
+      , 'designation' : 'Designation'
+      , 'type'        : 'app-demos'
+      , 'blurb'       : 'Will be updated soon'
+      , 'link'        : 'conference#demo-04-30-D'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/droidcon2013/'
+      , 'preview'     : 'https://hasgeek.tv/droidconin/'
+      , 'featured'    : false
+    }
+
+
+    , 'lightning-talks-05-15-A' : {
+        'id'          : 'lightning-talks-05-15-A'
+      , 'title'       : 'Lightning Talks'
+      , 'designation' : '5mins talks'
+      , 'type'        : 'gaming'
+      , 'blurb'       : 'Will be updated soon'
+      , 'link'        : 'conference#lightning-talks-05-15-A'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'featured'    : false
+    }
+    , 'lightning-talks-05-15-C' : {
+        'id'          : 'lightning-talks-05-15-C'
+      , 'title'       : 'Lightning Talks'
+      , 'designation' : '5mins talks'
+      , 'type'        : 'ux'
+      , 'blurb'       : 'Will be updated soon'
+      , 'link'        : 'conference#lightning-talks-05-15-C'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'featured'    : false
+    }
+  }
+%}

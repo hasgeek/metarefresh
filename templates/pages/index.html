@@ -1,0 +1,57 @@
+{% extends theme('layouts/page.html') %}
+{% from theme("data/conference-schedule-day1.html") import schedule as schedule_day1 %}
+{% from theme("data/conference-schedule-day2.html") import schedule as schedule_day2 %}
+{%
+  set page = {
+      'title'               : ''
+    , 'description'         : ''
+    , 'sections'            : [      
+       ('event-themes',          '')
+      , ('tickets',          'green')
+      , ('funnel-proposals',           '')
+      , ('past-highlights',           'blue')
+      , ('venue-summary',             'dark')
+      , ('sponsors-summary',          'green')
+    ]
+  }
+%}
+{% block navtype %}
+<div id="nav-home">
+{% endblock %}
+
+{% block banner %}
+<header class="masthead-home fill-blue"><!-- 
+  <div class="left-bg"></div>
+  <div class="right-bg"></div>
+  <div class="center-bg"></div> -->
+  <div class="container">
+    <div class="row masthead-banner">
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <h1 class="logo-text extralarge bold space-two-top">
+          <div class="text-left">Meta</div>
+          <div class="text-right">Refresh</div>
+        </h1>
+        <a class="ir logo hidden-xs" href="/">Droidcon India 2013</a>
+      </div>
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 text-right">
+        <h2 class="green extrabold all-lower extralarge space-four-top">
+          <div class="link">A Conference on</div>
+          <div class="link line1">Construction of</div>
+          <div class="link line2">User interface</div>
+          <div class="link line3">on the web</div>
+        </h2>
+        
+        <div class="intro row-fluid prose prose-type thin space-two-top">
+          <div class="line4 thin">28 - 30 November 2013&nbsp;&nbsp;|&nbsp;&nbsp;Bangalore</div>
+        </div>
+        
+        <p class="secondary space-two-top space-two-bottom">
+          <a class="button" href="http://droidcon.doattend.com/">Buy your Ticket</a>
+        </p>
+        <p><br></p>
+      </div>
+
+    </div>
+  </div>
+</header>
+{% endblock %}

@@ -1,0 +1,227 @@
+{% from "baseframe/components.html" import networkbar with context -%}
+
+<!DOCTYPE html>
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9">     <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js{%- if config['DEBUG'] %} wf-active{% endif %}">        <!--<![endif]-->
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Droidcon India: Android Conference in Bangalore, India{% endif %}">
+<meta name="author" content="HasGeek and friends">
+
+<meta property="og:title" content="Droidcon India 2013{% if page.title %} — {{ page.title }}{% endif %}"/>
+<meta property="og:image" content="{{ request.url_root[:-1] }}{{ theme_static('img/logo.png') }}"/>
+<meta property="og:url" content="{{ request.url }}"/>
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}Droidcon India: Android Conference in Bangalore, India{% endif %}"/>
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+<title>{% if page.title %}{{ page.title }} — {% endif %}Droidcon India 2013</title>
+
+{%- if _theme %}
+  {% assets "css_" + _theme -%}
+    <link rel="stylesheet" href="{{ ASSET_URL }}"/>
+  {% endassets -%}
+{%- endif %}
+
+<!-- Leaflet -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6.3/leaflet.min.css" />
+<!--[if lte IE 8]>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6.3/leaflet.ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" />
+<link href='//fonts.googleapis.com/css?family=Raleway:400,700,300,100' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/_baseframe/css/networkbar.css">
+
+<script src="{{ theme_static('js/vendor/modernizr-2.6.2.js') }}"></script>
+
+{%- if config['DEBUG'] %}
+  <link rel="stylesheet" href="{{ theme_static('css/fonts.css') }}">
+{%- else %}
+  <script type="text/javascript" src="//use.typekit.net/ewq6otu.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+{%- endif %}
+
+</head>
+<body class="fill-greengray">
+
+<div class="fill-silver">
+  {% block networkbar %}
+    {{ networkbar(siteid='events', login=false) }}
+  {% endblock %}
+</div>
+
+
+<div id="page">
+
+{% block banner %}
+<header class="fill-blue banner-internal push-two resetcoords clearfix">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+        <h1 class="nospace">
+          <a class="ir logo" href="/2013">
+            Droidcon India 2013
+          </a>
+        </h1>
+      </div>
+      <div class="col-lg-7 col-md-7 col-sm-5 col-xs-5">
+        <h1 class="extrabold legible">Droidcon India</h1>
+        <h3 class="calm tiny nospace-bottom all-caps">
+          28&nbsp;-&nbsp;30&nbsp;Nov<span class="hidden-xs">ember</span>&nbsp;2013
+          <br>
+          Bangalore
+        </h3>
+      </div>
+
+      <div class="ticket-link-container col-lg-3 col-md-3 col-sm-4 col-xs-4">
+        <p class="text-right space-line">
+          <a class="button" href="http://droidcon.doattend.com/">
+            <span class="hidden-xs">Buy Your</span> Ticket<span class="visible-xs">s</span>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block navtype %}
+<div id="nav-inner">
+{% endblock %}
+{% block nav %}
+<!-- <nav class="visible-phone mob-nav"><i class="icon-reorder icon-2x nav"></i></nav> -->
+<nav class="navbar navbar-inverse" id="site-nav" role="navigation">
+  <div class="container">
+   <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand green" href="/2014/">Meta Refresh</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Register <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="/2013/#tickets">Ticket Pricing</a></li>
+          <li><a href="/2013/venue">Venue and Hotels</a></li>
+          <li><a href="/2013/proposals">Session Proposals</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="/2013/conference">Conference</a></li>
+          <li><a href="/2013/workshops">Workshops</a></li>
+          <li><a href="/2013/runup-events">Runup events</a></li>
+        </ul>
+      </li>
+      <li><a href="/2013/schedule">Schedule</a></li>
+      <li><a href="/2013/sponsors">Sponsors</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="/2013/program-committee">Program Committee</a></li>
+          <li><a href="/2013/about">About HasGeek</a></li>
+          <li><a href="/2013/#highlights">Previous Editions</a></li>
+          <li><a href="/2013/code-of-conduct">Code of conduct</a></li>
+        </ul>
+      </li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a target="_blank" href="https://jobs.hasgeek.com/search?q=android">Jobs</a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->   
+  </div>
+</nav>
+
+<div class="zigzag-seperator"></div>
+{% endblock %}
+</div>
+
+{% block content %}
+  {% for item in page.sections  %}
+    {% with %}
+      {% if item is string %} {% set section = item %} {% else %} {% set section, background = item %} {% endif %}
+      {% include theme('sections/'+section+'.html') %}
+    {% endwith %}
+  {% endfor %}
+{% endblock %}
+
+
+<footer class="page-footer push-two fill-dark clearfix">
+  <div class="text-center tiny">
+    <p class="gray"><a href="http://www.droidcon.com/">Droidcon</a> is a registered trademark by <a href="http://www.mobileseasons.com/">Mobile Seasons GmbH</a>.</p>
+    <p class="gray">Copyright &copy; 2010–13. All rights reserved.</p>
+    <p><a href="mailto:info@hasgeek.com?subject=Hello Droidcon">info@hasgeek.com</a> /
+    <a href="tel:+918067684422" class="link-silent">+91-80-67684422</a></p>
+    <h3>
+      <a class="ir hasgeek-logo center-block space-one-top" href="//hasgeek.com">
+        HasGeek
+      </a>
+    </h3>
+  </div>
+</footer>
+
+
+</div><!-- #page -->
+{%- if not config['DEBUG'] %}
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+{%- endif %}
+<script>window.jQuery || document.write('<script src="{{ theme_static('js/vendor/jquery-1.10.2.min.js') }}"><\/script>')</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6.3/leaflet.js"></script>
+{%- if _theme %}
+  {% assets "js_" + _theme -%}
+    <script src="{{ ASSET_URL }}"></script>
+  {% endassets -%}
+{%- endif %}
+
+<script>
+// Google Analytics
+if (location.hostname == 'droidcon.in') {
+  var _gaq=[['_setAccount','UA-19123154-16'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+}
+</script>
+
+<script>
+    $(window).scroll(function () {
+      var currentScroll = $(this).scrollTop();
+      if( currentScroll > 700){
+        $('#nav-home').addClass('navbar-fixed-top');
+      }  else {
+        $('#nav-home').removeClass('navbar-fixed-top');
+      }
+      if( currentScroll > 248){
+        $('#nav-inner').addClass('navbar-fixed-top');
+      }  else {
+        $('#nav-inner').removeClass('navbar-fixed-top');
+      }
+    });
+</script>
+<script type="text/javascript">
+  $(".popover-right").popover({ placement: 'left', animation: true, trigger: 'hover'});
+  $(".popover-left").popover({ placement: 'right', animation: true, trigger: 'hover'});
+</script>
+{% block footerscripts %}{% endblock %}
+<!-- Prompt IE 6 users to install Chrome Frame. -->
+<!-- chromium.org/developers/how-tos/chrome-frame-getting-started -->
+<!--[if lt IE 7 ]>
+  <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+  <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+<![endif]-->
+
+</body>
+</html>

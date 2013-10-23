@@ -1,0 +1,185 @@
+{%
+  set types = [
+    {
+        'id'    : 'special-offer'
+      , 'title' : 'Special Offer'
+      , 'rate'  : '15 - 20% off For Droidcon Participants'
+    }
+    , {
+        'id'    : 'budget'
+      , 'title' : 'Budget'
+      , 'rate'  : 'Less than 1500/-'
+    }
+    , {
+        'id'    : 'delux'
+      , 'title' : 'Delux'
+      , 'rate'  : '1500/- to 3000/-'
+    }
+    , {
+        'id'    : 'luxury'
+      , 'title' : 'Luxury'
+      , 'rate'  : '3000/- & above'
+    }
+  ]
+%}  
+{%
+  set items = [
+    {
+        'title'   : 'Keys Hotel Whitefield'
+      , 'id'      : 'keys-hotel'
+      , 'type'    : 'special-offer'
+      , 'link'    : 'http://keyshotels.com/LocationBangalore.aspx'
+      , 'address' : 'Plot No.6, 1st Phase Industrial Area,<br>ITPL Road, Opposite Graphite India,<br>Bengaluru - 560 048, Karnataka'
+      , 'contact' : '<a href="tel:+918040355566">+918451043982</a><br><a href="tel:+918040355566">+912267830100</a><br><a href="mailto:priyanka.vidwans@keyshotels.com?Subject=Droidcon%20India%20Participant%20Enquiry">email</a>'
+      , 'distance': '7.9'
+    }
+
+    , {
+        'title'   : 'Aranha Homes'
+      , 'id'      : 'aranha-homes'
+      , 'type'    : 'budget'
+      , 'link'    : 'aranha.in'
+      , 'address' : '#148, 2nd Cross,<br>4th Main, Domlur'
+      , 'contact' : '<a href="tel:+918040355566">080-25352020</a>'
+      , 'distance': '7.9'
+    }
+    , {
+        'title'   : 'Yogamaya comforts'
+      , 'id'      : 'yogamaya-comforts'
+      , 'type'    : 'budget'
+      , 'link'    : 'www.yogamayacomforts.com'
+      , 'address' : '#110, Hotel Royal 0rchid Road<br>Amarjyothi Layout,<br>Domlur'
+      , 'contact' : '<a href="tel:+918040355566">080-41486788</a><br><a href="tel:+918040355566">8105406636</a>'
+      , 'distance': '8'
+    }
+    , {
+        'title'   : 'Park View Inn'
+      , 'id'      : 'park-view-inn'
+      , 'type'    : 'delux'
+      , 'link'    : 'www.parkviewinn.co.in'
+      , 'address' : '#17,7th main, 13th cross<br>Indiranagar 2nd stage<br>Bangalore - 560038<br>LANDMARK - Behind Health and Glow Showroom/ <br>Gokul Kuteera restaurant on C.M.H Road.'
+      , 'contact' : '<a href="tel:+918040355566">99001 25287</a><br><a href="tel:+918040355566">98864 25287</a><br><a href="tel:+918040355566">080-25285287</a><br><a href="tel:+918040355566">080-41698666</a>'
+      , 'distance': '9'
+    }
+    , {
+        'title'   : 'Home Inn Service Apartment'
+      , 'id'      : 'home-inn-service-apartment'
+      , 'type'    : 'delux'
+      , 'link'    : 'www.homeinnstay.com'
+      , 'address' : '#556, Next To Indiranagar Metro Station,<br>9TH A MN, Ist STG, Indiranagar'
+      , 'contact' : '<a href="tel:+918040355566">080-66379108</a>'
+      , 'distance': '8'
+    }
+    , {
+        'title'   : 'Urban Retreat'
+      , 'id'      : 'urban-retreat'
+      , 'type'    : 'delux'
+      , 'link'    : 'www.urbanretreat.in'
+      , 'address' : '#322, 6th Main, HAL 2nd Stage<br>Defence colony, Indiranagar'
+      , 'contact' : '<a href="tel:+918040355566">080-66490573</a><br><a href="tel:+918040355566">080-41152885</a>'
+      , 'distance': '9'
+    }
+    , {
+        'title'   : 'Amber inn'
+      , 'id'      : 'amber-inn'
+      , 'type'    : 'delux'
+      , 'link'    : 'www.amberinn.in'
+      , 'address' : '#46, 2nd floor, 9th Main, <br>80 feet road, HAL 3rd Stage, <br>Indiranagar'
+      , 'contact' : '<a href="tel:+918040355566">080-66534586</a><br><a href="tel:+918040355566">9916071100</a>'
+      , 'distance': '9'
+    }   
+    , {
+        'title'   : 'Ginger Hotel Whitefield'
+      , 'id'      : 'ginger-hotel-whitefield'
+      , 'type'    : 'luxury'
+      , 'link'    : 'gingerhotels.com'
+      , 'address' : '#128, EPIP Phase II, <br>Whitefield'
+      , 'contact' : '<a href="tel:+918040355566">080-66663333</a>'
+      , 'distance': '3'
+    }   
+    , {
+        'title'   : 'Radha Hometel'
+      , 'id'      : 'radha-hometel'
+      , 'type'    : 'luxury'
+      , 'link'    : 'hometel.co.in'
+      , 'address' : 'Whitefield, 136, / 137, EPIP Industrial Area'
+      , 'contact' : '<a href="tel:+918040355566">080-66226969</a>'
+      , 'distance': '2.8'
+    }  
+    , {
+        'title'   : 'Seven Hotel'
+      , 'id'      : 'seven-hotel'
+      , 'type'    : 'luxury'
+      , 'link'    : 'sevenhotel.com'
+      , 'address' : '39/5, Outer Ring Rd, Doddanekundi'
+      , 'contact' : '<a href="tel:+918040355566">080-66226969</a>'
+      , 'distance': '2.4'
+    } 
+    , {
+        'title'   : 'Hotel City Centre Residency'
+      , 'id'      : 'hotel-city-centre-residency'
+      , 'type'    : 'luxury'
+      , 'link'    : 'www.ccrhotels.in'
+      , 'address' : '#350, 1st Stage 12th A Cross <br>(close to Indiranagar Metro Station), <br> Indiranagar, Bangalore'
+      , 'contact' : '<a href="tel:+918040355566">080-66816001</a><br><a href="tel:+918040355566">080-25201001</a>'
+      , 'distance': '8'
+    } 
+    , {
+        'title'   : 'The Mayer Indiranagar'
+      , 'id'      : 'the-mayer-indiranagar'
+      , 'type'    : 'luxury'
+      , 'link'    : 'www.themayer.in'
+      , 'address' : '#26, ESI Hospital – 100 Feet Link Road,<br>HAL 2nd Stage, Indira Nagar'
+      , 'contact' : '<a href="tel:+918040355566">080-49048888</a>'
+      , 'distance': '9'
+    }
+    , {
+        'title'   : 'ISpace Service apartment'
+      , 'id'      : 'ispace-service-apartment'
+      , 'type'    : 'luxury'
+      , 'address' : '598/1, 4th cross, 12th main | Indiranagar'
+      , 'contact' : '<a href="tel:+918040355566">080-66536495</a><br><a href="tel:+918040355566">080-42454111</a>'
+      , 'distance': '8'
+    } 
+    , {
+        'title'   : 'VBT Whitefield'
+      , 'id'      : 'vbt-whitefield'
+      , 'type'    : 'luxury'
+      , 'link'    : 'www.vivantabytaj.com'
+      , 'address' : 'Whitefield'
+      , 'distance': '4'
+    }
+    , {
+        'title'   : 'PARK PLAZA'
+      , 'id'      : 'park-plaza'
+      , 'type'    : 'luxury'
+      , 'link'    : 'sarovarhotels.com/bengaluru-park-plaza.shtml'
+      , 'address' : 'Whitefield'
+      , 'distance': '7'
+    }
+    , {
+        'title'   : 'Zuri'
+      , 'id'      : 'zuri'
+      , 'type'    : 'luxury'
+      , 'link'    : 'www.thezurihotels.com'
+      , 'address' : 'ITPL Road, Whitefield'
+      , 'distance': '3'
+    }
+    , {
+        'title'   : 'Aloft Bangalore Whitefield'
+      , 'id'      : 'aloft-bangalore-whitefield'
+      , 'type'    : 'luxury'
+      , 'link'    : 'www.starwoodhotels.com/alofthotels/property/'
+      , 'address' : 'ITPL Road, Whitefield'
+      , 'distance': '5'
+    }
+    , {
+        'title'   : 'Fortune Select Trinity'
+      , 'id'      : 'fortune-select-trinity'
+      , 'type'    : 'luxury'
+      , 'link'    : 'www.fortunehotels.in/hotel/Bengaluru-Fortune_Select_Trinity.aspx'
+      , 'address' : 'ITPL Road, Whitefield'
+      , 'distance': '3.4'
+    }
+  ]
+%}

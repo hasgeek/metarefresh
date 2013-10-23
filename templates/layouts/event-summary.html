@@ -1,0 +1,55 @@
+<section class="event-summary push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
+  <div class="row-fluid container">
+    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 push-one-bottom">
+      <h2 class="extralarge all-caps">{% if page_link %}<a href="{{ page_link }}" class="link-silent">{% endif %}{{ event.title }}{% if page_link %}</a>{% endif %}</h2>
+      {% if event.when %}<p class="legible">{{ event.when|safe }}</p>{% endif %}
+      {% for item in nav -%}
+        {% if loop.first %}<ul class="inline-on-mobile list-plain secondary prose">{% endif %}
+          <li><a href="{{ item.link }}">{{ item.display }}</a></li>
+        {% if loop.last %}</ul>{% endif %}
+      {%- endfor %}
+    </div>
+    
+    <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 space-one-top">
+      <div class="legible-prose prose-type prose">
+        {{ event.blurb|safe }}
+      </div>
+      {% if action %}
+      <p class="title-type secondary space-one-top">
+        {{ action|safe }}
+      </p>
+      {% endif %}
+    </div>
+  </div>
+  {% block featured %}
+  {% for item in session.list|selectattr('featured') -%}
+    {% if loop.first %}
+    <div class="row-fluid container space-three-top space-two-bottom">
+      <h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 legible all-caps space-one-bottom">Featured {{ session.label }}</h3>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 legible-prose prose prose-type">
+        <ul class="space-half-top list-space-line list-plain link-silent row">
+    {% endif %}
+          <li class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+          {% if item.link %}
+            <a href="{{ item.link }}">{{ item.title }}</a>
+          {% else %}
+            <span class="italic">{{ item.title }}</span>
+          {% endif %}
+
+          {% if item.speaker %}
+            <em class="occupy space-1q-top secondary">{% if types and item.type %}a {{ types[item.type].title|lower }}{% endif %} by <strong>{{ item.speaker }}</strong></em>
+            <img class="speaker-photo" src="{{ item.photo }}">
+          {% endif %}
+          </li>
+    {% if loop.last %}
+        </ul>
+        <p class="tiny all-caps title-type text-right">
+          <a href="{{ session.link }}">All {{ session.label }} &rarr;</a>
+        </p>
+      </div>
+    </div>
+    {% endif %}
+  {%- endfor %}
+  {% endblock %}
+</section>
+

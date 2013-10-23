@@ -1,0 +1,23 @@
+{% 
+  set event = {
+      'title' : 'Workshops'
+    , 'when'  : '23 — 27 November 2013'
+    , 'blurb' : '<div class="row text-center"><a href="workshops#beginners-android-workshop"><div class="fill-lightgray push-one dark col-lg-6 col-md-6 col-sm-6 col-xs-12 info-box"> <i class="icon-android icon-4x"></i><i class="icon-cog icon-2x"></i><br>Beginner\'s<br>Android&nbsp;Workshop</div></a><a href="workshops#advanced-android-workshop">
+    <div class="fill-lightgray push-one dark col-lg-6 col-md-6 col-sm-6 col-xs-12 info-box"> <i class="icon-android icon-4x"></i><i class="icon-cogs icon-3x"></i><br>Advanced<br>Android&nbsp;Workshop</div></a></div>'  
+  }
+%}
+{% from theme("data/workshop-schedule.html") import schedule %}
+
+{% 
+  set action = ''
+%}
+{% from theme("data/workshop-sessions.html") import sessions, types %}
+{% 
+  set session = {
+      'id'    : 'sessions'
+    , 'label' : 'Sessions'
+    , 'link'  : 'workshops#sessions'
+    , 'list'  : sessions.values()
+    , 'types' : types
+  }
+%}

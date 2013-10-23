@@ -1,0 +1,13 @@
+{% extends theme('layouts/page.html') %}
+{% from theme("data/workshop-schedule.html") import schedule %}
+{%
+  set page = {
+      'title'       : 'Workshops'
+    , 'description' : 'Workshops in Droidcon India 2013'
+    , 'sections'    : [
+        ('workshop-intro',    'green')
+      , ('workshop-details', '')
+      , ('sponsors-summary',   'dark')
+    ]
+  }
+%}

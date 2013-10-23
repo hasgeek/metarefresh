@@ -1,0 +1,25 @@
+<section class="runup-events push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
+  	<div class="row-fluid container">
+	    <h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 extralarge all-caps">{% if page_link %}<a href="{{ page_link }}" class="link-silent">{% endif %}Runup Events{% if page_link %}</a>{% endif %}</h2>
+	        
+	   
+	    <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11 col-sm-12 col-xs-12">
+	    	<ul id="timeline">
+	    		{% for item in items -%}
+	    			<li class="event-node">
+	    				<div class="radio {% if item.timeline == 'past' %}theme-red{% elif item.timeline == 'upcoming' %}theme-green{% endif %}"></div>
+		    			<div class="relative">
+		      				<span class="date">{{ item.date }}</span>
+		      				<span class="circle"></span>
+		    			</div>
+			    		<div class="content">
+			    			<div class="legible-prose">{% if item.link %}<a href="{{ item.link }}">{% endif %}{{ item.title }}{% if item.link %}</a>{% endif %}</div>
+						    <div class="secondary-prose space-1q-top space-half-bottom">{{ item.venue }}</div>
+						    <p>{{ item.blurb }}</p>
+			    		</div>
+			  		</li>
+				{%- endfor %}
+			</ul>    
+		</div>
+  	</div>
+</section>
