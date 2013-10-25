@@ -1,7 +1,7 @@
 
 .button {
     display: inline-block;
-    background: #B49B33;
+    background: #BF4D28;
     color: #000;
     line-height: 1.4;
     padding: 1em 2em 1em;
@@ -11,7 +11,7 @@
     border: 0;
 }
 .button-mini    { padding: 0.2em 0.6em; }
-.button-on-dark { background: #BB3311; }
+.button-on-dark { background: #BF4D28; }
 .button:focus   { text-decoration: none; }
 .button:active  { box-shadow: inset 0 0 10px #000; }
 
@@ -64,20 +64,26 @@
 
 .masthead-home .logo { 
   /*background: url('https://images.hasgeek.com/embed/file/63caa7d2f3df4c7d8222b68e9861a6ca') no-repeat scroll center center;*/
+  /*background: url(../img/img.png) no-repeat scroll center center;
   background-size: contain;
   height: auto;
-  width: 70%;
-  padding-top: 50%;
-  margin-top: 12em;
+  width: 150%;
+  padding-top: 100%;
+  margin-top: -8em;
+  position: absolute;
+  left: -40%;*/
 }
 
 .logo-text{
-  background: rgba(255, 255, 255, 0.8);
-  color: #46425a;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-image: url(../img/logo-mobile.png);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
   width: 235px;
+  height: 235px;
   line-height: 50px;
-  border-radius: 50%;
-  padding: 68px 20px 68px 10px;
+  border-radius: 0%;
 }
 @media (min-width: 768px) and (max-width: 979px){
   .masthead-home .logo{
@@ -384,14 +390,6 @@
     .credits .row-fluid .offset1 { margin-left: 0; }
 }
 
-.page-footer {
-    background-color: #000 !important;
-    /*background-image: url(../img/2012-stage.jpg);*/
-/*    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    padding-bottom: 36%;*/
-}
 .page-footer > div{
     margin-bottom: 160px;
 }
@@ -1094,3 +1092,17 @@ li.event-node{
     min-height: 160px;
   }
 }
+@media screen and (min-width: 767px){  
+  .container>.navbar-collapse {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .navbar-collapse {
+    max-width: 930px;
+    border-top: 0;
+    box-shadow: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+

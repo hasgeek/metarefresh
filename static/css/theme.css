@@ -43,11 +43,11 @@ a.link-silent   { border-bottom: none; }
 .fill-black     { background-color: #000000 !important; color: #EEE; }
 .fill-silver-hud{ background-color: rgba(255,255,255,0.65) !important; color: #222; }
 .fill-red       { background-color: #BB3311 !important; color: #FCF3F3; }
-.fill-green     { background-color: #655643 !important; color: #FCF3F3; }
+.fill-brown     { background-color: #655643 !important; color: #FCF3F3; }
 .fill-yellow     { background-color: #B49B33 !important; color: #333; }
 .fill-redgray   { background-color: #EFE7E6 !important; color: #222020; }
-.fill-greengray { background-color: #E0E4CC !important; color: #222020; } /*#789733*/
-.fill-blue      { background-color: #0CA5B0 !important; color: #FFFFFF;}
+.fill-bg, .fill-beige { background-color: #E0E4CC !important; color: #222020;} /*#789733*/
+.fill-blue      { background-color: #0CA5B0 !important; color: #FFFFFF;  }
 .fill-lightgray { background-color: rgba(0,0,0,0.1) !important; color: #FCF3F3; }
 .fill-mediumgray { background-color: rgba(0,0,0,0.2) !important; color: #FCF3F3; }
 .fill-darkgray { background-color: rgba(0,0,0,0.3) !important; color: #FCF3F3; }
@@ -56,17 +56,16 @@ a.link-silent   { border-bottom: none; }
 .fill-silver    { background-color: rgba(0, 0, 0, 0.1); color: #333;}
 .fill-bronze    { background-color: rgba(140, 120, 83, 0.1); color: #333;}
 
-.fade-red-to-dark {
-    background-image: -webkit-linear-gradient(top,       #BB3311 20%, #121212);
-    background-image:    -moz-linear-gradient(top,       #BB3311 20%, #121212);
-    background-image:      -o-linear-gradient(top,       #BB3311 20%, #121212);
-    background-image:         linear-gradient(top bottom,#BB3311 20%, #121212);
+.fade-blue-to-brown {
+    background-image: -webkit-linear-gradient(top,       #0CA5B0 20%, #655643);
+    background-image:    -moz-linear-gradient(top,       #0CA5B0 20%, #655643);
+    background-image:      -o-linear-gradient(top,       #0CA5B0 20%, #655643);
+    background-image:         linear-gradient(top bottom,#0CA5B0 20%, #655643);
 }
-.fade-green-to-dark {
-    background-image: -webkit-linear-gradient(top,       #0CA5B0 20%, #121212);
-    background-image:    -moz-linear-gradient(top,       #0CA5B0 20%, #121212);
-    background-image:      -o-linear-gradient(top,       #0CA5B0 20%, #121212);
-    background-image:         linear-gradient(top bottom,#0CA5B0 20%, #121212);
+
+section{
+    background: #fff url(../img/bg_divider.png) bottom center repeat-x;
+padding: 84px 0 84px 0;
 }
 .schedule > li{
     border-top: 1px solid #FFFFFF;
