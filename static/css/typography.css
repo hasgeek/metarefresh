@@ -113,9 +113,7 @@ abbr {
 .runup-events li:last-child { padding-bottom: 0; }
 
 
-.video-thumbnail h4{
-    font-size: 14px;
-}
+
 .link{
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
