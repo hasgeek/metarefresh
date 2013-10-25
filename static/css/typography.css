@@ -115,17 +115,26 @@ abbr {
 
 
 .link{
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    /*text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);*/
+
+    text-shadow: 2px 0px #BF4D28, -1px 0px rgba(224, 228, 204, 0.6);
+}
+.line0{
+    font-size: 0.640em;
+    color: #BF4D28;
+    text-shadow: 1px 1px 1px rgba(224, 228, 204, 0.5);
 }
 .line1{
     font-size: 1.12em;
+    line-height: 1.2em;
 }
 .line2{
-    font-size: 1.6em;
+    font-size: 1.25em;
     line-height: 1em;
 }
 .line3{
-    font-size: 1.42em;
+    font-size: 1.67em;
+    line-height: 1.1em;
 }
 .line4{
     font-size: 2.04em;

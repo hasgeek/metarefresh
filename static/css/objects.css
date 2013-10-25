@@ -64,26 +64,21 @@
 
 .masthead-home .logo { 
   /*background: url('https://images.hasgeek.com/embed/file/63caa7d2f3df4c7d8222b68e9861a6ca') no-repeat scroll center center;*/
-  /*background: url(../img/img.png) no-repeat scroll center center;
+  background: url(../img/masthead.png) no-repeat scroll center center;
   background-size: contain;
   height: auto;
-  width: 150%;
-  padding-top: 100%;
-  margin-top: -8em;
-  position: absolute;
-  left: -40%;*/
+  width: 90%;
+  padding-top: 90%;
 }
 
 .logo-text{
-  background-color: rgba(255, 255, 255, 0.8);
+  /*background-color: rgba(224, 228, 204, 0.8);*/
   background-image: url(../img/logo-mobile.png);
-  background-size: 80%;
+  background-size: 70%;
   background-repeat: no-repeat;
-  background-position: center center;
-  width: 235px;
-  height: 235px;
-  line-height: 50px;
-  border-radius: 0%;
+  background-position: center top;
+  width: 280px;
+  height: 130px;
 }
 @media (min-width: 768px) and (max-width: 979px){
   .masthead-home .logo{
