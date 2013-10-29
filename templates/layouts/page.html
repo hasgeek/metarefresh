@@ -35,6 +35,8 @@
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" />
 <link href='//fonts.googleapis.com/css?family=Raleway:400,300,500,700,900' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Libre+Baskerville:400,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Lustria' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="/_baseframe/css/networkbar.css">
 
 <script src="{{ theme_static('js/vendor/modernizr-2.6.2.js') }}"></script>
@@ -64,15 +66,15 @@
     <div class="row">
       <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
         <h1 class="nospace">
-          <a class="ir logo" href="/2013">
-            Droidcon India 2013
+          <a class="ir logo" href="/2014">
+            Meta Refresh 2014
           </a>
         </h1>
       </div>
       <div class="col-lg-7 col-md-7 col-sm-5 col-xs-5">
-        <h1 class="extrabold legible">Droidcon India</h1>
+        <h1 class="extrabold legible">Meta Refresh</h1>
         <h3 class="calm tiny nospace-bottom all-caps">
-          28&nbsp;-&nbsp;30&nbsp;Nov<span class="hidden-xs">ember</span>&nbsp;2013
+          14&nbsp;-&nbsp;15&nbsp;Feb<span class="hidden-xs">ruary</span>&nbsp;2014
           <br>
           Bangalore
         </h3>
@@ -80,7 +82,7 @@
 
       <div class="ticket-link-container col-lg-3 col-md-3 col-sm-4 col-xs-4">
         <p class="text-right space-line">
-          <a class="button" href="http://droidcon.doattend.com/">
+          <a class="button" href="http://metarefresh.doattend.com/">
             <span class="hidden-xs">Buy Your</span> Ticket<span class="visible-xs">s</span>
           </a>
         </p>
@@ -95,7 +97,7 @@
 {% endblock %}
 {% block nav %}
 <!-- <nav class="visible-phone mob-nav"><i class="icon-reorder icon-2x nav"></i></nav> -->
-<nav class="navbar navbar-inverse" id="site-nav" role="navigation">
+<nav class="navbar" id="site-nav" role="navigation">
   <div class="container">
    <!-- Brand and toggle get grouped for better mobile display -->
   
@@ -201,7 +203,7 @@ if (location.hostname == 'droidcon.in') {
 <script>
     $(window).scroll(function () {
       var currentScroll = $(this).scrollTop();
-      if( currentScroll > 700){
+      if( currentScroll > 995){
         $('#nav-home').addClass('navbar-fixed-top');
       }  else {
         $('#nav-home').removeClass('navbar-fixed-top');

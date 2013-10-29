@@ -44,9 +44,10 @@ a.link-silent   { border-bottom: none; }
 .fill-silver-hud{ background-color: rgba(255,255,255,0.65) !important; color: #222; }
 .fill-red       { background-color: #BB3311 !important; color: #FCF3F3; }
 .fill-brown     { background-color: #655643 !important; color: #FCF3F3; }
-.fill-yellow     { background-color: #B49B33 !important; color: #333; }
+.fill-yellow     { background-color: #c7c575 !important; color: #333; }
 .fill-redgray   { background-color: #EFE7E6 !important; color: #222020; }
-.fill-bg, .fill-beige { background-color: #E0E4CC !important; color: #222020;} /*#789733*/
+.fill-bg        { background-color: #FFF !important; color: #222020;}
+.fill-beige { background-color: #E0E4CC !important; color: #222020;} /*#789733*/
 .fill-blue      { background-color: #0CA5B0 !important; color: #FFFFFF;  }
 .fill-lightgray { background-color: rgba(0,0,0,0.1) !important; color: #FCF3F3; }
 .fill-mediumgray { background-color: rgba(0,0,0,0.2) !important; color: #FCF3F3; }
