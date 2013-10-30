@@ -118,7 +118,7 @@
 
 .banner h1    { float: left; width: 4.5rem; margin: .5rem auto 0 -.5rem; }
 .banner .logo {
-    background: url('https://images.hasgeek.com/embed/file/63caa7d2f3df4c7d8222b68e9861a6ca?size=320x240') no-repeat scroll center center;
+    background: url(../img/logo-mobile.png) no-repeat scroll center center;
     background-size: contain;
     height: 0;
     width: 100%;
@@ -182,7 +182,7 @@
 }
 
 .banner-internal .logo {
-    background: url('https://images.hasgeek.com/embed/file/63caa7d2f3df4c7d8222b68e9861a6ca?size=320x240') no-repeat scroll center center;
+    background: url(../img/logo-mobile.png) no-repeat scroll center center;
     background-size: contain;
     height: 0;
     width:       5.5rem;
@@ -1030,8 +1030,10 @@ li.event-node{
 #screen{
   position: relative;
   left: 60px;
-  top: 40px;
+  top: 32px;
   width: 700px;
+  height: 360px;
+  margin-bottom: 20px;
 }
 #screen-button{
   margin-top: -36px;
@@ -1049,6 +1051,10 @@ li.event-node{
 }
 #screen-button:hover{
   border-bottom: 40px solid #0CA5B0;
+}
+#screen-bottom{
+  padding: 5px;
+  text-shadow: 1px 1px 1px #DF5E0E;
 }
 #platform-top{
   width: 300px;

@@ -1,16 +1,11 @@
 {% extends theme('layouts/page.html') %}
-{% from theme("data/conference-schedule-day1.html") import schedule as schedule_day1 %}
-{% from theme("data/conference-schedule-day2.html") import schedule as schedule_day2 %}
+{% from theme("data/conference-schedule.html") import schedule as schedule_day %}
 {%
   set page = {
       'title'       : 'Schedule'
     , 'description' : ''
     , 'sections'    : [
-        ('schedule-index',  'green')
-      , ('conference-schedule-day1',  '')
-      , ('color-index',  '')
-      , ('conference-schedule-day2',  'dark')
-      , ('hackathon', 'green')
+       ('conference-schedule',  'yellow')
       , ('sponsors-summary',  'blue')
     ]
   }

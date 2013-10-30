@@ -11,12 +11,12 @@
 			{% endif %}
 			      <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
 			        <span class="img-wrapper {% if item.type == 'business' %}theme-blue{% elif item.type == 'systems' %}theme-red{% elif item.type == 'gaming' %}theme-orange{% elif item.type == 'app-demos' %}theme-green{% elif item.type == 'ux' %}theme-violet{% else %}theme-transparent{% endif %}">
-			          <img class="photo" src="{{ item.photo }}">
+			          <img class="photo" alt="{{ item.title }}" src="{{ item.photo }}">
 			        </span>
 			        <h4 class="blue bold regular-prose">{{ item.title }}</h4>
-			        <h3>{{ item.name }}</h3>
+			        <h3 class="blue">{{ item.name }}</h3>
 			        <h5>{{ item.designation }}</h5>
-			        <h4 class="yellow shadow-text-white"><a href="{{ item.link }}">@{{ item.twitter }}</a></h4>
+			        <h4 class="yellow shadow-text-white"><a target="_blank" href="https://twitter.com/{{ item.twitter }}">@{{ item.twitter }}</a></h4>
 			      </li>
 			{% if loop.last %}
 			    </ul>

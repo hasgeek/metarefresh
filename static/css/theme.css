@@ -74,7 +74,7 @@ padding: 84px 0 84px 0;
     list-style-type: none;
 }
 .schedule > li a:hover{
-    color: #999;
+    color: #DF5E0E;
 }
 .schedule > li h3{
     padding-top: 6px;
@@ -82,6 +82,11 @@ padding: 84px 0 84px 0;
 .fill-dark .schedule > li{
     border-top: 1px solid #1E1E1E;
     border-bottom: 1px solid #000000;
+}
+.fill-yellow .schedule > li{
+    border-top: 1px solid #DFDAA4;
+    border-bottom: 1px solid #ADA45F;
+    list-style-type: none;
 }
 .fill-dark .schedule > li h3{
     padding-top: 6px;
@@ -107,18 +112,12 @@ padding: 84px 0 84px 0;
     border-left: 3px solid transparent;
     padding-left: 30px;
 }
-.schedule .gray a{
+.schedule .link-silent a{
     border-bottom: 0;
 }
-.schedule .gray a:hover{
+.schedule .link-silent a:hover{
     background-color: transparent;
-    color: #333;
-}
-.fill-dark .schedule .gray a{
-    color: #333;
-}
-.fill-dark .schedule .gray a:hover{
-    color: #EAEAEA;
+    color: #0CA5B0;
 }
 .theme-box-left i{
     padding-left: 5px;
