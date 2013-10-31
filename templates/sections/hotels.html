@@ -22,10 +22,10 @@
             {% for item in items  %}         
                 <tr class="fill-{% if item.type == 'special-offer' %}blue{% elif item.type == 'budget' %}bronze{% elif item.type == 'delux' %}silver{% elif item.type == 'luxury' %}gold{% endif %}">             
                   <td class="bold secondary-prose semibold" colspan="4">{{ item.title }}</td>
-                  <td>{{ item.address|safe }} <br><a class="yellow" target="_blank" href="http://{{ item.link }}">{{ item.link }}</a></td>
+                  <td>{{ item.address|safe }} <br><a class="blue" target="_blank" href="http://{{ item.link }}">{{ item.link }}</a></td>
                   <td>{{ item.contact|safe }}</td>              
                   <td>{{ item.distance }} km</td>
-                  <td>{% for t in types %}{% if item.type == t.id %}{{ t.title }}<br><small>[{{ t.rate }}]</small>{% endif %}{% endfor %}</td>
+                  <td>{% for t in types %}{% if item.type == t.id %}{{ t.title }}{% endif %}{% endfor %}</td>
                 </tr>        
             {% endfor %}
           </tbody>

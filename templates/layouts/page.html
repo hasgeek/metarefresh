@@ -115,23 +115,16 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav center-block">
-        <li><a href="/2014/">Meta Refresh</a></li>
+        <li><a class="red" href="/2014/">Meta Refresh</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Register <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li><a href="/2014/#tickets">Ticket Pricing</a></li>
             <li><a href="/2014/venue">Venue and Hotels</a></li>
-            <li><a href="/2014/proposals">Session Proposals</a></li>
           </ul>
         </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="/2014/conference">Conference</a></li>
-            <li><a href="/2014/workshops">Workshops</a></li>
-            <li><a href="/2014/runup-events">Runup events</a></li>
-          </ul>
-        </li>
+        
+        <li><a href="/2014/proposals">Proposals</a></li>
         <li><a href="/2014/schedule">Schedule</a></li>
         <li><a href="/2014/sponsors">Sponsors</a></li>
         <li class="dropdown">
@@ -203,7 +196,7 @@ if (location.hostname == 'droidcon.in') {
 <script>
     $(window).scroll(function () {
       var currentScroll = $(this).scrollTop();
-      if( currentScroll > 995){
+      if( currentScroll > 895){
         $('#nav-home').addClass('navbar-fixed-top');
       }  else {
         $('#nav-home').removeClass('navbar-fixed-top');

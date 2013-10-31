@@ -951,6 +951,13 @@ li.event-node{
 .dropdown-menu>li>a:hover{
   background-color: #0CA5B0;
 }
+.nav > li > a:focus, .nav > li > a:hover{
+  background-color: #EFEFEF;
+}
+.nav .caret, .nav a:hover .caret{
+  border-bottom-color: #0CA5B0;
+  border-top-color: #0CA5B0;
+}
 
 .info-box{
   border-radius: 5px;
@@ -1008,7 +1015,7 @@ li.event-node{
     margin-left: auto;
   }
   .navbar-collapse {
-    max-width: 930px;
+    max-width: 970px;
     border-top: 0;
     box-shadow: none;
     margin-left: auto;
@@ -1035,6 +1042,60 @@ li.event-node{
   height: 360px;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 768px) and (max-width: 979px){
+  #frame{
+    height: 430px;
+    width: 700px;
+  }
+  #screen{
+    top: 42px;
+    width: 500px;
+    height: 290px;
+  }
+  .navbar{
+    min-height: 30px;
+  }
+  .navbar-collapse{
+    max-width: 700px;
+  }
+  .navbar .nav > li > a, .navbar-brand {
+    font-size: 13px;
+    padding: 7px;
+  }
+  .dropdown-menu > li > a {    
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 980px) and (max-width: 1200px){
+  .navbar{
+    min-height: 40px;
+  }
+  .navbar-collapse{
+    max-width: 850px;
+  }
+  .navbar .nav > li > a, .navbar-brand {
+    font-size: 14px;
+    padding: 13px;
+  }
+}
+@media screen and (min-width: 980px) and (max-width: 65em){
+  #frame{
+    height: 430px;
+    width: 700px;
+  }
+  #screen{
+    top: 42px;
+    width: 500px;
+    height: 290px;
+  }
+  .navbar .nav > li > a, .navbar-brand {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+
 #screen-button{
   margin-top: -36px;
   height: 0px;
@@ -1069,4 +1130,27 @@ li.event-node{
   border-left: 40px solid transparent;
   border-right: 40px solid transparent;
   box-shadow: 0px 3px 0px #fff;
+}
+
+@media screen and (max-width: 767px){
+  #frame{
+    height: auto;
+    width: 80%;
+    font-size: 50%;
+  }
+  .navbar-collapse{
+    max-width: 100%;
+  }
+  #screen{
+    top: 42px;
+    left: 10px;
+    width: 95%;
+    height: auto;
+  }
+  #platform-top, #platform-base{
+    display: none;
+  }
+  #screen-button{
+    width: 200px;
+  }
 }

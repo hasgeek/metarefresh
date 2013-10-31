@@ -1,6 +1,5 @@
 {% extends theme('layouts/page.html') %}
-{% from theme("data/conference-schedule-day1.html") import schedule as schedule_day1 %}
-{% from theme("data/conference-schedule-day2.html") import schedule as schedule_day2 %}
+{% from theme("data/conference-schedule.html") import schedule as schedule %}
 {%
   set page = {
       'title'               : ''
@@ -35,7 +34,7 @@
       <div class="space-three-bottom">
         <div class="center-block space-one-top" id="frame">
           
-          <div id="screen" class="all-caps semibold">
+          <div id="screen" class="all-caps push-two-bottom text-center semibold">
             <div class="link line0 ">Conference &amp; Workshops on</div>        
             <div class="link line1">The Construction of</div>
             <div class="link line2">User interface</div>

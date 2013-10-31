@@ -28,10 +28,11 @@ a.link-silent   { border-bottom: none; }
 .gray           { color: #AAAAAA !important; }
 .light          { color: #EEEEEE !important; }
 .red            { color: #E55252 !important; }
-.green          { color: #4E3F30 !important; }
+.green          { color: #40a729 !important; }
 .blue           { color: #0CA5B0 !important; }
 .white          { color: #FFFFFF !important; }
 .yellow         { color: #B49B33 !important; }
+.orange         { color: #DF5E0E !important;}
 .faded          { color: rgba(255,255,255,.8) !important; }
 
 .blue-bg        { background: #46425A; padding: 0 5px 0 5px;}
