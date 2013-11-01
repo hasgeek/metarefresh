@@ -142,7 +142,7 @@ abbr {
 }
 @media screen and (min-width: 768px) and (max-width: 65em){
     .line0{
-        font-size: 2.25em;
+        font-size: 2.19em;
     }
     .line1{
         font-size: 3.1em;
@@ -151,8 +151,30 @@ abbr {
         font-size: 4.32em;
     }
     .line3{
-        font-size: 5.84em;    
+        font-size: 5.82em;    
     }  
+}
+@media screen and (max-width: 560px){
+    .line0{
+        font-size: 2.19em;
+    }
+    .line1{
+        font-size: 2.92em;
+    }
+    .line2 .part1{
+        font-size: 2.2em;
+        line-height: 0.9em;
+    }
+    .line2 .part2{
+        font-size: 1em;
+    }
+    .line3 .part1{
+        font-size: 1.15em;    
+    }
+    .line3 .part2{
+        font-size: 1.9em;    
+        line-height: 0.75em;
+    }
 }
 
 .navbar .nav>li>a, .navbar-brand{
@@ -164,12 +186,6 @@ abbr {
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
     font-family: inherit;
-}
-@media (min-width: 768px) and (max-width: 979px){
-    .navbar .nav>li>a, .navbar-brand{
-      font-size: 14px;
-      letter-spacing: 0.05em;
-    }
 }
 
 *::selection {
