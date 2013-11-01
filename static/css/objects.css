@@ -966,10 +966,11 @@ li.event-node{
 #screen{
   position: relative;
   left: 60px;
-  top: 32px;
+  top: 47px;
   width: 700px;
   height: 360px;
   margin-bottom: 20px;
+  font-size: 90%;
 }
 @media screen and (min-width: 768px) and (max-width: 979px){
   #frame{
@@ -977,7 +978,7 @@ li.event-node{
     width: 700px;
   }
   #screen{
-    top: 42px;
+    top: 55px;
     width: 500px;
     height: 290px;
   }

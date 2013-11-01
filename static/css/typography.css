@@ -125,7 +125,7 @@ abbr {
     text-shadow: 1px 1px 1px rgba(224, 228, 204, 0.5);
 }
 .line1{
-    font-size: 4.3em;
+    font-size: 4.15em;
     line-height: 1.2em;
 }
 .line2{
@@ -133,7 +133,7 @@ abbr {
     line-height: 1em;
 }
 .line3{
-    font-size: 8.1em;
+    font-size: 7.89em;
     line-height: 1.1em;
 }
 .line4{
@@ -144,16 +144,16 @@ abbr {
         font-size: 2.19em;
     }
     .line1{
-        font-size: 3.1em;
+        font-size: 3em;
     }
     .line2{
-        font-size: 4.32em;
+        font-size: 4.24em;
     }
     .line3{
-        font-size: 5.82em;    
+        font-size: 5.67em;    
     }  
 }
-@media screen and (max-width: 560px){
+@media screen and (max-width: 580px){
     .line0{
         font-size: 2.19em;
     }
@@ -180,7 +180,7 @@ abbr {
         font-size: 2.9em;
     }
     .line1{
-        font-size: 2em;
+        font-size: 1.95em;
         line-height: 3.5em;
     }
     .line2{
