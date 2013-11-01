@@ -73,7 +73,7 @@
 
 .logo-text{
   /*background-color: rgba(224, 228, 204, 0.8);*/
-  background-image: url(../img/logo-mobile.png);
+  background-image: url('https://images.hasgeek.com/embed/file/afaadd610e9a41fcad15c1d7a2b13635');
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: center top;
@@ -184,7 +184,7 @@
 }
 
 .banner-internal .logo {
-    background: url(../img/logo-mobile.png) no-repeat scroll center center;
+    background: url('https://imgee.s3.amazonaws.com/imgee/afaadd610e9a41fcad15c1d7a2b13635_w200_h130.png') no-repeat scroll center center;
     background-size: contain;
     height: 0;
     width:       5.5rem;
@@ -818,26 +818,6 @@ li.event-node{
   }
 }
 
-.theme#app-demos{
-  background-image: url(https://images.hasgeek.com/embed/file/363bae34271a4843b12f2a0cb83fa492);
-  background-repeat: no-repeat;
-}
-.theme#business{
-  background-image: url(https://images.hasgeek.com/embed/file/513b6b98c0aa46e58a89aa311a0e4fac);
-  background-repeat: no-repeat;
-}
-.theme#gaming{
-  background-image: url(https://images.hasgeek.com/embed/file/f2f5369f618a4f3f927bce66a632b351);
-  background-repeat: no-repeat;
-}
-.theme#systems{
-  background-image: url(https://images.hasgeek.com/embed/file/44811261e1e44630a57d784c56cd6267);
-  background-repeat: no-repeat;
-}
-.theme#ux{
-  background-image: url(https://images.hasgeek.com/embed/file/6c3e77d1d07a428b961100aecd88503e);
-  background-repeat: no-repeat;
-}
 
 
 /**** navbar ****/

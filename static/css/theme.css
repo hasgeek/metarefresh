@@ -66,8 +66,8 @@ a.link-silent   { border-bottom: none; }
 }
 
 section{
-    background: #fff url(../img/bg_divider.png) bottom center repeat-x;
-padding: 84px 0 84px 0;
+    background: #fff url('https://images.hasgeek.com/embed/file/e635625dbf6441698323f1671bf47143') bottom center repeat-x;
+    padding: 84px 0 84px 0;
 }
 .schedule > li{
     border-top: 1px solid #FFFFFF;
