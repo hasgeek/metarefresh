@@ -25,12 +25,7 @@
     padding-top:    3rem;
     padding-bottom: 3rem;
 }
-/*@media (min-width: 768px){
-  #page{
-    overflow: hidden;
-  }
-}
-*/
+
 @media (max-width: 767px) {
     .page-section {
         padding: 2rem 0;
@@ -62,17 +57,7 @@
 
 @media (max-width: 767px) { #hg-bar { padding: 0 20px; } }
 
-.masthead-home .logo { 
-  /*background: url('https://images.hasgeek.com/embed/file/63caa7d2f3df4c7d8222b68e9861a6ca') no-repeat scroll center center;*/
-  background: url(../img/masthead.png) no-repeat scroll center center;
-  background-size: contain;
-  height: auto;
-  width: 90%;
-  padding-top: 90%;
-}
-
 .logo-text{
-  /*background-color: rgba(224, 228, 204, 0.8);*/
   background-image: url('https://images.hasgeek.com/embed/file/afaadd610e9a41fcad15c1d7a2b13635');
   background-size: 70%;
   background-repeat: no-repeat;
@@ -80,12 +65,7 @@
   width: 280px;
   height: 130px;
 }
-@media (min-width: 768px) and (max-width: 979px){
-  .masthead-home .logo{
-    margin-top: 15em;
-    margin: 15em auto 0 auto;
-  }
-}
+
 @media (max-width: 767px) {
   .masthead-home .col-lg-8.text-right{
     text-align: center;
@@ -162,25 +142,6 @@
 }
 @media (min-width: 768px) {
     .banner h1                { margin: 1.25rem auto .5rem; }
-    .banner .logo             { height: 4rem;}
-    .banner.banner-home h1    { margin: 4rem auto 3rem; width: 14rem; }
-    .banner.banner-home h3    { padding-left: 0; }
-    .banner.banner-home h3    { text-align: center; }
-    .banner.banner-home h3 span,
-    .banner.banner-home h3 a  { display: inline;  width: auto; margin: auto; }
-    .banner.banner-home h3 i  { 
-        position: static;
-        width: auto;
-        left: 0;
-        font-family: inherit;
-        font-style: normal !important;
-        margin: 0 0.5rem;
-        padding-top: 0;
-    }
-    .banner .intro {
-        margin: 5rem 0 3rem;
-        max-width: 100%;
-    }
 }
 
 .banner-internal .logo {
@@ -216,16 +177,6 @@
     line-height: 1.2;
     margin-top: 1rem;
 }
-/*.program-committee ul {
-    list-style-type: none;
-    margin: 1rem 0 0;
-}
-@media (max-width: 767px) {
-    .program-committee ul                     { margin: 2rem 0 0; }
-    .program-committee ul li                  { width: 49%; }
-    .program-committee ul li:nth-child(odd)   { float: left;  }
-    .program-committee ul li:nth-child(even)  { float: right; }
-}*/
 .program-committee a {
     border-bottom: none;
 }
@@ -235,15 +186,13 @@
   overflow: hidden;
 }
 .program-committee .list-space-line li{
-  height: 350px;
+  height: 300px;
 }
 @media (min-width: 1200px){
   .program-committee .list-space-line li{
     height: 400px;
   }
 }
-
-
 .venue-home h2 {
     margin-bottom: 2rem;
 }
@@ -253,10 +202,8 @@
 }
 .js .venue-home {
     border-top:    1px solid #833;
-/*    border-bottom: 1px solid #000;*/
     position: relative;
     padding: 0;
-/*    padding: 1.5rem;*/
 }
 .js .venue-home h2 {
     position: absolute;
@@ -1092,6 +1039,11 @@ li.event-node{
   border-right: 20px solid transparent;
   border-radius: 10px;
   text-shadow: 0.5px 0.5px #C7C575;
+}
+@media screen and (min-width: 45em) and (max-width: 55em){
+  #screen-button.legible-prose{
+    font-size: 0.900em;
+  }
 }
 #screen-button:hover{
   border-bottom: 40px solid #0CA5B0;

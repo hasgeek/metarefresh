@@ -192,19 +192,27 @@ if (location.hostname == 'droidcon.in') {
 </script>
 
 <script>
-    $(window).scroll(function () {
-      var currentScroll = $(this).scrollTop();
-      if( currentScroll > 895){
-        $('#nav-home').addClass('navbar-fixed-top');
-      }  else {
-        $('#nav-home').removeClass('navbar-fixed-top');
-      }
-      if( currentScroll > 248){
-        $('#nav-inner').addClass('navbar-fixed-top');
-      }  else {
-        $('#nav-inner').removeClass('navbar-fixed-top');
-      }
-    });
+  $(window).scroll(function () {
+    var currentScroll = $(this).scrollTop();
+    var checkPoint;
+    if(Modernizr.mq('only screen and (max-width: 45em)')){
+      checkPoint = 728;
+    } else if(Modernizr.mq('only screen and (min-width: 45em) and (max-width: 767px)')){
+      checkPoint = 620;
+    } else {
+      checkPoint = 895;
+    }
+    if( currentScroll > checkPoint){
+      $('#nav-home').addClass('navbar-fixed-top');
+    }  else {
+      $('#nav-home').removeClass('navbar-fixed-top');
+    }
+    if( currentScroll > 248){
+      $('#nav-inner').addClass('navbar-fixed-top');
+    }  else {
+      $('#nav-inner').removeClass('navbar-fixed-top');
+    }
+  });
 </script>
 <script type="text/javascript">
   $(".popover-right").popover({ placement: 'left', animation: true, trigger: 'hover'});
