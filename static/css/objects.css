@@ -105,11 +105,13 @@
     line-height: 40px; 
   }
 }
-@media (max-width: 35em){
+@media (max-width: 55em){
   .logo-text{
     width: 165px;    
     padding: 45px 10px 45px 10px;  
     line-height: 35px;
+    height: 80px;
+    margin-top: 0.5em !important;
   }
   .line4{
     font-size: 1.2em;
@@ -1172,3 +1174,11 @@ li.event-node{
     margin-right: -15px;
   }
 }
+@media screen and (max-width: 456px){
+    #frame{
+        width: 90%;
+        border: 30px solid #000;
+        border-bottom: 40px solid #000;
+    }
+}
+

@@ -176,6 +176,36 @@ abbr {
         line-height: 0.75em;
     }
 }
+@media screen and (max-width: 456px){
+    .line0{
+        font-size: 2.9em;
+    }
+    .line1{
+        font-size: 2em;
+        line-height: 3.5em;
+    }
+    .line2{
+        line-height: 0.5em;
+    }
+    .line2 .part1{
+        font-size: 1.55em;
+        line-height: 0.6em;
+    }
+    .line2 .part2{
+        font-size: 0.7em;
+        line-height: 1.5em;
+    }
+    .line3{
+        line-height: 0.5em;
+    }
+    .line3 .part1{
+        font-size: 0.78em;    
+    }
+    .line3 .part2{
+        font-size: 1.3em;    
+        line-height: 1.1em;
+    }
+}
 
 .navbar .nav>li>a, .navbar-brand{
   font-family: 'Raleway', sans-serif;
