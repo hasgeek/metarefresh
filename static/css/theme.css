@@ -17,6 +17,12 @@ a:focus {
 a:hover         { background-color: #444; }
 .link-silent a,
 a.link-silent   { border-bottom: none; }
+.list-silent{
+    list-style-type: none;
+}
+ul.list-silent{
+    margin-left: -40px;
+}
 
 .prose.prose-type a { border-bottom: none; text-decoration: underline; }
 
