@@ -1,11 +1,24 @@
 <section class="funnel push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
   <div class="container">
     <div class="row-fluid space-two-bottom">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-        <h2 class="extralarge all-caps">Proposals</h2>
-        <p class="secondary-prose space-two-top">Anyone is welcome to propose a session. Participants who have purchased conference tickets will vote on session proposals. The Programme Committee steering Meta Refresh will also vote on submissions and balance the community voting.</p>
-        <p class="regular-prose all-caps gray space-one-bottom space-one-top">Status:&nbsp;&nbsp;<span class="green">Accepting Submissions</span></p>
-        <a href="https://funnel.hasgeek.com/metarefresh2014/" class="button tiny">View proposals on Funnel</a>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h2 class="extralarge all-caps text-center">Proposals</h2>
+        <div class="secondary-prose space-two-top">
+          <h3 class="blue">Who can propose a talk?</h3>
+          <p>Anyone is welcome to propose a session. If you are excited about someone’s work and believe it deserves wider recognition, we recommend you contact them person responsible and ask them to submit a proposal.<br>There is only one speaker per session.</p>
+          <h3 class="blue">Voting and selection</h3>
+          <p>Participants who have purchased conference tickets will vote on session proposals. The Programme Committee steering Meta Refresh will also vote on submissions and balance the community voting.</p>
+          <h3 class="blue">Theme</h3>
+          <p>For 2014 our emphasis is on <ol>
+            <li>front-end workflow process and automation</li>
+            <li>To push the envelope on the web, designers &amp; front-end engineers need to step out of their comfort zone and exchange skills. MetaRefresh is the place where these 2 ends of the spectrums converge. the idea is not to "make them work together better", the idea is that you need to be both if you want to push the web forward. front-end engineers should think about user experience (attributes like performance which affect user experience) and designers have to start exploiting the medium, front-end engineers need to start thinking about polish, fit &amp; finish</li></ol></p>
+          <h3 class="blue">Travel and accomodation for speakers</h3>
+          <p> Attendance is free for selected speakers. HasGeek will offer a grant to cover your travel to and accommodation in Bangalore from anywhere in the world for speakers delivering full sessions (30 minutes or longer). As our budget is limited, we will prefer speakers from locations closer home, but will do our best to cover for anyone exceptional. If you are able to raise support for your trip, we will count that as a speaker travel sponsorship.</p><p>Travel grants are reimbursed at the end of the conference. You are expected to make your own travel and stay arrangements. We will assist with hotel recommendations, visa letters and general advice on travel.</p>
+          </div><br>
+        <p class="regular-prose all-caps gray space-one-bottom space-one-top text-center">Status:&nbsp;&nbsp;<span class="green">Accepting Submissions</span></p>
+        <p class="text-center">
+          <a href="https://funnel.hasgeek.com/metarefresh2014/" class="button tiny">View proposals on Funnel</a>
+        </p>
       </div>    
     </div>
     <div id="funnel-links">
@@ -19,19 +32,44 @@
             <th>+1</th>
           </tr>
         </thead>
-        <tbody>        
+        <tbody>         
+        <tr><td colspan="5" class="bold text-center">Beginner</td></tr>
         {% for proposal in node.proposals() -%}
-            <tr data-section="{{ proposal['section_name'] }}" class="fill-lightgray dark semibold">
+          {% if proposal['level'] == 'Beginner' %}
+            <tr data-section="{{ proposal['section_name'] }}" class="fill-lightgray black">
               <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
               <td>{{ proposal['proposer'] }}</td>
               <td>{{ proposal['submitted']|shortdate }}</td>
               <td>{{ proposal['comments'] }}</td>
               <td>{{ proposal['votes'] }}</td>
             </tr>
-        {%- else -%}
-          <tr>
-            <td><em>(No proposals found)</em></td>
-          </tr>  
+          {% endif %} 
+        {%- endfor %}
+        
+        <tr><td colspan="5" class="bold text-center">Intermediate</td></tr>
+        {% for proposal in node.proposals() -%}
+          {% if proposal['level'] == 'Intermediate' %}
+            <tr data-section="{{ proposal['section_name'] }}" class="fill-mediumgray black">
+              <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
+              <td>{{ proposal['proposer'] }}</td>
+              <td>{{ proposal['submitted']|shortdate }}</td>
+              <td>{{ proposal['comments'] }}</td>
+              <td>{{ proposal['votes'] }}</td>
+            </tr>
+          {% endif %}
+        {%- endfor %}
+
+        <tr><td colspan="5" class="bold text-center">Advanced</td></tr>
+        {% for proposal in node.proposals() -%}
+          {% if proposal['level'] == 'Advanced' %}
+            <tr data-section="{{ proposal['section_name'] }}" class="fill-darkgray black">
+              <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
+              <td>{{ proposal['proposer'] }}</td>
+              <td>{{ proposal['submitted']|shortdate }}</td>
+              <td>{{ proposal['comments'] }}</td>
+              <td>{{ proposal['votes'] }}</td>
+            </tr>
+          {% endif %} 
         {%- endfor %}
         </tbody>
       </table>
