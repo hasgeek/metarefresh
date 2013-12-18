@@ -173,23 +173,23 @@
 }
 
 
-.program-committee h2 {
+.editorial-panel h2 {
     line-height: 1.2;
     margin-top: 1rem;
 }
-.program-committee a {
+.editorial-panel a {
     border-bottom: none;
 }
-.program-committee .list-space-line{
+.editorial-panel .list-space-line{
   padding-left: 0;
   width: 100%;
   overflow: hidden;
 }
-.program-committee .list-space-line li{
+.editorial-panel .list-space-line li{
   height: 300px;
 }
 @media (min-width: 1200px){
-  .program-committee .list-space-line li{
+  .editorial-panel .list-space-line li{
     height: 400px;
   }
 }
@@ -576,18 +576,18 @@ li.event-node{
 .featured-speakers h5{
   line-height: 20px;
 }
-.program-committee .prose.prose-type a{
+.editorial-panel .prose.prose-type a{
   text-decoration: none;
 }
 
 @media (min-width: 980px) and (max-width: 1200px){
-  .featured-speakers li, .program-committee-summary li{    
+  .featured-speakers li, .editorial-panel-summary li{    
     height: 300px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 979px){
-  .featured-speakers li, .program-committee-summary li{    
+  .featured-speakers li, .editorial-panel-summary li{    
     height: 280px;
   }
 }
@@ -599,7 +599,7 @@ li.event-node{
   .img-wrapper{
     width: 200px;
   }
-  .featured-speakers li, .program-committee-summary li{
+  .featured-speakers li, .editorial-panel-summary li{
     padding-bottom: 20px;
     height: 300px;
   }
