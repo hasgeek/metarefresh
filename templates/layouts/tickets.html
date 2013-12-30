@@ -12,7 +12,7 @@
           <h5>Rs. {{ ticket.price }}</h5>
         </div>
         <div class="subsection fill-darkgray">
-          {% if ticket.end_date %}<div class="yellow">Sales closes on:&nbsp;&nbsp;{{ ticket.end_date }}</div>{% else %} <div class="red shadow-text-white">{{ ticket.closed_msg }}</div>{% endif %}
+          {% if ticket.end_date %}<div class="yellow">Sales close on&nbsp;{{ ticket.end_date }}</div>{% else %} <div class="red shadow-text-white">{{ ticket.closed_msg }}</div>{% endif %}
         </div>
         <div class="subsection fill-blue push-half-top push-one-bottom">
           {{ ticket.package | safe }}
