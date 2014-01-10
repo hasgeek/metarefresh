@@ -12,6 +12,7 @@
 }
 .button-mini    { padding: 0.2em 0.6em; }
 .button-on-blue { background: #C7C575; }
+.button-blue { background: #0CA5B0; }
 .button:focus   { text-decoration: none; }
 .button:active  { box-shadow: inset 0 0 10px #000; }
 

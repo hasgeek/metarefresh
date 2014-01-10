@@ -171,3 +171,17 @@
 		display: none;
     }
 }
+.adjust-right{
+	text-align: right;
+}
+.adjust-left{
+	text-align: left;
+}
+@media screen and (max-width: 991px){
+	.adjust-right, .adjust-left{
+		text-align: center;
+	}
+	.adjust-right>.button, .adjust-left>.button{
+		width: 80%;
+	}
+}

@@ -82,6 +82,7 @@ abbr {
 .no-italic      { font-style: normal;  }
 
 .all-caps       { text-transform: uppercase;    }
+.all-capitalize { text-transform: capitalize;   }
 .all-lower      { text-transform: lowercase;    }
 .small-caps     { font-variant: small-caps;     }
 .strike         { text-decoration: line-through;}
