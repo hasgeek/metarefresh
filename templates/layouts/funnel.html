@@ -15,13 +15,55 @@
           <h3 class="blue">Travel and accomodation for speakers</h3>
           <p> Attendance is free for selected speakers. HasGeek will offer a grant to cover your travel to and accommodation in Bangalore from anywhere in the world for speakers delivering full sessions (30 minutes or longer). As our budget is limited, we will prefer speakers from locations closer home, but will do our best to cover for anyone exceptional. If you are able to raise support for your trip, we will count that as a speaker travel sponsorship.</p><p>Travel grants are reimbursed at the end of the conference. You are expected to make your own travel and stay arrangements. We will assist with hotel recommendations, visa letters and general advice on travel.</p>
           </div><br>
-        <p class="regular-prose all-caps gray space-one-bottom space-one-top text-center">Status:&nbsp;&nbsp;<span class="green">Accepting Submissions</span></p>
+        <p class="regular-prose semibold all-caps gray space-one-bottom space-one-top text-center">Status:&nbsp;&nbsp;<span class="red">Proposal Submission Closed</span>&nbsp;&nbsp;<span class="green">Accepting Votes</span></p>
         <p class="text-center">
           <a href="https://funnel.hasgeek.com/metarefresh2014/" class="button tiny semibold">View proposals on Funnel</a>
         </p>
       </div>    
     </div>
     <div id="funnel-links">
+      <h2 class="semibold legible">Confirmed sessions</h2>
+      <table id="funnel-listing" class="table table-bordered list-space-line list-plain link-silent">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>By</th>
+            <th>Level</th>
+            <th>Date</th>
+            <th><i class="icon-comments"></i></th>
+            <th>+1</th>
+          </tr>
+        </thead>
+        <tbody>  
+          <tr><td colspan="5" class="bold text-center">Talks</td></tr>       
+          {% for proposal in node.proposals() -%}
+            {% if proposal['confirmed']and proposal['section_name'] == 'talk' %}
+              <tr data-section="{{ proposal['section_name'] }}" class="fill-lightgray black semibold">
+                <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
+                <td>{{ proposal['proposer'] }}</td>
+                <td>{{ proposal['level'] }}</td>
+                <td>{{ proposal['submitted']|shortdate }}</td>
+                <td>{{ proposal['comments'] }}</td>
+                <td>{{ proposal['votes'] }}</td>
+              </tr>
+            {% endif %} 
+          {%- endfor %}
+          <tr><td colspan="5" class="bold text-center">Workshops</td></tr>       
+          {% for proposal in node.proposals() -%}
+            {% if proposal['confirmed']and proposal['section_name'] == 'workshops' %}
+              <tr data-section="{{ proposal['section_name'] }}" class="fill-lightgray black semibold">
+                <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
+                <td>{{ proposal['proposer'] }}</td>
+                <td>{{ proposal['level'] }}</td>
+                <td>{{ proposal['submitted']|shortdate }}</td>
+                <td>{{ proposal['comments'] }}</td>
+                <td>{{ proposal['votes'] }}</td>
+              </tr>
+            {% endif %} 
+          {%- endfor %}
+        </tbody>
+      </table>
+      <h2 class="semibold legible space-two-top">Talk Proposals</h2>
       <table id="funnel-listing" class="table table-bordered list-space-line list-plain link-silent">
         <thead>
           <tr>
@@ -35,8 +77,8 @@
         <tbody>         
         <tr><td colspan="5" class="bold text-center">Beginner</td></tr>
         {% for proposal in node.proposals() -%}
-          {% if proposal['level'] == 'Beginner' %}
-            <tr data-section="{{ proposal['section_name'] }}" class="fill-lightgray black semibold">
+          {% if proposal['level'] == 'Beginner' and proposal['section_name'] == 'talk' %}
+            <tr data-section="{{ proposal['section_name'] }}" class="theme-green-light black semibold">
               <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
               <td>{{ proposal['proposer'] }}</td>
               <td>{{ proposal['submitted']|shortdate }}</td>
@@ -48,8 +90,8 @@
         
         <tr><td colspan="5" class="bold text-center">Intermediate</td></tr>
         {% for proposal in node.proposals() -%}
-          {% if proposal['level'] == 'Intermediate' %}
-            <tr data-section="{{ proposal['section_name'] }}" class="fill-mediumgray black semibold">
+          {% if proposal['level'] == 'Intermediate' and proposal['section_name'] == 'talk' %}
+            <tr data-section="{{ proposal['section_name'] }}" class="theme-orange-light black semibold">
               <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
               <td>{{ proposal['proposer'] }}</td>
               <td>{{ proposal['submitted']|shortdate }}</td>
@@ -61,8 +103,60 @@
 
         <tr><td colspan="5" class="bold text-center">Advanced</td></tr>
         {% for proposal in node.proposals() -%}
-          {% if proposal['level'] == 'Advanced' %}
-            <tr data-section="{{ proposal['section_name'] }}" class="fill-darkgray black semibold">
+          {% if proposal['level'] == 'Advanced' and proposal['section_name'] == 'talk' %}
+            <tr data-section="{{ proposal['section_name'] }}" class="theme-red-light black semibold">
+              <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
+              <td>{{ proposal['proposer'] }}</td>
+              <td>{{ proposal['submitted']|shortdate }}</td>
+              <td>{{ proposal['comments'] }}</td>
+              <td>{{ proposal['votes'] }}</td>
+            </tr>
+          {% endif %} 
+        {%- endfor %}
+        </tbody>
+      </table>
+      <h2 class="semibold legible space-two-top">Workshop Proposals</h2>
+      <table id="funnel-listing" class="table table-bordered list-space-line list-plain link-silent">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>By</th>
+            <th>Date</th>
+            <th><i class="icon-comments"></i></th>
+            <th>+1</th>
+          </tr>
+        </thead>
+        <tbody>         
+          <tr><td colspan="5" class="bold text-center">Beginner</td></tr>
+        {% for proposal in node.proposals() -%}
+          {% if proposal['level'] == 'Beginner' and proposal['section_name'] == 'workshops' %}
+            <tr data-section="{{ proposal['section_name'] }}" class="theme-green-light black semibold">
+              <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
+              <td>{{ proposal['proposer'] }}</td>
+              <td>{{ proposal['submitted']|shortdate }}</td>
+              <td>{{ proposal['comments'] }}</td>
+              <td>{{ proposal['votes'] }}</td>
+            </tr>
+          {% endif %} 
+        {%- endfor %}
+        
+        <tr><td colspan="5" class="bold text-center">Intermediate</td></tr>
+        {% for proposal in node.proposals() -%}
+          {% if proposal['level'] == 'Intermediate' and proposal['section_name'] == 'workshops' %}
+            <tr data-section="{{ proposal['section_name'] }}" class="theme-orange-light black semibold">
+              <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
+              <td>{{ proposal['proposer'] }}</td>
+              <td>{{ proposal['submitted']|shortdate }}</td>
+              <td>{{ proposal['comments'] }}</td>
+              <td>{{ proposal['votes'] }}</td>
+            </tr>
+          {% endif %}
+        {%- endfor %}
+
+        <tr><td colspan="5" class="bold text-center">Advanced</td></tr>
+        {% for proposal in node.proposals() -%}
+          {% if proposal['level'] == 'Advanced' and proposal['section_name'] == 'workshops' %}
+            <tr data-section="{{ proposal['section_name'] }}" class="theme-red-light black semibold">
               <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
               <td>{{ proposal['proposer'] }}</td>
               <td>{{ proposal['submitted']|shortdate }}</td>
