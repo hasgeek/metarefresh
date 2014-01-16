@@ -37,7 +37,7 @@
         <tbody>  
           <tr><td colspan="5" class="bold text-center">Talks</td></tr>       
           {% for proposal in node.proposals() -%}
-            {% if proposal['confirmed']and proposal['section_name'] == 'talk' %}
+            {% if proposal['confirmed']and proposal['section'] == 'Full talk' or proposal['confirmed']and proposal['section'] == 'Crisp talk' %}
               <tr data-section="{{ proposal['section_name'] }}" class="fill-lightgray black semibold">
                 <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
                 <td>{{ proposal['proposer'] }}</td>

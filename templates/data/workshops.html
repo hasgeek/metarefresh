@@ -2,11 +2,38 @@
   set event = {
       'title' : 'Workshops'
     , 'when'  : '12 - 13 February 2014'
-    , 'blurb' : '<div class="row text-center"><a href="workshops#beginners-android-workshop"><div class="fill-lightgray push-one dark col-lg-6 col-md-6 col-sm-6 col-xs-12 info-box"> <i class="icon-android icon-4x"></i><i class="icon-cog icon-2x"></i><br>Beginner\'s<br>Android&nbsp;Workshop</div></a><a href="workshops#advanced-android-workshop">
-    <div class="fill-lightgray push-one dark col-lg-6 col-md-6 col-sm-6 col-xs-12 info-box"> <i class="icon-android icon-4x"></i><i class="icon-cogs icon-3x"></i><br>Advanced<br>Android&nbsp;Workshop</div></a></div>'  
+    , 'blurb' : ''  
   }
 %}
 {% from theme("data/workshop-schedule.html") import schedule %}
+{% if schedule is defined %}
+  {% 
+    set nav = [
+      {
+          'display' : 'Sessions'
+        , 'link'    : 'conference#sessions'
+      }
+      , {
+          'display' : 'Schedule'
+        , 'link'    : 'conference#schedule'
+      }
+      , {
+          'display' : 'Venue'
+        , 'link'    : 'conference#conference-venue'
+      }
+    ] 
+  %}
+{% else %}
+  {% 
+    set nav = [
+        {
+          'display' : 'Sessions'
+        , 'link'    : 'conference#talks'
+      }
+    ] 
+  %}
+{% endif %}
+
 
 {% 
   set action = ''

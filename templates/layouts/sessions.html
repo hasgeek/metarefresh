@@ -1,12 +1,19 @@
 <section id="sessions" class="push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
+  {% if talks %}
+    {% set session = talks %}
+  {% elif workshops %}
+    {% set session = workshops %}
+  {% endif %}
   <div class="row-fluid container text-center">
-    <h2 class="offset1 extralarge all-caps space-two-bottom">Talks</h2>
+    <h2 class="offset1 extralarge all-caps space-two-bottom">{% if session == talks %}Talks{% elif session == workshops %}Workshops{% endif %}</h2>
   </div>
-  {% for item in talks %}
-    <div id="{{ item.id }}" class="row-fluid container push-two">
+  
+
+  {% for item in session %}
+    <div id="{{ item.id }}" class="row-fluid container push-line">
       <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 legible space-two-bottom clearfix text-right">
         <h3 class="all-caps nospace-top semibold">{{ item.title|safe }}</h3>
-        <img class="speaker-photo {% if item.type == 'app-demos' %}theme-green{% elif item.type == 'systems' %}theme-red{% elif item.type == 'business' %}theme-blue{% elif item.type == 'gaming' %}theme-orange{% elif item.type == 'ux' %}theme-violet{% endif %}" src="{{ item.photo }}" alt="">
+        <img class="speaker-photo" src="{{ item.photo }}" alt="">
         <h4 class="prose-type calm italic"><span class="legible-prose">{{ item.speaker }}</span></h4>
         <h5 class="italic">{{ item.designation|safe }}</h5>
       </div>
@@ -14,32 +21,8 @@
         <div class="prose-type regular-prose space-three-bottom">
           {{ item.blurb|safe }}
           <ul class="list-plain secondary prose space-one-top">
-            {% if item.funnel %}<li class="flushleft"><a href="{{ item.funnel }}">Funnel Proposal</a></li>{% endif %}
-            {% if item.preview %}<li class="flushright"><a href="{{ item.preview }}">Preview</a></li>{% endif %}
-          </ul>
-        </div>
-      </div>
-    </div>
-  {% endfor %}
-  <div class="row-fluid container text-center">
-    <h2 class="offset1 extralarge all-caps space-two-bottom">Panel Discussions</h2>
-  </div>
-  {% for item in paneldiscussions %}
-    <div id="{{ item.id }}" class="row-fluid container push-two">
-      <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 legible space-two-bottom clearfix text-right">
-        <h3 class="all-caps nospace-top semibold">{{ item.title|safe }}</h3>
-        {% for member in item.panelists %}
-          <img class="speaker-photo {% if item.type == 'app-demos' %}theme-green{% elif item.type == 'systems' %}theme-red{% elif item.type == 'business' %}theme-blue{% elif item.type == 'gaming' %}theme-orange{% elif item.type == 'ux' %}theme-violet{% endif %}" src="{{ member.photo }}" alt="">
-          <h4 class="prose-type calm italic"><span class="legible-prose">{{ member.speaker }}</span></h4>
-          <h5 class="italic">{{ member.designation|safe }}</h5>
-        {% endfor %}     
-      </div>
-      <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 legible-prose prose prose-type">
-        <div class="prose-type regular-prose space-three-bottom">
-          {{ item.blurb|safe }}
-          <ul class="list-plain secondary prose space-one-top">
-            {% if item.funnel %}<li class="flushleft"><a href="{{ item.funnel }}">Funnel Proposal</a></li>{% endif %}
-            {% if item.preview %}<li class="flushright"><a href="{{ item.preview }}">Preview</a></li>{% endif %}
+            <li class="flushleft"><a target="_blank" href="https://funnel.hasgeek.com/metarefresh2014/{{ item.id }}">Funnel Proposal</a></li>
+            {% if item.preview %}<li class="flushright"><a target="_blank" href="{{ item.preview }}">Preview</a></li>{% endif %}
           </ul>
         </div>
       </div>
