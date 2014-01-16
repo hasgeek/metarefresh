@@ -540,8 +540,8 @@ li.event-node{
   margin-right: auto;
 }
 .bg-photo{
-  width: 210px;
-  height: 210px;
+  width: 212px;
+  height: 212px;
   display: block;
   background-size: 100% !important;
   border-radius: 50%;
@@ -586,14 +586,20 @@ li.event-node{
 }
 
 @media (min-width: 980px) and (max-width: 1200px){
-  .featured-speakers li, .editorial-panel-summary li{    
+  .editorial-panel-summary li{    
     height: 300px;
+  }
+  .featured-speakers li{    
+    height: 350px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 979px){
-  .featured-speakers li, .editorial-panel-summary li{    
+  .editorial-panel-summary li{    
     height: 280px;
+  }
+  .featured-speakers li{    
+    height: 320px;
   }
 }
 
@@ -604,11 +610,17 @@ li.event-node{
   .img-wrapper{
     width: 226px;
   }
-  .featured-speakers li, .editorial-panel-summary li{
+  .editorial-panel-summary li{
     padding-bottom: 20px;
     height: 350px;
   }
+  .featured-speakers li{
+    padding-bottom: 20px;
+    height: 400px;
+  }
 }
+
+
 
 #site-nav{
   width: 100%;
