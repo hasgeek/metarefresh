@@ -2,15 +2,14 @@
   <div class="row-fluid container">
     <h2 class="extralarge all-caps space-one-bottom">Sponsors</h2>
   </div>
-</section>
 
-{% with fill_cycler = cycler('fill-green', 'fill-dark') %}
+{% with fill_cycler = cycler('fill-yellow', 'fill-blue') %}
   {% from theme("data/sponsors.html") import types, items %}
   {% for type in types %}
     {% set outer = loop %}
     {% for item in items if item.type == type.id and type.size != 'compact'  %}
       {% if loop.first %}
-      <section class="sponsor-platinum {{ fill_cycler.next() }} clearfix">
+      <div class="sponsor-platinum {{ fill_cycler.next() }} clearfix">
         <div class="row-fluid container">
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 push-one-top">
             <h2 class="legible all-caps space-one-bottom">{{ type.title }}</h2>
@@ -19,9 +18,9 @@
       {% endif %}
         <h3 class="visuallyhidden">{{ item.title }}</h3>
         <div id="{{ type.id }}-{{ item.id }}" class="row-fluid container push-two-top">
-          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 legible space-two-bottom clearfix clearboth">
+          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 legible sponsor-{{ type.size }} space-two-bottom clearfix clearboth">
             <p class="clearfix space-two-bottom">
-              <a href="{{ item.link }}" target="_blank" class="occupy fill-white sponsor-logo contain-height flushleft">
+              <a href="{{ item.link }}" target="_blank" class="occupy fill-white sponsor-logo contain-height">
                 <img alt=" " src="{{ item.logo }}">
               </a>
             </p>
@@ -37,13 +36,14 @@
             {% endif %}
             
           </div>
-          <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 regular-prose prose prose-type space-three-bottom">
+          <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 regular-prose prose semibold space-three-bottom">
               {{ item.blurb|safe }}
           </div>
         </div>
       {% if loop.last %}
-      </section>
+      </div>
       {% endif %}
     {% endfor %}
   {% endfor %}
 {% endwith %}
+</section>
