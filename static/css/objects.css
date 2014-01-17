@@ -539,6 +539,9 @@ li.event-node{
   margin-left: auto;
   margin-right: auto;
 }
+.editorial-panel .img-wrapper{
+  width: 85%;
+}
 .bg-photo{
   width: 212px;
   height: 212px;
@@ -564,6 +567,9 @@ li.event-node{
   .bg-photo{
     width: 200px;
     height: 200px;
+  }
+  .editorial-panel .img-wrapper{
+    width: 230px;
   }
 }
 
@@ -1018,7 +1024,7 @@ ul.list-plain{
   }
   .navbar .nav > li > a, .navbar-brand {
     font-size: 14px;
-    padding: 13px;
+    padding: 12px;
   }
 }
 @media screen and (min-width: 980px) and (max-width: 65em){
@@ -1033,7 +1039,7 @@ ul.list-plain{
   }
   .navbar .nav > li > a, .navbar-brand {
     font-size: 13px;
-    padding: 8px;
+    padding: 7px;
   }
 }
 
