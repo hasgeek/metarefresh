@@ -178,10 +178,10 @@
 	text-align: left;
 }
 @media screen and (max-width: 991px){
-	.adjust-right, .adjust-left{
+	.adjust-right, .adjust-center, .adjust-left{
 		text-align: center;
 	}
-	.adjust-right>.button, .adjust-left>.button{
+	.adjust-right>.button, .adjust-center>.button, .adjust-left>.button{
 		width: 80%;
 	}
 }

@@ -53,7 +53,7 @@
 
 <div class="fill-silver">
   {% block networkbar %}
-    {{ networkbar(siteid='events', login=false) }}
+    {{ networkbar(siteid='events', login=true) }}
   {% endblock %}
 </div>
 
@@ -128,6 +128,7 @@
           <ul class="dropdown-menu">
             <li><a href="/2014/conference">Conference</a></li>
             <li><a href="/2014/workshops">Workshops</a></li>
+            <li><a href="/2014/miniconf">Miniconf</a></li>
             <li><a href="/2014/schedule">Schedule</a></li>
           </ul>
         </li>
@@ -150,6 +151,8 @@
 </nav>
 {% endblock %}
 </div>
+
+{% block macro %}{% endblock %}
 
 {% block content %}
   {% for item in page.sections  %}
