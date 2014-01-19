@@ -38,3 +38,14 @@
     ] 
   %}
 {% endif %}
+
+{% from theme("data/sessions.html") import talks, types %}
+{% 
+  set session = {
+      'id'    : 'talks'
+    , 'label' : 'Talks'
+    , 'link'  : 'conference#talks'
+    , 'list'  : talks.values()
+    , 'types' : types
+  }
+%}

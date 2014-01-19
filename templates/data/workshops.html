@@ -38,13 +38,13 @@
 {% 
   set action = ''
 %}
-{% from theme("data/workshop-sessions.html") import sessions, types %}
+{% from theme("data/sessions.html") import workshops, types %}
 {% 
   set session = {
       'id'    : 'sessions'
     , 'label' : 'Sessions'
     , 'link'  : 'workshops#sessions'
-    , 'list'  : sessions.values()
+    , 'list'  : workshops.values()
     , 'types' : types
   }
 %}

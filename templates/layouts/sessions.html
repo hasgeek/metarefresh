@@ -1,15 +1,10 @@
 <section id="sessions" class="push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
-  {% if talks %}
-    {% set session = talks %}
-  {% elif workshops %}
-    {% set session = workshops %}
-  {% endif %}
   <div class="row-fluid container text-center">
     <h2 class="offset1 extralarge all-caps space-two-bottom">{% if session == talks %}Talks{% elif session == workshops %}Workshops{% endif %}</h2>
   </div>
   
 
-  {% for item in session %}
+  {% for item in session.list %}
     <div id="{{ item.id }}" class="row-fluid container push-line">
       <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 legible space-two-bottom clearfix text-right">
         <h3 class="all-caps nospace-top semibold">{{ item.title|safe }}</h3>

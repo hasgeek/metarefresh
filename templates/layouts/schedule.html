@@ -1,5 +1,10 @@
 <section id="{{ schedule.id }}" class="schedule push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
   <div class="row text-center">
+    {% if talks %}
+      {% set sessions = talks %}
+    {% elif workshops %}
+      {% set sessions = workshops %}
+    {% endif %}
     <h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 extralarge all-caps space-two-bottom">Schedule{% if schedule.date %} — {{ schedule.date|safe }}{% endif %}</h2>
   </div>
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -20,8 +25,8 @@
     <li id="{{ item.id }}" class="row">
       {% if item.track1 %}
       {% with item = sessions[item.track1] %}
-        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 nospace-bottom clearfix text-right theme-box-left {% if item.type == 'business' %}theme-blue{% elif item.type == 'systems' %}theme-red{% elif item.type == 'gaming' %}theme-orange{% elif item.type == 'app-demos' %}theme-green{% elif item.type == 'ux' %}theme-violet{% else %}theme-transparent{% endif %}">
-          <a class="{% if item.featured == true %}popover-left{% endif %}" data-content="{{ item.blurb|safe }}" title="" data-toggle="popover" data-original-title="{{ item.title|safe }}"><h3 class="nospace-top legible-prose prose-type"><span>{{ item.title|safe }}</span></h3></a>
+        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 nospace-bottom clearfix text-right theme-box-left">
+          <a href="#{{ item.id }}"><h3 class="nospace-top legible-prose prose-type"><span>{{ item.title|safe }}</span></h3></a>
           {% if item.speaker or item.designation %}
             <p class="prose-type tiny calm">
               <span class="tiny">{{ item.speaker | safe }}</span><span class="link-silent">{% if item.funnel %}<a href="{{ item.funnel }}"><i class="icon-filter"></i></a>{% endif %} {% if item.preview %}<a href="{{ item.preview }}"><i class="icon-youtube-play"></i></a>{% endif %}</span>
@@ -39,8 +44,8 @@
       </div>
     {% if item.track2 %}
       {% with item = sessions[item.track2] %}
-        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 nospace-bottom clearfix text-left theme-box-right {% if item.type == 'business' %}theme-blue{% elif item.type == 'systems' %}theme-red{% elif item.type == 'gaming' %}theme-orange{% elif item.type == 'app-demos' %}theme-green{% elif item.type == 'ux' %}theme-violet{% else %}theme-transparent{% endif %}">
-          <a class="{% if item.featured == true %}popover-right{% endif %}" data-content="{{ item.blurb|safe }}" title="" data-toggle="popover" data-original-title="{{ item.title|safe }}"><h3 class="nospace-top legible-prose prose-type"><span>{{ item.title|safe }}</span></h3></a>
+        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 nospace-bottom clearfix text-left theme-box-right">
+          <a href="#{{ item.id }}"><h3 class="nospace-top legible-prose prose-type"><span>{{ item.title|safe }}</span></h3></a>
           {% if item.speaker or item.designation %}
             <p class="prose-type tiny calm">
                 <span class="link-silent">{% if item.funnel %}<a href="{{ item.funnel }}"><i class="icon-filter"></i></a>{% endif %} {% if item.preview %}<a href="{{ item.preview }}"><i class="icon-youtube-play"></i></a>{% endif %}</span> 
