@@ -39,6 +39,7 @@ html                    { font-size: 16px;     line-height: 1.5; }
 .secondary              { font-size: 0.875rem; line-height: 1.90; }
 .secondary-prose        { font-size: 0.950rem; line-height: 1.40; }
 .tiny                   { font-size: 0.600rem; line-height: 1.60; }
+.tiny-prose             { font-size: 0.400rem; line-height: 1.90; }
 
 @media only screen and (min-width: 30em) {
     html                { font-size: 18px; }

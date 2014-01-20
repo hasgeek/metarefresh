@@ -5,7 +5,12 @@
     <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 large all-caps">{{ venue.title }}<span class="regular occupy">{{ venue.subtitle }}</span></h3>
   </div>
   <div class="row-fluid container">
-    <img src="{{ venue.poster }}" class="contain-width col-lg-6 col-md-6 col-sm-6 col-xs-12">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contain-width">
+      <img src="{{ venue.poster }}" alt="{{ venue.title }}">
+      {% if venue.courtesy %}
+        <p class="tiny-prose"><em>Photo Courtesy: {{ venue.courtesy|safe }}</em></p>
+      {% endif %}
+    </div>
     <div class="no-js-hidden space-three-bottom">
       <h3 class="visuallyhidden">Map</h3>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 legible-prose clearfix">

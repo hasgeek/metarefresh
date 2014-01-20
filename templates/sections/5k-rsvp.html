@@ -44,7 +44,7 @@
               {%- with status = node.get_status(g.user) %}
                 {%- if node.has_capacity() %}
                   <p>
-                    Interested in attending HasGeek 5k?
+                    Will you be running the HasGeek 5k?
                   {{ rsvp_form(node, form, status=status) }}
                 {%- else %}
                   {%- if node.allow_waitlisting %}
@@ -71,7 +71,7 @@
           {%- else %}
             <p>
               {#{% if node.capacity > 0 -%} The venue has limited capacity. {% endif -%}#}
-              Interested in attending? Please login. You can use your existing Twitter or Google account, and if you have previously voted on a session proposal or attended a hacknight, you already have a HasGeek account.
+              Will you be running the HasGeek 5k? Please login. You can use your existing Twitter or Google account, and if you have previously voted on a session proposal or attended a hacknight, you already have a HasGeek account.
             </p>
             <p class="centered space-one-top">
               <a href="{{ url_for('login') }}" class="button tiny semibold">Login with Twitter, Google or HasGeek id</a>
