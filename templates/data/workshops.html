@@ -2,7 +2,7 @@
   set event = {
       'title' : 'Workshops'
     , 'when'  : '12 - 13 February 2014'
-    , 'blurb' : ''  
+    , 'blurb' : 'The 3 hour hands on sessions spanning over 2 days, covers 4 workshops on design + frontend development. Sessions include: "Making design decisions" by Sunit Singh, "Embracing Progressive Enhancement" by Souvik Das Gupta, "Responsive Web Design done right" by Arpan Chinta and "The Design Superheroes who uses Modern Design Workflows" by Brajeshwar Oinam.'  
   }
 %}
 {% from theme("data/workshop-schedule.html") import schedule %}
@@ -11,15 +11,15 @@
     set nav = [
       {
           'display' : 'Sessions'
-        , 'link'    : 'conference#sessions'
+        , 'link'    : 'workshops#sessions'
       }
       , {
           'display' : 'Schedule'
-        , 'link'    : 'conference#schedule'
+        , 'link'    : 'workshops#schedule'
       }
       , {
           'display' : 'Venue'
-        , 'link'    : 'conference#conference-venue'
+        , 'link'    : 'workshops#workshop-venue'
       }
     ] 
   %}
@@ -28,7 +28,7 @@
     set nav = [
         {
           'display' : 'Sessions'
-        , 'link'    : 'conference#talks'
+        , 'link'    : 'workshops#sessions'
       }
     ] 
   %}
@@ -42,7 +42,7 @@
 {% 
   set session = {
       'id'    : 'sessions'
-    , 'label' : 'Sessions'
+    , 'label' : 'Workshops'
     , 'link'  : 'workshops#sessions'
     , 'list'  : workshops.values()
     , 'types' : types
