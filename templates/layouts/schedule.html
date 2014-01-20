@@ -27,12 +27,7 @@
       {% if item.track1 %}
       {% with item = sessions[item.track1] %}
         <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 nospace-bottom clearfix text-right theme-box-left">
-          <a href="{{ schedule.type }}#{{ item.id }}" target="_blank"><h3 class="nospace-top legible-prose prose-type"><span>{{ item.title|safe }}</span></h3></a>
-          {% if item.speaker or item.designation %}
-            <p class="prose-type tiny calm">
-              <span class="tiny">{{ item.speaker | safe }}</span><span class="link-silent">{% if item.funnel %}<a href="{{ item.funnel }}"><i class="icon-filter"></i></a>{% endif %} {% if item.preview %}<a href="{{ item.preview }}"><i class="icon-youtube-play"></i></a>{% endif %}</span>
-            </p>
-          {% endif %}
+          {% include theme("layouts/partials/schedule-slot.html") %}
         </div>
       {% endwith %}
       {% else %}
@@ -46,13 +41,7 @@
     {% if item.track2 %}
       {% with item = sessions[item.track2] %}
         <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 nospace-bottom clearfix text-left theme-box-right">
-          <a href="{{ schedule.type }}#{{ item.id }}" target="_blank"><h3 class="nospace-top legible-prose prose-type"><span>{{ item.title|safe }}</span></h3></a>
-          {% if item.speaker or item.designation %}
-            <p class="prose-type tiny calm">
-                <span class="link-silent">{% if item.funnel %}<a href="{{ item.funnel }}"><i class="icon-filter"></i></a>{% endif %} {% if item.preview %}<a href="{{ item.preview }}"><i class="icon-youtube-play"></i></a>{% endif %}</span> 
-                <span class="tiny">{{ item.speaker|safe }}</span>
-            </p>
-          {% endif %}
+          {% include theme("layouts/partials/schedule-slot.html") %}
         </div>
       {% endwith %}
       {% else %}
