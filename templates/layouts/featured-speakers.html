@@ -18,7 +18,7 @@
               <h3>{{ item.speaker }}</h3>
               <h5>{{ item.designation|safe }}</h5>
               <h5 class="all-caps">{{ item.place }}</h5>
-              <h4 class="brown link-silent"><a target="_blank" href="https://twitter.com/{{ item.twitter }}">@{{ item.twitter }}</a></h4>
+              {% if item.twitter %}<h4 class="brown link-silent"><a target="_blank" href="https://twitter.com/{{ item.twitter }}">@{{ item.twitter }}</a></h4>{% endif %}
               {% if item.sponsor %}<h5 class="link-silent dark">Sponsored by <a target="_blank" href="{{ item.sponsor_link }}">{{ item.sponsor }}</a></h5>{% endif %}
             </li>
       {% if loop.last %}
