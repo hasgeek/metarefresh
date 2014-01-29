@@ -536,7 +536,7 @@ li.event-node{
   border: 13px solid rgba(255, 255, 255, 0.1);
   display: block;
   border-radius: 50%;
-  width: 70%;
+  width: 96%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -603,9 +603,6 @@ li.event-node{
   }
   .featured-speakers li{    
     height: 380px;
-  }
-  .img-wrapper{
-    width: 95%;
   }
 }
 
