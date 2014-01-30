@@ -27,10 +27,10 @@
       {% if item.track1 %}
       {% with item = sessions[item.track1] %}
         <div class="col-lg-4 col-lg-offset-1 col-md-5 col-sm-5 col-xs-12 nospace-bottom clearfix text-right theme-box-left">
-          <a href="{{ schedule.type }}#{{ item.id }}" target="_blank"><h3 class="nospace-top legible-prose prose-type"><span>{{ item.title|safe }}</span></h3></a>
+          {% if not item.other %}<a href="{{ schedule.type }}#{{ item.id }}" target="_blank">{% endif %}<h3 class="nospace-top legible-prose prose-type"><span>{{ item.title|safe }}</span></h3>{% if not item.other %}</a>{% endif %}
           {% if item.speaker or item.designation %}
           <p class="prose-type tiny calm">
-            <span class="tiny">{{ item.speaker | safe }}</span><span class="link-silent"><a href="https://funnel.hasgeek.com/metarefresh2014/{{ item.id }}"><i class="icon-filter"></i></a> {% if item.preview %}<a href="{{ item.preview }}"><i class="icon-youtube-play"></i></a>{% endif %}</span>
+            <span class="tiny">{{ item.speaker | safe }}</span>{% if not item.other %}<span class="link-silent"><a href="https://funnel.hasgeek.com/metarefresh2014/{{ item.id }}"><i class="icon-filter"></i></a> {% if item.preview %}<a href="{{ item.preview }}"><i class="icon-youtube-play"></i></a>{% endif %}</span>{% endif %}
           </p>
           {% endif %}
         </div>
@@ -46,10 +46,10 @@
     {% if item.track2 %}
       {% with item = sessions[item.track2] %}
         <div class="col-lg-4 col-md-5 col-sm-5 col-xs-12 nospace-bottom clearfix text-left theme-box-right">
-          <a href="{{ schedule.type }}#{{ item.id }}" target="_blank"><h3 class="nospace-top legible-prose prose-type"><span>{{ item.title|safe }}</span></h3></a>
+          {% if not item.other %}<a href="{{ schedule.type }}#{{ item.id }}" target="_blank">{% endif %}<h3 class="nospace-top legible-prose prose-type"><span>{{ item.title|safe }}</span></h3>{% if not item.other %}</a>{% endif %}
           {% if item.speaker or item.designation %}
           <p class="prose-type tiny calm">
-            <span class="link-silent"><a href="https://funnel.hasgeek.com/metarefresh2014/{{ item.id }}"><i class="icon-filter"></i></a> {% if item.preview %}<a href="{{ item.preview }}"><i class="icon-youtube-play"></i></a>{% endif %}</span> <span class="tiny">{{ item.speaker | safe }}</span>
+            {% if not item.other %}<span class="link-silent"><a href="https://funnel.hasgeek.com/metarefresh2014/{{ item.id }}"><i class="icon-filter"></i></a> {% if item.preview %}<a href="{{ item.preview }}"><i class="icon-youtube-play"></i></a>{% endif %}</span> {% endif %}<span class="tiny">{{ item.speaker | safe }}</span>
           </p>
           {% endif %}
         </div>

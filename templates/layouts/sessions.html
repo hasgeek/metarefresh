@@ -5,6 +5,7 @@
   
 
   {% for item in session.list %}
+    {% if not item.other %}
     <div id="{{ item.id }}" class="row-fluid container push-line">
       <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 legible space-two-bottom clearfix text-right">
         <h3 class="all-caps nospace-top semibold">{{ item.title|safe }}</h3>
@@ -22,5 +23,6 @@
         </div>
       </div>
     </div>
+    {% endif %}
   {% endfor %}
 </section>
