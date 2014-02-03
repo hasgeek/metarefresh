@@ -1129,3 +1129,18 @@ ul.list-plain{
     }
 }
 
+
+/* scrollback */
+.scrollback-stream{
+  z-index: 1001 !important;
+}
+.scrollback-icon, .scrollback-title{
+  background-color: #0CA5B0 !important;
+}
+.scrollback-title{
+  border-bottom-color: #C7C575 !important;
+}
+.scrollback-icon-menu{
+  background-image: url(http://local.metarefresh.in:8090/favicon.ico) !important;
+  background-size: 50%;
+}
