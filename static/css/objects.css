@@ -1137,6 +1137,9 @@ ul.list-plain{
 .scrollback-icon, .scrollback-title{
   background-color: #0CA5B0 !important;
 }
+.scrollback-alert{
+  background-color: #DF5E0E !important;
+}
 .scrollback-title{
   border-bottom-color: #C7C575 !important;
 }

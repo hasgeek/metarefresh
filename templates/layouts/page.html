@@ -235,6 +235,7 @@ if (location.hostname == 'droidcon.in') {
  window.scrollback = {
   streams:["hasgeek"],
   theme: 'light',
+  {%- if g.user %}nick: {{ g.user.username|tojson }},{% endif -%}
   ticker: true
  };
  
