@@ -1144,6 +1144,6 @@ ul.list-plain{
   border-bottom-color: #C7C575 !important;
 }
 .scrollback-icon-menu{
-  background-image: url(http://local.metarefresh.in:8090/favicon.ico) !important;
+  background-image: url(/favicon.ico) !important;
   background-size: 50%;
 }
