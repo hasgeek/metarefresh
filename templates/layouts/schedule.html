@@ -36,7 +36,7 @@
         </div>
       {% endwith %}
       {% else %}
-        <div class="col-lg-4 col-lg-offset-1 col-md-5 col-sm-5 col-xs-12 legible-prose prose prose-type clearfix text-right theme-box-left theme-transparent">
+        <div class="col-lg-4 col-lg-offset-1 col-md-5 col-sm-5 col-xs-12 legible-prose clearfix text-right theme-box-left theme-transparent">
           <div class="space-1q-top"><span class="calm italic secondary-prose">{{ item.title|safe }}</span></div>
         </div>
       {% endif %}
@@ -55,8 +55,8 @@
         </div>
       {% endwith %}
       {% else %}
-        <div class="col-lg-4 col-md-5 col-sm-5 col-xs-12 legible-prose prose prose-type clearfix text-left theme-box-right theme-transparent">
-          <div class="space-1q-top"><span class="calm italic secondary-prose">{{ item.title }}</span></div>
+        <div class="col-lg-4 col-md-5 col-sm-5 col-xs-12 legible-prose clearfix text-left theme-box-right theme-transparent">
+          <div class="space-1q-top"><span class="calm italic secondary-prose">{{ item.title|safe }}</span></div>
         </div>
       {% endif %}
     </li>
