@@ -957,7 +957,6 @@ ul.list-plain{
     margin-left: auto;
   }
   .navbar-collapse {
-    max-width: 970px;
     border-top: 0;
     box-shadow: none;
     margin-left: auto;
@@ -998,12 +997,9 @@ ul.list-plain{
   .navbar{
     min-height: 30px;
   }
-  .navbar-collapse{
-    max-width: 700px;
-  }
   .navbar .nav > li > a, .navbar-brand {
-    font-size: 12px;
-    padding: 7px;
+    font-size: 0.7em;
+    padding: 10px;
   }
   .dropdown-menu > li > a {    
     padding-top: 4px;
@@ -1012,19 +1008,19 @@ ul.list-plain{
   }
 }
 
-@media screen and (min-width: 980px) and (max-width: 1200px){
+@media screen and (min-width: 992px) and (max-width: 1200px){
   .navbar{
     min-height: 40px;
   }
-  .navbar-collapse{
-    max-width: 850px;
-  }
   .navbar .nav > li > a, .navbar-brand {
-    font-size: 14px;
+    font-size: 0.96em;
     padding: 12px;
   }
 }
-@media screen and (min-width: 980px) and (max-width: 65em){
+@media screen and (min-width: 980px) and (max-width: 992px){
+  .navbar{
+    min-height: 40px;
+  }
   #frame{
     height: 430px;
     width: 700px;
@@ -1035,8 +1031,8 @@ ul.list-plain{
     height: 290px;
   }
   .navbar .nav > li > a, .navbar-brand {
-    font-size: 13px;
-    padding: 7px;
+    font-size: 0.7em;
+    padding: 9px;
   }
 }
 
