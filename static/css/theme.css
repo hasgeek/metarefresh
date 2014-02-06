@@ -110,8 +110,11 @@ section{
     padding-top: 6px;
 }
 .fill-blue .schedule > li{
-    border-top: 1px solid #675A70;
-    border-bottom: 1px solid #2F2936;
+    border-top: 1px solid #30B4BC;
+    border-bottom: 1px solid #31747F;
+}
+.fill-blue .schedule > li i:hover{
+    color: #DF5E0E;
 }
 .fill-blue .schedule > li h3{
     padding-top: 6px;
