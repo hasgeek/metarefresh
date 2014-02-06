@@ -832,6 +832,9 @@ li.event-node{
 ul.list-plain{
   padding-left: 0;
 }
+.schedule button{
+  vertical-align: 50%;
+}
 .schedule ul{
   margin-right: 0 !important;
   padding-right: 15px !important;
@@ -1123,6 +1126,11 @@ ul.list-plain{
         border: 30px solid #000;
         border-bottom: 40px solid #000;
     }
+}
+@media screen and (min-width: 768px){
+  .modal-dialog {
+    padding-top: 100px;
+  }
 }
 
 
