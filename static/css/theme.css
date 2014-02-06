@@ -33,6 +33,7 @@ ul.list-silent{
 .dark           { color: #444444 !important; }
 .brown          { color: #655643 !important; }
 .gray           { color: #AAAAAA !important; }
+.dark-gray      { color: rgba(0,0,0,0.4) !important;}
 .light          { color: #EEEEEE !important; }
 .red            { color: #E55252 !important; }
 .green          { color: #40a729 !important; }
