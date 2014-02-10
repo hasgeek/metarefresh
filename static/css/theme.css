@@ -52,6 +52,7 @@ ul.list-silent{
 .fill-black     { background-color: #000000 !important; color: #EEE; }
 .fill-silver-hud{ background-color: rgba(255,255,255,0.65) !important; color: #222; }
 .fill-red       { background-color: #BB3311 !important; color: #FCF3F3; }
+.fill-orange    { background-color: #DF5E0E !important; color: #FCF3F3; }
 .fill-brown     { background-color: #655643 !important; color: #FCF3F3; }
 .fill-yellow     { background-color: #c7c575 !important; color: #333; }
 .fill-redgray   { background-color: #EFE7E6 !important; color: #222020; }
