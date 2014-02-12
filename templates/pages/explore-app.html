@@ -43,7 +43,7 @@
 	#special-offers-table.table-bordered{
 		border: 0;
 	}
-	#special-offers-table.table-bordered>thead>tr>th{
+	#special-offers-table.table-bordered>thead>tr>th, #theme-tracks-table.table-bordered>thead>tr>th{
 		background-color:#777777;
 	}
 	#special-offers-table.table-bordered>tbody:last-child{
@@ -56,7 +56,7 @@
 	#special-offers-table.table-bordered>tbody>tr:last-child>td{
 		border-bottom: 0;
 	}
-	#special-offers-table.table-bordered>thead>tr>th{
+	#special-offers-table.table-bordered>thead>tr>th, #theme-tracks-table.table-bordered>thead>tr>th{
 		border: 0;
 		line-height: 16px;
 		padding-top: 10px;
@@ -75,6 +75,38 @@
 		color:#fff;
 		line-height:14px;
 	}
+	.sponsor-logo-wrapper{
+		width: 80px;
+		height: 80px;
+	}
+	.sponsor-logo-placeholder{
+		height:60px;
+		width:60px;
+		background-repeat:no-repeat;
+		background-position:center center;
+		background-size:80%;
+		background-color: #FFF;
+	}
+	.panel-heading{
+		padding: 0;
+	}
+	.panel-group .panel{
+		border-radius: 0;
+	}
+	.panel-group .panel+.panel{
+		margin-top: 0;
+	}
+	.panel{
+		border: 0;
+	}
+	.sponsor-activities-table{
+		border: 0;
+		margin-bottom: -1px;
+	}
+	.panel-title a:hover, .panel-title a:focus{
+		color:#333;
+	}
+
 </style>
 </head>
 <body>
@@ -99,7 +131,71 @@
 			</tr>
 		</tbody>
 	</table>
-
+	<table id="theme-tracks-table" class="table table-bordered">
+		<thead>
+			<tr>
+				<th colspan="2">SPONSOR BOOTH ACTIVITIES</th>
+			</tr>
+		</thead>
+	</table>
+	<div class="panel-group" id="accordion">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a class="panel-link" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+						<table class="table table-bordered sponsor-activities-table">
+							<tbody>
+								<tr style="background-color:#efefef;">
+									<td class="sponsor-logo-wrapper"><div class="sponsor-logo-placeholder" style="background-image:url('https://imgee.s3.amazonaws.com/imgee/77c910a24cfd45b5a877741fed84356f_w60_h76.png');"></div></td>
+									<td><div class="bold">MULTUNUS</div><div class="secondary-prose">Twitter puzzle, TDD, UX improvement and demos</div></td>
+									<td style="width:30px; vertical-align:middle;"><i class="icon-chevron-down"></i></td>
+								</tr>
+							</tbody>
+						</table>
+					</a>
+				</h4>
+			</div>
+			<div id="collapseTwo" class="panel-collapse collapse in">
+				<div class="panel-body">
+					<p>
+						<ol>
+							<li>Daily dose of mental workout - Solve the Twitter puzzle and win T-Shirt</li>
+							<li>Hone your JS skills by pairing and TDD [we love Backbone.JS and AngularJS]</li>
+							<li>UX Expert? Help us improve multunus.com and win books on UX and design</li>
+							<li>Continuous Delivery mastered - A demo</li>
+						</ol>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a class="panel-link" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+						<table class="table table-bordered sponsor-activities-table">
+							<tbody>
+								<tr style="background-color:#efefef;">
+									<td class="sponsor-logo-wrapper"><div class="sponsor-logo-placeholder" style="background-image:url('https://imgee.s3.amazonaws.com/imgee/974172c31f4d4d59bf24c74232d997ad_w60_h15.png');"></div></td>
+									<td><div class="bold">SWISSNEX</div><div class="secondary-prose">Startup collaboration &amp; Twitter challenge</div></td>
+									<td style="width:30px; vertical-align:middle;"><i class="icon-chevron-down"></i></td>
+								</tr>
+							</tbody>
+						</table>
+					</a>
+				</h4>
+			</div>
+			<div id="collapseThree" class="panel-collapse collapse in">
+				<div class="panel-body">
+					<p>
+						<ol>
+							<li>Learn more about how you could collaborate with Swiss start-ups</li>
+							<li>Participate in the Twitter challenge to win speaker space with next Swiss entrepreneur</li>
+						</ol>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
 	<table id="special-offers-table" class="table table-bordered">
 		<thead>
 			<tr>
@@ -159,4 +255,26 @@
 			</tr>
 		</tbody>
 	</table>
+	
+{%- if not config['DEBUG'] %}
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+{%- endif %}
+<script>window.jQuery || document.write('<script src="{{ theme_static('js/vendor/jquery-1.10.2.min.js') }}"><\/script>')</script>
+{%- if _theme %}
+  {% assets "js_" + _theme -%}
+    <script src="{{ ASSET_URL }}"></script>
+  {% endassets -%}
+{%- endif %}
+<script>
+	$(".collapse").collapse();
+</script>
+<script>
+	$(function(){
+		if($('.panel-link').hasClass('collapsed')){
+			$(this).find('i').addClass('icon-chevron-down');
+
+		}
+	});
+</script>
+</body>
 </html>
