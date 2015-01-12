@@ -1,0 +1,13 @@
+{% extends theme('layouts/page.html') %}
+{% from theme("data/conference-schedule.html") import schedule as schedule_day %}
+{%
+  set page = {
+      'title'       : 'Schedule'
+    , 'description' : ''
+    , 'sections'    : [
+        ('workshop-schedule',  'yellow')
+      , ('conference-schedule',  'brown')
+      , ('sponsors-summary',  'blue')
+    ]
+  }
+%}

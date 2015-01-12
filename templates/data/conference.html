@@ -1,0 +1,51 @@
+{% 
+  set event = {
+      'title' : 'Conference'
+    , 'id'    : 'talks'
+    , 'blurb' : 'Meta Refresh conference spans over two days, which feature a single track on both days. This conference is for working web designers and developers to present on how their own work has advanced the state of the web in the past year.'
+    , 'when'          : '16 - 17 April 2015'
+  }
+%}
+{% from theme("data/conference-schedule.html") import schedule as schedule %}
+{% if schedule is defined %}
+  {% 
+    set nav = [
+      {
+          'display' : 'Schedule'
+        , 'link'    : 'conference#schedule'
+      }
+      , {
+          'display' : 'Talks'
+        , 'link'    : 'conference#sessions'
+      }
+      , {
+          'display' : 'Venue'
+        , 'link'    : 'conference#conference-venue'
+      }
+    ] 
+  %}
+{% else %}
+  {% 
+    set nav = [
+        {
+          'display' : 'Talks'
+        , 'link'    : 'conference#sessions'
+      }
+      , {
+          'display' : 'Venue'
+        , 'link'    : 'conference#conference-venue'
+      }
+    ] 
+  %}
+{% endif %}
+
+{% from theme("data/sessions.html") import talks, types %}
+{% 
+  set session = {
+      'id'    : 'sessions'
+    , 'label' : 'Talks'
+    , 'link'  : 'conference#sessions'
+    , 'list'  : talks.values()
+    , 'types' : types
+  }
+%}

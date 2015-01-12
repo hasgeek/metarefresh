@@ -1,0 +1,12 @@
+ <section class="blog-post push-two clearfix {% if background %} fill-{{ background }}{% endif %}">
+    <div class="row-fluid container">
+    	<h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 legible"><a href="/2013/blog"><i class="icon-caret-left"></i> Blog</a></h3></div>
+    <div class="row-fluid container">
+      <h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 extralarge all-caps">{{ node.title }}</h2>
+
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <p>by <strong>{{ node.author or node.user.fullname }}</strong> &middot; {{ node.published_at|longdate }}</p>
+        {{ node.content }}
+      </div>
+    </div>  
+  </section>

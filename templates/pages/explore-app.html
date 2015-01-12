@@ -1,0 +1,280 @@
+{% from "baseframe/components.html" import networkbar with context -%}
+
+<!DOCTYPE html>
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9">     <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js{%- if config['DEBUG'] %} wf-active{% endif %}">        <!--<![endif]-->
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="author" content="HasGeek and friends">
+
+<meta property="og:title" content="Meta Refresh 2014"/>
+<meta property="og:image" content="{{ request.url_root[:-1] }}{{ theme_static('img/logo.png') }}"/>
+<meta property="og:url" content="{{ request.url }}"/>
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+<title>Meta Refresh 2014</title>
+
+{%- if _theme %}
+  {% assets "css_" + _theme -%}
+    <link rel="stylesheet" href="{{ ASSET_URL }}"/>
+  {% endassets -%}
+{%- endif %}
+
+<link href='//fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
+
+<script src="{{ theme_static('js/vendor/modernizr-2.6.2.js') }}"></script>
+<script src="../../static/js/vendor/bootstrap.min.js"></script>
+<style>
+	body{
+		font-family:'Roboto', Arial, sans-serif;
+		font-size:15px;
+	}
+	.table{
+		margin-bottom: 0;
+	}
+	.logo-container img{
+		width: 100px;
+	}
+	#special-offers-table.table-bordered{
+		border: 0;
+	}
+	#special-offers-table.table-bordered>thead>tr>th, #theme-tracks-table.table-bordered>thead>tr>th{
+		background-color:#777777;
+	}
+	#special-offers-table.table-bordered>tbody:last-child{
+		border-bottom: 1px solid #ccc;
+	}
+	#special-offers-table.table-bordered>tbody>tr>td{
+		border: 0;
+		border-bottom: 1px solid #ccc;
+	}
+	#special-offers-table.table-bordered>tbody>tr:last-child>td{
+		border-bottom: 0;
+	}
+	#special-offers-table.table-bordered>thead>tr>th, #theme-tracks-table.table-bordered>thead>tr>th{
+		border: 0;
+		line-height: 16px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 15px;
+		font-weight:400;
+		color:#FFF;
+		font-size:14px;
+		border-bottom: 1px solid #BBB;
+	}
+	#special-offers-table a:hover{
+		background-color: transparent !important;
+	}
+	.theme-corner{
+		width: 30px;
+		color:#fff;
+		line-height:14px;
+	}
+	.sponsor-logo-wrapper{
+		width: 80px;
+		height: 80px;
+	}
+	.sponsor-logo-placeholder{
+		height:60px;
+		width:60px;
+		background-repeat:no-repeat;
+		background-position:center center;
+		background-size:80%;
+		background-color: #FFF;
+	}
+	.panel-heading{
+		padding: 0;
+	}
+	.panel-group .panel{
+		border-radius: 0;
+	}
+	.panel-group .panel+.panel{
+		margin-top: 0;
+	}
+	.panel{
+		border: 0;
+	}
+	.sponsor-activities-table{
+		border: 0;
+		margin-bottom: -1px;
+	}
+	.panel-title a:hover, .panel-title a:focus{
+		color:#333;
+	}
+
+</style>
+</head>
+<body>
+	<table id="special-offers-table" class="table table-bordered">
+		<thead>
+			<tr>
+				<th colspan="3">SPECIAL OFFERS</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td align="center" class="theme-corner fill-yellow"><i class="icon-money"></i></td>
+				<td>Help people with <span class="semibold">Milaap</span>, Get 30% off on Meta Refresh conference tickets<br><a class="blue link-silent" target="_blank" href="http://campaigns.milaap.org/metarefresh2014/">more info&nbsp;<i class="icon-caret-right"></i></a></td>
+			</tr>
+			<tr>
+				<td align="center" class="theme-corner fill-blue"><i class="icon-road"></i></td>
+				<td>Share a taxi to Meta Refresh 2014 with <span class="semibold">RideShare</span> &amp; Network with interesting people over the ride!<br><a class="blue link-silent" target="_blank" href="http://rideshare.co/meta-refresh-2014/">more info&nbsp;<i class="icon-caret-right"></i></a></td>
+			</tr>
+			<tr>
+				<td align="center" class="theme-corner fill-orange"><i class="icon-desktop"></i></td>
+				<td>Get a 1 month free account of <span class="semibold">Visual Website Optimizer</span> with 5000 visitor testing quota<br><a class="blue link-silent" target="_blank" href="http://resources.visualwebsiteoptimizer.com/metarefresh-2014">more info&nbsp;<i class="icon-caret-right"></i></a></td>
+			</tr>
+		</tbody>
+	</table>
+	<table id="theme-tracks-table" class="table table-bordered">
+		<thead>
+			<tr>
+				<th colspan="2">SPONSOR BOOTH ACTIVITIES</th>
+			</tr>
+		</thead>
+	</table>
+	<div class="panel-group" id="accordion">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a class="panel-link" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+						<table class="table table-bordered sponsor-activities-table">
+							<tbody>
+								<tr style="background-color:#efefef;">
+									<td class="sponsor-logo-wrapper"><div class="sponsor-logo-placeholder" style="background-image:url('https://imgee.s3.amazonaws.com/imgee/77c910a24cfd45b5a877741fed84356f_w60_h76.png');"></div></td>
+									<td><div class="bold">MULTUNUS</div><div class="secondary-prose">Twitter puzzle, TDD, UX improvement and demos</div></td>
+									<td style="width:30px; vertical-align:middle;"><i class="icon-chevron-down"></i></td>
+								</tr>
+							</tbody>
+						</table>
+					</a>
+				</h4>
+			</div>
+			<div id="collapseTwo" class="panel-collapse collapse in">
+				<div class="panel-body">
+					<p>
+						<ol>
+							<li>Daily dose of mental workout - Solve the Twitter puzzle and win T-Shirt</li>
+							<li>Hone your JS skills by pairing and TDD [we love Backbone.JS and AngularJS]</li>
+							<li>UX Expert? Help us improve multunus.com and win books on UX and design</li>
+							<li>Continuous Delivery mastered - A demo</li>
+						</ol>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a class="panel-link" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+						<table class="table table-bordered sponsor-activities-table">
+							<tbody>
+								<tr style="background-color:#efefef;">
+									<td class="sponsor-logo-wrapper"><div class="sponsor-logo-placeholder" style="background-image:url('https://imgee.s3.amazonaws.com/imgee/974172c31f4d4d59bf24c74232d997ad_w60_h15.png');"></div></td>
+									<td><div class="bold">SWISSNEX</div><div class="secondary-prose">Startup collaboration &amp; Twitter challenge</div></td>
+									<td style="width:30px; vertical-align:middle;"><i class="icon-chevron-down"></i></td>
+								</tr>
+							</tbody>
+						</table>
+					</a>
+				</h4>
+			</div>
+			<div id="collapseThree" class="panel-collapse collapse in">
+				<div class="panel-body">
+					<p>
+						<ol>
+							<li>Learn more about how you could collaborate with Swiss start-ups</li>
+							<li>Participate in the Twitter challenge to win speaker space with next Swiss entrepreneur</li>
+						</ol>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<table id="special-offers-table" class="table table-bordered">
+		<thead>
+			<tr>
+				<th colspan="2">SPONSORS &amp; PARTNERS</th>
+			</tr>
+		</thead>
+	</table>
+	<table class="table table-bordered">
+		<tbody>
+			<tr>
+				<td align="center" class="logo-container">
+					<img src="https://imgee.s3.amazonaws.com/imgee/e28b774251084334acd9d9e3d74a2854_w150_h75.png" alt="Paytm">
+				</td>
+				<td align="center" class="logo-container">
+					<img src="https://imgee.s3.amazonaws.com/imgee/42223a86fd6540838a1019db7500c618.png" alt="MyParichay">
+				</td>
+			</tr>
+			<tr>
+				<td align="center" class="logo-container">
+					<img src="https://imgee.s3.amazonaws.com/imgee/cfbe795d79ad4b6e925900a6377cf689.png" alt="Multunus">
+				</td>
+				<td align="center" class="logo-container">
+					<img src="https://imgee.s3.amazonaws.com/imgee/075887770c9641f394cef9b9f72aa804_w300_h123.png" alt="Github">
+				</td>
+			</tr>
+			<tr>
+				<td align="center" class="logo-container">
+					<img src="https://imgee.s3.amazonaws.com/imgee/974172c31f4d4d59bf24c74232d997ad.png" alt="Swissnex">
+				</td>
+				<td align="center" class="logo-container">
+					<img src="https://imgee.s3.amazonaws.com/imgee/8324ef0bea4740e88012a315b2297d2f.png" alt="Mozilla">
+				</td>
+			</tr>
+			<tr>
+				<td align="center" class="logo-container">
+					<img src="https://imgee.s3.amazonaws.com/imgee/a7d7808cadee427ab2eeeab8c635686f.png" alt="Yandex">
+				</td>
+				<td align="center" class="logo-container">
+					<img src="https://imgee.s3.amazonaws.com/imgee/cfa9f365fa9d47e49144aef65ec55d0f.png" alt="CommonFloor">
+				</td>
+			</tr>
+			<tr>
+				<td align="center" class="logo-container">
+					<img src="https://imgee.s3.amazonaws.com/imgee/9471afe206054c5fae4648738d35b6c7_w300_h81.png" alt="Visual Website Optimizer">
+				</td>
+				<td align="center" class="logo-container">
+					<img src="https://imgee.s3.amazonaws.com/imgee/53305c4281314adf8c9566b41faf318e_w300_h142.png" alt="Miranj">
+				</td>
+			</tr>
+			<tr>
+				<td align="center" class="logo-container">
+					<img src="https://imgee.s3.amazonaws.com/imgee/42b9746dfda846d189e5f91b7f893258.png" alt="Uncommon">
+				</td>
+				<td align="center" class="logo-container">
+					&nbsp;
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	
+{%- if not config['DEBUG'] %}
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+{%- endif %}
+<script>window.jQuery || document.write('<script src="{{ theme_static('js/vendor/jquery-1.10.2.min.js') }}"><\/script>')</script>
+{%- if _theme %}
+  {% assets "js_" + _theme -%}
+    <script src="{{ ASSET_URL }}"></script>
+  {% endassets -%}
+{%- endif %}
+<script>
+	$(".collapse").collapse();
+</script>
+<script>
+	$(function(){
+		if($('.panel-link').hasClass('collapsed')){
+			$(this).find('i').addClass('icon-chevron-down');
+
+		}
+	});
+</script>
+</body>
+</html>

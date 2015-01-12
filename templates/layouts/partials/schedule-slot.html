@@ -1,0 +1,6 @@
+<a href="{{ schedule.type }}#{{ item.id }}" target="_blank"><h3 class="nospace-top legible-prose prose-type"><span>{{ item.title|safe }}</span></h3></a>
+{% if item.speaker or item.designation %}
+<p class="prose-type tiny calm">
+  <span class="tiny">{{ item.speaker | safe }}</span><span class="link-silent"><a href="https://funnel.hasgeek.com/metarefresh2014/{{ item.id }}"><i class="icon-filter"></i></a> {% if item.preview %}<a href="{{ item.preview }}"><i class="icon-youtube-play"></i></a>{% endif %}</span>
+</p>
+{% endif %}

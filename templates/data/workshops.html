@@ -1,0 +1,50 @@
+{% 
+  set event = {
+      'title' : 'Workshops'
+    , 'when'  : '12 - 13 February 2014'
+    , 'blurb' : 'The 3 hour hands on sessions spanning over 2 days, covers 4 workshops on design + frontend development. Sessions include: "Making design decisions" by Sunit Singh, "Embracing Progressive Enhancement" by Souvik Das Gupta, "Responsive Web Design done right" by Arpan Chinta and "The Design Superheroes who uses Modern Design Workflows" by Brajeshwar Oinam.'  
+  }
+%}
+{% from theme("data/workshop-schedule.html") import schedule %}
+{% if schedule is defined %}
+  {% 
+    set nav = [
+      {
+          'display' : 'Schedule'
+        , 'link'    : 'workshops#schedule'
+      }
+      , {
+          'display' : 'Sessions'
+        , 'link'    : 'workshops#sessions'
+      }
+      , {
+          'display' : 'Venue'
+        , 'link'    : 'workshops#workshop-venue'
+      }
+    ] 
+  %}
+{% else %}
+  {% 
+    set nav = [
+        {
+          'display' : 'Sessions'
+        , 'link'    : 'workshops#sessions'
+      }
+    ] 
+  %}
+{% endif %}
+
+
+{% 
+  set action = ''
+%}
+{% from theme("data/sessions.html") import workshops, types %}
+{% 
+  set session = {
+      'id'    : 'sessions'
+    , 'label' : 'Workshops'
+    , 'link'  : 'workshops#sessions'
+    , 'list'  : workshops.values()
+    , 'types' : types
+  }
+%}

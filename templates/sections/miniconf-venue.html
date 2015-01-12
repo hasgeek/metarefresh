@@ -1,0 +1,6 @@
+{% with %}
+  {% from theme("data/miniconf.html") import event %}
+  {% from theme("data/workshop-venue.html") import venue %}
+  {% set venue_id = 'miniconf-venue' %}
+  {% include theme("layouts/venue.html") %}
+{% endwith %}

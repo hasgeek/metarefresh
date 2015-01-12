@@ -1,0 +1,247 @@
+{% from "baseframe/components.html" import networkbar with context -%}
+
+<!DOCTYPE html>
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9">     <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js{%- if config['DEBUG'] %} wf-active{% endif %}">        <!--<![endif]-->
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Meta Refresh: Conference on The Construction of User interface on the web, in Bangalore, India{% endif %}">
+<meta name="author" content="HasGeek and friends">
+
+<meta property="og:title" content="Meta Refresh 2015{% if page.title %} — {{ page.title }}{% endif %}"/>
+<meta property="og:image" content="{{ request.url_root[:-1] }}{{ theme_static('img/logo.png') }}"/>
+<meta property="og:url" content="{{ request.url }}"/>
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}Meta Refresh: Conference on The Construction of User interface on the web, in Bangalore, India{% endif %}"/>
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+<title>{% if page.title %}{{ page.title }} — {% endif %}Meta Refresh 2015</title>
+
+{%- if _theme %}
+  {% assets "css_" + _theme -%}
+    <link rel="stylesheet" href="{{ ASSET_URL }}"/>
+  {% endassets -%}
+{%- endif %}
+
+<!-- Leaflet -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6.3/leaflet.min.css" />
+<!--[if lte IE 8]>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6.3/leaflet.ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" />
+<link href='//fonts.googleapis.com/css?family=Raleway:400,300,500,700,900' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Libre+Baskerville:400,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Lustria' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/_baseframe/css/networkbar.css">
+
+<script src="{{ theme_static('js/vendor/modernizr-2.6.2.js') }}"></script>
+
+{%- if config['DEBUG'] %}
+  <link rel="stylesheet" href="{{ theme_static('css/fonts.css') }}">
+{%- else %}
+  <script type="text/javascript" src="//use.typekit.net/ewq6otu.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+{%- endif %}
+
+</head>
+<body class="fill-greengray">
+
+<div class="fill-silver">
+  {% block networkbar %}
+    {{ networkbar(siteid='events', login=true) }}
+  {% endblock %}
+</div>
+
+
+<div id="page">
+
+{% block banner %}
+<header class="fill-blue banner-internal push-two resetcoords clearfix">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+        <h1 class="nospace">
+          <a class="ir logo" href="/2015">
+            Meta Refresh 2015
+          </a>
+        </h1>
+      </div>
+      <div class="col-lg-7 col-md-7 col-sm-5 col-xs-5">
+        <h1 class="extrabold legible">Meta Refresh</h1>
+        <h3 class="calm tiny nospace-bottom all-caps">
+          16&nbsp;-&nbsp;17&nbsp;Apr<span class="hidden-xs">il</span>&nbsp;2015
+          <br>
+          Bangalore
+        </h3>
+      </div>
+
+      <div class="ticket-link-container col-lg-3 col-md-3 col-sm-4 col-xs-4">
+        <p class="text-right space-line">
+          <a class="button button-on-blue semibold" href="http://metarefresh.doattend.com/">
+            <span class="hidden-xs">Buy Your</span> Ticket<span class="visible-xs">s</span>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block navtype %}
+<div id="nav-inner">
+{% endblock %}
+{% block nav %}
+<!-- <nav class="visible-phone mob-nav"><i class="icon-reorder icon-2x nav"></i></nav> -->
+<nav class="navbar" id="site-nav" role="navigation">
+  <div class="container semibold">
+   <!-- Brand and toggle get grouped for better mobile display -->
+  
+      <div class="navbar-header visible-xs">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand blue semibold" href="/2015/">Meta Refresh</a>
+      </div>
+
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav center-block">
+        <li><a class="orange hidden-xs" href="/2015/">Meta Refresh</a></li>
+        <li><a href="https://metarefresh.talkfunnel.com/2015">Funnel</a></li>
+        <!--<li><a href="/2014/workshops">Workshops</a></li>
+        <li><a href="/2014/angularjs-miniconf">Miniconf</a></li>
+        <li><a href="/2014/sponsors">Sponsors</a></li>-->
+        </li>
+        <!--<li><a href="/2015/venue">Venue</a></li>-->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extras <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <!--<li><a href="/2014/5k">HasGeek 5k</a></li>
+            <li><a href="/2014/tshirt">T-shirt</a></li>
+            <li><a target="_blank" href="https://hasgeek.tv/metarefresh/2014-previews">Preview Videos</a></li>-->
+            <li><a href="/2015/#highlights">Previous Editions</a></li>
+            <li><a href="/2015/editorial-panel">Editorial Panel</a></li>
+            <li><a href="/2015/about">About HasGeek</a></li>
+          </ul>
+        </li>
+        <li><a target="_blank" href="https://hasjob.co/search?q=web">Jobs</a></li>
+        <li><a href="/2015/#tickets">Tickets</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->   
+   </div>
+</nav>
+{% endblock %}
+</div>
+
+{% block macro %}{% endblock %}
+
+{% block content %}
+  {% for item in page.sections  %}
+    {% with %}
+      {% if item is string %} {% set section = item %} {% else %} {% set section, background = item %} {% endif %}
+      {% include theme('sections/'+section+'.html') %}
+    {% endwith %}
+  {% endfor %}
+{% endblock %}
+
+
+<footer class="page-footer push-two fill-brown clearfix">
+  <div class="text-center tiny">
+    <p class="gray">Copyright &copy; 2010–15. All rights reserved.</p>
+    <p><a href="mailto:info@hasgeek.com?subject=Hello Droidcon">info@hasgeek.com</a> /
+    <a href="tel:+918067684422" class="link-silent">+91-767-633-2020</a></p>
+    <div class="link-silent space-half blue">
+      <i class="icon-twitter hidden-xs"></i>&nbsp;&nbsp;<a target="_blank" href="https://twitter.com/metarefresh">@metarefresh</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="icon-facebook-sign hidden-xs"></i>&nbsp;&nbsp;<a target="_blank" href="https://www.facebook.com/metarefresh">metarefresh</a>
+    </div>
+    <p class="tiny black"><a class="" href="/2015/code-of-conduct">Code of conduct</a></p>
+    <h3>
+      <a class="ir hasgeek-logo center-block space-one-top" href="//hasgeek.com">
+        HasGeek
+      </a>
+    </h3>
+  </div>
+</footer>
+
+
+</div><!-- #page -->
+{%- if not config['DEBUG'] %}
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+{%- endif %}
+<script>window.jQuery || document.write('<script src="{{ theme_static('js/vendor/jquery-1.10.2.min.js') }}"><\/script>')</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6.3/leaflet.js"></script>
+{%- if _theme %}
+  {% assets "js_" + _theme -%}
+    <script src="{{ ASSET_URL }}"></script>
+  {% endassets -%}
+{%- endif %}
+
+<script>
+// Google Analytics
+if (location.hostname == 'droidcon.in') {
+  var _gaq=[['_setAccount','UA-19123154-19'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+}
+</script>
+
+<script>
+  $(window).scroll(function () {
+    var currentScroll = $(this).scrollTop();
+    var checkPoint;
+    if(Modernizr.mq('only screen and (max-width: 45em)')){
+      checkPoint = 728;
+    } else if(Modernizr.mq('only screen and (min-width: 45em) and (max-width: 767px)')){
+      checkPoint = 620;
+    } else {
+      checkPoint = 895;
+    }
+    if( currentScroll > checkPoint){
+      $('#nav-home').addClass('navbar-fixed-top');
+    }  else {
+      $('#nav-home').removeClass('navbar-fixed-top');
+    }
+    if( currentScroll > 248){
+      $('#nav-inner').addClass('navbar-fixed-top');
+    }  else {
+      $('#nav-inner').removeClass('navbar-fixed-top');
+    }
+  });
+</script>
+<script type="text/javascript">
+  $(".popover-right").popover({ placement: 'left', animation: true, trigger: 'hover'});
+  $(".popover-left").popover({ placement: 'right', animation: true, trigger: 'hover'});
+</script>
+<script>
+ window.scrollback = {
+  streams:["hasgeek"],
+  theme: 'light',
+  {%- if g.user %}nick: {{ g.user.username|tojson }},{% endif -%}
+  ticker: true
+ };
+ 
+ /***** don't edit below *****/
+ (function(d,s,h,e){e=d.createElement(s);e.async=1;
+ e.src=h+'/client.min.js';scrollback.host=h;
+ d.getElementsByTagName(s)[0].parentNode.appendChild(e);}
+ (document,'script',(location.protocol=="https:"?"https:":"http:")+'//scrollback.io'));
+</script>
+{% block footerscripts %}{% endblock %}
+<!-- Prompt IE 6 users to install Chrome Frame. -->
+<!-- chromium.org/developers/how-tos/chrome-frame-getting-started -->
+<!--[if lt IE 7 ]>
+  <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+  <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+<![endif]-->
+
+</body>
+</html>

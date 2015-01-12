@@ -1,0 +1,27 @@
+<section class="editorial-panel-summary push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
+  <div class="row-fluid">
+
+    <h2 class="span12 large all-caps text-center">Editorial Panel</h2>
+
+    {% for item in items -%}
+	    {% if loop.first %}
+	    <div class="row-fluid space-two-bottom">
+	      <div class="offset1 span10 legible-prose prose prose-type">
+	        <ul class="space-half-top list-space-line list-plain link-silent row">
+	    {% endif %}
+	          <li class="span3 text-center">
+	          <img class="photo" src="{{ item.photo }}">
+	          <h3>{{ item.name }}</h3>
+	          <!-- <h4><a href="https://twitter.com/{{ item.twitter }}">@{{ item.twitter }}</a></h4> -->
+	          <h5>{{ item.designation }}</h5>
+	          <h4>{{ item.title }}</h4>
+	          </li>
+	    {% if loop.last %}
+	        </ul>	      
+	    	</div>    
+	  	</div>
+	    {% endif %}
+	{%- endfor %}
+
+  </div>
+</section>

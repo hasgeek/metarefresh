@@ -1,0 +1,24 @@
+{
+    "application": "eventframe",
+    "identifier": "metarefresh2015",
+    "name": "Meta Refresh 2015",
+    "author": "HasGeek",
+    "description": "Meta Refresh 2015 website template, adapted from JSFoo 2013",
+    "license": "All rights reserved",
+    "doctype": "html5",
+    "options": {
+        "assets_css": [
+            "css/vendor/bootstrap.min.css",
+            "css/font-awesome.min.css",
+            "css/font-awesome-ie7.min.css",
+            "css/typography.css",
+            "css/layout.css",
+            "css/theme.css",
+            "css/objects.css"
+        ],
+        "assets_js": [
+            "js/vendor/bootstrap.min.js",
+            "js/maps.js"
+        ]
+    }
+}

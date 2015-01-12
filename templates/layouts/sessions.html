@@ -1,0 +1,28 @@
+<section id="sessions" class="push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
+  <div class="row-fluid container text-center">
+    <h2 class="offset1 extralarge all-caps space-two-bottom">{{ session.label }}</h2>
+  </div>
+  
+
+  {% for item in session.list %}
+    {% if not item.other %}
+    <div id="{{ item.id }}" class="row-fluid container push-line">
+      <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 legible space-two-bottom clearfix text-right">
+        <h3 class="all-caps nospace-top semibold">{{ item.title|safe }}</h3>
+        <img class="speaker-photo" src="{{ item.photo }}" alt="">
+        <h4 class="prose-type calm italic"><span class="legible-prose">{{ item.speaker }}</span></h4>
+        <h5 class="italic">{{ item.designation|safe }}</h5>
+      </div>
+      <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 legible-prose prose prose-type">
+        <div class="prose-type regular-prose space-three-bottom">
+          {{ item.blurb|safe }}
+          <ul class="list-plain secondary prose space-one-top">
+            <li class="flushleft"><a target="_blank" href="https://funnel.hasgeek.com/metarefresh2014/{{ item.id }}">Funnel Proposal</a></li>
+            {% if item.preview %}<li class="flushright"><a target="_blank" href="{{ item.preview }}">Preview</a></li>{% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  {% endfor %}
+</section>

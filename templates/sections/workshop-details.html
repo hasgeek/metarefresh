@@ -1,0 +1,91 @@
+<section id="workshop-details" class=" clearfix{% if background %} fill-{{ background }}{% endif %}">
+<div class="">
+  {% with %}
+    {% from theme("data/workshop-details.html") import types, items %}
+
+    {% for type in types %}
+      <div id="{{ type.id }}" class="row-fluid {% if type.fill %}fill-{{ type.fill }}{% endif %}">
+        <div class="container push-three">
+        <h1 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 large bold all-caps space-one-bottom">
+          {{ type.title }}
+        </h1>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">        
+          <h4 class="legible-prose semibold">{{ type.date }}</h4>
+          <p class="tiny">{{ type.blurb|safe }}</p>
+          {% if type.schedule %}
+          <div class="space-two">
+            <div class="legible-prose black text-center fill-lightgray bold"><i class="icon-time"></i>&nbsp;&nbsp;SCHEDULE</div>
+            {{ type.schedule|safe }}
+          </div> 
+          {% endif %}
+        </div>
+      {% set outer = loop %}
+      {% for item in items if item.type == type.id  %}
+        {% if loop.first %}
+        <article id="{{ type.id }}-workshops" class="row-fluid">
+          
+          <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space-half-top list-space-line list-plain link-silent clearfix">
+            <div class="legible-prose black text-center space-two-bottom space-two-top fill-lightgray bold"><i class="icon-user"></i>&nbsp;&nbsp;INSTRUCTORS</div>
+        {% endif %}
+          {% if item.type == 'advanced-android-workshop' %}
+            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="row">
+                <div class="col-lg-4 text-center">
+                  <span class="img-wrapper theme-dark-transparent">
+                    <img class="photo" src="{{ item.photo }}">
+                  </span>
+                  <h3>{{ item.name }}</h3>
+                  <h5>{{ item.designation }}</h5>
+                  <h4 class="yellow shadow-text-white"><a href="https://twitter.com/{{ item.twitter }}">@{{ item.twitter }}</a></h4>
+                </div>
+
+                <div class="col-lg-8">
+                  {% if item.title %}
+                    <h3 class="legible bold">{{ item.title|safe }}</h3>
+                    <p class="tiny">{{ item.session|safe }}</p>
+                    <a class="green secondary" href="{{ item.funnel }}">Funnel proposal >></a>
+                  {% endif %}
+                </div>
+              </div>
+              
+            </li>
+          {% else %}
+            <li class="col-lg-3 col-md-3 col-sm-3 col-xs-12 text-center">
+              <span class="img-wrapper theme-dark-transparent">
+                <img class="photo" src="{{ item.photo }}">
+              </span>
+              <h3>{{ item.name }}</h3>
+              <h5>{{ item.designation }}</h5>
+              <h4 class="yellow shadow-text-white"><a href="https://twitter.com/{{ item.twitter }}">@{{ item.twitter }}</a></h4>
+              {% if item.title %}
+                <h3>{{ item.title|safe }}</h3>
+                <p>{{ item.session|safe }}</p>
+                <a href="{{ item.funnel }}">Funnel link >></a>
+              {% endif %}
+            </li>
+          {% endif %}
+        {% if loop.last %}
+          </ul>
+
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="legible-prose black text-center space-half-bottom fill-lightgray bold"><i class="icon-map-marker"></i>&nbsp;&nbsp;VENUE</div>
+            <h3>{{ type.venue }}</h3>
+            <p>{{ type.venue_address|safe }}</p>
+            {% if type.venue_map %}
+              <p><a href="{{ type.venue_map }}" target="_blank">Venue map</a>&nbsp;<i class="icon-double-angle-right"></i></p>
+            {% endif %}
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="legible-prose black text-center space-half-bottom fill-lightgray bold"><i class="icon-ticket"></i>&nbsp;&nbsp;TICKET</div>
+            <p class="regular-prose space-one">Ticket price:&nbsp;{{ type.price|safe }}</p>
+            <p class="regular-prose"><a href="{{ type.link }}" class="button">Purchase ticket</a></p>
+          </div>
+        </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+    </div>
+    {% endfor %}
+  {% endwith %}
+</div>
+</section>

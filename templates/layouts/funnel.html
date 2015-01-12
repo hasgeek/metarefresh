@@ -1,0 +1,202 @@
+<section class="funnel push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
+  <div class="container">
+    <div class="row-fluid space-two-bottom">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h2 class="extralarge all-caps text-center">Proposals</h2>
+        <div class="secondary-prose semibold space-two-top">
+          <h3 class="blue">Who can propose a talk?</h3>
+          <p>Anyone is welcome to propose a session. If you are excited about someone’s work and believe it deserves wider recognition, we recommend you contact them person responsible and ask them to submit a proposal.<br>There is only one speaker per session.</p>
+          <h3 class="blue">Voting and selection</h3>
+          <p>Participants who have purchased conference tickets will vote on session proposals. The Editorial Panel steering Meta Refresh will also vote on submissions and balance the community voting.</p>
+          <h3 class="blue">Theme</h3>
+          <p>For 2014 our emphasis is on <ol>
+            <li>front-end workflow process and automation</li>
+            <li>To push the envelope on the web, designers &amp; front-end engineers need to step out of their comfort zone and exchange skills. MetaRefresh is the place where these 2 ends of the spectrums converge. the idea is not to "make them work together better", the idea is that you need to be both if you want to push the web forward. front-end engineers should think about user experience (attributes like performance which affect user experience) and designers have to start exploiting the medium, front-end engineers need to start thinking about polish, fit &amp; finish</li></ol></p>
+          <h3 class="blue">Travel and accomodation for speakers</h3>
+          <p> Attendance is free for selected speakers. HasGeek will offer a grant to cover your travel to and accommodation in Bangalore from anywhere in the world for speakers delivering full sessions (30 minutes or longer). As our budget is limited, we will prefer speakers from locations closer home, but will do our best to cover for anyone exceptional. If you are able to raise support for your trip, we will count that as a speaker travel sponsorship.</p><p>Travel grants are reimbursed at the end of the conference. You are expected to make your own travel and stay arrangements. We will assist with hotel recommendations, visa letters and general advice on travel.</p>
+          </div><br>
+        <p class="regular-prose semibold all-caps gray space-one-bottom space-one-top text-center">Status:&nbsp;&nbsp;<span class="red">Submissions and voting closed.</span>&nbsp;&nbsp;<span class="green">awaiting jury selection</span></p>
+        <p class="text-center">
+          <a href="https://funnel.hasgeek.com/metarefresh2014/" class="button tiny semibold">View proposals on Funnel</a>
+        </p>
+      </div>    
+    </div>
+    <div id="funnel-links">
+      <h2 class="semibold legible">Confirmed sessions</h2>
+      <table id="funnel-listing" class="table table-bordered list-space-line list-plain link-silent">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>By</th>
+            <th>Level</th>
+            <th>Date</th>
+            <th><i class="icon-comments"></i></th>
+            <th>+1</th>
+          </tr>
+        </thead>
+        <tbody>  
+          <tr><td colspan="5" class="bold text-center">Talks</td></tr>       
+          {% for proposal in node.proposals() -%}
+            {% if proposal['confirmed']and proposal['section'] == 'Full talk' or proposal['confirmed']and proposal['section'] == 'Crisp talk' %}
+              <tr data-section="{{ proposal['section_name'] }}" class="fill-lightgray black semibold">
+                <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
+                <td>{{ proposal['proposer'] }}</td>
+                <td>{{ proposal['level'] }}</td>
+                <td>{{ proposal['submitted']|shortdate }}</td>
+                <td>{{ proposal['comments'] }}</td>
+                <td>{{ proposal['votes'] }}</td>
+              </tr>
+            {% endif %} 
+          {%- endfor %}
+          <tr><td colspan="5" class="bold text-center">Workshops</td></tr>       
+          {% for proposal in node.proposals() -%}
+            {% if proposal['confirmed']and proposal['section_name'] == 'workshops' %}
+              <tr data-section="{{ proposal['section_name'] }}" class="fill-lightgray black semibold">
+                <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
+                <td>{{ proposal['proposer'] }}</td>
+                <td>{{ proposal['level'] }}</td>
+                <td>{{ proposal['submitted']|shortdate }}</td>
+                <td>{{ proposal['comments'] }}</td>
+                <td>{{ proposal['votes'] }}</td>
+              </tr>
+            {% endif %} 
+          {%- endfor %}
+        </tbody>
+      </table>
+      <h2 class="semibold legible space-two-top">Talk Proposals</h2>
+      <table id="funnel-listing" class="table table-bordered list-space-line list-plain link-silent">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>By</th>
+            <th>Date</th>
+            <th><i class="icon-comments"></i></th>
+            <th>+1</th>
+          </tr>
+        </thead>
+        <tbody>         
+        <tr><td colspan="5" class="bold text-center">Beginner</td></tr>
+        {% for proposal in node.proposals() -%}
+          {% if proposal['level'] == 'Beginner' and proposal['section_name'] == 'talk' %}
+            <tr data-section="{{ proposal['section_name'] }}" class="theme-green-light black semibold">
+              <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
+              <td>{{ proposal['proposer'] }}</td>
+              <td>{{ proposal['submitted']|shortdate }}</td>
+              <td>{{ proposal['comments'] }}</td>
+              <td>{{ proposal['votes'] }}</td>
+            </tr>
+          {% endif %} 
+        {%- endfor %}
+        
+        <tr><td colspan="5" class="bold text-center">Intermediate</td></tr>
+        {% for proposal in node.proposals() -%}
+          {% if proposal['level'] == 'Intermediate' and proposal['section_name'] == 'talk' %}
+            <tr data-section="{{ proposal['section_name'] }}" class="theme-orange-light black semibold">
+              <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
+              <td>{{ proposal['proposer'] }}</td>
+              <td>{{ proposal['submitted']|shortdate }}</td>
+              <td>{{ proposal['comments'] }}</td>
+              <td>{{ proposal['votes'] }}</td>
+            </tr>
+          {% endif %}
+        {%- endfor %}
+
+        <tr><td colspan="5" class="bold text-center">Advanced</td></tr>
+        {% for proposal in node.proposals() -%}
+          {% if proposal['level'] == 'Advanced' and proposal['section_name'] == 'talk' %}
+            <tr data-section="{{ proposal['section_name'] }}" class="theme-red-light black semibold">
+              <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
+              <td>{{ proposal['proposer'] }}</td>
+              <td>{{ proposal['submitted']|shortdate }}</td>
+              <td>{{ proposal['comments'] }}</td>
+              <td>{{ proposal['votes'] }}</td>
+            </tr>
+          {% endif %} 
+        {%- endfor %}
+        </tbody>
+      </table>
+      <h2 class="semibold legible space-two-top">Workshop Proposals</h2>
+      <table id="funnel-listing" class="table table-bordered list-space-line list-plain link-silent">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>By</th>
+            <th>Date</th>
+            <th><i class="icon-comments"></i></th>
+            <th>+1</th>
+          </tr>
+        </thead>
+        <tbody>         
+          <tr><td colspan="5" class="bold text-center">Beginner</td></tr>
+        {% for proposal in node.proposals() -%}
+          {% if proposal['level'] == 'Beginner' and proposal['section_name'] == 'workshops' %}
+            <tr data-section="{{ proposal['section_name'] }}" class="theme-green-light black semibold">
+              <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
+              <td>{{ proposal['proposer'] }}</td>
+              <td>{{ proposal['submitted']|shortdate }}</td>
+              <td>{{ proposal['comments'] }}</td>
+              <td>{{ proposal['votes'] }}</td>
+            </tr>
+          {% endif %} 
+        {%- endfor %}
+        
+        <tr><td colspan="5" class="bold text-center">Intermediate</td></tr>
+        {% for proposal in node.proposals() -%}
+          {% if proposal['level'] == 'Intermediate' and proposal['section_name'] == 'workshops' %}
+            <tr data-section="{{ proposal['section_name'] }}" class="theme-orange-light black semibold">
+              <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
+              <td>{{ proposal['proposer'] }}</td>
+              <td>{{ proposal['submitted']|shortdate }}</td>
+              <td>{{ proposal['comments'] }}</td>
+              <td>{{ proposal['votes'] }}</td>
+            </tr>
+          {% endif %}
+        {%- endfor %}
+
+        <tr><td colspan="5" class="bold text-center">Advanced</td></tr>
+        {% for proposal in node.proposals() -%}
+          {% if proposal['level'] == 'Advanced' and proposal['section_name'] == 'workshops' %}
+            <tr data-section="{{ proposal['section_name'] }}" class="theme-red-light black semibold">
+              <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
+              <td>{{ proposal['proposer'] }}</td>
+              <td>{{ proposal['submitted']|shortdate }}</td>
+              <td>{{ proposal['comments'] }}</td>
+              <td>{{ proposal['votes'] }}</td>
+            </tr>
+          {% endif %} 
+        {%- endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>  
+</section>
+
+{% block footerscripts %}
+<script type="text/javascript">
+  $(function() {
+
+    var matchtab = function() {
+      var url = document.location.toString();
+      if (url.match('#/')) {
+        $('.nav-tabs a[href="#'+url.split('#/')[1]+'"]').tab('show');
+      } else if (url.match('#')) {
+        $('.nav-tabs a[href="#'+url.split('#')[1]+'"]').tab('show');
+      }
+    };
+
+    // Load correct tab when fragment identifier changes
+    $(window).bind('hashchange', matchtab);
+    // Load correct tab when the page loads
+    matchtab();
+    // Change hash for tab click
+    $('.nav-tabs a').on('shown', function (e) {
+      window.location.hash = '#/' + e.target.hash.slice(1);
+    });
+    var url = document.location.toString();
+    if (!url.match('#')) {
+      // Activate the first tab if none are active
+      $('.nav-tabs a').filter(':first').tab('show');
+    }
+  });
+</script>
+{% endblock %}

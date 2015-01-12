@@ -1,0 +1,24 @@
+<section class="event-summary push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
+  <div class="row-fluid container">
+    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 push-one-bottom">
+      <h2 class="extralarge all-caps">{% if page_link %}<a href="{{ page_link }}" class="link-silent">{% endif %}{{ event.title }}{% if page_link %}</a>{% endif %}</h2>
+      {% if event.when %}<p class="legible">{{ event.when|safe }}</p>{% endif %}
+      {% for item in nav -%}
+        {% if loop.first %}<ul class="inline-on-mobile list-plain secondary prose">{% endif %}
+          <li><a href="{{ item.link }}">{{ item.display }}</a></li>
+        {% if loop.last %}</ul>{% endif %}
+      {%- endfor %}
+    </div>
+    
+    <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 space-one-top">
+      <div class="legible-prose">
+        {{ event.blurb|safe }}
+      </div>
+      {% if action %}
+      <p class="title-type secondary space-one-top">
+        {{ action|safe }}
+      </p>
+      {% endif %}
+    </div>
+  </div>
+</section>

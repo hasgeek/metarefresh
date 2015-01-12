@@ -1,0 +1,112 @@
+{%
+  set types = [
+      {
+        'id'    : 'beginners-android-workshop'
+      , 'title' : 'Beginner\'s Android Workshop'
+      , 'blurb' : 'A hands-on introduction to android app development mainly focused on newbies.'
+      , 'date'  : '23 - 24 November 2013'
+      , 'venue' : 'ThoughtWorks Technologies (India) Pvt Ltd. '
+      , 'venue_address': 'ACR Mansion G + 3floors <br>147/F, 8th Main, 3rd Block <br>Koramangala, Bangalore-560034, India'
+      , 'venue_map' : 'http://goo.gl/maps/RKoxa'
+      , 'fill'  : ''
+      , 'price' : '<span class="gray tiny">will be updated soon.</span>'
+      , 'speakercount': '4'
+      , 'schedule' : '
+      <table class="table table-bordered"><thead><tr>
+        <th>DAY 1</th>
+        <th>DAY 2</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td>Android overview and history</td>
+          <td>Advanced UI</td>
+        </tr>
+        <tr>
+          <td>Main android building blocks</td>
+          <td>Activity lifecycle</td>
+        </tr>
+        <tr>
+          <td>Simple hello world program</td>
+          <td>Threads</td>
+        </tr>
+        <tr>
+          <td>Overview of the IDE</td>
+          <td>Databases and content providers</td>
+        </tr>
+        <tr>
+          <td>A sample android program, like a music player</td>
+          <td>Uploading an application to the play store</td>
+        </tr>
+      </tbody>
+    </table>'
+    }
+    , {
+        'id'    : 'advanced-android-workshop'
+      , 'title' : 'Intermediate/Advanced Android Workshops'
+      , 'blurb' : 'Two-day intensive hands-on workshops that dives deep into the advanced techniques of Android development.'
+      , 'date'  : '26 - 27 November 2013'
+      , 'venue' : 'Details coming soon..'
+      , 'fill'  : 'blue'
+      , 'speakercount': '2'
+      , 'price' : '<span class="gray tiny">will be updated soon.</span>'
+    }
+  ]
+%}  
+{%
+  set items = [
+      {
+        'name'   : 'Soham Mondal'
+      , 'id'      : 'soham-mondal'
+      , 'type'    : 'beginners-android-workshop'
+      , 'twitter'    : 's0h4m'
+      , 'designation': 'Co-founder and CEO at Triveous'
+      , 'photo'   : 'https://images.hasgeek.com/embed/file/4d9f51654db04d4e86979c2e64d54a19'
+    }
+    , {
+        'name'   : 'Anenth Guru'
+      , 'id'      : 'anenth-guru'
+      , 'type'    : 'beginners-android-workshop'
+      , 'twitter'    : 'anenth'
+      , 'designation': 'Developer and Co-founder at TripThirsty'
+      , 'photo'   : 'https://images.hasgeek.com/embed/file/c640e3f448d14e288eee8c8153264b43?size=300x300'
+    }
+    , {
+        'name'   : 'Sandeep Bhaskar'
+      , 'id'      : 'sandeep-bhaskar'
+      , 'type'    : 'beginners-android-workshop'
+      , 'twitter'    : 'sandeepbhaskar'
+      , 'designation': 'Developer and Co-founder at TripThirsty'
+      , 'photo'   : 'https://images.hasgeek.com/embed/file/62ff465cf40044f580c4ec98cc5a4be6'
+    }
+    , {
+        'name'   : 'Amrit Sanjeev'
+      , 'id'      : 'amrit-sanjeev'
+      , 'type'    : 'beginners-android-workshop'
+      , 'twitter'    : 'amsanjeev'
+      , 'designation': 'Staff Engineer (Mobility) at Intuit'
+      , 'photo'   : 'https://images.hasgeek.com/embed/file/52b65df7733743d6a1f7c2ea07594175'
+    }
+    , {
+        'name'   : 'Gautam Gupta'
+      , 'id'      : 'gautam-gupta'
+      , 'type'    : 'advanced-android-workshop'
+      , 'twitter'    : 'thegautamgupta'
+      , 'designation': '18yr student, Entrepreneur, Open source contributor'
+      , 'photo'   : 'https://images.hasgeek.com/embed/file/3de43a42dd894d11bdd172ff2a854dab'
+      , 'title'   : 'Workshop: Making a Simple App to Read Printed Text using Tesseract (OCR)'
+      , 'session' : 'To add the capability of reading some printed text into your application for further use! Have you ever wanted to input some text by the user, and that was printed on the paper? This workshop will help you getting that text into your application, while maintaining user experience! <br>We\’ll do this by using a fork of Tesseract Android Tools by Robert Theis called Tess Two. It is based on the Tesseract OCR Engine (mainly maintained by Google) and Leptonica image processing libraries. <br>The process starts by building and importing Tess Two, adding the code to capture &amp; process an image from the camera, and then finally filtering that image for the text, ie. performing OCR. <br>We\'ll also explore possibilities and use cases of this, for example searching, translating text, storing receipts digitally, etc.'
+      , 'funnel'  : 'https://funnel.hasgeek.com/droidcon2013/864-workshop-making-a-simple-app-to-read-printed-text-'
+    }
+    , {
+        'name'   : 'Hiemanshu Sharma'
+      , 'id'      : 'hiemanshu-sharma'
+      , 'type'    : 'advanced-android-workshop'
+      , 'twitter'    : 'hiemanshu'
+      , 'designation': 'Co Founder at Mobule'
+      , 'photo'   : 'https://images.hasgeek.com/embed/file/655d1d52d1ca4c39ad1c3b2756dfa499'
+      , 'title'   : 'Building your own ROMs'
+      , 'session' : 'This is a workshop that will help you with building ROMs for the devices that are currently supported by CyanogenMod.<br>It will cover details on getting the source code (I will have a recent copy of it with me so we dont waste bandwidth), setting up your machine to build ROMs, and how to do the most common tasks and debugging that go on with building ROMs.'
+      , 'funnel'  : 'https://funnel.hasgeek.com/droidcon2013/882-building-your-own-roms'
+    }
+  ]
+%}
