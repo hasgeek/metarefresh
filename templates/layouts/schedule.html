@@ -65,7 +65,7 @@
           {% if not item.other %}<a href="{{ schedule.type }}#{{ item.id }}" target="_blank">{% endif %}<h3 class="nospace-top legible-prose prose-type"><span>{{ item.title|safe }}</span></h3>{% if not item.other %}</a>{% endif %}
           {% if item.speaker or item.designation %}
           <p class="prose-type tiny calm">
-            {% if not item.other %}<span class="link-silent"><a href="https://funnel.hasgeek.com/metarefresh2014/{{ item.id }}"><i class="icon-filter"></i></a> {% if item.preview %}<a href="{{ item.preview }}"><i class="icon-youtube-play"></i></a>{% endif %}</span> {% endif %}<span class="tiny">{{ item.speaker | safe }}</span>
+            {% if not item.other %}<span class="link-silent"><a href="https://metarefresh.talkfunnel.com/2015/{{ item.id }}" target="_blank"><i class="icon-filter"></i></a> {% if item.preview %}<a href="{{ item.preview }}"><i class="icon-youtube-play"></i></a>{% endif %}</span> {% endif %}<span class="tiny">{{ item.speaker | safe }}</span>
           </p>
           {% endif %}
         </div>
