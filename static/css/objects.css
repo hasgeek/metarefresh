@@ -1151,3 +1151,45 @@ ul.list-plain{
   background-image: url(/favicon.ico) !important;
   background-size: 50%;
 }
+
+.subscribe-form {
+  margin-top: 20px;
+}
+
+.submit-loader {
+  padding: 0px 10px 5px;
+  display: none;
+}
+
+.subscribe-input {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.4;
+  border: 2px solid #DCE8ED;
+  box-shadow: none;
+  margin: 0 5px 10px;
+  padding: 0 10px;
+  width: 250px;
+  height: 45px;
+  max-height: 45px;
+  border-radius: 0.25em;
+}
+@media(min-width:480px) {
+  .subscribe-input {
+    width: 300px;
+  }
+}
+
+.subscribe-button {
+  padding: 10px;
+  font-size: 18px;
+  text-transform: none;
+}
+
+.ajax-loader {
+  visibility: hidden;
+  padding: 0px 10px 5px;
+}
+.helptext {
+  height: 30px;
+}
