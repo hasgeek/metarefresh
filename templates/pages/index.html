@@ -52,7 +52,7 @@
 </header>
 {% endblock %}
 
-{% block footer_script %}
+{% block footerscripts %}
 <style type="text/css">    
   #boxoffice-widget .boxoffice-button-action {    
     background-color: #DF5E0E;    
@@ -65,19 +65,19 @@
     color: #fff;    
   }   
   #boxoffice-widget .payment-stages-bg {    
-    background-color: #898850;    
+    background-color: #655643;    
   }   
   #boxoffice-widget .progress-indicator>li {    
     color: #fff;    
   }   
   #boxoffice-widget .category-heading {   
-    background-color: #0ca5b0;    
-    border-bottom: 3px solid #087880;   
+    background-color: #c7c575;    
+    border-bottom: 3px solid #8a8950;   
     color: rgba(0,0,0,0.6);  
     line-height: 1.1;  
   }   
   #boxoffice-widget .category-heading:after {   
-    border-color: #0ca5b0 transparent #0ca5b0 #0ca5b0;    
+    border-color: #c7c575 transparent #c7c575 #c7c575;    
   }
 </style>    
     
@@ -113,6 +113,6 @@
     }).fail(function(response) {    
       $('#boxoffice-widget p').html('Unable to connect. Please try again.');    
     });   
-  });   
+  }); 
 </script>
 {% endblock %}
