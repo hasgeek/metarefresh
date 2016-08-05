@@ -6,8 +6,8 @@ $(function initLeaflets() {
                 , marker: [12.9833, 77.5833] // bangalore
                 , label: null
                 , maxZoom: 18
-                , attribution: '<a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>, <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>'
-                , subdomains: ['otile1','otile2','otile3','otile4']
+                , attribution: '<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>'
+                , subdomains: ['a','b','c']
                 , scrollWheelZoom: false
             }
             , args
@@ -29,7 +29,7 @@ $(function initLeaflets() {
             , scrollWheelZoom: options.scrollWheelZoom
         });
         
-        L.tileLayer('http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
               maxZoom: options.maxZoom
             , attribution: options.attribution
             , subdomains: options.subdomains
