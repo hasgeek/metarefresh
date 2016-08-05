@@ -1,9 +1,9 @@
 {
     "application": "eventframe",
-    "identifier": "metarefresh2015",
-    "name": "Meta Refresh 2015",
+    "identifier": "metarefresh2016",
+    "name": "Meta Refresh 2016",
     "author": "HasGeek",
-    "description": "Meta Refresh 2015 website template, adapted from JSFoo 2013",
+    "description": "Meta Refresh 2016 website template, adapted from JSFoo 2013",
     "license": "All rights reserved",
     "doctype": "html5",
     "options": {
