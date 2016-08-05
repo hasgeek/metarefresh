@@ -44,10 +44,75 @@
         <div id="platform-top" class="center-block"></div>
         <div id="platform-base" class="center-block">        
         </div>
-        <a href="/2016/#tickets" target="_blank"><div id="screen-button" class="text-center bold center-block legible-prose">BUY TICKETS</div></a>
+        <a href="#tickets" class="smooth-scroll" target="_blank"><div id="screen-button" class="text-center bold center-block legible-prose">BUY TICKETS</div></a>
       </div>
 
     </div>
   </div>
 </header>
+{% endblock %}
+
+{% block footer_script %}
+<style type="text/css">    
+  #boxoffice-widget .boxoffice-button-action {    
+    background-color: #DF5E0E;    
+    border-color:  #ba500e;   
+    color: #fff;    
+  }   
+  #boxoffice-widget .boxoffice-button-info {    
+    background-color: #5BC0DE;    
+    border-color: #2A9CBE;    
+    color: #fff;    
+  }   
+  #boxoffice-widget .payment-stages-bg {    
+    background-color: #898850;    
+  }   
+  #boxoffice-widget .progress-indicator>li {    
+    color: #fff;    
+  }   
+  #boxoffice-widget .category-heading {   
+    background-color: #0ca5b0;    
+    border-bottom: 3px solid #087880;   
+    color: rgba(0,0,0,0.6);  
+    line-height: 1.1;  
+  }   
+  #boxoffice-widget .category-heading:after {   
+    border-color: #0ca5b0 transparent #0ca5b0 #0ca5b0;    
+  }
+</style>    
+    
+<script>    
+  $(function(){   
+    //Boxoffice widget    
+    var boxofficeUrl = "https://boxoffice.hasgeek.com";   
+    var username, userphone, useremail;   
+    {% if g.user %}   
+      {% if g.user.fullname %}    
+        username = "{{ g.user.fullname }}";   
+      {% endif %}   
+      {% if g.user.phone %}   
+        userphone = "{{ g.user.phone }}";   
+      {% endif %}   
+      useremail = "{{ g.user.email }}";   
+    {% endif %}   
+    $.get({   
+      url: boxofficeUrl+"/api/1/boxoffice.js",    
+      crossDomain: true   
+    }).done(function(data) {    
+      var boxofficeScript = document.createElement('script');   
+      boxofficeScript.innerHTML = data.script;    
+      document.getElementsByTagName('body')[0].appendChild(boxofficeScript);    
+      window.Boxoffice.init({   
+        org: 'hasgeek',   
+        itemCollection: '5618a78c-5b01-11e6-aee5-4d52a6f8306d',   
+        user_name: username,    
+        user_phone: userphone,    
+        user_email: useremail,    
+        paymentDesc: 'Meta Refresh 2016'    
+      });   
+    }).fail(function(response) {    
+      $('#boxoffice-widget p').html('Unable to connect. Please try again.');    
+    });   
+  });   
+</script>
 {% endblock %}

@@ -219,13 +219,12 @@
     top:   0.55rem;
 }
 .js .leaflet-map {
-    float: right;
     height: 555px;
     color: black;
 }
 .js .leaflet-map a { border-bottom: none; }
-.js .venue-home .city-level    { width: 65%; }
-.js .venue-home .country-level { width: 35%; float: left; }
+.js .venue-home .city-level    { width: 100%; }
+
 @media (max-width: 767px) {
     .js .venue-home { padding: 0; }
     .js .venue-home h2 {
@@ -235,7 +234,6 @@
         text-shadow: rgba(0,0,0,0.5) 0 0 1px;
     }
     .js .venue-home .city-level    { width: 100%; }
-    .js .venue-home .country-level { display: none; }
 }
 @media (min-height: 300px) { .js .leaflet-map { height: 250px; } }
 @media (min-height: 450px) { .js .leaflet-map { height: 425px; } }
