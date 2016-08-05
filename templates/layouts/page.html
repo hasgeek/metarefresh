@@ -233,3 +233,67 @@ if (location.hostname == 'droidcon.in') {
 
 </body>
 </html>
+{% block footer_script %}
+<style type="text/css">    
+  #boxoffice-widget .boxoffice-button-action {    
+    background-color: #E05F26;    
+    border-color:  #B94C1D;   
+    color: #fff;    
+  }   
+  #boxoffice-widget .boxoffice-button-info {    
+    background-color: #5BC0DE;    
+    border-color: #2A9CBE;    
+    color: #fff;    
+  }   
+  #boxoffice-widget .payment-stages-bg {    
+    background-color: #60583E;    
+  }   
+  #boxoffice-widget .progress-indicator>li {    
+    color: #bbb;    
+  }   
+  #boxoffice-widget .category-heading {   
+    background-color: #F2DE9C;    
+    border-bottom: 3px solid #bcad7a;   
+    color: rgba(0,0,0,0.6);  
+    line-height: 1.1;  
+  }   
+  #boxoffice-widget .category-heading:after {   
+    border-color: #F2DE9C transparent #F2DE9C #F2DE9C;    
+  }
+</style>    
+    
+<script>    
+  $(function(){   
+    //Boxoffice widget    
+    var boxofficeUrl = "http://boxoffice.hari.dev:6500";   
+    var username, userphone, useremail;   
+    {% if g.user %}   
+      {% if g.user.fullname %}    
+        username = "{{ g.user.fullname }}";   
+      {% endif %}   
+      {% if g.user.phone %}   
+        userphone = "{{ g.user.phone }}";   
+      {% endif %}   
+      useremail = "{{ g.user.email }}";   
+    {% endif %}   
+    $.get({   
+      url: boxofficeUrl+"/api/1/boxoffice.js",    
+      crossDomain: true   
+    }).done(function(data) {    
+      var boxofficeScript = document.createElement('script');   
+      boxofficeScript.innerHTML = data.script;    
+      document.getElementsByTagName('body')[0].appendChild(boxofficeScript);    
+      window.Boxoffice.init({   
+        org: 'hasgeek',   
+        itemCollection: '562e6951-5a53-11e6-92fd-fb61ec3ea331',   
+        user_name: username,    
+        user_phone: userphone,    
+        user_email: useremail,    
+        paymentDesc: 'Fifth Elephant 2016'    
+      });   
+    }).fail(function(response) {    
+      $('#boxoffice-widget p').html('Unable to connect. Please try again.');    
+    });   
+  });   
+</script>
+{% endblock %}
