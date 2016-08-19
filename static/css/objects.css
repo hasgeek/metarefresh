@@ -821,7 +821,7 @@ li.event-node{
   top: 50px;
   z-index: 1030;
 }
-#highlights ul, .sessions ul, .schedule ul, .featured-speakers ul, .sponsors ul, #tickets ul, .code-of-conduct ul, .event-summary ul, .sessions h3, .event-themes ul, .sessions h5, .venue ul{
+#highlights ul, .sessions ul, .schedule ul, .featured-speakers ul, .sponsors ul, .code-of-conduct ul, .event-summary ul, .sessions h3, .event-themes ul, .sessions h5, .venue ul{
   margin-left: 0 !important;
   padding-left: 0 !important;
   margin-right: 0 !important;
@@ -846,15 +846,6 @@ ul.list-plain{
   padding-right: 20px;
 }*/
 
-
-#tickets li{
-  list-style-type: none;
-  line-height: 25px;
-}
-#tickets .subsection{
-  /*margin-top: -10px;*/
-  padding: 5px 5px 10px 5px;
-}
 .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
   border: 1px solid rgba(143, 140, 140, 0.15);
 }
