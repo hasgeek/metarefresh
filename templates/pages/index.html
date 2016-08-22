@@ -124,7 +124,7 @@
 <script>    
   $(function(){   
     //Boxoffice widget    
-    var boxofficeUrl = "http://boxoffice.vidya.dev:6500";   
+    var boxofficeUrl = "https://boxoffice.hasgeek.com";   
     var username, userphone, useremail;   
     {% if g.user %}   
       {% if g.user.fullname %}    
@@ -144,7 +144,7 @@
       document.getElementsByTagName('body')[0].appendChild(boxofficeScript);    
       window.Boxoffice.init({   
         org: 'hasgeek',   
-        itemCollection: '002c4497-609f-11e6-bb88-7f076319e7bb',   
+        itemCollection: '5618a78c-5b01-11e6-aee5-4d52a6f8306d',   
         user_name: username,    
         user_phone: userphone,    
         user_email: useremail,    
