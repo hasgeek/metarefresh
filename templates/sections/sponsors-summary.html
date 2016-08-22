@@ -1,4 +1,4 @@
-<section class="sponsors push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
+<section class="sponsors push-two clearfix{% if background %} fill-{{ background }}{% endif %}" id="sponsors">
   <div class="row-fluid container">
     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 push-one-bottom">
       <h2 class="extralarge all-caps">Sponsors</h2>
@@ -27,7 +27,7 @@
           <ul class="col-lg-7 col-md-7 col-sm-7 col-xs-12 nospace-bottom list-plain link-silent clearfix list-space-line sponsor-{{ type.size }}">
         {% endif %}
           <li>
-              <a href="{% if type.size == 'compact' %}{{ item.link }}{% else %}sponsors#{{ type.id }}-{{ item.id }}{% endif %}" class="occupy fill-white sponsor-logo {% if item.orientation == 'portrait' %}contain-height{% elif item.orientation == 'landscape' %}contain-width{% endif %}">
+              <a href="{% if type.size == 'compact' %}{{ item.link }}{% else %}sponsors#{{ type.id }}-{{ item.id }}{% endif %}" class="occupy fill-white sponsorlogo {% if item.orientation == 'portrait' %}contain-height{% elif item.orientation == 'landscape' %}contain-width{% endif %}">
                 <img alt="{{ item.title }}" src="{{ item.logo }}">
               </a>
           </li>
