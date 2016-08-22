@@ -40,11 +40,7 @@
 <!--[if lte IE 8]>
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6.3/leaflet.ie.css" />
 <![endif]-->
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" />
-<link href='//fonts.googleapis.com/css?family=Raleway:400,300,500,700,900' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Libre+Baskerville:400,700' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Lustria' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Raleway:400,500,700" rel="stylesheet">
 <link rel="stylesheet" href="/_baseframe/css/networkbar.css">
 
 </head>
@@ -77,23 +73,19 @@
 <div id="page">
 
 {% block banner %}
-<header class="fill-blue banner-internal push-two resetcoords clearfix">
+<header>
   <div class="container">
     <div class="row">
-      <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
-        <h1 class="nospace">
-          <a class="ir logo" href="/2016">
-            Meta Refresh 2015
+      <div class="text-center">
+        <h1 class="logo-wrapper">
+          <a class="logo" href="/2016">
+            <img src="{{ theme_static('img/logo.png') }}"/>
           </a>
         </h1>
-      </div>
-      <div class="col-lg-7 col-md-7 col-sm-5 col-xs-5">
-        <h1 class="extrabold legible">Meta Refresh</h1>
-        <h3 class="calm tiny nospace-bottom all-caps">
-          17&nbsp;September&nbsp;2016
-          <br>
-          Bangalore
-        </h3>
+        <h2 class="logo-heading">Meta Refresh</h2>
+        <h1 class="date-venue-text">17&nbsp;September&nbsp;2016</h1>
+        <h1 class="date-venue-text">MLR convention center, Bangalore</h1>
+        <button href="#tickets" class="button smooth-scroll buy-tickets-btn" target="_blank">Buy tickets</button>
       </div>
     </div>
   </div>
@@ -114,7 +106,7 @@
   {% endfor %}
 {% endblock %}
 
-<footer class="page-footer push-two fill-brown clearfix" id="about">
+<footer class="page-footer push-two fill-blue clearfix" id="about">
   <div class="container text-center space-four-bottom">
     <p class="secondary link-silent"><a href="http://hasgeek.com/" target="_blank" class="orange">HasGeek</a> helps people in technology meet each other, collaborate on new opportunities and advance the state of the art. We organize conferences, hacknights, workshops and geekups, and provide tools for communities to self-organize.</p>
     <p class="secondary link-silent">We’ve created conferences around the themes of <a href="http://rootconf.in/" target="_blank" class="orange">devops</a>, <a href="http://metarefresh.in/" target="_blank" class="orange">front end engineering</a>, <a href="http://www.juliacon.in/" target="_blank" class="orange">Julia</a>, <a href="http://fifthelephant.in/" target="_blank" class="orange">big data and cloud computing</a>, <a href="http://jsfoo.in/" target="_blank" class="orange">JavaScript</a> and <a href="http://droidcon.in/" target="_blank" class="orange">Android</a>. Our <a href="http://hasjob.co/" target="_blank" class="orange">Job Board</a> is used by thousands of geeks every month to find new opportunities.</p>

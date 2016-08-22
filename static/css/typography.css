@@ -5,21 +5,13 @@
 
 /*  Families  */
 
-/*body,
-.title-type     { font-family: "Adelle", sans-serif; }
+body    { font-family: 'Open Sans', sans-serif; }
 
-i,
-em,
-.prose-type     { font-family: "Adelle", serif; }
-*/
+.logo-text { font-family: 'Raleway', sans-serif; }
 
-
-body,
-.title-type     { font-family: "Raleway", brandon-grotesque, "Brandon Grotesque", "Gill Sans", "Gill Sans MT", sans-serif; }
-
-i,
-em,
-.prose-type     { font-family: "Raleway", adobe-caslon-pro, "Adobe Caslon Pro", serif; }
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+  font-family: 'Open Sans', sans-serif;
+}
 
 
 /*  Scale  */
@@ -209,13 +201,14 @@ abbr {
 }
 
 .navbar .nav>li>a, .navbar-brand{
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
   font-size: 16px;
   letter-spacing: 0.05em;
   color: #0CA5B0;
 }
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+
+.navbar-brand{
   font-family: 'Raleway', sans-serif;
 }
 

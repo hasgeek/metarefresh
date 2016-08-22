@@ -1,8 +1,84 @@
+html, body, #page {
+  height: 100%;
+  margin: 0px;
+}
+
+header {
+  background: url(../img/bg.svg) no-repeat scroll center center;
+  background-size: 100%;
+  background-color: #182128;
+  background-position: 0 100%;
+  height: 500px;
+}
+
+.logo-wrapper {
+  margin: 100px 0 15px;
+}
+
+.logo-wrapper a{
+  border: none;
+}
+
+.logo-wrapper a:hover {
+  background-color: transparent;
+}
+
+.logo img {
+  max-width: 150px;
+}
+
+.logo-heading {
+  font-size: 50px;
+  color: #fff;
+  margin: 0 0 15px;
+}
+
+.date-venue-text {
+  font-size: 18px;
+  color: #fff;
+  margin: 0 0 15px;
+}
+
+.buy-tickets-btn {
+  color: #fff;
+  font-size: 15px;
+  margin: 15px 0 40px;
+}
+
+@media (min-width: 768px) {
+  header {
+    height: 700px
+  }
+
+  .logo-heading {
+    font-size: 65px;
+  }
+
+  .logo-wrapper {
+    margin-top: 150px;
+  }
+
+  .logo img {
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    height: 100%;
+  }
+  .date-venue-text {
+    font-size: 22px;
+  }
+  .buy-tickets-btn {
+    font-size: 18px;
+  }
+}
 
 .button {
     display: inline-block;
     background: #DF5E0E;
-    color: #000;
+    color: #fff;
     line-height: 1.4;
     padding: 1em 2em 1em;
     text-transform: uppercase;
@@ -10,12 +86,9 @@
     border-radius: 0.25em;
     border: 0;
 }
-.button-mini    { padding: 0.2em 0.6em; }
-.button-on-blue { background: #C7C575; }
-.button-blue { background: #0CA5B0; }
-.button-white { background: #E9E7EA; }
-.button:focus   { text-decoration: none; }
-.button:active  { box-shadow: inset 0 0 10px #000; }
+.button:hover {
+  background-color: #d0580d;
+}
 
 .separated-links + .separated-links:before {
     content: '•';
@@ -59,56 +132,6 @@
 
 @media (max-width: 767px) { #hg-bar { padding: 0 20px; } }
 
-.logo-text{
-  background-image: url('https://images.hasgeek.com/embed/file/afaadd610e9a41fcad15c1d7a2b13635');
-  background-size: 70%;
-  background-repeat: no-repeat;
-  background-position: center top;
-  width: 280px;
-  height: 130px;
-}
-
-@media (max-width: 767px) {
-  .masthead-home .col-lg-8.text-right{
-    text-align: center;
-  }
-  .logo-text{
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 2em !important;
-  }
-}
-
-@media (max-width: 45em){
-  .logo-text{
-    width: 175px;    
-    padding: 47px 10px 47px 15px; 
-    line-height: 40px; 
-  }
-}
-@media (max-width: 55em){
-  .logo-text{
-    width: 165px;    
-    padding: 45px 10px 45px 10px;  
-    line-height: 35px;
-    height: 80px;
-    margin-top: 0.5em !important;
-  }
-  .line4{
-    font-size: 1.2em;
-  }
-}
-
-.banner h1    { float: left; width: 4.5rem; margin: .5rem auto 0 -.5rem; }
-.banner .logo {
-    background: url(../img/logo-mobile.png) no-repeat scroll center center;
-    background-size: contain;
-    height: 0;
-    width: 100%;
-    padding-top: 100%;
-}
-.banner .logo:hover { background-color: transparent; }
 .banner.banner-home h1 { float: none; margin: 3rem auto; }
 .banner.banner-home h2 span + span { display: inline-block; margin-left: 0.5rem; }
 .banner sup, sup.date { top: 0; font-size: 65%; }
@@ -778,7 +801,7 @@ li.event-node{
 /**** navbar ****/
 .navbar{
   background-image: none;
-  background-color: #E9E7EA;
+  background-color: #b22e40;
 }
 .navbar a{
   border-bottom: 0;
@@ -886,11 +909,11 @@ ul.list-plain{
   background-color: #0CA5B0;
 }
 .nav > li > a:focus, .nav > li > a:hover{
-  background-color: #EFEFEF;
+  background-color: #543f3b;
 }
 .nav .caret, .nav a:hover .caret{
-  border-bottom-color: #0CA5B0;
-  border-top-color: #0CA5B0;
+  border-bottom-color: #fff;
+  border-top-color: #fff;
 }
 
 .info-box{
@@ -955,10 +978,6 @@ ul.list-plain{
     margin-right: auto;
   }
 }
-/*header{
-  background: url(../img/bg.png) no-repeat scroll center center;
-  background-size: 100%;
-}*/
 
 #frame{
   border: 40px solid #000;
@@ -1098,11 +1117,11 @@ ul.list-plain{
   }
 
   .navbar-toggle{
-    background-color: #D3D3D3;
+    background-color: #543f3b;
     margin-top: 7px;
   }
   .navbar-toggle .icon-bar{
-    background-color: #0CA5B0;
+    background-color: #fff;
   }
   .navbar-collapse>ul{
     margin-left: -15px;

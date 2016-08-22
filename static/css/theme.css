@@ -52,16 +52,18 @@ ul.list-silent{
 .fill-black     { background-color: #000000 !important; color: #EEE; }
 .fill-silver-hud{ background-color: rgba(255,255,255,0.65) !important; color: #222; }
 .fill-red       { background-color: #BB3311 !important; color: #FCF3F3; }
-.fill-orange    { background-color: #DF5E0E !important; color: #FCF3F3; }
+.fill-orange    { background-color: #ec6126 !important; color: #fff; }
 .fill-brown     { background-color: #655643 !important; color: #FCF3F3; }
+.fill-darkbrown     { background-color: #543f3b !important; color: #FCF3F3; }
 .fill-yellow     { background-color: #c7c575 !important; color: #333; }
 .fill-redgray   { background-color: #EFE7E6 !important; color: #222020; }
 .fill-bg        { background-color: #FFF !important; color: #222020;}
 .fill-beige { background-color: #E0E4CC !important; color: #222020;} /*#789733*/
-.fill-blue      { background-color: #0CA5B0 !important; color: #FFFFFF;  }
+.fill-blue      { background-color: #182128 !important; color: #FFFFFF;  }
 .fill-lightgray { background-color: rgba(0,0,0,0.1) !important; color: #FCF3F3; }
 .fill-mediumgray { background-color: rgba(0,0,0,0.2) !important; color: #FCF3F3; }
 .fill-darkgray { background-color: rgba(0,0,0,0.3) !important; color: #FCF3F3; }
+.fill-pink { background-color: #b22e40!important; color: #fff;}
 
 .fill-gold      { background-color: rgba(204, 153, 0, 0.1); color: #333;}
 .fill-silver    { background-color: rgba(0, 0, 0, 0.1); color: #333;}
@@ -72,6 +74,13 @@ ul.list-silent{
     background-image:    -moz-linear-gradient(top,       #0CA5B0 20%, #655643);
     background-image:      -o-linear-gradient(top,       #0CA5B0 20%, #655643);
     background-image:         linear-gradient(top bottom,#0CA5B0 20%, #655643);
+}
+
+.fade-dark-to-light {
+  background-image: -webkit-linear-gradient(top,       #543f3b 20%, #655643);
+  background-image:    -moz-linear-gradient(top,       #543f3b 20%, #655643);
+  background-image:      -o-linear-gradient(top,       #543f3b 20%, #655643);
+  background-image:         linear-gradient(top bottom,#543f3b 20%, #655643);
 }
 
 section{
