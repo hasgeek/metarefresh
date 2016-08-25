@@ -3,7 +3,7 @@
     <h2 class="extralarge all-caps space-one-bottom">Sponsors</h2>
   </div>
 
-{% with fill_cycler = cycler('fill-yellow', 'fill-blue') %}
+{% with fill_cycler = cycler('fill-darkbrown') %}
   {% from theme("data/sponsors.html") import types, items %}
   {% for type in types %}
     {% set outer = loop %}
@@ -18,9 +18,9 @@
       {% endif %}
         <h3 class="visuallyhidden">{{ item.title }}</h3>
         <div id="{{ type.id }}-{{ item.id }}" class="row-fluid container push-two-top">
-          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 legible sponsor-{{ type.size }} space-two-bottom clearfix clearboth">
-            <p class="clearfix space-two-bottom">
-              <a href="{{ item.link }}" target="_blank" class="occupy fill-white sponsor-logo contain-height">
+          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 legible sponsor-{{ type.size }} space-one-bottom clearfix clearboth">
+            <p class="clearfix nospace">
+              <a href="{{ item.link }}" target="_blank" class="occupy fill-white sponsorlogo">
                 <img alt=" " src="{{ item.logo }}">
               </a>
             </p>
