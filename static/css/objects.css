@@ -1197,6 +1197,10 @@ ul.list-plain{
   height: 30px;
 }
 
-#boxoffice-widget img{
+#boxoffice-widget .popover {
+  width: 250px;
+}
+
+#boxoffice-widget img {
   width: 100%;
 }
