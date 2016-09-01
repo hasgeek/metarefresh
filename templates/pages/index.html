@@ -116,11 +116,13 @@
         paymentDesc: 'Meta Refresh 2016'    
       });
 
-      $('.t-shirt-image').popover({
+      $('#boxoffice-widget').popover({
+        selector: '.t-shirt-image',
         placement : 'top',
         trigger : 'hover',
         html : true
       });
+      
     }).fail(function(response) {    
       var error_msg;
       if (response.readyState === 4) {
