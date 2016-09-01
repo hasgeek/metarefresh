@@ -1196,3 +1196,7 @@ ul.list-plain{
 .helptext {
   height: 30px;
 }
+
+#boxoffice-widget img{
+  width: 100%;
+}
