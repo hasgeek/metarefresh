@@ -15,6 +15,26 @@
   }
 %}
 
+{% block banner %}
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="text-center">
+        <h1 class="logo-wrapper">
+          <a class="logo" href="/2016">
+            <img src="{{ theme_static('img/logo.png') }}"/>
+          </a>
+        </h1>
+        <h2 class="logo-heading">Meta Refresh</h2>
+        <h1 class="date-venue-text">17&nbsp;September&nbsp;2016</h1>
+        <h1 class="date-venue-text">MLR convention center, Bangalore</h1>
+        <button href="#tickets" class="button smooth-scroll buy-tickets-btn" target="_blank">Buy tickets</button>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
 {% block navtype %}
 <div id="nav-home">
   <nav class="navbar" id="site-nav" role="navigation">
@@ -37,6 +57,7 @@
         <ul class="nav navbar-nav center-block">
           <li><a class="white hidden-xs" href="/2016/">Meta Refresh</a></li>
           <li><a href="#announcements" class="white smooth-scroll">Announcements</a></li>
+          <li><a href="/2016/workshop" class="white" target="_blank">Workshop</a></li>
           <li><a href="#tickets" class="white smooth-scroll">Tickets</a></li>
           <li><a href="#venue" class="white smooth-scroll">Venue</a></li>
           <li><a href="#sponsors" class="white smooth-scroll">Sponsors</a></li>

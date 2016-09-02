@@ -9,15 +9,17 @@
     <div id="{{ item.id }}" class="row-fluid container push-line">
       <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 legible space-two-bottom clearfix text-right">
         <h3 class="all-caps nospace-top semibold">{{ item.title|safe }}</h3>
-        <img class="speaker-photo" src="{{ item.photo }}" alt="">
+        <img class="speaker-photo" src="{{ item.photo[0] }}" alt="">
+        <img class="speaker-photo" src="{{ item.photo[1] }}" alt="">
         <h4 class="prose-type calm italic"><span class="legible-prose">{{ item.speaker }}</span></h4>
         <h5 class="italic">{{ item.designation|safe }}</h5>
       </div>
       <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 legible-prose prose prose-type">
+        <h3 class="all-caps nospace-top semibold">{{ item.title|safe }}</h3>
         <div class="prose-type regular-prose space-three-bottom">
           {{ item.blurb|safe }}
           <ul class="list-plain secondary prose space-one-top">
-            <li class="flushleft"><a href="https://metarefresh.talkfunnel.com/2015/{{ item.id }}" target="_blank">Funnel Proposal</a></li>
+            <li class="flushleft"><a href="{{ item.link }}" target="_blank">Funnel Proposal</a></li>
             {% if item.preview %}<li class="flushright"><a target="_blank" href="{{ item.preview }}">Preview</a></li>{% endif %}
           </ul>
         </div>

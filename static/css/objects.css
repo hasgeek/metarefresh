@@ -89,6 +89,14 @@ header {
 .button:hover {
   background-color: #d0580d;
 }
+.button-no-hover:hover {
+  background-color: inherit;
+}
+.button-mini    { padding: 0.2em 0.6em; }
+.button-on-blue { background: #C7C575; }
+.button-blue { background: #0CA5B0; }
+.button-white { background: #E9E7EA; }
+.button-pink { background: #b22e40; }
 
 .separated-links + .separated-links:before {
     content: '•';
@@ -605,17 +613,23 @@ li.event-node{
 
 .talk-title {
   font-size: 20px;
-  line-height: 1.1;
-  min-height: 67px;
+  line-height: 1.3;
   margin: 10px 0;
 }
-
+@media (min-width: 768px) {
+  .talk-title {
+    min-height: 45px;
+  }
+}
 .talk-speaker {
   font-size: 18px;
   line-height: 1.1;
   margin: 10px 0;
 }
-
+.speaker-designation {
+  width: 80%;
+  margin: auto;
+}
 .featured-speakers h5{
   line-height: 20px;
 }
@@ -941,6 +955,12 @@ ul.list-plain{
 
 .speaker-photo{
   width: 30%;
+}
+
+@media (min-width: 768px) {
+  .speaker-photo{
+    width: 40%;
+  }
 }
 
 .popover{

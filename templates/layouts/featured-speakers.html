@@ -1,5 +1,5 @@
 <section class="featured-speakers push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
-  <div class="container">
+  <div class="container-fluid">
   <div class="row-fluid">
     <h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 large all-caps text-center space-two-bottom">Featured speakers</h2>
   </div>
@@ -17,7 +17,7 @@
               </span></a>
               <h3 class="talk-title orange"><a href="{{ item.link }}" target="_blank">{{ item.title }}</a></h3>
               <h3 class="talk-speaker">{{ item.speaker }}</h3>
-              <h5>{{ item.designation|safe }}</h5>
+              <h5 class="speaker-designation">{{ item.designation|safe }}</h5>
               <h5 class="all-caps">{{ item.place }}</h5>
               {% if item.twitter %}<h4 class="brown link-silent"><a target="_blank" href="https://twitter.com/{{ item.twitter }}" class="twitter-blue">@{{ item.twitter }}</a></h4>{% endif %}
               {% if item.sponsor %}<h5 class="link-silent dark">Sponsored by <a target="_blank" href="{{ item.sponsor_link }}">{{ item.sponsor }}</a></h5>{% endif %}
