@@ -1,7 +1,7 @@
-<section class="featured-speakers push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
+<section class="push-two clearfix{% if background %} fill-{{ background }}{% endif %}" id="featured-talks">
   <div class="container-fluid">
   <div class="row-fluid">
-    <h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 large all-caps text-center space-two-bottom">Featured speakers</h2>
+    <h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 large all-caps text-center space-two-bottom">Featured talks</h2>
   </div>
   {% for item in session.list -%}
     {% if item.featured %}
