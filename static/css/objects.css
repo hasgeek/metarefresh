@@ -573,6 +573,7 @@ li.event-node{
   display: block;
   background-size: 100% !important;
   border-radius: 50%;
+  margin: auto;
 }
 @media screen and (min-width:768px) and (max-width:1199px){
   .bg-photo{
@@ -600,6 +601,19 @@ li.event-node{
   transform: none;
   -moz-transform: none;
   -webkit-transform: none;
+}
+
+.talk-title {
+  font-size: 20px;
+  line-height: 1.1;
+  min-height: 67px;
+  margin: 10px 0;
+}
+
+.talk-speaker {
+  font-size: 18px;
+  line-height: 1.1;
+  margin: 10px 0;
 }
 
 .featured-speakers h5{
