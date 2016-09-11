@@ -1281,6 +1281,7 @@ ul.list-plain{
   background-color: #543f3b;
   padding: 15px 0;
   color: #fff;
+  min-height: 100px;
 }
 .schedule-table td.track-0 div {
   background-color: #b22e40;
